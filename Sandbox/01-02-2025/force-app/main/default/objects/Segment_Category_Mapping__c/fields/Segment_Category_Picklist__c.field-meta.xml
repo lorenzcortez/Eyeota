@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Segment_Category_Picklist__c</fullName>
+    <label>Segment Category</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>B2B</fullName>
+                <default>false</default>
+                <label>B2B</label>
+            </value>
+            <value>
+                <fullName>Custom</fullName>
+                <default>false</default>
+                <label>Custom</label>
+            </value>
+            <value>
+                <fullName>Intent</fullName>
+                <default>false</default>
+                <label>Intent</label>
+            </value>
+            <value>
+                <fullName>Interest</fullName>
+                <default>false</default>
+                <label>Interest</label>
+            </value>
+            <value>
+                <fullName>Product Ownership</fullName>
+                <default>false</default>
+                <label>Product Ownership</label>
+            </value>
+            <value>
+                <fullName>Seasonal</fullName>
+                <default>false</default>
+                <label>Seasonal</label>
+            </value>
+            <value>
+                <fullName>Sociodemographic</fullName>
+                <default>false</default>
+                <label>Sociodemographic</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

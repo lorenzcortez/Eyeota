@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>49.0</apiVersion>
+    <description>Testing Flows to Full Copy Sandbox</description>
+    <interviewLabel>Testing {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Testing</label>
+    <processType>Flow</processType>
+    <status>InvalidDraft</status>
+    <steps>
+        <name>Just_Testing</name>
+        <label>Just Testing</label>
+        <locationX>146</locationX>
+        <locationY>132</locationY>
+    </steps>
+</Flow>

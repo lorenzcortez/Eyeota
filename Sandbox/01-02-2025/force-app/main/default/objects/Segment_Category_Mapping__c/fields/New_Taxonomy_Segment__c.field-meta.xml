@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Taxonomy_Segment__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Equivalent segment from the New Taxonomy (2019).</description>
+    <label>New Taxonomy Segment</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>$Source.New_Taxonomy__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </filterItems>
+        <isOptional>true</isOptional>
+    </lookupFilter>
+    <referenceTo>Segment_Category_Mapping__c</referenceTo>
+    <relationshipLabel>Segments Database</relationshipLabel>
+    <relationshipName>Segments_Database</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

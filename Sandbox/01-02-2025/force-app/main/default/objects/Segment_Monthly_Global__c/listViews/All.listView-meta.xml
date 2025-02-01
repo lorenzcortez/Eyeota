@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>Date__c</columns>
+    <columns>Calls__c</columns>
+    <columns>Uniques__c</columns>
+    <columns>Revenue__c</columns>
+    <columns>Country_Raw__c</columns>
+    <columns>Segment_Key_Raw__c</columns>
+    <columns>Segment_Name_Supply_Raw__c</columns>
+    <columns>Segment_Name_Supply_Raw_Original__c</columns>
+    <columns>Segment_Name__c</columns>
+    <columns>Segment_Code__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Date__c</field>
+        <operation>greaterOrEqual</operation>
+        <value>1/1/2021</value>
+    </filters>
+    <label>All</label>
+</ListView>

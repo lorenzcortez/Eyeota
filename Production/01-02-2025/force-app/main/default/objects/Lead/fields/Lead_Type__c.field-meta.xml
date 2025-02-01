@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Type__c</fullName>
+    <label>Lead Type</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Branded Data Partner</fullName>
+                <default>false</default>
+                <label>Branded Data Partner</label>
+            </value>
+            <value>
+                <fullName>Mobile</fullName>
+                <default>false</default>
+                <label>Mobile</label>
+            </value>
+            <value>
+                <fullName>Competitor (no emails)</fullName>
+                <default>false</default>
+                <label>Competitor (no emails)</label>
+            </value>
+            <value>
+                <fullName>Ad Network</fullName>
+                <default>false</default>
+                <label>Ad Network</label>
+            </value>
+            <value>
+                <fullName>Ad Server</fullName>
+                <default>false</default>
+                <label>Ad Server</label>
+            </value>
+            <value>
+                <fullName>Advertiser</fullName>
+                <default>false</default>
+                <label>Advertiser</label>
+            </value>
+            <value>
+                <fullName>Data Supplier</fullName>
+                <default>false</default>
+                <label>Data Supplier</label>
+            </value>
+            <value>
+                <fullName>Data Buyer</fullName>
+                <default>false</default>
+                <label>Data Buyer</label>
+            </value>
+            <value>
+                <fullName>Data Partner</fullName>
+                <default>false</default>
+                <label>Data Partner</label>
+            </value>
+            <value>
+                <fullName>DMP/Data Specialist</fullName>
+                <default>false</default>
+                <label>DMP/Data Specialist</label>
+            </value>
+            <value>
+                <fullName>DSP</fullName>
+                <default>false</default>
+                <label>DSP</label>
+            </value>
+            <value>
+                <fullName>Media Agency</fullName>
+                <default>false</default>
+                <label>Media Agency</label>
+            </value>
+            <value>
+                <fullName>Trading Desk</fullName>
+                <default>false</default>
+                <label>Trading Desk</label>
+            </value>
+            <value>
+                <fullName>Publisher</fullName>
+                <default>false</default>
+                <label>Publisher</label>
+            </value>
+            <value>
+                <fullName>SSP</fullName>
+                <default>false</default>
+                <label>SSP</label>
+            </value>
+            <value>
+                <fullName>Advisory Board Member</fullName>
+                <default>false</default>
+                <label>Advisory Board Member</label>
+            </value>
+            <value>
+                <fullName>Board of Directors</fullName>
+                <default>false</default>
+                <label>Board of Directors</label>
+            </value>
+            <value>
+                <fullName>Competitor Investor</fullName>
+                <default>false</default>
+                <label>Competitor Investor</label>
+            </value>
+            <value>
+                <fullName>Current Investor</fullName>
+                <default>false</default>
+                <label>Current Investor</label>
+            </value>
+            <value>
+                <fullName>Potential Investor</fullName>
+                <default>false</default>
+                <label>Potential Investor</label>
+            </value>
+            <value>
+                <fullName>Shareholder</fullName>
+                <default>false</default>
+                <label>Shareholder</label>
+            </value>
+            <value>
+                <fullName>Unlisted Advisor</fullName>
+                <default>false</default>
+                <label>Unlisted Advisor</label>
+            </value>
+            <value>
+                <fullName>Industry Association</fullName>
+                <default>false</default>
+                <label>Industry Association</label>
+            </value>
+            <value>
+                <fullName>Press</fullName>
+                <default>false</default>
+                <label>Press</label>
+            </value>
+            <value>
+                <fullName>Event Supplier</fullName>
+                <default>false</default>
+                <label>Event Supplier</label>
+            </value>
+            <value>
+                <fullName>Marketing Supplier</fullName>
+                <default>false</default>
+                <label>Marketing Supplier</label>
+            </value>
+            <value>
+                <fullName>General Interest</fullName>
+                <default>false</default>
+                <label>General Interest</label>
+            </value>
+            <value>
+                <fullName>Employee</fullName>
+                <default>false</default>
+                <label>Employee</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

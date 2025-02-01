@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sync_to_HubSpot__c</fullName>
+    <defaultValue>true</defaultValue>
+    <inlineHelpText>Please untick if contact unsubscribes or if email is inactive.</inlineHelpText>
+    <label>Sync to HubSpot</label>
+    <trackHistory>true</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

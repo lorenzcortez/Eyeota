@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Errors_Segments</fullName>
+    <columns>NAME</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>Date_Invoiced__c</columns>
+    <columns>Date__c</columns>
+    <columns>Revenue__c</columns>
+    <columns>Platform__c</columns>
+    <columns>Segment_Name__c</columns>
+    <columns>Segment_Name_For_DBM_TTD_TubeMogul__c</columns>
+    <columns>Segment_Name_Sales_Raw_Original__c</columns>
+    <columns>Segment_Name_Sales_Raw__c</columns>
+    <columns>Segment_Mapping__c</columns>
+    <columns>Segment_Category_Mapping__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Segment_Name_Sales_Raw__c</field>
+        <operation>equals</operation>
+        <value>EYEOTA - AUTO - PURCHASED - VEHICLE BOUGHT NEW</value>
+    </filters>
+    <filters>
+        <field>Date_Invoiced__c</field>
+        <operation>equals</operation>
+        <value>9/1/2022</value>
+    </filters>
+    <filters>
+        <field>Segment_Name__c</field>
+        <operation>equals</operation>
+    </filters>
+    <label>Errors_Segments</label>
+</ListView>

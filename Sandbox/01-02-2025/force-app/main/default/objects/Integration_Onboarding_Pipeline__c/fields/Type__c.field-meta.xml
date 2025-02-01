@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type__c</fullName>
+    <label>Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Initial_Onboarding_Integration</fullName>
+                <default>false</default>
+                <label>Initial Ingestion/Onboarding</label>
+            </value>
+            <value>
+                <fullName>New_Segments</fullName>
+                <default>false</default>
+                <label>New Segments</label>
+            </value>
+            <value>
+                <fullName>Custom Segments</fullName>
+                <default>false</default>
+                <label>Custom Segments</label>
+            </value>
+            <value>
+                <fullName>Segment Refresh</fullName>
+                <default>false</default>
+                <label>Segment Refresh</label>
+            </value>
+            <value>
+                <fullName>Segment Update</fullName>
+                <default>false</default>
+                <label>Segment Update</label>
+            </value>
+            <value>
+                <fullName>Deletion</fullName>
+                <default>false</default>
+                <label>Deletion</label>
+            </value>
+            <value>
+                <fullName>Termination</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Termination</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

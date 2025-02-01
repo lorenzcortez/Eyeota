@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Data_Collection__c</fullName>
+    <label>Data Collection</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Deterministic</fullName>
+                <default>true</default>
+                <label>Deterministic</label>
+            </value>
+            <value>
+                <fullName>Modelled (all)</fullName>
+                <default>false</default>
+                <label>Modelled (all)</label>
+            </value>
+            <value>
+                <fullName>Modelled (in parts)</fullName>
+                <default>false</default>
+                <label>Modelled (in parts)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

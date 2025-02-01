@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Intent_Sources__c</fullName>
+    <label>Intent Sources</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Comparison sites</fullName>
+                <default>false</default>
+                <label>Comparison sites</label>
+            </value>
+            <value>
+                <fullName>Booking Engines</fullName>
+                <default>false</default>
+                <label>Booking Engines</label>
+            </value>
+            <value>
+                <fullName>Product configurations</fullName>
+                <default>false</default>
+                <label>Product configurations</label>
+            </value>
+            <value>
+                <fullName>Quote requests</fullName>
+                <default>false</default>
+                <label>Quote requests</label>
+            </value>
+            <value>
+                <fullName>Product Searches</fullName>
+                <default>false</default>
+                <label>Product Searches</label>
+            </value>
+            <value>
+                <fullName>Basket Contents</fullName>
+                <default>false</default>
+                <label>Basket Contents</label>
+            </value>
+            <value>
+                <fullName>Multiple Product Reviews</fullName>
+                <default>false</default>
+                <label>Multiple Product Reviews</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

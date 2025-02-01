@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>If_Status_is_Closed_Won_Need_IO</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(NOT(OR(TEXT(Deal_Type__c)=&quot;DSP CPM&quot;, TEXT(Deal_Type__c)=&quot;DMP CPM&quot; )),AND(TEXT(StageName) = &quot;Closed Won&quot;, Send_email_alert_for_IO__c = FALSE))</errorConditionFormula>
+    <errorMessage>Please make sure to attach the IO to this Opportunity and check the &quot;Send email alert for IO&quot; field before updating the Stage to Closed Won.</errorMessage>
+</ValidationRule>

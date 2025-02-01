@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type__c</fullName>
+    <label>Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>33Across</fullName>
+                <default>false</default>
+                <label>33Across</label>
+            </value>
+            <value>
+                <fullName>Digital Envoy</fullName>
+                <default>false</default>
+                <label>Digital Envoy</label>
+            </value>
+            <value>
+                <fullName>ID Graph</fullName>
+                <default>false</default>
+                <label>ID Graph</label>
+            </value>
+            <value>
+                <fullName>ShareThis</fullName>
+                <default>false</default>
+                <label>ShareThis</label>
+            </value>
+            <value>
+                <fullName>TapAd</fullName>
+                <default>false</default>
+                <label>TapAd</label>
+            </value>
+            <value>
+                <fullName>Tech Cost</fullName>
+                <default>false</default>
+                <label>Tech Cost</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

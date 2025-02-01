@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Platform_Account</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CORE.USERS.FIRST_NAME</columns>
+    <columns>Platform_Category__c</columns>
+    <columns>Revenue_Share_Eyeota_Markeplace__c</columns>
+    <columns>Custom_Segments__c</columns>
+    <columns>Advertising_Type__c</columns>
+    <columns>Status__c</columns>
+    <columns>Taxonomy_Structure__c</columns>
+    <columns>Type_of_Pricing__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.Platform_DSP</value>
+    </filters>
+    <label>Platform Account</label>
+</ListView>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Segment_Refresh_v2</fullName>
+    <availability>online</availability>
+    <displayType>massActionButton</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>Segment Refresh</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <requireRowSelection>true</requireRowSelection>
+    <url>https://ap8.salesforce.com/a02/e? 
+CF00N9000000EQvyZ={!Account.Name} 
+&amp;CF00N9000000EQvyZ_lkid={!Account.Id} 
+&amp;CF00N9000000FDUIA={!Account.Data_Operations__c} 
+&amp;CF00N9000000FDUIA_lkid={!Account.Data_OperationsId__c} 
+&amp;retURL=%2{!Account.Id} 
+&amp;RecordType=01290000000AB1D 
+&amp;00N9000000EQvpI={!Account.Publisher_ID__c}
+&amp;00N9000000F0fAL=Stage 1: Data Prep 
+&amp;ent=01I900000007pkP 
+&amp;00N9000000EQvyj=Segment%20Refresh</url>
+</WebLink>

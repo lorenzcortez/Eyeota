@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Supplier_Net_Earnings_Final__c</fullName>
+    <formula>Supplier_Net_Earnings__c + Supplier_Net_Earnings_Retrospective__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Supplier Net Earnings Final (USD)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>10</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

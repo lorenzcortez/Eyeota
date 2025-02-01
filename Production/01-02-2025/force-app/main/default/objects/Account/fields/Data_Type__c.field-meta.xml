@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Data_Type__c</fullName>
+    <label>Data Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Branded</fullName>
+                <default>false</default>
+                <label>Branded</label>
+            </value>
+            <value>
+                <fullName>Non-Branded</fullName>
+                <default>true</default>
+                <label>Non-Branded</label>
+            </value>
+            <value>
+                <fullName>Branded &amp; Non-Branded</fullName>
+                <default>false</default>
+                <label>Branded &amp; Non-Branded</label>
+            </value>
+            <value>
+                <fullName>PDMP</fullName>
+                <default>false</default>
+                <label>PDMP</label>
+            </value>
+            <value>
+                <fullName>PDMP &amp; Branded</fullName>
+                <default>false</default>
+                <label>PDMP &amp; Branded</label>
+            </value>
+            <value>
+                <fullName>PDMP, Branded &amp; Non-Branded</fullName>
+                <default>false</default>
+                <label>PDMP, Branded &amp; Non-Branded</label>
+            </value>
+            <value>
+                <fullName>PDMP &amp; Non-Branded</fullName>
+                <default>false</default>
+                <label>PDMP &amp; Non-Branded</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

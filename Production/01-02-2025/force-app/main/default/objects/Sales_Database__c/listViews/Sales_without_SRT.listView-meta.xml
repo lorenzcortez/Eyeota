@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_without_SRT</fullName>
+    <columns>NAME</columns>
+    <columns>Date_Invoiced__c</columns>
+    <columns>Segment_Name__c</columns>
+    <columns>Target_Country_Raw__c</columns>
+    <columns>Revenue__c</columns>
+    <columns>Platform_Account_Name__c</columns>
+    <columns>Target_Country_Name__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Segment_Revenue_Transaction__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>Date_Invoiced__c</field>
+        <operation>equals</operation>
+        <value>3/1/2024</value>
+    </filters>
+    <label>Sales without SRT</label>
+    <sharedTo>
+        <group>AIA_Team</group>
+        <group>Finance_Team</group>
+        <role>Finance_Team</role>
+    </sharedTo>
+</ListView>

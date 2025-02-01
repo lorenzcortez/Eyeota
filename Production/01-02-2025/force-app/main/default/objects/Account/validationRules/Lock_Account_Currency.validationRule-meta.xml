@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lock_Account_Currency</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISCHANGED( CurrencyIsoCode ),
+OR(
+NOT( ISBLANK( c2g__CODAAccountsReceivableControl__c )),
+NOT( ISBLANK( c2g__CODAAccountsPayableControl__c ))
+)
+)</errorConditionFormula>
+    <errorDisplayField>CurrencyIsoCode</errorDisplayField>
+    <errorMessage>This Account is in use by FinancialForce Accounting. You cannot change its currency.</errorMessage>
+</ValidationRule>

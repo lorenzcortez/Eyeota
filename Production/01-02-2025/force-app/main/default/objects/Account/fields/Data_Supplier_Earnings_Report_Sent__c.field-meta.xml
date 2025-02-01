@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Data_Supplier_Earnings_Report_Sent__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>To be ticked by Account Manager once Earnings Report has been sent to Data Supplier</inlineHelpText>
+    <label>Data Supplier Earnings Report Sent</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

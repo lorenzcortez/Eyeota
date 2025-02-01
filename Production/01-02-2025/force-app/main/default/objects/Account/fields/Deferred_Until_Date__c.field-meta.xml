@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Deferred_Until_Date__c</fullName>
+    <formula>IF(ISPICKVAL(Deferred_Until__c, &apos;Q4 2017&apos;),DATE(2017,10,01),
+IF(ISPICKVAL(Deferred_Until__c, &apos;Q1 2018&apos;),DATE(2018,01,01),
+IF(ISPICKVAL(Deferred_Until__c, &apos;Q2 2018&apos;),DATE(2018,04,01),
+IF(ISPICKVAL(Deferred_Until__c, &apos;Q3 2018&apos;),DATE(2018,07,01),
+IF(ISPICKVAL(Deferred_Until__c, &apos;Q4 2018&apos;),DATE(2018,10,01),
+IF(ISPICKVAL(Deferred_Until__c, &apos;Q1 2019&apos;),DATE(2019,01,01),
+IF(ISPICKVAL(Deferred_Until__c, &apos;Q2 2019&apos;),DATE(2019,04,01),
+IF(ISPICKVAL(Deferred_Until__c, &apos;Q3 2019&apos;),DATE(2019,07,01),
+IF(ISPICKVAL(Deferred_Until__c, &apos;Q4 2019&apos;),DATE(2019,10,01),
+IF(ISPICKVAL(Deferred_Until__c, &apos;Q1 2020&apos;),DATE(2020,01,01),
+IF(ISPICKVAL(Deferred_Until__c, &apos;Q2 2020&apos;),DATE(2020,04,01),
+IF(ISPICKVAL(Deferred_Until__c, &apos;Q3 2020&apos;),DATE(2020,07,10),
+IF(ISPICKVAL(Deferred_Until__c, &apos;Q4 2020&apos;),DATE(2020,10,01),
+null)))))))))))))</formula>
+    <label>Deferred Until Date</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

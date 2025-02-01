@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Identify_key_countries__c</fullName>
+    <label>Identify key countries</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>TextArea</type>
+</CustomField>

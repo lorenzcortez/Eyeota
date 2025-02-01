@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Data_Asset_Account</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>New Data Asset Account</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <url>/001/e?acc3={!Account.Name}&amp;acc3_1kid={!Account.Id}&amp;retURL={!Account.Id}&amp;RecordType=01290000000iUry&amp;00N9000000Djsjs={!Account.Integration_Type__c}&amp;00N9000000DwhpJ={!Account.Data_Type__c}&amp;
+CF00N9000000F0dNu_lkid={!Account.Recruited_By_UserId__c}&amp;CF00N9000000F0dNu={!Account.Recruited_By_User__c}&amp;CF00N9000000FDw9j={!Account.Data_Operations__c}&amp;CF00N9000000FDw9j_lkid={!Account.Data_OperationsId__c}
+&amp;ent=Account</url>
+</WebLink>

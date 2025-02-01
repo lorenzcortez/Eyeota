@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>If_DMP_Flat_Fee_Update_Amount</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(ISPICKVAL(Deal_Type__c,&quot;DMP Flat Fee&quot;),ISBLANK(Amount))</errorConditionFormula>
+    <errorMessage>Please fill in the Amount field to save this record.</errorMessage>
+</ValidationRule>

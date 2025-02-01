@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Code_Sales_Item_ID__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE(
+Product_Name__c,
+&quot;Eyeota Audience Data Usage&quot;, &quot;SGEY0525000001&quot;,
+&quot;Eyeota Audience Data License&quot;, &quot;SGEY0525000002&quot;,
+&quot;Eyeota Revenue Share&quot;, &quot;SGEY0525000003&quot;,
+&quot;NetWise Rev Share&quot;, &quot;SGNW0525000001&quot;,
+&quot;NetWise ID Graph&quot;, &quot;SGNW0525000002&quot;,
+&quot;NetWise ID Graph+&quot;, &quot;SGNW0525000003&quot;,
+&quot;NetWise Platform License&quot;, &quot;SGNW0525000004&quot;,
+&quot;Consumer Intelligence&quot;, &quot;SGNW0525000005&quot;,
+NULL
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Product Code (Sales Item ID)</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Data_Supplier_Holding_Group__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( AND(RecordType.DeveloperName =&apos;Data_Supplier_Parent_Accout&apos;,Parent.Name!=null), Parent.Name ,
+IF( AND(RecordType.DeveloperName =&apos;Data_Supplier_Parent_Accout&apos;,Parent.Name=null),  Name  ,
+IF(AND(RecordType.DeveloperName =&apos;Publisher&apos;,Parent.Parent.Name!=null), Parent.Parent.Name ,
+IF(AND(RecordType.DeveloperName =&apos;Publisher&apos;,Parent.Parent.Name=null),Parent.Name ,
+IF( RecordType.DeveloperName =&apos;Data_Supplier_Holding_Group&apos;, Name ,&apos;N/A&apos;)))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Data Supplier Holding Group</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

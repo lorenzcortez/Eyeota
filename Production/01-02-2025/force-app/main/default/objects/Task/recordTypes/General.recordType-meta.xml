@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>General</fullName>
+    <active>true</active>
+    <description>General Activity Record Type for all users.</description>
+    <label>General</label>
+    <picklistValues>
+        <picklist>Priority</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Normal</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status</picklist>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Open</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Subject</picklist>
+        <values>
+            <fullName>Buyers Enabled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Coffee chat</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Data supply updated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Live</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phone Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pitch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pixels Sent Out</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prices Updated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Private Marketplace Integration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Private Marketplace Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Private Marketplace Setup</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Proposal%2FBrief</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Publisher Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reporting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Review Session</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Segment Populating</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Setting Up Buyers%2FLicenses</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Setting Up Data Supply</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Setting Up Integration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Setting Up Taxonomy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Site Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social networking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Taxonomy Updated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tech Integration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Training Session</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Troubleshooting</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Call</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HubSpot</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

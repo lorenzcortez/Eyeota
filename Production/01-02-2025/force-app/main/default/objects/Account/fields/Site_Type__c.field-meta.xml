@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Site_Type__c</fullName>
+    <label>Site Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Branded Data Partner</fullName>
+                <default>false</default>
+                <label>Branded Data Partner</label>
+            </value>
+            <value>
+                <fullName>Ad Network</fullName>
+                <default>false</default>
+                <label>Ad Network</label>
+            </value>
+            <value>
+                <fullName>Automotive</fullName>
+                <default>false</default>
+                <label>Automotive</label>
+            </value>
+            <value>
+                <fullName>Beauty</fullName>
+                <default>false</default>
+                <label>Beauty</label>
+            </value>
+            <value>
+                <fullName>Booking Engine</fullName>
+                <default>false</default>
+                <label>Booking Engine</label>
+            </value>
+            <value>
+                <fullName>Dating</fullName>
+                <default>false</default>
+                <label>Dating</label>
+            </value>
+            <value>
+                <fullName>Downloading</fullName>
+                <default>false</default>
+                <label>Downloading</label>
+            </value>
+            <value>
+                <fullName>Ecommerce</fullName>
+                <default>false</default>
+                <label>Ecommerce</label>
+            </value>
+            <value>
+                <fullName>Education</fullName>
+                <default>false</default>
+                <label>Education</label>
+            </value>
+            <value>
+                <fullName>Fashion</fullName>
+                <default>false</default>
+                <label>Fashion</label>
+            </value>
+            <value>
+                <fullName>Food</fullName>
+                <default>false</default>
+                <label>Food</label>
+            </value>
+            <value>
+                <fullName>Furniture</fullName>
+                <default>false</default>
+                <label>Furniture</label>
+            </value>
+            <value>
+                <fullName>Gambling</fullName>
+                <default>false</default>
+                <label>Gambling</label>
+            </value>
+            <value>
+                <fullName>Games</fullName>
+                <default>false</default>
+                <label>Games</label>
+            </value>
+            <value>
+                <fullName>Health</fullName>
+                <default>false</default>
+                <label>Health</label>
+            </value>
+            <value>
+                <fullName>Hobbies</fullName>
+                <default>false</default>
+                <label>Hobbies</label>
+            </value>
+            <value>
+                <fullName>Hote/Accomodation</fullName>
+                <default>false</default>
+                <label>Hote/Accomodation</label>
+            </value>
+            <value>
+                <fullName>Insurance</fullName>
+                <default>false</default>
+                <label>Insurance</label>
+            </value>
+            <value>
+                <fullName>Kids</fullName>
+                <default>false</default>
+                <label>Kids</label>
+            </value>
+            <value>
+                <fullName>Languages</fullName>
+                <default>false</default>
+                <label>Languages</label>
+            </value>
+            <value>
+                <fullName>Magazines</fullName>
+                <default>false</default>
+                <label>Magazines</label>
+            </value>
+            <value>
+                <fullName>Mens</fullName>
+                <default>false</default>
+                <label>Mens</label>
+            </value>
+            <value>
+                <fullName>Movies</fullName>
+                <default>false</default>
+                <label>Movies</label>
+            </value>
+            <value>
+                <fullName>Music</fullName>
+                <default>false</default>
+                <label>Music</label>
+            </value>
+            <value>
+                <fullName>News / Blog</fullName>
+                <default>false</default>
+                <label>News / Blog</label>
+            </value>
+            <value>
+                <fullName>Price Comparison</fullName>
+                <default>false</default>
+                <label>Price Comparison</label>
+            </value>
+            <value>
+                <fullName>Product / Service Listings</fullName>
+                <default>false</default>
+                <label>Product / Service Listings</label>
+            </value>
+            <value>
+                <fullName>Real Estate</fullName>
+                <default>false</default>
+                <label>Real Estate</label>
+            </value>
+            <value>
+                <fullName>Search aggregator</fullName>
+                <default>false</default>
+                <label>Search aggregator</label>
+            </value>
+            <value>
+                <fullName>Sports</fullName>
+                <default>false</default>
+                <label>Sports</label>
+            </value>
+            <value>
+                <fullName>Survey Site</fullName>
+                <default>false</default>
+                <label>Survey Site</label>
+            </value>
+            <value>
+                <fullName>Tech</fullName>
+                <default>false</default>
+                <label>Tech</label>
+            </value>
+            <value>
+                <fullName>Ticketing</fullName>
+                <default>false</default>
+                <label>Ticketing</label>
+            </value>
+            <value>
+                <fullName>Travel Site</fullName>
+                <default>false</default>
+                <label>Travel Site</label>
+            </value>
+            <value>
+                <fullName>Video</fullName>
+                <default>false</default>
+                <label>Video</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

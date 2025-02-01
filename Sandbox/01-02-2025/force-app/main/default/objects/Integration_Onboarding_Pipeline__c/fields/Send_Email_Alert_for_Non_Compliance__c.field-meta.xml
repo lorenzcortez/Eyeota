@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Send_Email_Alert_for_Non_Compliance__c</fullName>
+    <defaultValue>false</defaultValue>
+    <label>Send Email Alert for Non-Compliance</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

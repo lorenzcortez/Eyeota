@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Deal_Type__c</fullName>
+    <inlineHelpText>Please choose what the deal type is. If &apos;Others&apos;, please fill in the &quot;Deal Notes&quot; field.</inlineHelpText>
+    <label>Deal Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Eyeota Social</fullName>
+                <default>false</default>
+                <label>Eyeota Social</label>
+            </value>
+            <value>
+                <fullName>DSP CPM</fullName>
+                <default>true</default>
+                <label>DSP CPM</label>
+            </value>
+            <value>
+                <fullName>DSP Flat Fee</fullName>
+                <default>false</default>
+                <label>DSP Flat Fee</label>
+            </value>
+            <value>
+                <fullName>DMP CPM</fullName>
+                <default>false</default>
+                <label>DMP CPM</label>
+            </value>
+            <value>
+                <fullName>DMP Flat Fee</fullName>
+                <default>false</default>
+                <label>DMP Flat Fee</label>
+            </value>
+            <value>
+                <fullName>PDMP</fullName>
+                <default>false</default>
+                <label>PDMP</label>
+            </value>
+            <value>
+                <fullName>Site Optimization Subscription</fullName>
+                <default>false</default>
+                <label>Site Optimization Subscription</label>
+            </value>
+            <value>
+                <fullName>On-boarding Subscription</fullName>
+                <default>false</default>
+                <label>On-boarding Subscription</label>
+            </value>
+            <value>
+                <fullName>Distribution Subscription</fullName>
+                <default>false</default>
+                <label>Distribution Subscription</label>
+            </value>
+            <value>
+                <fullName>OOH Media Owner Licensed</fullName>
+                <default>false</default>
+                <label>OOH Media Owner Licensed</label>
+            </value>
+            <value>
+                <fullName>Bespoke</fullName>
+                <default>false</default>
+                <label>Bespoke</label>
+            </value>
+            <value>
+                <fullName>POC</fullName>
+                <default>false</default>
+                <label>POC</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>CPM</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>CPM</label>
+            </value>
+            <value>
+                <fullName>Flat Fee</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Flat Fee</label>
+            </value>
+            <value>
+                <fullName>Others</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Others</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

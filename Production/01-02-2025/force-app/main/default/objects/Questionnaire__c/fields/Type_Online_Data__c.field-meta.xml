@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type_Online_Data__c</fullName>
+    <label>Type: Online Data</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Cookie IDs</fullName>
+                <default>false</default>
+                <label>Cookie IDs</label>
+            </value>
+            <value>
+                <fullName>IP Addresses</fullName>
+                <default>false</default>
+                <label>IP Addresses</label>
+            </value>
+            <value>
+                <fullName>MAIDs</fullName>
+                <default>false</default>
+                <label>MAIDs</label>
+            </value>
+            <value>
+                <fullName>Device IDs</fullName>
+                <default>false</default>
+                <label>Device IDs</label>
+            </value>
+            <value>
+                <fullName>HEMs, IDL, TTD UID, ID5, Lotame ID (please specify)</fullName>
+                <default>false</default>
+                <label>HEMs, IDL, TTD UID, ID5, Lotame ID (please specify)</label>
+            </value>
+            <value>
+                <fullName>Other Identifiers (please specify)</fullName>
+                <default>false</default>
+                <label>Other Identifiers (please specify)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

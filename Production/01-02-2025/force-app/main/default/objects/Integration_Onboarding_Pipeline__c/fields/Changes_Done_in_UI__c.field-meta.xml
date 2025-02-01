@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Changes_Done_in_UI__c</fullName>
+    <description>Condense from:
+-All changes done in UI
+-Mappings deleted in the UI</description>
+    <inlineHelpText>All changes done and/or mappings deleted in the Eyeota system.</inlineHelpText>
+    <label>Changes Done in UI</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Subject_Access_Requests</fullName>
+    <columns>Deadline__c</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>Days_Left_to_Deadline__c</columns>
+    <columns>Tech_Ticket_Number__c</columns>
+    <columns>Link_to_Ticket__c</columns>
+    <columns>Cookie_ID_Requested__c</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>CASES.EMAIL</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>Access_Request__c</columns>
+    <columns>Deletion_Request__c</columns>
+    <columns>CASES.STATUS</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Case.Subject_Access_Request</value>
+    </filters>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed</value>
+    </filters>
+    <label>Subject Access Requests</label>
+</ListView>

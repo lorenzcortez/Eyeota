@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ActiveAgencyContacts_EMEA</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CONTACT.EMAIL</columns>
+    <columns>CONTACT.ADDRESS2_COUNTRY</columns>
+    <columns>Unsubscribed__c</columns>
+    <columns>Inactive_Contact__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>equals</operation>
+        <value>MJ,AD,GB,IT,TC,CP,NM,NAM</value>
+    </filters>
+    <filters>
+        <field>Inactive_Contact__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <label>Active Agency Contacts_EMEA</label>
+</ListView>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IAB_TCF_purpose_s__c</fullName>
+    <label>IAB TCF purpose(s)</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Information storage and access</fullName>
+                <default>false</default>
+                <label>Information storage and access</label>
+            </value>
+            <value>
+                <fullName>Personalization</fullName>
+                <default>false</default>
+                <label>Personalization</label>
+            </value>
+            <value>
+                <fullName>Measurement</fullName>
+                <default>false</default>
+                <label>Measurement</label>
+            </value>
+            <value>
+                <fullName>Special Feature: Matching Data to Offline Sources</fullName>
+                <default>false</default>
+                <label>Special Feature: Matching Data to Offline Sources</label>
+            </value>
+            <value>
+                <fullName>Linking Devices</fullName>
+                <default>false</default>
+                <label>Linking Devices</label>
+            </value>
+            <value>
+                <fullName>Precise Geographic Location Data</fullName>
+                <default>false</default>
+                <label>Precise Geographic Location Data</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

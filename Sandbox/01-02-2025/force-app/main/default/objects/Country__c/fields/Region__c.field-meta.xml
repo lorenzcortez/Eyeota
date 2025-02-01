@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Region__c</fullName>
+    <label>Region</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Central Asia</fullName>
+                <default>false</default>
+                <label>Central Asia</label>
+            </value>
+            <value>
+                <fullName>Western Europe</fullName>
+                <default>false</default>
+                <label>Western Europe</label>
+            </value>
+            <value>
+                <fullName>Eastern Europe</fullName>
+                <default>false</default>
+                <label>Eastern Europe</label>
+            </value>
+            <value>
+                <fullName>MENA</fullName>
+                <default>false</default>
+                <label>MENA</label>
+            </value>
+            <value>
+                <fullName>Australasia</fullName>
+                <default>false</default>
+                <label>Australasia</label>
+            </value>
+            <value>
+                <fullName>Sub-Saharan Africa</fullName>
+                <default>false</default>
+                <label>Sub-Saharan Africa</label>
+            </value>
+            <value>
+                <fullName>Caribbean</fullName>
+                <default>false</default>
+                <label>Caribbean</label>
+            </value>
+            <value>
+                <fullName>ROW</fullName>
+                <default>false</default>
+                <label>ROW</label>
+            </value>
+            <value>
+                <fullName>Latam</fullName>
+                <default>false</default>
+                <label>Latam</label>
+            </value>
+            <value>
+                <fullName>Southern Asia</fullName>
+                <default>false</default>
+                <label>Southern Asia</label>
+            </value>
+            <value>
+                <fullName>South East Asia</fullName>
+                <default>false</default>
+                <label>South East Asia</label>
+            </value>
+            <value>
+                <fullName>North America</fullName>
+                <default>false</default>
+                <label>North America</label>
+            </value>
+            <value>
+                <fullName>North Asia</fullName>
+                <default>false</default>
+                <label>North Asia</label>
+            </value>
+            <value>
+                <fullName>Europe</fullName>
+                <default>false</default>
+                <label>Europe</label>
+            </value>
+            <value>
+                <fullName>APAC</fullName>
+                <default>false</default>
+                <label>APAC</label>
+            </value>
+            <value>
+                <fullName>Global</fullName>
+                <default>false</default>
+                <label>Global</label>
+            </value>
+            <value>
+                <fullName>EMEA</fullName>
+                <default>false</default>
+                <label>EMEA</label>
+            </value>
+            <value>
+                <fullName>APAC - Excluding SEA</fullName>
+                <default>false</default>
+                <label>APAC - Excluding SEA</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

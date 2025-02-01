@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cannot_edit_approved_SIM_record</fullName>
+    <active>false</active>
+    <errorConditionFormula>Approved_for_Posting__c =TRUE</errorConditionFormula>
+    <errorMessage>Approved Sales Invoice Matching record cannot be edited.</errorMessage>
+</ValidationRule>

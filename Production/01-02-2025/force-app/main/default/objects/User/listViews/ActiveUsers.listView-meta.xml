@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ActiveUsers</fullName>
+    <columns>CREATED_DATE</columns>
+    <columns>FULL_NAME</columns>
+    <columns>TIMEZONE</columns>
+    <columns>MANAGER</columns>
+    <columns>CORE.USERS.COMMUNITY_NICKNAME</columns>
+    <columns>CORE.USERS.DIVISION</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>CORE.USERS.USERNAME</columns>
+    <columns>CORE.USERS.LAST_LOGIN</columns>
+    <columns>CORE.USER_ROLE.NAME</columns>
+    <columns>CORE.PROFILE.NAME</columns>
+    <columns>DELEGATED_APPROVER</columns>
+    <columns>Password_Expiration_Notification__c</columns>
+    <columns>PASSWORD_EXPIRES</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CORE.USERS.ACTIVE</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>CORE.PROFILE.NAME</field>
+        <operation>notEqual</operation>
+        <value>Chatter Free User</value>
+    </filters>
+    <filters>
+        <field>CORE.USER_ROLE.NAME</field>
+        <operation>equals</operation>
+        <value>Financial Controller</value>
+    </filters>
+    <label>Active Users</label>
+</ListView>

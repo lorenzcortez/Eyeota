@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contract_Signed_Date_Validation</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(ISBLANK(Maintenance_Start_Date__c)=FALSE,AND(Probability!=1, Send_email_alert_for_IO__c=FALSE))</errorConditionFormula>
+    <errorMessage>Please only fill in the Contract Signed Date once this deal has been closed, Probability has been marked as 100% and the Send Email Alert for IO box has been checked.</errorMessage>
+</ValidationRule>

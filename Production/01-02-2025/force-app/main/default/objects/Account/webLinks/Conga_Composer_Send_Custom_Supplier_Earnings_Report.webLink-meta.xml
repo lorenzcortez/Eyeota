@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Conga_Composer_Send_Custom_Supplier_Earnings_Report</fullName>
+    <availability>online</availability>
+    <description>Originally created by Conga Solution Manager. Date of last use of Update Button from Conga Solution record: https://d90000000ysloeai.my.salesforce.com/a7e0o00000002GLAAY
+06-Jan-2025 06:10:20 AM</description>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <hasMenubar>false</hasMenubar>
+    <hasScrollbars>false</hasScrollbars>
+    <hasToolbar>false</hasToolbar>
+    <height>660</height>
+    <isResizable>false</isResizable>
+    <linkType>url</linkType>
+    <masterLabel>Send Custom Supplier Earnings Report</masterLabel>
+    <openType>newWindow</openType>
+    <position>none</position>
+    <protected>false</protected>
+    <showsLocation>false</showsLocation>
+    <showsStatus>false</showsStatus>
+    <url>/apex/APXTConga4__Conga_Composer?SolMgr=1
+&amp;serverUrl={!API.Partner_Server_URL_520}
+&amp;Id={!Account.Id}
+
+&amp;QueryId=[SDBLast6Mos]0Q_184EAI862019,
+[SDBBreakdown]0Q_189EAI886363,
+[SDBMonth]0Q_237EAI934324,
+[SDBEyeotaAU]0Q_190EAI536087,
+[SDBEyeotaDE]0Q_191EAI459357,
+[SDBEyeotaUK]0Q_193EAI059790,
+[SDBEyeotaBR]0Q_200EAI674083,
+[SDBEyeotaCA]0Q_201EAI592709,
+[SDBEyeotaES]0Q_209EAI939755,
+[SDBEyeotaFR]0Q_211EAI184463,
+[SDBEyeotaHK]0Q_212EAI422941,
+[SDBEyeotaIT]0Q_215EAI924778,
+[SDBEyeotaJP]0Q_217EAI194797,
+[SDBEyeotaMX]0Q_220EAI085889,
+[SDBEyeotaNL]0Q_222EAI950758,
+[SDBEyeotaNZ]0Q_224EAI844272,
+[SDBEyeotaPL]0Q_226EAI082782,
+[SDBEyeotaRU]0Q_228EAI935536,
+[SDBEyeotaTR]0Q_232EAI929439,
+[SDBEyeotaTW]0Q_233EAI817406,
+[SDBEyeotaNORDICS]0Q_295EAI381534,
+[SDBEyeotaSEA1]0Q_296EAI543156,
+[SDBEyeotaSEA2]0Q_297EAI407197,
+[SDBEyeotaUS1]0Q_299EAI995705,
+[SDBEyeotaUS2]0Q_298EAI403193,
+[SDBEyeotaOthers1]0Q_300EAI452092,
+[SDBEyeotaOthers2]0Q_301EAI257594,
+[SDBBrandedAU]0Q_238EAI482915,
+[SDBBrandedDE]0Q_239EAI342117,
+[SDBBrandedUK]0Q_241EAI233923,
+[SDBBrandedBR]0Q_248EAI216187,
+[SDBBrandedCA]0Q_249EAI602006,
+[SDBBrandedES]0Q_257EAI813544,
+[SDBBrandedFR]0Q_259EAI181792,
+[SDBBrandedHK]0Q_262EAI602874,
+[SDBBrandedIT]0Q_264EAI194006,
+[SDBBrandedJP]0Q_265EAI003941,
+[SDBBrandedMX]0Q_268EAI810404,
+[SDBBrandedNL]0Q_270EAI015003,
+[SDBBrandedNZ]0Q_272EAI879009,
+[SDBBrandedPL]0Q_274EAI586099,
+[SDBBrandedRU]0Q_276EAI495759,
+[SDBBrandedTR]0Q_280EAI901557,
+[SDBBrandedTW]0Q_281EAI769271,
+[SDBBrandedNORDICS]0Q_288EAI216706,
+[SDBBrandedSEA1]0Q_289EAI925122,
+[SDBBrandedSEA2]0Q_290EAI163518,
+[SDBBrandedUS1]0Q_292EAI660290,
+[SDBBrandedUS2]0Q_291EAI845670,
+[SDBBrandedOthers1]0Q_293EAI068587,
+[SDBBrandedOthers2]0Q_294EAI277183,
+[SDBEyeotaIN]0Q_216EAI210919,
+[SDBBrandedIN]0Q_286EAI631167,
+[SDBCustom]0Q_188EAI498046,
+[SalesDBUSUS1]0Q_287EAI395573,
+[SalesDBUSOthers1]0Q_302EAI395573,
+[SalesDBUSOthers2]0Q_304EAI395573,
+[SalesDBOthers1]0Q_305EAI395574,
+[SalesDBOthers2]0Q_303EAI395573,
+[SalesDBUSUS2]0Q_307EAI395574,
+[SalesDBUSUS3]0Q_308EAI395574,
+[SDBEyeotaOthers3]0Q_314EAI906278,
+[SDBBrandedOthers3]0Q_315EAI527562,
+[SDBBrandedUS3]0Q_316EAI911399,
+[SDBEyeotaUS3]0Q_317EAI799229,
+[SalesDBOthers3]0Q_318EAI961734
+
+&amp;TemplateId=0T_009EAI807577
+
+&amp;CongaEmailTemplateId=0E_004EAI873239
+
+&amp;OFN=&quot;November+2024+-+Eyeota+Supplier+Earnings+Report+-&quot;+{!Account.Name}
+&amp;SC0=1
+&amp;EmailToId={!$User.Id}
+&amp;EmailAdditionalTo={!Account.Supplier_Earnings_Email__c}
+&amp;EmailBCC=mfanelli@eyeota.com
+&amp;EmailCC=accounts@eyeota.com
+&amp;SC1=Attachments
+&amp;DS7=12</url>
+    <width>900</width>
+</WebLink>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Integration_Type__c</fullName>
+    <label>Ingestion/Onboarding Type</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>S2S</fullName>
+                <default>false</default>
+                <label>S2S</label>
+            </value>
+            <value>
+                <fullName>Online via Pixel</fullName>
+                <default>false</default>
+                <label>Online via Pixel</label>
+            </value>
+            <value>
+                <fullName>Online via S2S</fullName>
+                <default>false</default>
+                <label>Online via S2S</label>
+            </value>
+            <value>
+                <fullName>Online via MAID</fullName>
+                <default>false</default>
+                <label>Online via MAID</label>
+            </value>
+            <value>
+                <fullName>Online via SDK</fullName>
+                <default>false</default>
+                <label>Online via SDK</label>
+            </value>
+            <value>
+                <fullName>Offline via Geo Location</fullName>
+                <default>false</default>
+                <label>Offline via Geo Location</label>
+            </value>
+            <value>
+                <fullName>Offline via Geo Location &amp; Sociodemographics</fullName>
+                <default>false</default>
+                <label>Offline via Geo Location &amp; Sociodemographics</label>
+            </value>
+            <value>
+                <fullName>Online via S2S and Modelling</fullName>
+                <default>false</default>
+                <label>Online via S2S and Modelling</label>
+            </value>
+            <value>
+                <fullName>Offline via 3rd Party Onboarder</fullName>
+                <default>false</default>
+                <label>Offline via 3rd Party Onboarder</label>
+            </value>
+            <value>
+                <fullName>Online via HEM</fullName>
+                <default>false</default>
+                <label>Online via HEM</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

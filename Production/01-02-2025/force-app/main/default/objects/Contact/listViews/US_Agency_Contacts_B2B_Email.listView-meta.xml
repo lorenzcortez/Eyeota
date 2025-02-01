@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>US_Agency_Contacts_B2B_Email</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CONTACT.PHONE1</columns>
+    <columns>CONTACT.EMAIL</columns>
+    <columns>CONTACT.TITLE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>Hubspot_List_Name__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Hubspot_List_Name__c</field>
+        <operation>contains</operation>
+        <value>US Agency Contacts_B2B Email</value>
+    </filters>
+    <label>US Agency Contacts_B2B Email</label>
+</ListView>

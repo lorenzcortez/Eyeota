@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PDMP_Supplier__c</fullName>
+    <label>PDMP Supplier</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Immediate Media</fullName>
+                <default>false</default>
+                <label>Immediate Media</label>
+            </value>
+            <value>
+                <fullName>Honest John</fullName>
+                <default>false</default>
+                <label>Honest John</label>
+            </value>
+            <value>
+                <fullName>Experian/ Boots Advantage</fullName>
+                <default>false</default>
+                <label>Experian/ Boots Advantage</label>
+            </value>
+            <value>
+                <fullName>Lastminute</fullName>
+                <default>false</default>
+                <label>Lastminute</label>
+            </value>
+            <value>
+                <fullName>DelidataX</fullName>
+                <default>false</default>
+                <label>DelidataX</label>
+            </value>
+            <value>
+                <fullName>Detik.com</fullName>
+                <default>false</default>
+                <label>Detik.com</label>
+            </value>
+            <value>
+                <fullName>DAX</fullName>
+                <default>false</default>
+                <label>DAX</label>
+            </value>
+            <value>
+                <fullName>Alodokter</fullName>
+                <default>false</default>
+                <label>Alodokter</label>
+            </value>
+            <value>
+                <fullName>Enlinea Sdn Bhd (Nuren Group)</fullName>
+                <default>false</default>
+                <label>Enlinea Sdn Bhd (Nuren Group)</label>
+            </value>
+            <value>
+                <fullName>REA</fullName>
+                <default>false</default>
+                <label>REA</label>
+            </value>
+            <value>
+                <fullName>Vertical Health</fullName>
+                <default>false</default>
+                <label>Vertical Health</label>
+            </value>
+            <value>
+                <fullName>YouGov</fullName>
+                <default>false</default>
+                <label>YouGov</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

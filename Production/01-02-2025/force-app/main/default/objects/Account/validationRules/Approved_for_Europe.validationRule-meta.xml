@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Approved_for_Europe</fullName>
+    <active>true</active>
+    <description>Approved for Europe can only be checked if DPA Returned Date and Data Supplier Questionnaire Completed Date have been filled in for Accounts created after Jan 2020.</description>
+    <errorConditionFormula>AND(AND(AND(YEAR(DATEVALUE( CreatedDate ))&gt;=2020, ISBLANK(Data_Partner_Questionnaire_Completion_Da__c)=FALSE), ISBLANK(DPA_Received__c) =FALSE), Approved_for_Europe__c =TRUE)</errorConditionFormula>
+    <errorMessage>Please make sure that the Data Partner Qnaire Completion Date and DPA Received fields have been completed before updating the Approved for Europe field.</errorMessage>
+</ValidationRule>

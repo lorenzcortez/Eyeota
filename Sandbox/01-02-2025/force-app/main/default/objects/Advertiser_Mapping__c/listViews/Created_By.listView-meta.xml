@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Created_By</fullName>
+    <columns>NAME</columns>
+    <columns>Advertiser__c</columns>
+    <columns>Advertiser_Raw__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CREATEDBY_USER.ALIAS</field>
+        <operation>equals</operation>
+        <value>SS</value>
+    </filters>
+    <label>Created By</label>
+</ListView>

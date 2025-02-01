@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Data_Category__c</fullName>
+    <label>Data Category</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Hashed Emails</fullName>
+                <default>false</default>
+                <label>Hashed Emails</label>
+            </value>
+            <value>
+                <fullName>Branded Data B2B</fullName>
+                <default>false</default>
+                <label>Branded Data B2B</label>
+            </value>
+            <value>
+                <fullName>Branded Data B2C</fullName>
+                <default>false</default>
+                <label>Branded Data B2C</label>
+            </value>
+            <value>
+                <fullName>Demographic - Declared Age</fullName>
+                <default>false</default>
+                <label>Demographic - Declared Age</label>
+            </value>
+            <value>
+                <fullName>Demographic - Declared Gender</fullName>
+                <default>false</default>
+                <label>Demographic - Declared Gender</label>
+            </value>
+            <value>
+                <fullName>Demographic - First Name/Salutation</fullName>
+                <default>false</default>
+                <label>Demographic - First Name/Salutation</label>
+            </value>
+            <value>
+                <fullName>Demographic - Income</fullName>
+                <default>false</default>
+                <label>Demographic - Income</label>
+            </value>
+            <value>
+                <fullName>Demographic - Job</fullName>
+                <default>false</default>
+                <label>Demographic - Job</label>
+            </value>
+            <value>
+                <fullName>Demographic - Lifestyle</fullName>
+                <default>false</default>
+                <label>Demographic - Lifestyle</label>
+            </value>
+            <value>
+                <fullName>Demographic - Location</fullName>
+                <default>false</default>
+                <label>Demographic - Location</label>
+            </value>
+            <value>
+                <fullName>Demographic - Marital Status</fullName>
+                <default>false</default>
+                <label>Demographic - Marital Status</label>
+            </value>
+            <value>
+                <fullName>Intent - Auto</fullName>
+                <default>false</default>
+                <label>Intent - Auto</label>
+            </value>
+            <value>
+                <fullName>Intent - B2B</fullName>
+                <default>false</default>
+                <label>Intent - B2B</label>
+            </value>
+            <value>
+                <fullName>Intent - Consumer Electronics</fullName>
+                <default>false</default>
+                <label>Intent - Consumer Electronics</label>
+            </value>
+            <value>
+                <fullName>Intent - Entertainment</fullName>
+                <default>false</default>
+                <label>Intent - Entertainment</label>
+            </value>
+            <value>
+                <fullName>Intent - Finance</fullName>
+                <default>false</default>
+                <label>Intent - Finance</label>
+            </value>
+            <value>
+                <fullName>Intent - Food</fullName>
+                <default>false</default>
+                <label>Intent - Food</label>
+            </value>
+            <value>
+                <fullName>Intent - Gaming</fullName>
+                <default>false</default>
+                <label>Intent - Gaming</label>
+            </value>
+            <value>
+                <fullName>Intent - IT/Computer</fullName>
+                <default>false</default>
+                <label>Intent - IT/Computer</label>
+            </value>
+            <value>
+                <fullName>Intent - Jobs</fullName>
+                <default>false</default>
+                <label>Intent - Jobs</label>
+            </value>
+            <value>
+                <fullName>Intent - News/Information</fullName>
+                <default>false</default>
+                <label>Intent - News/Information</label>
+            </value>
+            <value>
+                <fullName>Intent - Real Estate</fullName>
+                <default>false</default>
+                <label>Intent - Real Estate</label>
+            </value>
+            <value>
+                <fullName>Intent - Shopping/Retail</fullName>
+                <default>false</default>
+                <label>Intent - Shopping/Retail</label>
+            </value>
+            <value>
+                <fullName>Intent - Sport</fullName>
+                <default>false</default>
+                <label>Intent - Sport</label>
+            </value>
+            <value>
+                <fullName>Intent - Travel</fullName>
+                <default>false</default>
+                <label>Intent - Travel</label>
+            </value>
+            <value>
+                <fullName>Interest - Auto</fullName>
+                <default>false</default>
+                <label>Interest - Auto</label>
+            </value>
+            <value>
+                <fullName>Interest - B2B</fullName>
+                <default>false</default>
+                <label>Interest - B2B</label>
+            </value>
+            <value>
+                <fullName>Interest - Consumer Electronics</fullName>
+                <default>false</default>
+                <label>Interest - Consumer Electronics</label>
+            </value>
+            <value>
+                <fullName>Interest - Entertainment</fullName>
+                <default>false</default>
+                <label>Interest - Entertainment</label>
+            </value>
+            <value>
+                <fullName>Interest - Finance</fullName>
+                <default>false</default>
+                <label>Interest - Finance</label>
+            </value>
+            <value>
+                <fullName>Interest - Food</fullName>
+                <default>false</default>
+                <label>Interest - Food</label>
+            </value>
+            <value>
+                <fullName>Interest - Gaming</fullName>
+                <default>false</default>
+                <label>Interest - Gaming</label>
+            </value>
+            <value>
+                <fullName>Interest - IT/Computer</fullName>
+                <default>false</default>
+                <label>Interest - IT/Computer</label>
+            </value>
+            <value>
+                <fullName>Interest - Jobs</fullName>
+                <default>false</default>
+                <label>Interest - Jobs</label>
+            </value>
+            <value>
+                <fullName>Interest - News/Information</fullName>
+                <default>false</default>
+                <label>Interest - News/Information</label>
+            </value>
+            <value>
+                <fullName>Interest - Shopping/Retail</fullName>
+                <default>false</default>
+                <label>Interest - Shopping/Retail</label>
+            </value>
+            <value>
+                <fullName>Interest - Sport</fullName>
+                <default>false</default>
+                <label>Interest - Sport</label>
+            </value>
+            <value>
+                <fullName>Interest - Travel</fullName>
+                <default>false</default>
+                <label>Interest - Travel</label>
+            </value>
+            <value>
+                <fullName>Seasonal Segments</fullName>
+                <default>false</default>
+                <label>Seasonal Segments</label>
+            </value>
+            <value>
+                <fullName>AU TV Zones</fullName>
+                <default>false</default>
+                <label>AU TV Zones</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

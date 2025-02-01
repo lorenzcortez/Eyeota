@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Earnings_Revenue_Final_USD__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(AND(AND( Date_Invoiced__c &gt;=DATEVALUE(&quot;2019-08-01&quot;),(Revenue_For_Export__c +  Earnings_Revenue_Adjustment_USD__c)&lt;0),DAY(Date_Invoiced__c)=1),
+0,
+Revenue_For_Export__c +  Earnings_Revenue_Adjustment_USD__c)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Earnings Revenue Final (USD)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>10</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Errors</fullName>
+    <columns>NAME</columns>
+    <columns>PDT_Member__c</columns>
+    <columns>Date_Invoiced__c</columns>
+    <columns>Date__c</columns>
+    <columns>Revenue__c</columns>
+    <columns>Buyer_and_Buyer_Country__c</columns>
+    <columns>Buyer_Raw__c</columns>
+    <columns>Buyer_Country_Raw__c</columns>
+    <columns>Target_Country_Raw__c</columns>
+    <columns>Advertiser_Raw_Original__c</columns>
+    <columns>Segment_Name__c</columns>
+    <columns>Campaign_Raw_Original__c</columns>
+    <columns>Platform_Raw_Original__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Buyer_Raw__c</field>
+        <operation>startsWith</operation>
+        <value>home depot</value>
+    </filters>
+    <filters>
+        <field>Date_Invoiced__c</field>
+        <operation>greaterOrEqual</operation>
+        <value>1/1/2022</value>
+    </filters>
+    <filters>
+        <field>Buyer_Global_Data_Alliance_Removed__c</field>
+        <operation>equals</operation>
+        <value>,Unknown</value>
+    </filters>
+    <label>Errors_Buyers</label>
+</ListView>

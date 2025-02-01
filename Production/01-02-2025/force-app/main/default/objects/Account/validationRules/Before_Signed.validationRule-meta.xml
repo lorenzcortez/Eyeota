@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Before_Signed</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(AND(AND( RecordType.Name =&apos;Open Account&apos;, TEXT(Status__c) =&apos;Signed&apos;),TEXT(Integration_Type__c)=null),TEXT(Data_Type__c)=null)</errorConditionFormula>
+    <errorMessage>Please make sure that Ingestion/Onboarding Type and Data Type are filled in before saving the record.</errorMessage>
+</ValidationRule>

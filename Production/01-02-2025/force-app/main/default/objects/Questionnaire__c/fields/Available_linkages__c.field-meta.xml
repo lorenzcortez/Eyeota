@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Available_linkages__c</fullName>
+    <label>Available Linkages</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Mobile Device ID to HH Address</fullName>
+                <default>false</default>
+                <label>Mobile Device ID to HH Address</label>
+            </value>
+            <value>
+                <fullName>Mobile Device ID to Hashed Email</fullName>
+                <default>false</default>
+                <label>Mobile Device ID to Hashed Email</label>
+            </value>
+            <value>
+                <fullName>Mobile Device ID to App Usage Data</fullName>
+                <default>false</default>
+                <label>Mobile Device ID to App Usage Data</label>
+            </value>
+            <value>
+                <fullName>Full Name to Postal code</fullName>
+                <default>false</default>
+                <label>Full Name to Postal code</label>
+            </value>
+            <value>
+                <fullName>Postal code to Email</fullName>
+                <default>false</default>
+                <label>Postal code to Email</label>
+            </value>
+            <value>
+                <fullName>Cookies to Email</fullName>
+                <default>false</default>
+                <label>Cookies to Email</label>
+            </value>
+            <value>
+                <fullName>Postal Code to Phone Number</fullName>
+                <default>false</default>
+                <label>Postal Code to Phone Number</label>
+            </value>
+            <value>
+                <fullName>Mobile Device ID to Cookies</fullName>
+                <default>false</default>
+                <label>Mobile Device ID to Cookies</label>
+            </value>
+            <value>
+                <fullName>None of the above</fullName>
+                <default>false</default>
+                <label>None of the above</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

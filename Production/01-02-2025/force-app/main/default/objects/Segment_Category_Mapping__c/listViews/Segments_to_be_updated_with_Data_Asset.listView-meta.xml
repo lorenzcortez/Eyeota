@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Segments_to_be_updated_with_Data_Asset</fullName>
+    <columns>LAST_UPDATE</columns>
+    <columns>NAME</columns>
+    <columns>Data_Supplier_Holding_Group__c</columns>
+    <columns>Data_Asset_Account__c</columns>
+    <columns>Data_Supplier__c</columns>
+    <columns>Segment_Name__c</columns>
+    <columns>Segment_Supplier_Category__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Data_Asset_Account__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>Segment_Supplier_Category__c</field>
+        <operation>equals</operation>
+        <value>Branded</value>
+    </filters>
+    <filters>
+        <field>Segment_Name__c</field>
+        <operation>contains</operation>
+        <value>YouGov</value>
+    </filters>
+    <label>Segments to be updated with Data Asset</label>
+    <sharedTo>
+        <role>DataOps_Team</role>
+    </sharedTo>
+</ListView>

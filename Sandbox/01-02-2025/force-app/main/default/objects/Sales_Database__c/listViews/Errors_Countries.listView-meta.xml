@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Errors_Countries</fullName>
+    <columns>NAME</columns>
+    <columns>Date_Invoiced__c</columns>
+    <columns>Segment_Revenue_Transaction__c</columns>
+    <columns>Buyer_and_Buyer_Country__c</columns>
+    <columns>Buyer_Country_Raw__c</columns>
+    <columns>Target_Country_Raw__c</columns>
+    <columns>Segment_Name_Sales_Raw_Original__c</columns>
+    <columns>Buyer_Raw__c</columns>
+    <columns>Advertiser_Raw__c</columns>
+    <columns>Campaign__c</columns>
+    <columns>Platform_Raw_Original__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Date_Invoiced__c</field>
+        <operation>equals</operation>
+        <value>2/1/2022</value>
+    </filters>
+    <filters>
+        <field>Target_Country_Raw__c</field>
+        <operation>equals</operation>
+        <value>&quot;DE, CH&quot;</value>
+    </filters>
+    <filters>
+        <field>Buyer_Raw__c</field>
+        <operation>equals</operation>
+        <value>META PLATFORMS_UK (GBP)</value>
+    </filters>
+    <label>Errors_Countries</label>
+</ListView>

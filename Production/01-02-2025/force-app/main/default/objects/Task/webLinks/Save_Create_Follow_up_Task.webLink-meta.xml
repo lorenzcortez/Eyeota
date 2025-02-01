@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Save_Create_Follow_up_Task</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Save &amp; Create Follow-up Task</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/32.0/connection.js&quot;)}
+
+try{
+    var taskToUpdate = new sforce.SObject(&quot;Task&quot;);
+
+    taskToUpdate.Id = &quot;{!Task.Id}&quot;;
+    taskToUpdate.Status = &quot;Completed&quot;;
+
+    var result = sforce.connection.update([taskToUpdate]);
+
+    if(result[0].success === &quot;true&quot;){
+        location.replace(&quot;/{!Task.Id}/e?clone=1&amp;tsk12=Not%20Started&quot;);
+    }
+    else{
+        alert(
+            &quot;An Error has Occurred. Error: &quot; + 
+            result[0].errors.message
+        );
+    }
+}
+catch(e){
+    alert(
+        &quot;An Un-expected Error has Occurred. Error: &quot; + 
+        e
+    );
+}</url>
+</WebLink>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Krux_excluded</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(NOT(INCLUDES(Inclusion_List_GlobalList__c,&apos;Krux&apos;)),NOT(ISBLANK( Krux_Upload_Date__c )))</errorConditionFormula>
+    <errorDisplayField>Krux_Upload_Date__c</errorDisplayField>
+    <errorMessage>Krux is not in the Inclusion List.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Supplier_Gross_Earnings_Retrospective__c</fullName>
+    <description>For data before 2016 and for Digital Envoy adjustments.</description>
+    <label>Digital Envoy Adjustment (USD)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>6</scale>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

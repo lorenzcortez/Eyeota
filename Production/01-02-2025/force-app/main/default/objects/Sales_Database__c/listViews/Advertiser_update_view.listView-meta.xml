@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Advertiser_update_view</fullName>
+    <columns>NAME</columns>
+    <columns>Platform_Account_Name__c</columns>
+    <columns>Advertiser_Account_Name__c</columns>
+    <columns>Advertiser_Raw_Original__c</columns>
+    <columns>Segment_Name__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Advertiser_Raw__c</field>
+        <operation>equals</operation>
+        <value>VBG_BUSINESS MARKETS</value>
+    </filters>
+    <filters>
+        <field>Date_Invoiced__c</field>
+        <operation>greaterOrEqual</operation>
+        <value>9/1/2023</value>
+    </filters>
+    <label>Advertiser update view (JD)</label>
+    <sharedTo>
+        <group>AIA_Team</group>
+    </sharedTo>
+</ListView>

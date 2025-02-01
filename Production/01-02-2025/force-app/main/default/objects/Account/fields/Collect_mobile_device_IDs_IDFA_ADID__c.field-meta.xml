@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Collect_mobile_device_IDs_IDFA_ADID__c</fullName>
+    <label>Collect mobile device IDs (IDFA, ADID)</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Yes_No</valueSetName>
+    </valueSet>
+</CustomField>

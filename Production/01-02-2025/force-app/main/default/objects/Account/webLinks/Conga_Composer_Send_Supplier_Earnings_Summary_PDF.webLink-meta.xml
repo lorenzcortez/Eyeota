@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Conga_Composer_Send_Supplier_Earnings_Summary_PDF</fullName>
+    <availability>online</availability>
+    <description>Originally created by Conga Solution Manager. Date of last use of Update Button from Conga Solution record: https://d90000000ysloeai--apxtconga4.visualforce.com/a7e0o00000002GQAAY
+27-Apr-2022 11:18:38 AM</description>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <hasMenubar>false</hasMenubar>
+    <hasScrollbars>false</hasScrollbars>
+    <hasToolbar>false</hasToolbar>
+    <height>660</height>
+    <isResizable>false</isResizable>
+    <linkType>url</linkType>
+    <masterLabel>Send Supplier Earnings Summary PDF</masterLabel>
+    <openType>newWindow</openType>
+    <position>none</position>
+    <protected>false</protected>
+    <showsLocation>false</showsLocation>
+    <showsStatus>false</showsStatus>
+    <url>/apex/APXTConga4__Conga_Composer?SolMgr=1
+&amp;serverUrl={!API.Partner_Server_URL_370}
+&amp;Id={!Account.Id}
+
+&amp;QueryId=[SDBMonth]a7Y0o0000007D6u,
+[SDBBreakdown]a7Y0o0000007Cyp,
+[SDBLast6Mos]a7Y0o0000007CyQ
+
+&amp;TemplateId=a7g0o0000000KGT
+
+&amp;CongaEmailTemplateId=a7X0o000001Pfad
+
+&amp;OFN=PO{!Account.PO__c}322+&quot;Mar+2022+-+Eyeota+Supplier+Earnings+Report+-&quot;+{!Account.Name}
+&amp;EmailBCC=marketing-tech@eyeota.com
+&amp;EmailCC=accounts@eyeota.com
+&amp;DefaultPDF=1
+&amp;EmailAdditionalTo={!Account.Supplier_Earnings_Email__c}
+&amp;EmailToId={!$User.Id}
+&amp;DS7=13</url>
+    <width>900</width>
+</WebLink>

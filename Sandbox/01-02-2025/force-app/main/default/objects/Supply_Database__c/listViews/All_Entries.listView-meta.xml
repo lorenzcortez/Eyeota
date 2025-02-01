@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Entries</fullName>
+    <columns>NAME</columns>
+    <columns>Date__c</columns>
+    <columns>Data_Supplier__c</columns>
+    <columns>Data_Supplier_Raw_Original__c</columns>
+    <columns>Segment_Name_Supply_Raw_Original__c</columns>
+    <columns>Segment_Name__c</columns>
+    <columns>Target_Country_Raw__c</columns>
+    <columns>Publisher_Data_Type__c</columns>
+    <columns>Supplier_Revenue_Share__c</columns>
+    <columns>Uniques__c</columns>
+    <columns>Total_Segment_Uniques__c</columns>
+    <columns>Total_Segment_Revenue__c</columns>
+    <columns>Supplier_Gross_Earnings__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All Entries</label>
+</ListView>

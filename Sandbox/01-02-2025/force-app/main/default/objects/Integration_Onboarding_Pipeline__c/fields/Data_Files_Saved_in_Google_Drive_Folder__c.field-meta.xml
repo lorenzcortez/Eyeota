@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Data_Files_Saved_in_Google_Drive_Folder__c</fullName>
+    <inlineHelpText>Mapping files refer to files received from 3rd party onboarder</inlineHelpText>
+    <label>Data/Mapping File Saved in Drive</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

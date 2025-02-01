@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Errors_Platforms</fullName>
+    <columns>NAME</columns>
+    <columns>Platform__c</columns>
+    <columns>Platform_Raw_Original__c</columns>
+    <columns>Buyer_and_Buyer_Country__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Date_Invoiced__c</field>
+        <operation>equals</operation>
+        <value>1/5/2022</value>
+    </filters>
+    <filters>
+        <field>Platform__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>Platform_Raw__c</field>
+        <operation>startsWith</operation>
+        <value>OMD EMEA</value>
+    </filters>
+    <label>Errors_Platforms</label>
+</ListView>

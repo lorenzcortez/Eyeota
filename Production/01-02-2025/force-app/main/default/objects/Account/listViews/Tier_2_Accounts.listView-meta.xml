@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tier_2_Accounts</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ACCOUNT.RECORDTYPE</columns>
+    <columns>Regionv2__c</columns>
+    <columns>CORE.USERS.FIRST_NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Tiers__c</field>
+        <operation>equals</operation>
+        <value>Tier 2</value>
+    </filters>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.Data_Supplier_Parent_Accout</value>
+    </filters>
+    <label>Tier 2 Accounts</label>
+</ListView>

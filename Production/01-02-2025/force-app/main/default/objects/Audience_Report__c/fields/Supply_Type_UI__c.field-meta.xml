@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Supply_Type_UI__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(AND(Data_Supplier_Raw_Original__c =&apos;Eyeota&apos;, 
+NOT(BEGINS(Segment_Taxonomy_Name__c,&apos;Custom Segment&apos;)) 
+),&apos;Eyeota Marketplace&apos;, 
+
+(IF 
+(AND(AND 
+(BEGINS(Data_Supplier_Raw_Original__c,&apos;BD_&apos;),Segment_Error__c=null), 
+OR(NOT(CONTAINS(Segment_Taxonomy_Name__c,&apos;- Custom -&apos;))), 
+(NOT(CONTAINS(Segment_Taxonomy_Name__c,&apos;-Custom-&apos;)) 
+)),&apos;Branded&apos;, 
+
+(IF 
+(AND 
+(OR 
+(OR(CONTAINS( Eyeota_UI_Segment_Name__c ,&apos;Custom &apos;)),Segment_Category__c=&apos;Custom&apos;), 
+OR(CONTAINS(Segment_Taxonomy_Name__c,&apos;- Custom -&apos;),CONTAINS(Segment_Taxonomy_Name__c,&apos;-Custom-&apos;)), 
+BEGINS(Data_Supplier_Raw_Original__c,&apos;BD_&apos;) 
+),&apos;Branded Custom&apos;, 
+
+(IF 
+(OR(AND 
+(OR((CONTAINS( Eyeota_UI_Segment_Name__c ,&apos;Custom &apos;)),Segment_Category__c=&apos;Custom&apos;), 
+(NOT(BEGINS(Data_Supplier_Raw_Original__c,&apos;BD&apos;))) 
+) 
+,BEGINS(Segment_Taxonomy_Name__c,&apos;Custom Segment&apos; 
+)),&apos;Eyeota Custom&apos;, 
+
+&apos;Linked Segments&apos;))) 
+
+))))</formula>
+    <label>Supply Type (UI)</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

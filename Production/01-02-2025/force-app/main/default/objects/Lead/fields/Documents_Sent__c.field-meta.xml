@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Documents_Sent__c</fullName>
+    <label>Documents Sent</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Contract</fullName>
+                <default>false</default>
+                <label>Contract</label>
+            </value>
+            <value>
+                <fullName>Billing Process</fullName>
+                <default>false</default>
+                <label>Billing Process</label>
+            </value>
+            <value>
+                <fullName>Pixel Implementation</fullName>
+                <default>false</default>
+                <label>Pixel Implementation</label>
+            </value>
+            <value>
+                <fullName>Publisher Intro</fullName>
+                <default>false</default>
+                <label>Publisher Intro</label>
+            </value>
+            <value>
+                <fullName>Sales Deck</fullName>
+                <default>false</default>
+                <label>Sales Deck</label>
+            </value>
+            <value>
+                <fullName>Others</fullName>
+                <default>false</default>
+                <label>Others</label>
+            </value>
+            <value>
+                <fullName>Lead</fullName>
+                <default>false</default>
+                <label>Lead</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

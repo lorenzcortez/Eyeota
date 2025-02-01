@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Global_Taxonomy_Status_Formula__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE( Segment_Category_Mapping__r.Global_Taxonomy_Status__c ,
+&quot;Transfer-Delete&quot;,1,
+&quot;Transfer-Keep&quot;,1,
+&quot;Delete&quot;,2,
+NULL)</formula>
+    <label>Global Taxonomy Status (Formula)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

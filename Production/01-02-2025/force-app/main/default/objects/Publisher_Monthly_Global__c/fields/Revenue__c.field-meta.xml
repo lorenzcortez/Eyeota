@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Revenue__c</fullName>
+    <description>Revenue aggregated from Gross Supplier Earnings of Supply Database, for the Date and Data Supplier in the current record.</description>
+    <label>Revenue</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Segments</fullName>
+    <availability>online</availability>
+    <displayType>massActionButton</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>New Segments</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <requireRowSelection>true</requireRowSelection>
+    <url>var loc; 
+
+if ( 
+&quot;{!Account.Integration_Type__c}&quot; == &quot;Online via Pixel&quot; &amp;&amp; 
+&quot;{!Account.Data_Type__c}&quot; == &quot;Branded&quot; &amp;&amp; 
+&quot;{!Account.Approved__c}&quot; == true 
+
+) 
+{loc = &quot;/a02/e?CF00N9000000EQvyZ={!Account.Name}&amp;CF00N9000000EQvyZ_lkid={!Account.Id}&amp;CF00N9000000FDUIA={!Account.Data_Operations__c}&amp;CF00N9000000FDUIA_lkid={!Account.Data_OperationsId__c}&amp;retURL=%2{!Account.Id}&amp;RecordType=01290000001MIRc&amp;00N9000000EQvpI={!Account.Publisher_ID__c}&amp;ent=01I900000007pkP&amp;00N9000000EQvyj=New_Segments&quot;; 
+} 
+
+else if ( 
+&quot;{!Account.Integration_Type__c}&quot; == &quot;Online via Pixel&quot; &amp;&amp; 
+&quot;{!Account.Data_Type__c}&quot; == &quot;Branded &amp; Non-Branded&quot; &amp;&amp; 
+&quot;{!Account.Approved__c}&quot; == true 
+
+) 
+{loc = &quot;/a02/e?CF00N9000000EQvyZ={!Account.Name}&amp;CF00N9000000EQvyZ_lkid={!Account.Id}&amp;CF00N9000000FDUIA={!Account.Data_Operations__c}&amp;CF00N9000000FDUIA_lkid={!Account.Data_OperationsId__c}&amp;retURL=%2{!Account.Id}&amp;RecordType=01290000001MIRc&amp;00N9000000EQvpI={!Account.Publisher_ID__c}&amp;ent=01I900000007pkP&amp;00N9000000EQvyj=New_Segments&quot;; 
+} 
+
+else if ( 
+&quot;{!Account.Integration_Type__c}&quot; == &quot;Online via Pixel&quot; &amp;&amp; 
+&quot;{!Account.Data_Type__c}&quot; == &quot;Non-Branded&quot; &amp;&amp; 
+&quot;{!Account.Approved__c}&quot; == true 
+) 
+{loc = &quot;/a02/e?CF00N9000000EQvyZ={!Account.Name}&amp;CF00N9000000EQvyZ_lkid={!Account.Id}&amp;CF00N9000000FDUIA={!Account.Data_Operations__c}&amp;CF00N9000000FDUIA_lkid={!Account.Data_OperationsId__c}&amp;retURL=%2{!Account.Id}&amp;RecordType=01290000000AB21&amp;00N9000000EQvpI={!Account.Publisher_ID__c}&amp;ent=01I900000007pkP&amp;00N9000000EQvyj=New_Segments&quot;; 
+} 
+
+else if ( 
+&quot;{!Account.Integration_Type__c}&quot; == &quot;Online via S2S&quot; &amp;&amp; 
+&quot;{!Account.Data_Type__c}&quot; == &quot;Branded&quot; &amp;&amp; 
+&quot;{!Account.Approved__c}&quot; == true 
+) 
+{loc = &quot;/a02/e?CF00N9000000EQvyZ={!Account.Name}&amp;CF00N9000000EQvyZ_lkid={!Account.Id}&amp;CF00N9000000FDUIA={!Account.Data_Operations__c}&amp;CF00N9000000FDUIA_lkid={!Account.Data_OperationsId__c}&amp;retURL=%2{!Account.Id}&amp;RecordType=01290000001MIRh&amp;00N9000000EQvpI={!Account.Publisher_ID__c}&amp;ent=01I900000007pkP&amp;00N9000000EQvyj=New_Segments&quot;; 
+} 
+
+else if ( 
+&quot;{!Account.Integration_Type__c}&quot; == &quot;Online via S2S&quot; &amp;&amp; 
+&quot;{!Account.Data_Type__c}&quot; == &quot;Branded &amp; Non-Branded&quot; &amp;&amp; 
+&quot;{!Account.Approved__c}&quot; == true 
+) 
+{loc = &quot;/a02/e?CF00N9000000EQvyZ={!Account.Name}&amp;CF00N9000000EQvyZ_lkid={!Account.Id}&amp;CF00N9000000FDUIA={!Account.Data_Operations__c}&amp;CF00N9000000FDUIA_lkid={!Account.Data_OperationsId__c}&amp;retURL=%2{!Account.Id}&amp;RecordType=01290000001MIRh&amp;00N9000000EQvpI={!Account.Publisher_ID__c}&amp;ent=01I900000007pkP&amp;00N9000000EQvyj=New_Segments&quot;; 
+} 
+
+else if ( 
+&quot;{!Account.Integration_Type__c}&quot; == &quot;Online via S2S&quot; &amp;&amp; 
+&quot;{!Account.Data_Type__c}&quot; == &quot;Non-Branded&quot; &amp;&amp; 
+&quot;{!Account.Approved__c}&quot; == true 
+) 
+{loc = &quot;/a02/e?CF00N9000000EQvyZ={!Account.Name}&amp;CF00N9000000EQvyZ_lkid={!Account.Id}&amp;CF00N9000000FDUIA={!Account.Data_Operations__c}&amp;CF00N9000000FDUIA_lkid={!Account.Data_OperationsId__c}&amp;retURL=%2{!Account.Id}&amp;RecordType=01290000000AB26&amp;00N9000000EQvpI={!Account.Publisher_ID__c}&amp;ent=01I900000007pkP&amp;00N9000000EQvyj=New_Segments&quot;; 
+} 
+
+else if ( 
+&quot;{!Account.Integration_Type__c}&quot; == &quot;Offline via 3rd Party Onboarder&quot; &amp;&amp; 
+&quot;{!Account.Data_Type__c}&quot; == &quot;Branded&quot; &amp;&amp; 
+&quot;{!Account.Approved__c}&quot; == true 
+) 
+{loc = &quot;/a02/e?CF00N9000000EQvyZ={!Account.Name}&amp;CF00N9000000EQvyZ_lkid={!Account.Id}&amp;CF00N9000000FDUIA={!Account.Data_Operations__c}&amp;CF00N9000000FDUIA_lkid={!Account.Data_OperationsId__c}&amp;retURL=%2{!Account.Id}&amp;RecordType=01290000001MIQF&amp;00N9000000EQvpI={!Account.Publisher_ID__c}&amp;ent=01I900000007pkP&amp;00N9000000EQvyj=New_Segments&quot;; 
+} 
+
+else if ( 
+&quot;{!Account.Integration_Type__c}&quot; == &quot;Offline via Geo Location&quot; &amp;&amp; 
+&quot;{!Account.Data_Type__c}&quot; == &quot;Branded&quot; &amp;&amp; 
+&quot;{!Account.Approved__c}&quot; == true 
+) 
+{loc = &quot;/a02/e?CF00N9000000EQvyZ={!Account.Name}&amp;CF00N9000000EQvyZ_lkid={!Account.Id}&amp;CF00N9000000FDUIA={!Account.Data_Operations__c}&amp;CF00N9000000FDUIA_lkid={!Account.Data_OperationsId__c}&amp;retURL=%2{!Account.Id}&amp;RecordType=01290000001MIQe&amp;00N9000000EQvpI={!Account.Publisher_ID__c}&amp;ent=01I900000007pkP&amp;00N9000000EQvyj=New_Segments&quot;; 
+} 
+
+else if ( 
+&quot;{!Account.Integration_Type__c}&quot; == &quot;Offline via Geo Location &amp; Sociodemographics&quot; &amp;&amp; 
+&quot;{!Account.Data_Type__c}&quot; == &quot;Branded&quot; &amp;&amp; 
+&quot;{!Account.Approved__c}&quot; == true 
+) 
+{loc = &quot;/a02/e?CF00N9000000EQvyZ={!Account.Name}&amp;CF00N9000000EQvyZ_lkid={!Account.Id}&amp;CF00N9000000FDUIA={!Account.Data_Operations__c}&amp;CF00N9000000FDUIA_lkid={!Account.Data_OperationsId__c}&amp;retURL=%2{!Account.Id}&amp;RecordType=01290000001MIQe&amp;00N9000000EQvpI={!Account.Publisher_ID__c}&amp;ent=01I900000007pkP&amp;00N9000000EQvyj=New_Segments&quot;; 
+} 
+
+else if ( 
+&quot;{!Account.Integration_Type__c}&quot; == &quot;Online via S2S and Modelling&quot; &amp;&amp; 
+&quot;{!Account.Data_Type__c}&quot; == &quot;Branded&quot; &amp;&amp; 
+&quot;{!Account.Approved__c}&quot; == true 
+) 
+{loc = &quot;/a02/e?CF00N9000000EQvyZ={!Account.Name}&amp;CF00N9000000EQvyZ_lkid={!Account.Id}&amp;CF00N9000000FDUIA={!Account.Data_Operations__c}&amp;CF00N9000000FDUIA_lkid={!Account.Data_OperationsId__c}&amp;retURL=%2{!Account.Id}&amp;RecordType=01290000001MIRm&amp;00N9000000EQvpI={!Account.Publisher_ID__c}&amp;ent=01I900000007pkP&amp;00N9000000EQvyj=New_Segments&quot;; 
+} 
+
+else if ( 
+&quot;{!Account.Integration_Type__c}&quot; == &quot;Online via S2S&quot; &amp;&amp; 
+&quot;{!Account.Data_Type__c}&quot; == &quot;Branded&quot; &amp;&amp; 
+&quot;{!Account.Approved__c}&quot; == false 
+) 
+
+{ 
+if(confirm(&quot;Please wait for the account to be approved before starting the Ingestion/Onboarding Process.&quot;) == true) 
+{loc=&quot;/{!Account.Id}&quot;} 
+else {loc=&quot;/{!Account.Id}&quot;} 
+} 
+
+else if ( 
+&quot;{!Account.Integration_Type__c}&quot; == &quot;Online via S2S&quot; &amp;&amp; 
+&quot;{!Account.Data_Type__c}&quot; == &quot;Branded &amp; Non-Branded&quot; &amp;&amp; 
+&quot;{!Account.Approved__c}&quot; == false 
+) 
+
+{ 
+if(confirm(&quot;Please wait for the account to be approved before starting the Ingestion/Onboarding Process.&quot;) == true) 
+{loc=&quot;/{!Account.Id}&quot;} 
+else {loc=&quot;/{!Account.Id}&quot;} 
+} 
+
+
+else if ( 
+&quot;{!Account.Integration_Type__c}&quot; == &quot;Online via S2S&quot; &amp;&amp; 
+&quot;{!Account.Data_Type__c}&quot; == &quot;Non-Branded&quot; &amp;&amp; 
+&quot;{!Account.Approved__c}&quot; == false 
+) 
+
+{ 
+if(confirm(&quot;Please wait for the account to be approved before starting the Ingestion/Onboarding Process.&quot;) == true) 
+{loc=&quot;/{!Account.Id}&quot;} 
+else {loc=&quot;/{!Account.Id}&quot;} 
+} 
+
+else if ( 
+&quot;{!Account.Integration_Type__c}&quot; == &quot;Offline via Geo Location&quot; &amp;&amp; 
+&quot;{!Account.Data_Type__c}&quot; == &quot;Branded&quot; &amp;&amp; 
+&quot;{!Account.Approved__c}&quot; == false 
+) 
+
+{ 
+if(confirm(&quot;Please wait for the account to be approved before starting the Ingestion/Onboarding Process.&quot;) == true) 
+{loc=&quot;/{!Account.Id}&quot;} 
+else {loc=&quot;/{!Account.Id}&quot;} 
+} 
+
+
+else if ( 
+&quot;{!Account.Integration_Type__c}&quot; == &quot;Offline via Geo Location &amp; Sociodemographics&quot; &amp;&amp; 
+&quot;{!Account.Data_Type__c}&quot; == &quot;Branded&quot; &amp;&amp; 
+&quot;{!Account.Approved__c}&quot; == false 
+) 
+
+{ 
+if(confirm(&quot;Please wait for the account to be approved before starting the Ingestion/Onboarding Process.&quot;) == true) 
+{loc=&quot;/{!Account.Id}&quot;} 
+else {loc=&quot;/{!Account.Id}&quot;} 
+} 
+
+
+else if ( 
+&quot;{!Account.Integration_Type__c}&quot; == &quot;Online via S2S and Modelling&quot; &amp;&amp; 
+&quot;{!Account.Data_Type__c}&quot; == &quot;Branded&quot; &amp;&amp; 
+&quot;{!Account.Approved__c}&quot; == false 
+) 
+
+{ 
+if(confirm(&quot;Please wait for the account to be approved before starting the Ingestion/Onboarding Process.&quot;) == true) 
+{loc=&quot;/{!Account.Id}&quot;} 
+else {loc=&quot;/{!Account.Id}&quot;} 
+} 
+
+
+else if ( 
+&quot;{!Account.Integration_Type__c}&quot; == &quot;Online via Pixel&quot; &amp;&amp; 
+&quot;{!Account.Data_Type__c}&quot; == &quot;Branded&quot; &amp;&amp; 
+&quot;{!Account.Approved__c}&quot; == false 
+) 
+
+{ 
+if(confirm(&quot;Please wait for the account to be approved before starting the Ingestion/Onboarding Process.&quot;) == true) 
+{loc=&quot;/{!Account.Id}&quot;} 
+else {loc=&quot;/{!Account.Id}&quot;} 
+} 
+
+
+else if ( 
+&quot;{!Account.Integration_Type__c}&quot; == &quot;Online via Pixel&quot; &amp;&amp; 
+&quot;{!Account.Data_Type__c}&quot; == &quot;Branded &amp; Non-Branded&quot; &amp;&amp; 
+&quot;{!Account.Approved__c}&quot; == false 
+) 
+
+{ 
+if(confirm(&quot;Please wait for the account to be approved before starting the Ingestion/Onboarding Process.&quot;) == true) 
+{loc=&quot;/{!Account.Id}&quot;} 
+else {loc=&quot;/{!Account.Id}&quot;} 
+} 
+
+
+else if ( 
+&quot;{!Account.Integration_Type__c}&quot; == &quot;Online via Pixel&quot; &amp;&amp; 
+&quot;{!Account.Data_Type__c}&quot; == &quot;Non-Branded&quot; &amp;&amp; 
+&quot;{!Account.Approved__c}&quot; == false 
+) 
+
+{ 
+if(confirm(&quot;Please wait for the account to be approved before starting the Ingestion/Onboarding Process.&quot;) == true) 
+{loc=&quot;/{!Account.Id}&quot;} 
+else {loc=&quot;/{!Account.Id}&quot;} 
+} 
+
+
+else if ( 
+&quot;{!Account.Integration_Type__c}&quot; == &quot;Offline via 3rd Party Onboarder&quot; &amp;&amp; 
+&quot;{!Account.Data_Type__c}&quot; == &quot;Branded&quot; &amp;&amp; 
+&quot;{!Account.Approved__c}&quot; == false 
+) 
+
+{ 
+if(confirm(&quot;Please wait for the account to be approved before starting the Ingestion/Onboarding Process.&quot;) == true) 
+{loc=&quot;/{!Account.Id}&quot;} 
+else {loc=&quot;/{!Account.Id}&quot;} 
+} 
+
+
+else if ( 
+&quot;{!Account.Integration_Type__c}&quot; == &quot;Offline via 3rd Party Onboarded&quot; &amp;&amp; 
+&quot;{!Account.Data_Type__c}&quot; == &quot;Branded &amp; Non-Branded&quot; &amp;&amp; 
+&quot;{!Account.Approved__c}&quot; == false 
+) 
+
+{ 
+if(confirm(&quot;Please wait for the account to be approved before starting the Ingestion/Onboarding Process.&quot;) == true) 
+{loc=&quot;/{!Account.Id}&quot;} 
+else {loc=&quot;/{!Account.Id}&quot;} 
+} 
+
+
+else 
+
+{ 
+if(confirm(&quot;This is not a valid Ingestion/Onboarding type. Please check that Ingestion Type and Data Type are correct.&quot;) == true) 
+{loc=&quot;/{!Account.Id}&quot;} 
+else {loc=&quot;/{!Account.Id}&quot;} 
+} 
+
+
+window.top.location.href = loc;</url>
+</WebLink>

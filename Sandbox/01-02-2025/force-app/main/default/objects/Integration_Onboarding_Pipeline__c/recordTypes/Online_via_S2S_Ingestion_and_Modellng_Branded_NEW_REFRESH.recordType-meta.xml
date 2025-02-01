@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Online_via_S2S_Ingestion_and_Modellng_Branded_NEW_REFRESH</fullName>
+    <active>false</active>
+    <label>Online via S2S Ingestion and Modellng (Branded) - NEW/REFRESH</label>
+    <picklistValues>
+        <picklist>Audience_Report_Blurb__c</picklist>
+        <values>
+            <fullName>Complete</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incomplete</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Data_Type_v2__c</picklist>
+        <values>
+            <fullName>Branded</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non-Branded</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PDMP</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Inclusion_List_GlobalList__c</picklist>
+        <values>
+            <fullName>AdTheorent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Adform</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Adobe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Aggregate Knowledge</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Amazon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Amobee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Amobee - Social</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AppNexus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Appier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Avocet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Basis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bidtellect</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brand Networks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brightroll</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Conversant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DataXu</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Facebook</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FreakOut</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Glassview</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Google</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Google DFP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IgnitionOne</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Infectious Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Krux</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LiveRamp</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lotame</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MPlatform</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Media iQ Digital</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MediaMath</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nativo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ONE by AOL%2FAOL Platforms</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oracle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Permutive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pubmatic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quantcast</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RadiumOne</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rocketfuel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Semasio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Specific Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SpotXchange</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>StackAdapt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Taboola</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tapad</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>The Trade Desk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Treasure Data</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tremor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TubeMogul</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Turn</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Viant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Videology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Xaxis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yahoo</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Press_Release_Status__c</picklist>
+        <values>
+            <fullName>1st draft with BDP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting for internal approval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting for more info</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Product_Page_Status__c</picklist>
+        <values>
+            <fullName>1st draft with BDP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting for internal approval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting for more info</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sales_Deck_Status__c</picklist>
+        <values>
+            <fullName>1st draft with BDP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting for internal approval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting for more info</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Segment_Available_in_DSPs_DMPs__c</picklist>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Q1 2021</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Q1 2022</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Q1 2023</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Q1 2024</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Q2 2020</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Q2 2021</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Q2 2022</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Q2 2023</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Q2 2024</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Q3 2020</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Q3 2021</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Q3 2022</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Q3 2023</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Q3 2024</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Q4 2020</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Q4 2021</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Q4 2022</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Q4 2023</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Q4 2024</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Segment_Update_Type__c</picklist>
+        <values>
+            <fullName>Description</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lifetime</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mapping Values</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pricing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Segment Name</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Segments_Visible_in_Audience_Report__c</picklist>
+        <values>
+            <fullName>April 2017</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>April 2018</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>August 2017</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>August 2018</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>December 2017</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>December 2018</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>February 2017</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>February 2018</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>January 2017</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>January 2018</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>July 2017</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>July 2018</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>June 2017</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>June 2018</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>March 2017</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>March 2018</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>May 2017</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>May 2018</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>November 2017</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>November 2018</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>October 2017</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>October 2018</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>September 2017</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>September 2018</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Stage__c</picklist>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dropped</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stage 1%3A Data Prep</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Stage 2%3A Ingestion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stage 3%3A Data Push</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type__c</picklist>
+        <values>
+            <fullName>Custom Segments</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Initial_Onboarding_Integration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New_Segments</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Segment Refresh</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

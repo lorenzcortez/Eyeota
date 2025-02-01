@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SAR_Regulation__c</fullName>
+    <label>SAR Regulation</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Other_/_Generic</fullName>
+                <default>true</default>
+                <label>Other / Generic</label>
+            </value>
+            <value>
+                <fullName>CCPA_(California,_Colorado,_Connecticut,_Virginia,_Utah,_Nevada_Residents)</fullName>
+                <default>false</default>
+                <label>CCPA (California, Colorado, Connecticut, Virginia, Utah, Nevada Residents)</label>
+            </value>
+            <value>
+                <fullName>GDRP_(Non_US_Requests)</fullName>
+                <default>false</default>
+                <label>GDPR (Non US Requests)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

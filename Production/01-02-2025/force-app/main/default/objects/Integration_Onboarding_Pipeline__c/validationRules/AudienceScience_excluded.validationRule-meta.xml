@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AudienceScience_excluded</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(NOT(INCLUDES(Inclusion_List_GlobalList__c,&apos;AudienceScience&apos;)),NOT(ISBLANK( AudienceScience_Upload_Date__c )))</errorConditionFormula>
+    <errorDisplayField>AudienceScience_Upload_Date__c</errorDisplayField>
+    <errorMessage>AudienceScience is not in the Inclusion List.</errorMessage>
+</ValidationRule>

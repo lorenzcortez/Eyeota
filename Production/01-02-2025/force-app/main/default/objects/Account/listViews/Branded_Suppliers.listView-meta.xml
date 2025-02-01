@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Branded_Suppliers</fullName>
+    <columns>CORE.USERS.FIRST_NAME</columns>
+    <columns>Data_Supplier_Holding_Group__c</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ACCOUNT.ADDRESS1_COUNTRY</columns>
+    <columns>Publisher_Status__c</columns>
+    <columns>Currency_Code__c</columns>
+    <columns>Contract_Returned_Date__c</columns>
+    <columns>Revenue_Share_Branded_Data__c</columns>
+    <columns>Revenue_Share__c</columns>
+    <columns>Publisher_Remarks__c</columns>
+    <columns>Other_Requirements__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Receive_Earnings_Report_this_month__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>Data_Type__c</field>
+        <operation>equals</operation>
+        <value>Branded,Branded &amp; Non-Branded</value>
+    </filters>
+    <filters>
+        <field>Publisher_Status__c</field>
+        <operation>equals</operation>
+        <value>Active</value>
+    </filters>
+    <label>Branded Suppliers</label>
+</ListView>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Print_Bulk_Statement_PDF</fullName>
+    <availability>online</availability>
+    <description>Print Bulk Statement PDF</description>
+    <displayType>massActionButton</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Print Bulk Statement PDF</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <requireRowSelection>true</requireRowSelection>
+    <url>// SALES INVOICE
+//var idArray = {!GETRECORDIDS($ObjectType.c2g__codaInvoice__c)};
+// SALES CREDIT NOTE
+//var idArray = {!GETRECORDIDS($ObjectType.c2g__codaCreditNote__c)};
+// CHECKS OR REMITTANCES
+//var idArray = {!GETRECORDIDS($ObjectType.c2g__codaPayment__c)};
+
+var idArray = {!GETRECORDIDS($ObjectType.Account)};
+//This is the formula field created above
+var urlFieldName=&quot;Print_Statement_PDF_Formula__c&quot;;
+// DO NOT MODIFY ANYTHING BELOW THIS LINE
+// YOU MAY PASS UP TO 50 IDS
+var CongaURL = &quot;https://conductor.congamerge.com&quot; +
+&quot;?MOID=&quot; + idArray +
+&quot;&amp;SessionId={!$Api.Session_ID}&quot; +
+&quot;&amp;ServerUrl={!$Api.Partner_Server_URL_160}&quot;+
+&quot;&amp;UrlFieldName=&quot;+urlFieldName;
+window.open( CongaURL, &quot;Conga&quot;, &quot;width=700,height=450,menubar=0&quot; );</url>
+</WebLink>

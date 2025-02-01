@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DuplicateRule xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <actionOnInsert>Block</actionOnInsert>
+    <actionOnUpdate>Allow</actionOnUpdate>
+    <alertText>You&apos;re creating a duplicate record. We recommend you use an existing record instead.</alertText>
+    <description>Triggered when new Lead has the same email as an existing Lead.</description>
+    <duplicateRuleFilter>
+        <booleanFilter xsi:nil="true"/>
+        <duplicateRuleFilterItems>
+            <field>Owner</field>
+            <operation>notEqual</operation>
+            <value>Kevin Tan, Luke Johnson</value>
+            <sortOrder>1</sortOrder>
+            <table>Lead</table>
+        </duplicateRuleFilterItems>
+    </duplicateRuleFilter>
+    <duplicateRuleMatchRules>
+        <matchRuleSObjectType>Lead</matchRuleSObjectType>
+        <matchingRule>Duplicate_Lead_Same_Email</matchingRule>
+        <objectMapping xsi:nil="true"/>
+    </duplicateRuleMatchRules>
+    <isActive>true</isActive>
+    <masterLabel>Duplicate Lead Same Email</masterLabel>
+    <operationsOnUpdate>Report</operationsOnUpdate>
+    <securityOption>BypassSharingRules</securityOption>
+    <sortOrder>1</sortOrder>
+</DuplicateRule>

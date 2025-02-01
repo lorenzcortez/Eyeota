@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TreasureData_excluded</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(NOT(INCLUDES(Inclusion_List_GlobalList__c,&apos;Treasure Data&apos;)),NOT(ISBLANK( Treasure_Data_Upload_Date__c )))</errorConditionFormula>
+    <errorDisplayField>Treasure_Data_Upload_Date__c</errorDisplayField>
+    <errorMessage>Treasure Data is not in the Inclusion List.</errorMessage>
+</ValidationRule>

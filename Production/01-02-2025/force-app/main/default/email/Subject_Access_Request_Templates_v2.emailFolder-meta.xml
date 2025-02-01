@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailFolder xmlns="http://soap.sforce.com/2006/04/metadata">
+    <accessType>Shared</accessType>
+    <name>Subject Access Request Templates v2</name>
+    <publicFolderAccess>ReadOnly</publicFolderAccess>
+    <sharedTo>
+        <role>Report_Manager</role>
+    </sharedTo>
+</EmailFolder>

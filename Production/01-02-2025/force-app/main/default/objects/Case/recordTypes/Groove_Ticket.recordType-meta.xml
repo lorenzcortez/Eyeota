@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Groove_Ticket</fullName>
+    <active>true</active>
+    <businessProcess>Groove Ticket</businessProcess>
+    <label>Groove Ticket</label>
+    <picklistValues>
+        <picklist>Email_Status__c</picklist>
+        <values>
+            <fullName>New Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Read Email</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Labels__c</picklist>
+        <values>
+            <fullName>Closed Lost</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed No Response</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed Won</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending- 1 Follow up Sent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending- 2 Follow ups Sent</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Origin</picklist>
+        <values>
+            <fullName>Audience Request Form</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Datadesk email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lead Machine email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SMS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>berlin%40eyeota%2Ecom</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>datadesk%40eyeota%2Ecom</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>info%40eyeota%2Ecom</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>london%40eyeota%2Ecom</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>melbourne%40eyeota%2Ecom</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>newyork%40eyeota%2Ecom</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>publisher%40eyeota%2Ecom</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>singapore%40eyeota%2Ecom</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>sydney%40eyeota%2Ecom</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>tokyo%40eyeota%2Ecom</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Priority</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medium</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Urgent</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reason</picklist>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>SAR_Regulation__c</picklist>
+        <values>
+            <fullName>Other_%2F_Generic</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Audience Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Event Inquiry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Feature Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General Inquiry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marketing%2FPR Inquiry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Problem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Question</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

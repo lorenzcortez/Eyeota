@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Advertiser_Mapping_SB_Refresh</fullName>
+    <columns>Segment_Revenue_Transaction__c</columns>
+    <columns>Date__c</columns>
+    <columns>Date_Invoiced__c</columns>
+    <columns>Revenue__c</columns>
+    <columns>Buyer_Country_Raw__c</columns>
+    <columns>Target_Country_Raw__c</columns>
+    <columns>Buyer_and_Buyer_Country__c</columns>
+    <columns>Buyer_Raw__c</columns>
+    <columns>Platform_Raw__c</columns>
+    <columns>Advertiser_Raw__c</columns>
+    <columns>Campaign__c</columns>
+    <columns>Advertiser__c</columns>
+    <columns>Segment_Name_Sales_Raw_Original__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Advertiser_Raw__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>Advertiser__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>Date__c</field>
+        <operation>greaterOrEqual</operation>
+        <value>6/1/2021</value>
+    </filters>
+    <label>Advertiser Mapping SB Refresh</label>
+</ListView>

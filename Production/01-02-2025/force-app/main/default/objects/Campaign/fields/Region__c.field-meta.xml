@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Region__c</fullName>
+    <description>Region where event was organized</description>
+    <inlineHelpText>Please pick the region the event caters to.</inlineHelpText>
+    <label>Region</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Global</fullName>
+                <default>false</default>
+                <label>Global</label>
+            </value>
+            <value>
+                <fullName>ANZ</fullName>
+                <default>false</default>
+                <label>ANZ</label>
+            </value>
+            <value>
+                <fullName>APAC</fullName>
+                <default>false</default>
+                <label>APAC</label>
+            </value>
+            <value>
+                <fullName>EMEA</fullName>
+                <default>false</default>
+                <label>EMEA</label>
+            </value>
+            <value>
+                <fullName>LATAM</fullName>
+                <default>false</default>
+                <label>LATAM</label>
+            </value>
+            <value>
+                <fullName>North America</fullName>
+                <default>false</default>
+                <label>North America</label>
+            </value>
+            <value>
+                <fullName>SEA</fullName>
+                <default>false</default>
+                <label>SEA</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

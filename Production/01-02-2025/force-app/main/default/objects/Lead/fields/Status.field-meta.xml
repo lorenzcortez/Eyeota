@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status</fullName>
+    <inlineHelpText>Open-New Lead
+Email Sent-Sent Email/Called/Met in person
+Email Bounced - Queued for deletion
+Qualified - Convert to Contact/Account
+Unqualified-Irrelevant Lead; Queued for deletion</inlineHelpText>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+</CustomField>

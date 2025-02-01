@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Response_Type__c</fullName>
+    <label>Response Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Brief</fullName>
+                <default>false</default>
+                <label>Brief</label>
+            </value>
+            <value>
+                <fullName>Insights</fullName>
+                <default>false</default>
+                <label>Insights</label>
+            </value>
+            <value>
+                <fullName>Supplier Focused Playbook</fullName>
+                <default>false</default>
+                <label>Supplier Focused Playbook</label>
+            </value>
+            <value>
+                <fullName>Vertical Focused Playbook</fullName>
+                <default>false</default>
+                <label>Vertical Focused Playbook</label>
+            </value>
+            <value>
+                <fullName>Audience Profile Playbook</fullName>
+                <default>false</default>
+                <label>Audience Profile Playbook</label>
+            </value>
+            <value>
+                <fullName>Client Specific Playbook</fullName>
+                <default>false</default>
+                <label>Client Specific Playbook</label>
+            </value>
+            <value>
+                <fullName>Playbook</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>General Playbook</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

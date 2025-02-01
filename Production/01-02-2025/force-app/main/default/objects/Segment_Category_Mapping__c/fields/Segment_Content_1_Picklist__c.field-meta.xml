@@ -1,0 +1,1949 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Segment_Content_1_Picklist__c</fullName>
+    <label>Segment Content 1</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>0</fullName>
+                <default>false</default>
+                <label>0</label>
+            </value>
+            <value>
+                <fullName>Adult Entertainment</fullName>
+                <default>false</default>
+                <label>Adult Entertainment</label>
+            </value>
+            <value>
+                <fullName>Advertising &amp; Marketing</fullName>
+                <default>false</default>
+                <label>Advertising &amp; Marketing</label>
+            </value>
+            <value>
+                <fullName>Age</fullName>
+                <default>false</default>
+                <label>Age</label>
+            </value>
+            <value>
+                <fullName>Age &amp; Gender</fullName>
+                <default>false</default>
+                <label>Age &amp; Gender</label>
+            </value>
+            <value>
+                <fullName>Agriculture</fullName>
+                <default>false</default>
+                <label>Agriculture</label>
+            </value>
+            <value>
+                <fullName>Airfares</fullName>
+                <default>false</default>
+                <label>Airfares</label>
+            </value>
+            <value>
+                <fullName>Airline Brands</fullName>
+                <default>false</default>
+                <label>Airline Brands</label>
+            </value>
+            <value>
+                <fullName>Alcohol</fullName>
+                <default>false</default>
+                <label>Alcohol</label>
+            </value>
+            <value>
+                <fullName>Alcoholic Beverages</fullName>
+                <default>false</default>
+                <label>Alcoholic Beverages</label>
+            </value>
+            <value>
+                <fullName>Alcoholic Drinks</fullName>
+                <default>false</default>
+                <label>Alcoholic Drinks</label>
+            </value>
+            <value>
+                <fullName>Arts Interest</fullName>
+                <default>false</default>
+                <label>Arts Interest</label>
+            </value>
+            <value>
+                <fullName>Attitudes and Preferences</fullName>
+                <default>false</default>
+                <label>Attitudes and Preferences</label>
+            </value>
+            <value>
+                <fullName>Audio Video Equipment</fullName>
+                <default>false</default>
+                <label>Audio Video Equipment</label>
+            </value>
+            <value>
+                <fullName>Auto</fullName>
+                <default>false</default>
+                <label>Auto</label>
+            </value>
+            <value>
+                <fullName>Auto Accessories</fullName>
+                <default>false</default>
+                <label>Auto Accessories</label>
+            </value>
+            <value>
+                <fullName>Auto Brands</fullName>
+                <default>false</default>
+                <label>Auto Brands</label>
+            </value>
+            <value>
+                <fullName>Auto Buyers</fullName>
+                <default>false</default>
+                <label>Auto Buyers</label>
+            </value>
+            <value>
+                <fullName>Auto Enthusiasts</fullName>
+                <default>false</default>
+                <label>Auto Enthusiasts</label>
+            </value>
+            <value>
+                <fullName>Auto Owners</fullName>
+                <default>false</default>
+                <label>Auto Owners</label>
+            </value>
+            <value>
+                <fullName>Auto Parts</fullName>
+                <default>false</default>
+                <label>Auto Parts</label>
+            </value>
+            <value>
+                <fullName>Auto Services</fullName>
+                <default>false</default>
+                <label>Auto Services</label>
+            </value>
+            <value>
+                <fullName>B2B Interest</fullName>
+                <default>false</default>
+                <label>B2B Interest</label>
+            </value>
+            <value>
+                <fullName>Baby &amp; Kid Brands</fullName>
+                <default>false</default>
+                <label>Baby &amp; Kid Brands</label>
+            </value>
+            <value>
+                <fullName>Baby Care</fullName>
+                <default>false</default>
+                <label>Baby Care</label>
+            </value>
+            <value>
+                <fullName>Baby Goods</fullName>
+                <default>false</default>
+                <label>Baby Goods</label>
+            </value>
+            <value>
+                <fullName>Bank Brands</fullName>
+                <default>false</default>
+                <label>Bank Brands</label>
+            </value>
+            <value>
+                <fullName>Beauty Interest</fullName>
+                <default>false</default>
+                <label>Beauty Interest</label>
+            </value>
+            <value>
+                <fullName>Beer &amp; Wine</fullName>
+                <default>false</default>
+                <label>Beer &amp; Wine</label>
+            </value>
+            <value>
+                <fullName>Beer and Wine</fullName>
+                <default>false</default>
+                <label>Beer and Wine</label>
+            </value>
+            <value>
+                <fullName>Beverage Brands</fullName>
+                <default>false</default>
+                <label>Beverage Brands</label>
+            </value>
+            <value>
+                <fullName>Book Interest</fullName>
+                <default>false</default>
+                <label>Book Interest</label>
+            </value>
+            <value>
+                <fullName>Books</fullName>
+                <default>false</default>
+                <label>Books</label>
+            </value>
+            <value>
+                <fullName>Brands</fullName>
+                <default>false</default>
+                <label>Brands</label>
+            </value>
+            <value>
+                <fullName>Building Supplies</fullName>
+                <default>false</default>
+                <label>Building Supplies</label>
+            </value>
+            <value>
+                <fullName>Business</fullName>
+                <default>false</default>
+                <label>Business</label>
+            </value>
+            <value>
+                <fullName>Business Intent</fullName>
+                <default>false</default>
+                <label>Business Intent</label>
+            </value>
+            <value>
+                <fullName>Business Interest</fullName>
+                <default>false</default>
+                <label>Business Interest</label>
+            </value>
+            <value>
+                <fullName>Business Services</fullName>
+                <default>false</default>
+                <label>Business Services</label>
+            </value>
+            <value>
+                <fullName>Buying Behavior</fullName>
+                <default>false</default>
+                <label>Buying Behavior</label>
+            </value>
+            <value>
+                <fullName>Buy Now Pay Later</fullName>
+                <default>false</default>
+                <label>Buy Now Pay Later</label>
+            </value>
+            <value>
+                <fullName>Cameras &amp; Camcorders</fullName>
+                <default>false</default>
+                <label>Cameras &amp; Camcorders</label>
+            </value>
+            <value>
+                <fullName>Career</fullName>
+                <default>false</default>
+                <label>Career</label>
+            </value>
+            <value>
+                <fullName>Career Interest</fullName>
+                <default>false</default>
+                <label>Career Interest</label>
+            </value>
+            <value>
+                <fullName>Charity Activities</fullName>
+                <default>false</default>
+                <label>Charity Activities</label>
+            </value>
+            <value>
+                <fullName>Children Fashion</fullName>
+                <default>false</default>
+                <label>Children Fashion</label>
+            </value>
+            <value>
+                <fullName>Children Goods</fullName>
+                <default>false</default>
+                <label>Children Goods</label>
+            </value>
+            <value>
+                <fullName>Cigarettes and Tobacco</fullName>
+                <default>false</default>
+                <label>Cigarettes and Tobacco</label>
+            </value>
+            <value>
+                <fullName>Clothes</fullName>
+                <default>false</default>
+                <label>Clothes</label>
+            </value>
+            <value>
+                <fullName>Clothing Accessories</fullName>
+                <default>false</default>
+                <label>Clothing Accessories</label>
+            </value>
+            <value>
+                <fullName>Collectibles</fullName>
+                <default>false</default>
+                <label>Collectibles</label>
+            </value>
+            <value>
+                <fullName>Collecting Interest</fullName>
+                <default>false</default>
+                <label>Collecting Interest</label>
+            </value>
+            <value>
+                <fullName>Comics &amp; Magazines</fullName>
+                <default>false</default>
+                <label>Comics &amp; Magazines</label>
+            </value>
+            <value>
+                <fullName>Communication Technologies</fullName>
+                <default>false</default>
+                <label>Communication Technologies</label>
+            </value>
+            <value>
+                <fullName>Company Revenue</fullName>
+                <default>false</default>
+                <label>Company Revenue</label>
+            </value>
+            <value>
+                <fullName>Company Size</fullName>
+                <default>false</default>
+                <label>Company Size</label>
+            </value>
+            <value>
+                <fullName>Computer Accessories</fullName>
+                <default>false</default>
+                <label>Computer Accessories</label>
+            </value>
+            <value>
+                <fullName>Computer Brands</fullName>
+                <default>false</default>
+                <label>Computer Brands</label>
+            </value>
+            <value>
+                <fullName>Computer Components</fullName>
+                <default>false</default>
+                <label>Computer Components</label>
+            </value>
+            <value>
+                <fullName>Computer Hardware</fullName>
+                <default>false</default>
+                <label>Computer Hardware</label>
+            </value>
+            <value>
+                <fullName>Computer Software</fullName>
+                <default>false</default>
+                <label>Computer Software</label>
+            </value>
+            <value>
+                <fullName>Construction</fullName>
+                <default>false</default>
+                <label>Construction</label>
+            </value>
+            <value>
+                <fullName>Consumer Electronics</fullName>
+                <default>false</default>
+                <label>Consumer Electronics</label>
+            </value>
+            <value>
+                <fullName>Consumer Electronics Brands</fullName>
+                <default>false</default>
+                <label>Consumer Electronics Brands</label>
+            </value>
+            <value>
+                <fullName>Consumer Interest</fullName>
+                <default>false</default>
+                <label>Consumer Interest</label>
+            </value>
+            <value>
+                <fullName>Cooking Enthusiasts</fullName>
+                <default>false</default>
+                <label>Cooking Enthusiasts</label>
+            </value>
+            <value>
+                <fullName>Cosmetics</fullName>
+                <default>false</default>
+                <label>Cosmetics</label>
+            </value>
+            <value>
+                <fullName>Cosmetics Brands</fullName>
+                <default>false</default>
+                <label>Cosmetics Brands</label>
+            </value>
+            <value>
+                <fullName>Courses &amp; Trainings</fullName>
+                <default>false</default>
+                <label>Courses &amp; Trainings</label>
+            </value>
+            <value>
+                <fullName>Credit Card Brands</fullName>
+                <default>false</default>
+                <label>Credit Card Brands</label>
+            </value>
+            <value>
+                <fullName>Cruise</fullName>
+                <default>false</default>
+                <label>Cruise</label>
+            </value>
+            <value>
+                <fullName>Cuisine</fullName>
+                <default>false</default>
+                <label>Cuisine</label>
+            </value>
+            <value>
+                <fullName>Custom</fullName>
+                <default>false</default>
+                <label>Custom</label>
+            </value>
+            <value>
+                <fullName>Data Center Solutions</fullName>
+                <default>false</default>
+                <label>Data Center Solutions</label>
+            </value>
+            <value>
+                <fullName>Department Store Brands</fullName>
+                <default>false</default>
+                <label>Department Store Brands</label>
+            </value>
+            <value>
+                <fullName>Design Interest</fullName>
+                <default>false</default>
+                <label>Design Interest</label>
+            </value>
+            <value>
+                <fullName>Desktops</fullName>
+                <default>false</default>
+                <label>Desktops</label>
+            </value>
+            <value>
+                <fullName>Dessert &amp; Sweets</fullName>
+                <default>false</default>
+                <label>Dessert &amp; Sweets</label>
+            </value>
+            <value>
+                <fullName>Digital Games</fullName>
+                <default>false</default>
+                <label>Digital Games</label>
+            </value>
+            <value>
+                <fullName>Educational Level</fullName>
+                <default>false</default>
+                <label>Educational Level</label>
+            </value>
+            <value>
+                <fullName>Education Seekers</fullName>
+                <default>false</default>
+                <label>Education Seekers</label>
+            </value>
+            <value>
+                <fullName>Electricity Providers</fullName>
+                <default>false</default>
+                <label>Electricity Providers</label>
+            </value>
+            <value>
+                <fullName>Electronice &amp; Computers</fullName>
+                <default>false</default>
+                <label>Electronice &amp; Computers</label>
+            </value>
+            <value>
+                <fullName>Employment Area</fullName>
+                <default>false</default>
+                <label>Employment Area</label>
+            </value>
+            <value>
+                <fullName>Employment Status</fullName>
+                <default>false</default>
+                <label>Employment Status</label>
+            </value>
+            <value>
+                <fullName>Energy</fullName>
+                <default>false</default>
+                <label>Energy</label>
+            </value>
+            <value>
+                <fullName>Enterprise Applications</fullName>
+                <default>false</default>
+                <label>Enterprise Applications</label>
+            </value>
+            <value>
+                <fullName>Enterprise Content</fullName>
+                <default>false</default>
+                <label>Enterprise Content</label>
+            </value>
+            <value>
+                <fullName>Enterprise Products</fullName>
+                <default>false</default>
+                <label>Enterprise Products</label>
+            </value>
+            <value>
+                <fullName>Entertainment</fullName>
+                <default>false</default>
+                <label>Entertainment</label>
+            </value>
+            <value>
+                <fullName>Entertainment Activities</fullName>
+                <default>false</default>
+                <label>Entertainment Activities</label>
+            </value>
+            <value>
+                <fullName>Entertainment Interest</fullName>
+                <default>false</default>
+                <label>Entertainment Interest</label>
+            </value>
+            <value>
+                <fullName>Entertainment Store Brands</fullName>
+                <default>false</default>
+                <label>Entertainment Store Brands</label>
+            </value>
+            <value>
+                <fullName>Ethnic Group</fullName>
+                <default>false</default>
+                <label>Ethnic Group</label>
+            </value>
+            <value>
+                <fullName>Event</fullName>
+                <default>false</default>
+                <label>Event</label>
+            </value>
+            <value>
+                <fullName>Family Interest</fullName>
+                <default>false</default>
+                <label>Family Interest</label>
+            </value>
+            <value>
+                <fullName>Fashion Accessories</fullName>
+                <default>false</default>
+                <label>Fashion Accessories</label>
+            </value>
+            <value>
+                <fullName>Fashion Brands</fullName>
+                <default>false</default>
+                <label>Fashion Brands</label>
+            </value>
+            <value>
+                <fullName>Fashion Interest</fullName>
+                <default>false</default>
+                <label>Fashion Interest</label>
+            </value>
+            <value>
+                <fullName>Finance Interest</fullName>
+                <default>false</default>
+                <label>Finance Interest</label>
+            </value>
+            <value>
+                <fullName>Financial Product</fullName>
+                <default>false</default>
+                <label>Financial Product</label>
+            </value>
+            <value>
+                <fullName>Financial Products</fullName>
+                <default>false</default>
+                <label>Financial Products</label>
+            </value>
+            <value>
+                <fullName>Financial Service Owners</fullName>
+                <default>false</default>
+                <label>Financial Service Owners</label>
+            </value>
+            <value>
+                <fullName>Financial Services</fullName>
+                <default>false</default>
+                <label>Financial Services</label>
+            </value>
+            <value>
+                <fullName>Financial Status</fullName>
+                <default>false</default>
+                <label>Financial Status</label>
+            </value>
+            <value>
+                <fullName>Fitness &amp; Wellness</fullName>
+                <default>false</default>
+                <label>Fitness &amp; Wellness</label>
+            </value>
+            <value>
+                <fullName>Flight Class</fullName>
+                <default>false</default>
+                <label>Flight Class</label>
+            </value>
+            <value>
+                <fullName>Flowers</fullName>
+                <default>false</default>
+                <label>Flowers</label>
+            </value>
+            <value>
+                <fullName>Food &amp; Beverages</fullName>
+                <default>false</default>
+                <label>Food &amp; Beverages</label>
+            </value>
+            <value>
+                <fullName>Food and Drinks</fullName>
+                <default>false</default>
+                <label>Food and Drinks</label>
+            </value>
+            <value>
+                <fullName>Food Brands</fullName>
+                <default>false</default>
+                <label>Food Brands</label>
+            </value>
+            <value>
+                <fullName>Food Enthusiasts</fullName>
+                <default>false</default>
+                <label>Food Enthusiasts</label>
+            </value>
+            <value>
+                <fullName>Footwear</fullName>
+                <default>false</default>
+                <label>Footwear</label>
+            </value>
+            <value>
+                <fullName>Free Product / Gift</fullName>
+                <default>false</default>
+                <label>Free Product / Gift</label>
+            </value>
+            <value>
+                <fullName>Frequent Buyers</fullName>
+                <default>false</default>
+                <label>Frequent Buyers</label>
+            </value>
+            <value>
+                <fullName>Frequent Travelers</fullName>
+                <default>false</default>
+                <label>Frequent Travelers</label>
+            </value>
+            <value>
+                <fullName>Fulfilment / Logistics Services</fullName>
+                <default>false</default>
+                <label>Fulfilment / Logistics Services</label>
+            </value>
+            <value>
+                <fullName>Furniture &amp; Homewares</fullName>
+                <default>false</default>
+                <label>Furniture &amp; Homewares</label>
+            </value>
+            <value>
+                <fullName>Furniture Store Brands</fullName>
+                <default>false</default>
+                <label>Furniture Store Brands</label>
+            </value>
+            <value>
+                <fullName>Gambling Interest</fullName>
+                <default>false</default>
+                <label>Gambling Interest</label>
+            </value>
+            <value>
+                <fullName>Game Enthusiasts</fullName>
+                <default>false</default>
+                <label>Game Enthusiasts</label>
+            </value>
+            <value>
+                <fullName>Games &amp; Toys</fullName>
+                <default>false</default>
+                <label>Games &amp; Toys</label>
+            </value>
+            <value>
+                <fullName>Gardening Products</fullName>
+                <default>false</default>
+                <label>Gardening Products</label>
+            </value>
+            <value>
+                <fullName>Garden Plants and Furniture</fullName>
+                <default>false</default>
+                <label>Garden Plants and Furniture</label>
+            </value>
+            <value>
+                <fullName>Gender</fullName>
+                <default>false</default>
+                <label>Gender</label>
+            </value>
+            <value>
+                <fullName>General Attitudes</fullName>
+                <default>false</default>
+                <label>General Attitudes</label>
+            </value>
+            <value>
+                <fullName>Generation</fullName>
+                <default>false</default>
+                <label>Generation</label>
+            </value>
+            <value>
+                <fullName>Gift Cards / Stationery</fullName>
+                <default>false</default>
+                <label>Gift Cards / Stationery</label>
+            </value>
+            <value>
+                <fullName>Gifts &amp; Cards</fullName>
+                <default>false</default>
+                <label>Gifts &amp; Cards</label>
+            </value>
+            <value>
+                <fullName>Gifts and Gadgets</fullName>
+                <default>false</default>
+                <label>Gifts and Gadgets</label>
+            </value>
+            <value>
+                <fullName>Groceries Shoppers</fullName>
+                <default>false</default>
+                <label>Groceries Shoppers</label>
+            </value>
+            <value>
+                <fullName>Grocery</fullName>
+                <default>false</default>
+                <label>Grocery</label>
+            </value>
+            <value>
+                <fullName>Gym &amp; Fitness</fullName>
+                <default>false</default>
+                <label>Gym &amp; Fitness</label>
+            </value>
+            <value>
+                <fullName>Health &amp; Fitness Interest</fullName>
+                <default>false</default>
+                <label>Health &amp; Fitness Interest</label>
+            </value>
+            <value>
+                <fullName>Health and Beauty</fullName>
+                <default>false</default>
+                <label>Health and Beauty</label>
+            </value>
+            <value>
+                <fullName>Healthcare</fullName>
+                <default>false</default>
+                <label>Healthcare</label>
+            </value>
+            <value>
+                <fullName>Healthcare Interest</fullName>
+                <default>false</default>
+                <label>Healthcare Interest</label>
+            </value>
+            <value>
+                <fullName>Health Products</fullName>
+                <default>false</default>
+                <label>Health Products</label>
+            </value>
+            <value>
+                <fullName>High Discounts</fullName>
+                <default>false</default>
+                <label>High Discounts</label>
+            </value>
+            <value>
+                <fullName>High-Tech Owners</fullName>
+                <default>false</default>
+                <label>High-Tech Owners</label>
+            </value>
+            <value>
+                <fullName>Holiday</fullName>
+                <default>false</default>
+                <label>Holiday</label>
+            </value>
+            <value>
+                <fullName>Holiday Shoppers</fullName>
+                <default>false</default>
+                <label>Holiday Shoppers</label>
+            </value>
+            <value>
+                <fullName>Holiday Travelers</fullName>
+                <default>false</default>
+                <label>Holiday Travelers</label>
+            </value>
+            <value>
+                <fullName>Home &amp; Garden</fullName>
+                <default>false</default>
+                <label>Home &amp; Garden</label>
+            </value>
+            <value>
+                <fullName>Home &amp; Garden Interest</fullName>
+                <default>false</default>
+                <label>Home &amp; Garden Interest</label>
+            </value>
+            <value>
+                <fullName>Home Appliances</fullName>
+                <default>false</default>
+                <label>Home Appliances</label>
+            </value>
+            <value>
+                <fullName>Home Appliances Owners</fullName>
+                <default>false</default>
+                <label>Home Appliances Owners</label>
+            </value>
+            <value>
+                <fullName>Home Improvement</fullName>
+                <default>false</default>
+                <label>Home Improvement</label>
+            </value>
+            <value>
+                <fullName>Home Improvement and DIY</fullName>
+                <default>false</default>
+                <label>Home Improvement and DIY</label>
+            </value>
+            <value>
+                <fullName>HomeOwners Status</fullName>
+                <default>false</default>
+                <label>HomeOwners Status</label>
+            </value>
+            <value>
+                <fullName>Homeowner Status</fullName>
+                <default>false</default>
+                <label>Homeowner Status</label>
+            </value>
+            <value>
+                <fullName>Home Products Brands</fullName>
+                <default>false</default>
+                <label>Home Products Brands</label>
+            </value>
+            <value>
+                <fullName>Home Value</fullName>
+                <default>false</default>
+                <label>Home Value</label>
+            </value>
+            <value>
+                <fullName>Hotel Brands</fullName>
+                <default>false</default>
+                <label>Hotel Brands</label>
+            </value>
+            <value>
+                <fullName>Hotel Intent</fullName>
+                <default>false</default>
+                <label>Hotel Intent</label>
+            </value>
+            <value>
+                <fullName>Household Members</fullName>
+                <default>false</default>
+                <label>Household Members</label>
+            </value>
+            <value>
+                <fullName>Household Size</fullName>
+                <default>false</default>
+                <label>Household Size</label>
+            </value>
+            <value>
+                <fullName>Household Technology</fullName>
+                <default>false</default>
+                <label>Household Technology</label>
+            </value>
+            <value>
+                <fullName>House Ownership</fullName>
+                <default>false</default>
+                <label>House Ownership</label>
+            </value>
+            <value>
+                <fullName>House Size</fullName>
+                <default>false</default>
+                <label>House Size</label>
+            </value>
+            <value>
+                <fullName>House Type</fullName>
+                <default>false</default>
+                <label>House Type</label>
+            </value>
+            <value>
+                <fullName>House Value</fullName>
+                <default>false</default>
+                <label>House Value</label>
+            </value>
+            <value>
+                <fullName>Human Resources</fullName>
+                <default>false</default>
+                <label>Human Resources</label>
+            </value>
+            <value>
+                <fullName>Income Level</fullName>
+                <default>false</default>
+                <label>Income Level</label>
+            </value>
+            <value>
+                <fullName>Industry</fullName>
+                <default>false</default>
+                <label>Industry</label>
+            </value>
+            <value>
+                <fullName>Industry Equipment</fullName>
+                <default>false</default>
+                <label>Industry Equipment</label>
+            </value>
+            <value>
+                <fullName>Insurance Owners</fullName>
+                <default>false</default>
+                <label>Insurance Owners</label>
+            </value>
+            <value>
+                <fullName>Internet Activities</fullName>
+                <default>false</default>
+                <label>Internet Activities</label>
+            </value>
+            <value>
+                <fullName>Internet Owners</fullName>
+                <default>false</default>
+                <label>Internet Owners</label>
+            </value>
+            <value>
+                <fullName>Internet Services</fullName>
+                <default>false</default>
+                <label>Internet Services</label>
+            </value>
+            <value>
+                <fullName>Job Seekers</fullName>
+                <default>false</default>
+                <label>Job Seekers</label>
+            </value>
+            <value>
+                <fullName>Kitchen Accessories</fullName>
+                <default>false</default>
+                <label>Kitchen Accessories</label>
+            </value>
+            <value>
+                <fullName>Language Interest</fullName>
+                <default>false</default>
+                <label>Language Interest</label>
+            </value>
+            <value>
+                <fullName>Languages</fullName>
+                <default>false</default>
+                <label>Languages</label>
+            </value>
+            <value>
+                <fullName>Laptops</fullName>
+                <default>false</default>
+                <label>Laptops</label>
+            </value>
+            <value>
+                <fullName>Legal Advice</fullName>
+                <default>false</default>
+                <label>Legal Advice</label>
+            </value>
+            <value>
+                <fullName>Length of Residence</fullName>
+                <default>false</default>
+                <label>Length of Residence</label>
+            </value>
+            <value>
+                <fullName>Lifestyle</fullName>
+                <default>false</default>
+                <label>Lifestyle</label>
+            </value>
+            <value>
+                <fullName>Lifestyle Activities</fullName>
+                <default>false</default>
+                <label>Lifestyle Activities</label>
+            </value>
+            <value>
+                <fullName>Liquor Store Brands</fullName>
+                <default>false</default>
+                <label>Liquor Store Brands</label>
+            </value>
+            <value>
+                <fullName>Location</fullName>
+                <default>false</default>
+                <label>Location</label>
+            </value>
+            <value>
+                <fullName>Location - SA3</fullName>
+                <default>false</default>
+                <label>Location - SA3</label>
+            </value>
+            <value>
+                <fullName>Low Discounts</fullName>
+                <default>false</default>
+                <label>Low Discounts</label>
+            </value>
+            <value>
+                <fullName>Luxury Products</fullName>
+                <default>false</default>
+                <label>Luxury Products</label>
+            </value>
+            <value>
+                <fullName>Magazine Brands</fullName>
+                <default>false</default>
+                <label>Magazine Brands</label>
+            </value>
+            <value>
+                <fullName>Manufacturing</fullName>
+                <default>false</default>
+                <label>Manufacturing</label>
+            </value>
+            <value>
+                <fullName>Marital Status</fullName>
+                <default>false</default>
+                <label>Marital Status</label>
+            </value>
+            <value>
+                <fullName>Marketing &amp; Advertising</fullName>
+                <default>false</default>
+                <label>Marketing &amp; Advertising</label>
+            </value>
+            <value>
+                <fullName>Meal</fullName>
+                <default>false</default>
+                <label>Meal</label>
+            </value>
+            <value>
+                <fullName>Medical Services</fullName>
+                <default>false</default>
+                <label>Medical Services</label>
+            </value>
+            <value>
+                <fullName>Membership</fullName>
+                <default>false</default>
+                <label>Membership</label>
+            </value>
+            <value>
+                <fullName>Mobile Phone Owners</fullName>
+                <default>false</default>
+                <label>Mobile Phone Owners</label>
+            </value>
+            <value>
+                <fullName>Mobile Service Brands</fullName>
+                <default>false</default>
+                <label>Mobile Service Brands</label>
+            </value>
+            <value>
+                <fullName>Motorcycle Owners</fullName>
+                <default>false</default>
+                <label>Motorcycle Owners</label>
+            </value>
+            <value>
+                <fullName>Movies</fullName>
+                <default>false</default>
+                <label>Movies</label>
+            </value>
+            <value>
+                <fullName>Music</fullName>
+                <default>false</default>
+                <label>Music</label>
+            </value>
+            <value>
+                <fullName>Musical Instruments</fullName>
+                <default>false</default>
+                <label>Musical Instruments</label>
+            </value>
+            <value>
+                <fullName>Music Interest</fullName>
+                <default>false</default>
+                <label>Music Interest</label>
+            </value>
+            <value>
+                <fullName>Nature &amp; Environment Interest</fullName>
+                <default>false</default>
+                <label>Nature &amp; Environment Interest</label>
+            </value>
+            <value>
+                <fullName>News</fullName>
+                <default>false</default>
+                <label>News</label>
+            </value>
+            <value>
+                <fullName>News &amp; Current Events</fullName>
+                <default>false</default>
+                <label>News &amp; Current Events</label>
+            </value>
+            <value>
+                <fullName>Non-Alcoholic Beverages</fullName>
+                <default>false</default>
+                <label>Non-Alcoholic Beverages</label>
+            </value>
+            <value>
+                <fullName>Office Furniture &amp; Supplies</fullName>
+                <default>false</default>
+                <label>Office Furniture &amp; Supplies</label>
+            </value>
+            <value>
+                <fullName>Office Supplies</fullName>
+                <default>false</default>
+                <label>Office Supplies</label>
+            </value>
+            <value>
+                <fullName>Online Shopping</fullName>
+                <default>false</default>
+                <label>Online Shopping</label>
+            </value>
+            <value>
+                <fullName>Order Channel</fullName>
+                <default>false</default>
+                <label>Order Channel</label>
+            </value>
+            <value>
+                <fullName>Organic Food</fullName>
+                <default>false</default>
+                <label>Organic Food</label>
+            </value>
+            <value>
+                <fullName>Original Gifts &amp; Gadgets</fullName>
+                <default>false</default>
+                <label>Original Gifts &amp; Gadgets</label>
+            </value>
+            <value>
+                <fullName>Outdoor Activities</fullName>
+                <default>false</default>
+                <label>Outdoor Activities</label>
+            </value>
+            <value>
+                <fullName>Outdoor Adventure</fullName>
+                <default>false</default>
+                <label>Outdoor Adventure</label>
+            </value>
+            <value>
+                <fullName>Payment Method</fullName>
+                <default>false</default>
+                <label>Payment Method</label>
+            </value>
+            <value>
+                <fullName>Personal Care</fullName>
+                <default>false</default>
+                <label>Personal Care</label>
+            </value>
+            <value>
+                <fullName>Personal Care Brands</fullName>
+                <default>false</default>
+                <label>Personal Care Brands</label>
+            </value>
+            <value>
+                <fullName>Personal Health</fullName>
+                <default>false</default>
+                <label>Personal Health</label>
+            </value>
+            <value>
+                <fullName>Pet Products</fullName>
+                <default>false</default>
+                <label>Pet Products</label>
+            </value>
+            <value>
+                <fullName>Pets Enthusiasts</fullName>
+                <default>false</default>
+                <label>Pets Enthusiasts</label>
+            </value>
+            <value>
+                <fullName>Pet Supplies</fullName>
+                <default>false</default>
+                <label>Pet Supplies</label>
+            </value>
+            <value>
+                <fullName>Pharmacy Brands</fullName>
+                <default>false</default>
+                <label>Pharmacy Brands</label>
+            </value>
+            <value>
+                <fullName>Photography Interest</fullName>
+                <default>false</default>
+                <label>Photography Interest</label>
+            </value>
+            <value>
+                <fullName>Political Attitudes</fullName>
+                <default>false</default>
+                <label>Political Attitudes</label>
+            </value>
+            <value>
+                <fullName>Politics Interest</fullName>
+                <default>false</default>
+                <label>Politics Interest</label>
+            </value>
+            <value>
+                <fullName>Portable Electronics</fullName>
+                <default>false</default>
+                <label>Portable Electronics</label>
+            </value>
+            <value>
+                <fullName>POS Gear</fullName>
+                <default>false</default>
+                <label>POS Gear</label>
+            </value>
+            <value>
+                <fullName>Printers</fullName>
+                <default>false</default>
+                <label>Printers</label>
+            </value>
+            <value>
+                <fullName>Professional Groups</fullName>
+                <default>false</default>
+                <label>Professional Groups</label>
+            </value>
+            <value>
+                <fullName>Purchase Behaviors</fullName>
+                <default>false</default>
+                <label>Purchase Behaviors</label>
+            </value>
+            <value>
+                <fullName>Purchase Intent</fullName>
+                <default>false</default>
+                <label>Purchase Intent</label>
+            </value>
+            <value>
+                <fullName>Real Estate</fullName>
+                <default>false</default>
+                <label>Real Estate</label>
+            </value>
+            <value>
+                <fullName>Real Estate Interest</fullName>
+                <default>false</default>
+                <label>Real Estate Interest</label>
+            </value>
+            <value>
+                <fullName>Recreation</fullName>
+                <default>false</default>
+                <label>Recreation</label>
+            </value>
+            <value>
+                <fullName>Religion</fullName>
+                <default>false</default>
+                <label>Religion</label>
+            </value>
+            <value>
+                <fullName>Religion Interest</fullName>
+                <default>false</default>
+                <label>Religion Interest</label>
+            </value>
+            <value>
+                <fullName>Restaurant / Bar</fullName>
+                <default>false</default>
+                <label>Restaurant / Bar</label>
+            </value>
+            <value>
+                <fullName>Restaurant/ Food Chain Brands</fullName>
+                <default>false</default>
+                <label>Restaurant/ Food Chain Brands</label>
+            </value>
+            <value>
+                <fullName>Restaurants / Bars</fullName>
+                <default>false</default>
+                <label>Restaurants / Bars</label>
+            </value>
+            <value>
+                <fullName>Retail Products</fullName>
+                <default>false</default>
+                <label>Retail Products</label>
+            </value>
+            <value>
+                <fullName>Retail Products Owners</fullName>
+                <default>false</default>
+                <label>Retail Products Owners</label>
+            </value>
+            <value>
+                <fullName>Romance &amp; Adventure</fullName>
+                <default>false</default>
+                <label>Romance &amp; Adventure</label>
+            </value>
+            <value>
+                <fullName>Science Interest</fullName>
+                <default>false</default>
+                <label>Science Interest</label>
+            </value>
+            <value>
+                <fullName>Seniority</fullName>
+                <default>false</default>
+                <label>Seniority</label>
+            </value>
+            <value>
+                <fullName>Servers</fullName>
+                <default>false</default>
+                <label>Servers</label>
+            </value>
+            <value>
+                <fullName>Services</fullName>
+                <default>false</default>
+                <label>Services</label>
+            </value>
+            <value>
+                <fullName>Services Intent</fullName>
+                <default>false</default>
+                <label>Services Intent</label>
+            </value>
+            <value>
+                <fullName>Shoppers</fullName>
+                <default>false</default>
+                <label>Shoppers</label>
+            </value>
+            <value>
+                <fullName>Shopping</fullName>
+                <default>false</default>
+                <label>Shopping</label>
+            </value>
+            <value>
+                <fullName>Shopping Intent</fullName>
+                <default>false</default>
+                <label>Shopping Intent</label>
+            </value>
+            <value>
+                <fullName>Shopping Interest</fullName>
+                <default>false</default>
+                <label>Shopping Interest</label>
+            </value>
+            <value>
+                <fullName>Social Grade</fullName>
+                <default>false</default>
+                <label>Social Grade</label>
+            </value>
+            <value>
+                <fullName>Social Media Activities</fullName>
+                <default>false</default>
+                <label>Social Media Activities</label>
+            </value>
+            <value>
+                <fullName>Social Media Channel</fullName>
+                <default>false</default>
+                <label>Social Media Channel</label>
+            </value>
+            <value>
+                <fullName>Sociodemographic Profile</fullName>
+                <default>false</default>
+                <label>Sociodemographic Profile</label>
+            </value>
+            <value>
+                <fullName>Sociodemographic Profiles</fullName>
+                <default>false</default>
+                <label>Sociodemographic Profiles</label>
+            </value>
+            <value>
+                <fullName>Sport Enthusiasts</fullName>
+                <default>false</default>
+                <label>Sport Enthusiasts</label>
+            </value>
+            <value>
+                <fullName>Sporting Brands</fullName>
+                <default>false</default>
+                <label>Sporting Brands</label>
+            </value>
+            <value>
+                <fullName>Sporting Club</fullName>
+                <default>false</default>
+                <label>Sporting Club</label>
+            </value>
+            <value>
+                <fullName>Sporting Goods</fullName>
+                <default>false</default>
+                <label>Sporting Goods</label>
+            </value>
+            <value>
+                <fullName>Sporting Products</fullName>
+                <default>false</default>
+                <label>Sporting Products</label>
+            </value>
+            <value>
+                <fullName>Sporting Store Brands</fullName>
+                <default>false</default>
+                <label>Sporting Store Brands</label>
+            </value>
+            <value>
+                <fullName>Sport Interest</fullName>
+                <default>false</default>
+                <label>Sport Interest</label>
+            </value>
+            <value>
+                <fullName>Sports</fullName>
+                <default>false</default>
+                <label>Sports</label>
+            </value>
+            <value>
+                <fullName>Sports Enthusiasts</fullName>
+                <default>false</default>
+                <label>Sports Enthusiasts</label>
+            </value>
+            <value>
+                <fullName>Storage &amp; Media</fullName>
+                <default>false</default>
+                <label>Storage &amp; Media</label>
+            </value>
+            <value>
+                <fullName>Supermarket Brands</fullName>
+                <default>false</default>
+                <label>Supermarket Brands</label>
+            </value>
+            <value>
+                <fullName>Tech Enthusiasts</fullName>
+                <default>false</default>
+                <label>Tech Enthusiasts</label>
+            </value>
+            <value>
+                <fullName>Technology</fullName>
+                <default>false</default>
+                <label>Technology</label>
+            </value>
+            <value>
+                <fullName>Telecom Services</fullName>
+                <default>false</default>
+                <label>Telecom Services</label>
+            </value>
+            <value>
+                <fullName>Tickets</fullName>
+                <default>false</default>
+                <label>Tickets</label>
+            </value>
+            <value>
+                <fullName>Tobacco</fullName>
+                <default>false</default>
+                <label>Tobacco</label>
+            </value>
+            <value>
+                <fullName>Tools &amp; Hardware</fullName>
+                <default>false</default>
+                <label>Tools &amp; Hardware</label>
+            </value>
+            <value>
+                <fullName>Toy Brands</fullName>
+                <default>false</default>
+                <label>Toy Brands</label>
+            </value>
+            <value>
+                <fullName>Transportation / Freight Services</fullName>
+                <default>false</default>
+                <label>Transportation / Freight Services</label>
+            </value>
+            <value>
+                <fullName>Travel Accommodation</fullName>
+                <default>false</default>
+                <label>Travel Accommodation</label>
+            </value>
+            <value>
+                <fullName>Travel Destination</fullName>
+                <default>false</default>
+                <label>Travel Destination</label>
+            </value>
+            <value>
+                <fullName>Travel Enthusiasts</fullName>
+                <default>false</default>
+                <label>Travel Enthusiasts</label>
+            </value>
+            <value>
+                <fullName>Travel Intent</fullName>
+                <default>false</default>
+                <label>Travel Intent</label>
+            </value>
+            <value>
+                <fullName>TV / Audio Owners</fullName>
+                <default>false</default>
+                <label>TV / Audio Owners</label>
+            </value>
+            <value>
+                <fullName>Utilities</fullName>
+                <default>false</default>
+                <label>Utilities</label>
+            </value>
+            <value>
+                <fullName>Voting Activities</fullName>
+                <default>false</default>
+                <label>Voting Activities</label>
+            </value>
+            <value>
+                <fullName>Web-Oriented Architecture</fullName>
+                <default>false</default>
+                <label>Web-Oriented Architecture</label>
+            </value>
+            <value>
+                <fullName>Wedding &amp; Bridal</fullName>
+                <default>false</default>
+                <label>Wedding &amp; Bridal</label>
+            </value>
+            <value>
+                <fullName>Accommodation Intent</fullName>
+                <default>false</default>
+                <label>Accommodation Intent</label>
+            </value>
+            <value>
+                <fullName>Adult Entertainment Buyers</fullName>
+                <default>false</default>
+                <label>Adult Entertainment Buyers</label>
+            </value>
+            <value>
+                <fullName>Agriculture Products Buyers</fullName>
+                <default>false</default>
+                <label>Agriculture Products Buyers</label>
+            </value>
+            <value>
+                <fullName>Alcoholic Beverage Buyers</fullName>
+                <default>false</default>
+                <label>Alcoholic Beverage Buyers</label>
+            </value>
+            <value>
+                <fullName>Art Activities</fullName>
+                <default>false</default>
+                <label>Art Activities</label>
+            </value>
+            <value>
+                <fullName>Arts Buyers</fullName>
+                <default>false</default>
+                <label>Arts Buyers</label>
+            </value>
+            <value>
+                <fullName>Auto Intent</fullName>
+                <default>false</default>
+                <label>Auto Intent</label>
+            </value>
+            <value>
+                <fullName>B2B Advertising &amp; Marketing</fullName>
+                <default>false</default>
+                <label>B2B Advertising &amp; Marketing</label>
+            </value>
+            <value>
+                <fullName>B2B Business Services</fullName>
+                <default>false</default>
+                <label>B2B Business Services</label>
+            </value>
+            <value>
+                <fullName>B2B Communication Technologies</fullName>
+                <default>false</default>
+                <label>B2B Communication Technologies</label>
+            </value>
+            <value>
+                <fullName>B2B Construction</fullName>
+                <default>false</default>
+                <label>B2B Construction</label>
+            </value>
+            <value>
+                <fullName>B2B Courses &amp; Trainings</fullName>
+                <default>false</default>
+                <label>B2B Courses &amp; Trainings</label>
+            </value>
+            <value>
+                <fullName>B2B Custom</fullName>
+                <default>false</default>
+                <label>B2B Custom</label>
+            </value>
+            <value>
+                <fullName>B2B Data Center Solutions</fullName>
+                <default>false</default>
+                <label>B2B Data Center Solutions</label>
+            </value>
+            <value>
+                <fullName>B2B Desktops</fullName>
+                <default>false</default>
+                <label>B2B Desktops</label>
+            </value>
+            <value>
+                <fullName>B2B Energy</fullName>
+                <default>false</default>
+                <label>B2B Energy</label>
+            </value>
+            <value>
+                <fullName>B2B Enterprise Applications</fullName>
+                <default>false</default>
+                <label>B2B Enterprise Applications</label>
+            </value>
+            <value>
+                <fullName>B2B Enterprise Content</fullName>
+                <default>false</default>
+                <label>B2B Enterprise Content</label>
+            </value>
+            <value>
+                <fullName>B2B Enterprise Products</fullName>
+                <default>false</default>
+                <label>B2B Enterprise Products</label>
+            </value>
+            <value>
+                <fullName>B2B Financial Services</fullName>
+                <default>false</default>
+                <label>B2B Financial Services</label>
+            </value>
+            <value>
+                <fullName>B2B Fulfilment / Logistics Services</fullName>
+                <default>false</default>
+                <label>B2B Fulfilment / Logistics Services</label>
+            </value>
+            <value>
+                <fullName>B2B Healthcare</fullName>
+                <default>false</default>
+                <label>B2B Healthcare</label>
+            </value>
+            <value>
+                <fullName>B2B Human Resources</fullName>
+                <default>false</default>
+                <label>B2B Human Resources</label>
+            </value>
+            <value>
+                <fullName>B2B Industry Equipment</fullName>
+                <default>false</default>
+                <label>B2B Industry Equipment</label>
+            </value>
+            <value>
+                <fullName>B2B Laptops</fullName>
+                <default>false</default>
+                <label>B2B Laptops</label>
+            </value>
+            <value>
+                <fullName>B2B Manufacturing</fullName>
+                <default>false</default>
+                <label>B2B Manufacturing</label>
+            </value>
+            <value>
+                <fullName>B2B Office Furniture &amp; Supplies</fullName>
+                <default>false</default>
+                <label>B2B Office Furniture &amp; Supplies</label>
+            </value>
+            <value>
+                <fullName>B2B Printers</fullName>
+                <default>false</default>
+                <label>B2B Printers</label>
+            </value>
+            <value>
+                <fullName>B2B Professional Groups</fullName>
+                <default>false</default>
+                <label>B2B Professional Groups</label>
+            </value>
+            <value>
+                <fullName>B2B Servers</fullName>
+                <default>false</default>
+                <label>B2B Servers</label>
+            </value>
+            <value>
+                <fullName>B2B Technology</fullName>
+                <default>false</default>
+                <label>B2B Technology</label>
+            </value>
+            <value>
+                <fullName>B2B Transportation / Freight Services</fullName>
+                <default>false</default>
+                <label>B2B Transportation / Freight Services</label>
+            </value>
+            <value>
+                <fullName>B2B Web-Oriented Architecture</fullName>
+                <default>false</default>
+                <label>B2B Web-Oriented Architecture</label>
+            </value>
+            <value>
+                <fullName>Baby Goods Buyers</fullName>
+                <default>false</default>
+                <label>Baby Goods Buyers</label>
+            </value>
+            <value>
+                <fullName>Bombora</fullName>
+                <default>false</default>
+                <label>Bombora</label>
+            </value>
+            <value>
+                <fullName>Books Buyers</fullName>
+                <default>false</default>
+                <label>Books Buyers</label>
+            </value>
+            <value>
+                <fullName>Building Supplies Buyers</fullName>
+                <default>false</default>
+                <label>Building Supplies Buyers</label>
+            </value>
+            <value>
+                <fullName>Charity Supporters</fullName>
+                <default>false</default>
+                <label>Charity Supporters</label>
+            </value>
+            <value>
+                <fullName>Children Goods Buyers</fullName>
+                <default>false</default>
+                <label>Children Goods Buyers</label>
+            </value>
+            <value>
+                <fullName>Cigarettes &amp; Tobacco Buyers</fullName>
+                <default>false</default>
+                <label>Cigarettes &amp; Tobacco Buyers</label>
+            </value>
+            <value>
+                <fullName>Clothes Buyers</fullName>
+                <default>false</default>
+                <label>Clothes Buyers</label>
+            </value>
+            <value>
+                <fullName>Collectibles Buyers</fullName>
+                <default>false</default>
+                <label>Collectibles Buyers</label>
+            </value>
+            <value>
+                <fullName>Company Location</fullName>
+                <default>false</default>
+                <label>Company Location</label>
+            </value>
+            <value>
+                <fullName>Company Type</fullName>
+                <default>false</default>
+                <label>Company Type</label>
+            </value>
+            <value>
+                <fullName>Company Value</fullName>
+                <default>false</default>
+                <label>Company Value</label>
+            </value>
+            <value>
+                <fullName>Computer Buyers</fullName>
+                <default>false</default>
+                <label>Computer Buyers</label>
+            </value>
+            <value>
+                <fullName>Consumer Electronics Buyers</fullName>
+                <default>false</default>
+                <label>Consumer Electronics Buyers</label>
+            </value>
+            <value>
+                <fullName>Cooking Interest</fullName>
+                <default>false</default>
+                <label>Cooking Interest</label>
+            </value>
+            <value>
+                <fullName>Custom Buyers</fullName>
+                <default>false</default>
+                <label>Custom Buyers</label>
+            </value>
+            <value>
+                <fullName>Dessert &amp; Sweets Buyers</fullName>
+                <default>false</default>
+                <label>Dessert &amp; Sweets Buyers</label>
+            </value>
+            <value>
+                <fullName>DIY Buyers</fullName>
+                <default>false</default>
+                <label>DIY Buyers</label>
+            </value>
+            <value>
+                <fullName>Education Interest</fullName>
+                <default>false</default>
+                <label>Education Interest</label>
+            </value>
+            <value>
+                <fullName>Education Level</fullName>
+                <default>false</default>
+                <label>Education Level</label>
+            </value>
+            <value>
+                <fullName>Entertainment Buyers</fullName>
+                <default>false</default>
+                <label>Entertainment Buyers</label>
+            </value>
+            <value>
+                <fullName>Fashion Accessories Buyers</fullName>
+                <default>false</default>
+                <label>Fashion Accessories Buyers</label>
+            </value>
+            <value>
+                <fullName>Financial Product Owners</fullName>
+                <default>false</default>
+                <label>Financial Product Owners</label>
+            </value>
+            <value>
+                <fullName>Financial Services Shoppers</fullName>
+                <default>false</default>
+                <label>Financial Services Shoppers</label>
+            </value>
+            <value>
+                <fullName>Fitness &amp; Wellness Interest</fullName>
+                <default>false</default>
+                <label>Fitness &amp; Wellness Interest</label>
+            </value>
+            <value>
+                <fullName>Food &amp; Beverage Buyers</fullName>
+                <default>false</default>
+                <label>Food &amp; Beverage Buyers</label>
+            </value>
+            <value>
+                <fullName>Footwear Buyers</fullName>
+                <default>false</default>
+                <label>Footwear Buyers</label>
+            </value>
+            <value>
+                <fullName>Gamblers</fullName>
+                <default>false</default>
+                <label>Gamblers</label>
+            </value>
+            <value>
+                <fullName>Gambling Activities</fullName>
+                <default>false</default>
+                <label>Gambling Activities</label>
+            </value>
+            <value>
+                <fullName>Games &amp; Toys Buyers</fullName>
+                <default>false</default>
+                <label>Games &amp; Toys Buyers</label>
+            </value>
+            <value>
+                <fullName>Games Brands</fullName>
+                <default>false</default>
+                <label>Games Brands</label>
+            </value>
+            <value>
+                <fullName>Games Interest</fullName>
+                <default>false</default>
+                <label>Games Interest</label>
+            </value>
+            <value>
+                <fullName>Gifts &amp; Gadgets Buyers</fullName>
+                <default>false</default>
+                <label>Gifts &amp; Gadgets Buyers</label>
+            </value>
+            <value>
+                <fullName>Grapeshot</fullName>
+                <default>false</default>
+                <label>Grapeshot</label>
+            </value>
+            <value>
+                <fullName>Grocery Buyers</fullName>
+                <default>false</default>
+                <label>Grocery Buyers</label>
+            </value>
+            <value>
+                <fullName>Health &amp; Beauty Buyers</fullName>
+                <default>false</default>
+                <label>Health &amp; Beauty Buyers</label>
+            </value>
+            <value>
+                <fullName>Health &amp; Medical Services Intent</fullName>
+                <default>false</default>
+                <label>Health &amp; Medical Services Intent</label>
+            </value>
+            <value>
+                <fullName>Home &amp; Garden Brands</fullName>
+                <default>false</default>
+                <label>Home &amp; Garden Brands</label>
+            </value>
+            <value>
+                <fullName>Home &amp; Garden Buyers</fullName>
+                <default>false</default>
+                <label>Home &amp; Garden Buyers</label>
+            </value>
+            <value>
+                <fullName>Home Appliances Buyers</fullName>
+                <default>false</default>
+                <label>Home Appliances Buyers</label>
+            </value>
+            <value>
+                <fullName>Jobs Interest</fullName>
+                <default>false</default>
+                <label>Jobs Interest</label>
+            </value>
+            <value>
+                <fullName>Lifestyle Interest</fullName>
+                <default>false</default>
+                <label>Lifestyle Interest</label>
+            </value>
+            <value>
+                <fullName>Luxury Products Buyers</fullName>
+                <default>false</default>
+                <label>Luxury Products Buyers</label>
+            </value>
+            <value>
+                <fullName>Membership Owners</fullName>
+                <default>false</default>
+                <label>Membership Owners</label>
+            </value>
+            <value>
+                <fullName>Music Shoppers</fullName>
+                <default>false</default>
+                <label>Music Shoppers</label>
+            </value>
+            <value>
+                <fullName>News &amp; Current Events Interest</fullName>
+                <default>false</default>
+                <label>News &amp; Current Events Interest</label>
+            </value>
+            <value>
+                <fullName>Office Supplies Buyers</fullName>
+                <default>false</default>
+                <label>Office Supplies Buyers</label>
+            </value>
+            <value>
+                <fullName>Online Shoppers</fullName>
+                <default>false</default>
+                <label>Online Shoppers</label>
+            </value>
+            <value>
+                <fullName>Organic Food Buyers</fullName>
+                <default>false</default>
+                <label>Organic Food Buyers</label>
+            </value>
+            <value>
+                <fullName>Outdoor Activities Buyers</fullName>
+                <default>false</default>
+                <label>Outdoor Activities Buyers</label>
+            </value>
+            <value>
+                <fullName>Pet Supplies Buyers</fullName>
+                <default>false</default>
+                <label>Pet Supplies Buyers</label>
+            </value>
+            <value>
+                <fullName>Pets Interest</fullName>
+                <default>false</default>
+                <label>Pets Interest</label>
+            </value>
+            <value>
+                <fullName>Publishing Brands</fullName>
+                <default>false</default>
+                <label>Publishing Brands</label>
+            </value>
+            <value>
+                <fullName>Real Estate Buyers</fullName>
+                <default>false</default>
+                <label>Real Estate Buyers</label>
+            </value>
+            <value>
+                <fullName>Recreation Spenders</fullName>
+                <default>false</default>
+                <label>Recreation Spenders</label>
+            </value>
+            <value>
+                <fullName>Restaurant / Bar Consumers</fullName>
+                <default>false</default>
+                <label>Restaurant / Bar Consumers</label>
+            </value>
+            <value>
+                <fullName>Restaurant / Food Chain Brands</fullName>
+                <default>false</default>
+                <label>Restaurant / Food Chain Brands</label>
+            </value>
+            <value>
+                <fullName>Retail Product Owners</fullName>
+                <default>false</default>
+                <label>Retail Product Owners</label>
+            </value>
+            <value>
+                <fullName>Schober</fullName>
+                <default>false</default>
+                <label>Schober</label>
+            </value>
+            <value>
+                <fullName>Services Consumers</fullName>
+                <default>false</default>
+                <label>Services Consumers</label>
+            </value>
+            <value>
+                <fullName>Social Interest</fullName>
+                <default>false</default>
+                <label>Social Interest</label>
+            </value>
+            <value>
+                <fullName>Social Media Brands</fullName>
+                <default>false</default>
+                <label>Social Media Brands</label>
+            </value>
+            <value>
+                <fullName>Special Event</fullName>
+                <default>false</default>
+                <label>Special Event</label>
+            </value>
+            <value>
+                <fullName>Special Event Shoppers</fullName>
+                <default>false</default>
+                <label>Special Event Shoppers</label>
+            </value>
+            <value>
+                <fullName>Sporting Activities</fullName>
+                <default>false</default>
+                <label>Sporting Activities</label>
+            </value>
+            <value>
+                <fullName>Sporting Goods Buyers</fullName>
+                <default>false</default>
+                <label>Sporting Goods Buyers</label>
+            </value>
+            <value>
+                <fullName>Tech Interest</fullName>
+                <default>false</default>
+                <label>Tech Interest</label>
+            </value>
+            <value>
+                <fullName>Technology Buyers</fullName>
+                <default>false</default>
+                <label>Technology Buyers</label>
+            </value>
+            <value>
+                <fullName>Telecom &amp; Utilities Intent</fullName>
+                <default>false</default>
+                <label>Telecom &amp; Utilities Intent</label>
+            </value>
+            <value>
+                <fullName>Telecom Brands</fullName>
+                <default>false</default>
+                <label>Telecom Brands</label>
+            </value>
+            <value>
+                <fullName>Telecom Service Owners</fullName>
+                <default>false</default>
+                <label>Telecom Service Owners</label>
+            </value>
+            <value>
+                <fullName>Tools &amp; Hardware Buyers</fullName>
+                <default>false</default>
+                <label>Tools &amp; Hardware Buyers</label>
+            </value>
+            <value>
+                <fullName>Utility Providers</fullName>
+                <default>false</default>
+                <label>Utility Providers</label>
+            </value>
+            <value>
+                <fullName>Wedding &amp; Bridal Shoppers</fullName>
+                <default>false</default>
+                <label>Wedding &amp; Bridal Shoppers</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

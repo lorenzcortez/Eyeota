@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opp_KPIs__c</fullName>
+    <label>KPIs</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Reach a new pool of customers</fullName>
+                <default>false</default>
+                <label>Reach a new pool of customers</label>
+            </value>
+            <value>
+                <fullName>Generate product sales</fullName>
+                <default>false</default>
+                <label>Generate product sales</label>
+            </value>
+            <value>
+                <fullName>Generate leads</fullName>
+                <default>false</default>
+                <label>Generate leads</label>
+            </value>
+            <value>
+                <fullName>Generate conversions</fullName>
+                <default>false</default>
+                <label>Generate conversions</label>
+            </value>
+            <value>
+                <fullName>Measurement of success</fullName>
+                <default>false</default>
+                <label>Measurement of success</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

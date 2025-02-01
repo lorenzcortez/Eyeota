@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cookie_sync_Offline_batch_file_trans__c</fullName>
+    <defaultValue>false</defaultValue>
+    <label>Cookie sync &amp; Offline batch file trans</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

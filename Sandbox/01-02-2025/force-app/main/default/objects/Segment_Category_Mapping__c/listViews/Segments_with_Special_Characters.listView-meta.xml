@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Segments_with_Special_Characters</fullName>
+    <columns>NAME</columns>
+    <columns>Segment_Name__c</columns>
+    <columns>Segment_Description__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Segment_Name__c</field>
+        <operation>contains</operation>
+        <value>€,£,ö,ü,ë,é,ç,à,è,�</value>
+    </filters>
+    <label>Segments with Special Characters</label>
+    <sharedTo>
+        <group>AIA_Team</group>
+        <role>DataOps_Team</role>
+    </sharedTo>
+</ListView>

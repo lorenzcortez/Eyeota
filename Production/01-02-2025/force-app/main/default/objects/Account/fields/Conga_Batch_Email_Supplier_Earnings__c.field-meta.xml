@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Conga_Batch_Email_Supplier_Earnings__c</fullName>
+    <description>##Conga created button:00b0o000002ZAJP</description>
+    <externalId>false</externalId>
+    <formula>&quot;&amp;solmgr=1&quot;+&quot;&amp;id=&quot;+Id+&quot;&amp;qmode=SendEmail&quot;+&quot;&amp;templateid=a7g0o000000LTN0&quot;+&quot;&amp;queryid=[SDBLast6Mos]a7Y0o0000007CyQ,[SDBBreakdown]a7Y0o0000007Cyp,[SDBCustom]a7Y0o0000007Cyk,[SDBEyeotaAU]a7Y0o0000007D37,[SDBEyeotaDE]a7Y0o0000007D3C,[SDBEyeotaUK]a7Y0o0000007D3M,[SDBEyeotaBR]a7Y0o0000007D3v,[SDBEyeotaCA]a7Y0o0000007D40,[SDBEyeotaES]a7Y0o0000007D4e,[SDBEyeotaFR]a7Y0o0000007D4o,[SDBEyeotaHK]a7Y0o0000007D4t,[SDBEyeotaIT]a7Y0o0000007D58,[SDBEyeotaJP]a7Y0o0000007D5I,[SDBEyeotaMX]a7Y0o0000007D5X,[SDBEyeotaNL]a7Y0o0000007D5h,[SDBEyeotaNZ]a7Y0o0000007D5r,[SDBEyeotaPL]a7Y0o0000007D61,[SDBEyeotaRU]a7Y0o0000007D6B,[SDBEyeotaTR]a7Y0o0000007D6V,[SDBEyeotaTW]a7Y0o0000007D6a,[SDBMonth]a7Y0o0000007D6u,[SDBBrandedAU]a7Y0o0000007D6z,[SDBBrandedDE]a7Y0o0000007D74,[SDBBrandedUK]a7Y0o0000007D7E,[SDBBrandedBR]a7Y0o0000007D7n,[SDBBrandedCA]a7Y0o0000007D7s,[SDBBrandedES]a7Y0o0000007D8W,[SDBBrandedFR]a7Y0o0000007D8g,[SDBBrandedHK]a7Y0o0000007D8v,[SDBBrandedIT]a7Y0o0000007D95,[SDBBrandedJP]a7Y0o0000007D9A,[SDBBrandedMX]a7Y0o0000007D9P,[SDBBrandedNL]a7Y0o0000007D9Z,[SDBBrandedNZ]a7Y0o0000007D9j,[SDBBrandedPL]a7Y0o0000007D9t,[SDBBrandedRU]a7Y0o0000007DA3,[SDBBrandedTR]a7Y0o0000007DAN,[SDBBrandedTW]a7Y0o0000007DAS,[SDBEyeotaIN]a7Y0o0000007D5D,[SDBBrandedIN]a7Y0o0000007DAr,[SDBTotals]a7Y0o0000007CyV,[SDBEyeotaNORDICS]a7Y0o0000008RZl,[SDBBrandedNORDICS]a7Y0o0000008RZC,[SDBEyeotaSEA1]a7Y0o0000008RZq,[SDBEyeotaSEA2]a7Y0o0000008RZv,[SDBBrandedSEA1]a7Y0o0000008RZH,[SDBBrandedSEA2]a7Y0o0000008RZM,[SDBEyeotaOthers1]a7Y0o0000008RaA,[SDBEyeotaOthers2]a7Y0o0000008RaF,[SDBBrandedOthers1]a7Y0o0000008RZb,[SDBBrandedOthers2]a7Y0o0000008RZg,[SDBEyeotaUS1]a7Y0o0000008Ra5,[SDBEyeotaUS2]a7Y0o0000008Ra0,[SDBBrandedUS1]a7Y0o0000008RZW,[SDBBrandedUS2]a7Y0o0000008RZR&quot;+
+&quot;&amp;congaemailtemplateid=a7X0o000000Q5QE&quot; + 
+&quot;&amp;sc0=1&quot; + 
+&quot;&amp;emailtoid=&quot; + $User.Id +
+&quot;&amp;emailadditionalto=&quot; + Supplier_Earnings_Email__c +
+&quot;&amp;sc1=Attachments&quot; + 
+&quot;&amp;emailbcc=marketing-tech@eyeota.com&quot; +
+&quot;&amp;ofn=PO&quot; + PO__c + &quot;619 \&quot;June 2019 - Eyeota Supplier Earnings Report -\&quot; &quot; + Name</formula>
+    <label>Conga Batch Email Supplier Earnings</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

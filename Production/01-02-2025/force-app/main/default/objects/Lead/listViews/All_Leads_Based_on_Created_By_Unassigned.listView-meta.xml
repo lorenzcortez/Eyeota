@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Leads_Based_on_Created_By_Unassigned</fullName>
+    <booleanFilter>1 AND 2 AND 3 AND 4 AND 5 AND 6 AND 7</booleanFilter>
+    <columns>Spam__c</columns>
+    <columns>LEAD.FIRST_NAME</columns>
+    <columns>LEAD.LAST_NAME</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>Email_Domain__c</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>LEAD.LEAD_SOURCE</columns>
+    <columns>Lead_Source_Other__c</columns>
+    <columns>LEAD.COUNTRY</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>CREATEDBY_USER.ALIAS</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>LEAD.UNREAD</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>LEAD.LEAD_SOURCE</field>
+        <operation>notEqual</operation>
+        <value>Lead Gen</value>
+    </filters>
+    <filters>
+        <field>Lead_Source_Other__c</field>
+        <operation>notContain</operation>
+        <value>Unsubscribe,Subject Access Request</value>
+    </filters>
+    <filters>
+        <field>LEAD.CREATED_DATE</field>
+        <operation>greaterOrEqual</operation>
+        <value>6/1/2017 12:00 AM</value>
+    </filters>
+    <filters>
+        <field>Spam__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>LEAD.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Lead.General</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>equals</operation>
+        <value>Machine,EP</value>
+    </filters>
+    <filters>
+        <field>Email_Domain__c</field>
+        <operation>notContain</operation>
+        <value>gmail,hotmail,outlook</value>
+    </filters>
+    <label>All Unassigned Inbound Leads</label>
+</ListView>

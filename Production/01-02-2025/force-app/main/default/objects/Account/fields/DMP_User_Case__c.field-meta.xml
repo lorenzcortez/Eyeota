@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DMP_User_Case__c</fullName>
+    <label>DMP User Case</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Analytics</fullName>
+                <default>false</default>
+                <label>Analytics</label>
+            </value>
+            <value>
+                <fullName>Measurement</fullName>
+                <default>false</default>
+                <label>Measurement</label>
+            </value>
+            <value>
+                <fullName>Modeling</fullName>
+                <default>false</default>
+                <label>Modeling</label>
+            </value>
+            <value>
+                <fullName>Targeting/Activation</fullName>
+                <default>false</default>
+                <label>Targeting/Activation</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

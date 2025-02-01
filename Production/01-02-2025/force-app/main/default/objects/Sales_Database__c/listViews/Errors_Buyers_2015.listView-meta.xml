@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Errors_Buyers_2015</fullName>
+    <columns>NAME</columns>
+    <columns>Buyer_Original_Raw__c</columns>
+    <columns>Advertiser__c</columns>
+    <columns>Advertiser_Raw_Original__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Date__c</field>
+        <operation>greaterOrEqual</operation>
+        <value>1/1/2015</value>
+    </filters>
+    <label>Errors_Buyers_2015</label>
+</ListView>

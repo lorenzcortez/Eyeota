@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Owner_Sources__c</fullName>
+    <label>Owner Sources</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Registration Data</fullName>
+                <default>false</default>
+                <label>Registration Data</label>
+            </value>
+            <value>
+                <fullName>Survey Responses</fullName>
+                <default>false</default>
+                <label>Survey Responses</label>
+            </value>
+            <value>
+                <fullName>Consumer Purchase Activity</fullName>
+                <default>false</default>
+                <label>Consumer Purchase Activity</label>
+            </value>
+            <value>
+                <fullName>Transactional events</fullName>
+                <default>false</default>
+                <label>Transactional events</label>
+            </value>
+            <value>
+                <fullName>CRM/ Loyalty data</fullName>
+                <default>false</default>
+                <label>CRM/ Loyalty data</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

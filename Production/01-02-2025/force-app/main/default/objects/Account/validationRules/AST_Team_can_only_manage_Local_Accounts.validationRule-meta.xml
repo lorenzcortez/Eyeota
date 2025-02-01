@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AST_Team_can_only_manage_Local_Accounts</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND (
+ $UserRole.Name = &quot;AST Team&quot;,
+OR(
+TEXT (Account_Category__c) = &quot;Regional Account&quot;,
+TEXT (Account_Category__c) = &quot;Global Account&quot;,
+TEXT (Account_Category__c) = &quot;Media Agency&quot;,
+ TEXT (Account_Category__c) = &quot;Holding Company&quot;
+))</errorConditionFormula>
+    <errorDisplayField>Account_Category__c</errorDisplayField>
+    <errorMessage>You are not authorized to create an Account with this Category.</errorMessage>
+</ValidationRule>
