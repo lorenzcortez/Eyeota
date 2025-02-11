@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Segment_Sales_Mappings</fullName>
+    <columns>CREATED_DATE</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>UPDATEDBY_USER.ALIAS</columns>
+    <columns>NAME</columns>
+    <columns>Segment_Name_Sales_Raw__c</columns>
+    <columns>Segment_Name__c</columns>
+    <columns>Segment_Category_Mapping__c</columns>
+    <columns>Created_From_Exception__c</columns>
+    <columns>isCreatedFromException__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Segment_Name_Sales_Raw__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>Segment_Name__c</field>
+        <operation>equals</operation>
+    </filters>
+    <label>Segment Sales Mappings</label>
+</ListView>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Generate_Payable_Invoice</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>Generate Payable Invoice</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <url>https://ap8.salesforce.com/a5V/e?
+CF00N9000000F64hG={!Invoice_Matching__c.Account__c}
+&amp;CF00N9000000F64hG_lkid={!Invoice_Matching__c.AccountId__c}
+&amp;00N0o00000N0Ydj={!Invoice_Matching__c.Name}
+&amp;save_new=1&amp;sfdc.override=1</url>
+</WebLink>

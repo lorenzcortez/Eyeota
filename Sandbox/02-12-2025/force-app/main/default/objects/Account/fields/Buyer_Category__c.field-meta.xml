@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Buyer_Category__c</fullName>
+    <label>Buyer Category</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Holding Group Agency</fullName>
+                <default>false</default>
+                <label>Holding Group Agency</label>
+            </value>
+            <value>
+                <fullName>Independent Agency</fullName>
+                <default>false</default>
+                <label>Independent Agency</label>
+            </value>
+            <value>
+                <fullName>Strategic Independent Agency</fullName>
+                <default>false</default>
+                <label>Strategic Independent Agency</label>
+            </value>
+            <value>
+                <fullName>Inside Sales Independent Agency</fullName>
+                <default>false</default>
+                <label>Inside Sales Independent Agency</label>
+            </value>
+            <value>
+                <fullName>Client Direct</fullName>
+                <default>false</default>
+                <label>Client Direct</label>
+            </value>
+            <value>
+                <fullName>Managed Service</fullName>
+                <default>false</default>
+                <label>Managed Service</label>
+            </value>
+            <value>
+                <fullName>Platform Account</fullName>
+                <default>false</default>
+                <label>Platform Account</label>
+            </value>
+            <value>
+                <fullName>Supplier Sales</fullName>
+                <default>false</default>
+                <label>Supplier Sales</label>
+            </value>
+            <value>
+                <fullName>Others</fullName>
+                <default>false</default>
+                <label>Others</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

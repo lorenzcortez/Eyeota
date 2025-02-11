@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>Month__c</columns>
+    <columns>NAME</columns>
+    <columns>Account__c</columns>
+    <columns>CURRENCY_ISO_CODE</columns>
+    <columns>Amount_in_Billing_Currency__c</columns>
+    <columns>Payable_Invoice_Number__c</columns>
+    <columns>Invoice_Currency__c</columns>
+    <columns>Invoice_Net__c</columns>
+    <columns>Payment_Status__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All</label>
+    <sharedTo>
+        <group>Finance_Team</group>
+        <group>Publisher_Team_APAC</group>
+        <group>Publisher_Team_EMEA</group>
+        <group>Publisher_Team_NA</group>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Advertiser_update_Ashraf</fullName>
+    <columns>NAME</columns>
+    <columns>Advertiser_Raw__c</columns>
+    <columns>Advertiser__c</columns>
+    <columns>Advertiser_Sector_1__c</columns>
+    <columns>Advertiser_Sector_2__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Advertiser_Raw__c</field>
+        <operation>equals</operation>
+        <value>Remitly - US</value>
+    </filters>
+    <filters>
+        <field>Advertiser__c</field>
+        <operation>equals</operation>
+        <value>,Unclassified</value>
+    </filters>
+    <filters>
+        <field>Date_Invoiced__c</field>
+        <operation>greaterOrEqual</operation>
+        <value>1/1/2024</value>
+    </filters>
+    <label>Advertiser update (Ashraf)</label>
+    <sharedTo>
+        <group>AIA_Team</group>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Publisher_Site_Type__c</fullName>
+    <label>Publisher Site Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Product &amp; Service Marketplace</fullName>
+                <default>false</default>
+                <label>Product &amp; Service Marketplace</label>
+            </value>
+            <value>
+                <fullName>N/A</fullName>
+                <default>false</default>
+                <label>N/A</label>
+            </value>
+            <value>
+                <fullName>Ad Network / SSP / Agency</fullName>
+                <default>false</default>
+                <label>Ad Network / SSP / Agency</label>
+            </value>
+            <value>
+                <fullName>News &amp; Information</fullName>
+                <default>false</default>
+                <label>News &amp; Information</label>
+            </value>
+            <value>
+                <fullName>Bookings</fullName>
+                <default>false</default>
+                <label>Bookings</label>
+            </value>
+            <value>
+                <fullName>Branded Data Provider</fullName>
+                <default>false</default>
+                <label>Branded Data Provider</label>
+            </value>
+            <value>
+                <fullName>Blog</fullName>
+                <default>false</default>
+                <label>Blog</label>
+            </value>
+            <value>
+                <fullName>General</fullName>
+                <default>false</default>
+                <label>General</label>
+            </value>
+            <value>
+                <fullName>Product Comparison &amp; Reviews</fullName>
+                <default>false</default>
+                <label>Product Comparison &amp; Reviews</label>
+            </value>
+            <value>
+                <fullName>Social</fullName>
+                <default>false</default>
+                <label>Social</label>
+            </value>
+            <value>
+                <fullName>Deals</fullName>
+                <default>false</default>
+                <label>Deals</label>
+            </value>
+            <value>
+                <fullName>Survey</fullName>
+                <default>false</default>
+                <label>Survey</label>
+            </value>
+            <value>
+                <fullName>Brand Site</fullName>
+                <default>false</default>
+                <label>Brand Site</label>
+            </value>
+            <value>
+                <fullName>E-Commerce</fullName>
+                <default>false</default>
+                <label>E-Commerce</label>
+            </value>
+            <value>
+                <fullName>Content Hosting</fullName>
+                <default>false</default>
+                <label>Content Hosting</label>
+            </value>
+            <value>
+                <fullName>DMP</fullName>
+                <default>false</default>
+                <label>DMP</label>
+            </value>
+            <value>
+                <fullName>Business Directory</fullName>
+                <default>false</default>
+                <label>Business Directory</label>
+            </value>
+            <value>
+                <fullName>Payment Gateway</fullName>
+                <default>false</default>
+                <label>Payment Gateway</label>
+            </value>
+            <value>
+                <fullName>Forum</fullName>
+                <default>false</default>
+                <label>Forum</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

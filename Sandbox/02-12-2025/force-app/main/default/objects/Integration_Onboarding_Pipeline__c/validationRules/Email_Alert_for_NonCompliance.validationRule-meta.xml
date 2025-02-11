@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Email_Alert_for_NonCompliance</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(ISNULL( Reason_for_non_compliance__c ), (Send_Email_Alert_for_Non_Compliance__c = TRUE))</errorConditionFormula>
+    <errorDisplayField>Send_Email_Alert_for_Non_Compliance__c</errorDisplayField>
+    <errorMessage>Please fill in the &quot;Reason for Non-Compliance&quot; field.</errorMessage>
+</ValidationRule>

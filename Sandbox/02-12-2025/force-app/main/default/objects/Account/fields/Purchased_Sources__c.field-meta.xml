@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Purchased_Sources__c</fullName>
+    <label>Purchased Sources</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Consumer Purchase Activity</fullName>
+                <default>false</default>
+                <label>Consumer Purchase Activity</label>
+            </value>
+            <value>
+                <fullName>Transactional events</fullName>
+                <default>false</default>
+                <label>Transactional events</label>
+            </value>
+            <value>
+                <fullName>Shopping Behaviour</fullName>
+                <default>false</default>
+                <label>Shopping Behaviour</label>
+            </value>
+            <value>
+                <fullName>Payment information</fullName>
+                <default>false</default>
+                <label>Payment information</label>
+            </value>
+            <value>
+                <fullName>CRM</fullName>
+                <default>false</default>
+                <label>CRM</label>
+            </value>
+            <value>
+                <fullName>Loyalty data</fullName>
+                <default>false</default>
+                <label>Loyalty data</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

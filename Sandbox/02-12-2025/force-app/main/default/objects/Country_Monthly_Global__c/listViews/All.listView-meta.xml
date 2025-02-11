@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>Calls__c</columns>
+    <columns>Country__c</columns>
+    <columns>Country_Name__c</columns>
+    <columns>Date__c</columns>
+    <columns>Revenue__c</columns>
+    <columns>Master_Geography_Code__c</columns>
+    <columns>Region_Rollup__c</columns>
+    <columns>Region_Rollup_Index_Report__c</columns>
+    <columns>Uniques__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All</label>
+</ListView>

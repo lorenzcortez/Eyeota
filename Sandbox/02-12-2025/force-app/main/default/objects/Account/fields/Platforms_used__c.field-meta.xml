@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Platforms_used__c</fullName>
+    <inlineHelpText>Please select all platforms buyer is using.</inlineHelpText>
+    <label>Platforms used</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Ad.com</fullName>
+                <default>false</default>
+                <label>Ad.com</label>
+            </value>
+            <value>
+                <fullName>Adform</fullName>
+                <default>false</default>
+                <label>Adform</label>
+            </value>
+            <value>
+                <fullName>Adobe</fullName>
+                <default>false</default>
+                <label>Adobe</label>
+            </value>
+            <value>
+                <fullName>Aggregate Knowledge</fullName>
+                <default>false</default>
+                <label>Aggregate Knowledge</label>
+            </value>
+            <value>
+                <fullName>Amobee</fullName>
+                <default>false</default>
+                <label>Amobee</label>
+            </value>
+            <value>
+                <fullName>AOL O&amp;O</fullName>
+                <default>false</default>
+                <label>AOL O&amp;O</label>
+            </value>
+            <value>
+                <fullName>AOL ON</fullName>
+                <default>false</default>
+                <label>AOL ON</label>
+            </value>
+            <value>
+                <fullName>Appier</fullName>
+                <default>false</default>
+                <label>Appier</label>
+            </value>
+            <value>
+                <fullName>AppNexus</fullName>
+                <default>false</default>
+                <label>AppNexus</label>
+            </value>
+            <value>
+                <fullName>Audience Science</fullName>
+                <default>false</default>
+                <label>Audience Science</label>
+            </value>
+            <value>
+                <fullName>Avocet</fullName>
+                <default>false</default>
+                <label>Avocet</label>
+            </value>
+            <value>
+                <fullName>Brightroll</fullName>
+                <default>false</default>
+                <label>Brightroll</label>
+            </value>
+            <value>
+                <fullName>Conversant</fullName>
+                <default>false</default>
+                <label>Conversant</label>
+            </value>
+            <value>
+                <fullName>DataXu</fullName>
+                <default>false</default>
+                <label>DataXu</label>
+            </value>
+            <value>
+                <fullName>DBM</fullName>
+                <default>false</default>
+                <label>DBM</label>
+            </value>
+            <value>
+                <fullName>FreakOut JP</fullName>
+                <default>false</default>
+                <label>FreakOut JP</label>
+            </value>
+            <value>
+                <fullName>Google AdWords</fullName>
+                <default>false</default>
+                <label>Google AdWords</label>
+            </value>
+            <value>
+                <fullName>Google Audience Center</fullName>
+                <default>false</default>
+                <label>Google Audience Center</label>
+            </value>
+            <value>
+                <fullName>Google DFP</fullName>
+                <default>false</default>
+                <label>Google DFP</label>
+            </value>
+            <value>
+                <fullName>Google TrueView</fullName>
+                <default>false</default>
+                <label>Google TrueView</label>
+            </value>
+            <value>
+                <fullName>IgnitionOne</fullName>
+                <default>false</default>
+                <label>IgnitionOne</label>
+            </value>
+            <value>
+                <fullName>Infectious Media</fullName>
+                <default>false</default>
+                <label>Infectious Media</label>
+            </value>
+            <value>
+                <fullName>Krux</fullName>
+                <default>false</default>
+                <label>Krux</label>
+            </value>
+            <value>
+                <fullName>Lotame</fullName>
+                <default>false</default>
+                <label>Lotame</label>
+            </value>
+            <value>
+                <fullName>MediaMath</fullName>
+                <default>false</default>
+                <label>MediaMath</label>
+            </value>
+            <value>
+                <fullName>ONE by AOL: Display</fullName>
+                <default>false</default>
+                <label>ONE by AOL: Display</label>
+            </value>
+            <value>
+                <fullName>Adap.tv</fullName>
+                <default>false</default>
+                <label>ONE by AOL: Video</label>
+            </value>
+            <value>
+                <fullName>Oracle</fullName>
+                <default>false</default>
+                <label>Oracle</label>
+            </value>
+            <value>
+                <fullName>Platform</fullName>
+                <default>false</default>
+                <label>Platform</label>
+            </value>
+            <value>
+                <fullName>RadiumOne</fullName>
+                <default>false</default>
+                <label>RadiumOne</label>
+            </value>
+            <value>
+                <fullName>Rocketfuel</fullName>
+                <default>false</default>
+                <label>Rocketfuel</label>
+            </value>
+            <value>
+                <fullName>Specific Media</fullName>
+                <default>false</default>
+                <label>Specific Media</label>
+            </value>
+            <value>
+                <fullName>SpotXchange</fullName>
+                <default>false</default>
+                <label>SpotXchange</label>
+            </value>
+            <value>
+                <fullName>The Trade Desk</fullName>
+                <default>false</default>
+                <label>The Trade Desk</label>
+            </value>
+            <value>
+                <fullName>The Trade Desk - Data Alliance</fullName>
+                <default>false</default>
+                <label>The Trade Desk - Data Alliance</label>
+            </value>
+            <value>
+                <fullName>TubeMogul</fullName>
+                <default>false</default>
+                <label>TubeMogul</label>
+            </value>
+            <value>
+                <fullName>Turn</fullName>
+                <default>false</default>
+                <label>Turn</label>
+            </value>
+            <value>
+                <fullName>Viant</fullName>
+                <default>false</default>
+                <label>Viant</label>
+            </value>
+            <value>
+                <fullName>Videology</fullName>
+                <default>false</default>
+                <label>Videology</label>
+            </value>
+            <value>
+                <fullName>Yahoo!</fullName>
+                <default>false</default>
+                <label>Yahoo!</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

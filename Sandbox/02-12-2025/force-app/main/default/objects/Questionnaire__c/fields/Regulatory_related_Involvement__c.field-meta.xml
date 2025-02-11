@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Regulatory_related_Involvement__c</fullName>
+    <label>Regulatory related Involvement</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Network Advertising Initiative (NAI)</fullName>
+                <default>false</default>
+                <label>Network Advertising Initiative (NAI)</label>
+            </value>
+            <value>
+                <fullName>Direct Marketing Assn (US)</fullName>
+                <default>false</default>
+                <label>Direct Marketing Assn (US)</label>
+            </value>
+            <value>
+                <fullName>Digital Advertising Alliance (DAA)</fullName>
+                <default>false</default>
+                <label>Digital Advertising Alliance (DAA)</label>
+            </value>
+            <value>
+                <fullName>Direct Marketing Assn (UK)</fullName>
+                <default>false</default>
+                <label>Direct Marketing Assn (UK)</label>
+            </value>
+            <value>
+                <fullName>EDDA (YourOnlineChoices.com)</fullName>
+                <default>false</default>
+                <label>EDDA (YourOnlineChoices.com)</label>
+            </value>
+            <value>
+                <fullName>ePrivacy Seal</fullName>
+                <default>false</default>
+                <label>ePrivacy Seal</label>
+            </value>
+            <value>
+                <fullName>Interactive Advertising Bureau (IAB) US/CA</fullName>
+                <default>false</default>
+                <label>Interactive Advertising Bureau (IAB) US/CA</label>
+            </value>
+            <value>
+                <fullName>Interactive Advertising Bureau (IAB) EU</fullName>
+                <default>false</default>
+                <label>Interactive Advertising Bureau (IAB) EU</label>
+            </value>
+            <value>
+                <fullName>Interactive Advertising Bureau (IAB) APAC</fullName>
+                <default>false</default>
+                <label>Interactive Advertising Bureau (IAB) APAC</label>
+            </value>
+            <value>
+                <fullName>Other (please specify)</fullName>
+                <default>false</default>
+                <label>Other (please specify)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

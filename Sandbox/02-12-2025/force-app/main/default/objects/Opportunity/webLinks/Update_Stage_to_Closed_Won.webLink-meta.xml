@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Update_Stage_to_Closed_Won</fullName>
+    <availability>online</availability>
+    <displayType>massActionButton</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Update Stage to Closed Won</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <requireRowSelection>true</requireRowSelection>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/20.0/connection.js&quot;)} 
+
+var records = {!GETRECORDIDS($ObjectType.Opportunity)}; 
+var newRecords = []; 
+
+if (records[0] == null) 
+{ 
+alert(&quot;Please select at least one row&quot;) 
+} 
+else 
+{ 
+for (var n=0; n&lt;records.length; n++) { 
+var o = new sforce.SObject(&quot;Opportunity&quot;); 
+o.id = records[n]; 
+o.StageName = &apos;Closed Won&apos;; 
+newRecords.push(o); 
+} 
+
+result = sforce.connection.update(newRecords); 
+window.location.reload(); 
+}</url>
+</WebLink>

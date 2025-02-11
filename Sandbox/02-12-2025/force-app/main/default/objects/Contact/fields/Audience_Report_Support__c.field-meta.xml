@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Audience_Report_Support__c</fullName>
+    <label>Audience Report Support</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>I would like to speak to someone at Eyeota</fullName>
+                <default>false</default>
+                <label>I would like to speak to someone at Eyeota</label>
+            </value>
+            <value>
+                <fullName>I can&apos;t find the segment I&apos;m looking for</fullName>
+                <default>false</default>
+                <label>I can&apos;t find the segment I&apos;m looking for</label>
+            </value>
+            <value>
+                <fullName>I need help finding relevant segments for my campaign</fullName>
+                <default>false</default>
+                <label>I need help finding relevant segments for my campaign</label>
+            </value>
+            <value>
+                <fullName>I can&apos;t find segments for the country I am looking for</fullName>
+                <default>false</default>
+                <label>I can&apos;t find segments for the country I am looking for</label>
+            </value>
+            <value>
+                <fullName>Other (please specify)</fullName>
+                <default>false</default>
+                <label>Other (please specify)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

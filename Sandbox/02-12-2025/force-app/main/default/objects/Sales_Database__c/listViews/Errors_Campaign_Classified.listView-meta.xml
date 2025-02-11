@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Errors_Campaign_Classified</fullName>
+    <columns>NAME</columns>
+    <columns>Advertiser__c</columns>
+    <columns>Campaign_Raw_Original__c</columns>
+    <columns>Campaign__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Campaign_Classified_Error__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>Advertiser__c</field>
+        <operation>equals</operation>
+        <value>,NULL</value>
+    </filters>
+    <label>Errors_Campaign Classified</label>
+</ListView>

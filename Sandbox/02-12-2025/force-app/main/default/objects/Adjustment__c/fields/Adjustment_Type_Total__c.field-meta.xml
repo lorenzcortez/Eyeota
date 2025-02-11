@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Adjustment_Type_Total__c</fullName>
+    <label>Adjustment Type Total</label>
+    <summarizedField>Adjustment_Type__c.Amount__c</summarizedField>
+    <summaryForeignKey>Adjustment_Type__c.Adjustment__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

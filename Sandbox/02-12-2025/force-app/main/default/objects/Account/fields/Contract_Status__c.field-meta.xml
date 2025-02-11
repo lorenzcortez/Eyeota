@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contract_Status__c</fullName>
+    <label>Contract Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Contract Sent</fullName>
+                <default>false</default>
+                <label>Contract Sent</label>
+            </value>
+            <value>
+                <fullName>Contract Returned</fullName>
+                <default>false</default>
+                <label>Contract Returned</label>
+            </value>
+            <value>
+                <fullName>Data Exploration</fullName>
+                <default>false</default>
+                <label>Data Exploration</label>
+            </value>
+            <value>
+                <fullName>Pixels Sent</fullName>
+                <default>false</default>
+                <label>Pixels Sent</label>
+            </value>
+            <value>
+                <fullName>Data Mapping of Segments</fullName>
+                <default>false</default>
+                <label>Data Mapping of Segments</label>
+            </value>
+            <value>
+                <fullName>Pixels Implemented</fullName>
+                <default>false</default>
+                <label>Pixels Implemented</label>
+            </value>
+            <value>
+                <fullName>Receiving Data</fullName>
+                <default>false</default>
+                <label>Receiving Data</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

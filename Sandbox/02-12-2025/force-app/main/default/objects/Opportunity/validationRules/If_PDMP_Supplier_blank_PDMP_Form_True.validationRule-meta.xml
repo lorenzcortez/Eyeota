@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>If_PDMP_Supplier_blank_PDMP_Form_True</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( PDMP_Form_Attached__c =TRUE,
+AND(ISPICKVAL( PDMP_Supplier__c,&quot;&quot; ),
+ISPICKVAL(Deal_Type__c,&quot;PDMP&quot;)))</errorConditionFormula>
+    <errorMessage>Please fill in the PDMP Supplier field for this PDMP Opportunity.</errorMessage>
+</ValidationRule>

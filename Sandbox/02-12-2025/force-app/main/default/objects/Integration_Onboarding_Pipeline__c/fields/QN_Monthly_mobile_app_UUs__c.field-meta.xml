@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>QN_Monthly_mobile_app_UUs__c</fullName>
+    <externalId>false</externalId>
+    <formula>Data_Supplier_Account__r.Parent.Monthly_mobile_app_UUs__c</formula>
+    <label>Monthly mobile app UUs</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,5 @@
+.execution__container .slds-card__body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Marketing_Email_Activity_Type__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(BEGINS(Subject, &quot;Sent&quot;),&quot;Marketing Email Sent&quot;,
+IF(BEGINS(Subject,&quot;Opened&quot;),&quot;Marketing Email Opened&quot;,
+IF(BEGINS(Subject,&quot;Clicked&quot;),&quot;Marketing Email Clicked&quot;,
+IF(BEGINS(Subject,&quot;Submitted Form&quot;),&quot;Marketing Form Submitted&quot;,
+&quot;&quot;))))</formula>
+    <label>Marketing Email Activity Type</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

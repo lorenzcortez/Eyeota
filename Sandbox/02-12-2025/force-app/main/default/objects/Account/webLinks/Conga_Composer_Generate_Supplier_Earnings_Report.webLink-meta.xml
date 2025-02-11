@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Conga_Composer_Generate_Supplier_Earnings_Report</fullName>
+    <availability>online</availability>
+    <description>Originally created by Conga Solution Manager. Date of last use of Update Button from Conga Solution record: https://apxtconga4.ap8.visual.force.com/a7e0o0000004F08AAE
+01-May-2019 02:45:01 PM</description>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <hasMenubar>false</hasMenubar>
+    <hasScrollbars>false</hasScrollbars>
+    <hasToolbar>false</hasToolbar>
+    <height>660</height>
+    <isResizable>false</isResizable>
+    <linkType>url</linkType>
+    <masterLabel>Generate Supplier Earnings Report</masterLabel>
+    <openType>newWindow</openType>
+    <position>none</position>
+    <protected>false</protected>
+    <showsLocation>false</showsLocation>
+    <showsStatus>false</showsStatus>
+    <url>/apex/APXTConga4__Conga_Composer?SolMgr=1
+&amp;serverUrl={!API.Partner_Server_URL_370}
+&amp;Id={!Account.Id}
+
+&amp;QueryId=[SDBLast6Mos]a7Y0o0000007CyQ,
+[SDBBreakdown]a7Y0o0000007Cyp,
+[SDBCustom]a7Y0o0000007Cyk,
+[SDBEyeotaAU]a7Y0o0000007D37,
+[SDBEyeotaDE]a7Y0o0000007D3C,
+[SDBEyeotaSG]a7Y0o0000007D3H,
+[SDBEyeotaUK]a7Y0o0000007D3M,
+[SDBEyeotaUS]a7Y0o0000007D3R,
+[SDBEyeotaAE]a7Y0o0000007D3W,
+[SDBEyeotaAPAC]a7Y0o0000007D3b,
+[SDBEyeotaAR]a7Y0o0000007D3g,
+[SDBEyeotaAT]a7Y0o0000007D3l,
+[SDBEyeotaBE]a7Y0o0000007D3q,
+[SDBEyeotaBR]a7Y0o0000007D3v,
+[SDBEyeotaCA]a7Y0o0000007D40,
+[SDBEyeotaCH]a7Y0o0000007D45,
+[SDBEyeotaCL]a7Y0o0000007D4A,
+[SDBEyeotaCY]a7Y0o0000007D4F,
+[SDBEyeotaEMEA]a7Y0o0000007D4Z,
+[SDBEyeotaES]a7Y0o0000007D4e,
+[SDBEyeotaFR]a7Y0o0000007D4o,
+[SDBEyeotaHK]a7Y0o0000007D4t,
+[SDBEyeotaID]a7Y0o0000007D4y,
+[SDBEyeotaIE]a7Y0o0000007D53,
+[SDBEyeotaIT]a7Y0o0000007D58,
+[SDBEyeotaJP]a7Y0o0000007D5I,
+[SDBEyeotaKR]a7Y0o0000007D5N,
+[SDBEyeotaMX]a7Y0o0000007D5X,
+[SDBEyeotaMY]a7Y0o0000007D5c,
+[SDBEyeotaNL]a7Y0o0000007D5h,
+[SDBEyeotaNO]a7Y0o0000007D5m,
+[SDBEyeotaNZ]a7Y0o0000007D5r,
+[SDBEyeotaPL]a7Y0o0000007D61,
+[SDBEyeotaPR]a7Y0o0000007D66,
+[SDBEyeotaRU]a7Y0o0000007D6B,
+[SDBEyeotaTH]a7Y0o0000007D6Q,
+[SDBEyeotaTR]a7Y0o0000007D6V,
+[SDBEyeotaTW]a7Y0o0000007D6a,
+[SDBEyeotaVN]a7Y0o0000007D6f,
+[SDBEyeotaZA]a7Y0o0000007D6k,
+[SDBEyeotaOthers]a7Y0o0000007D6p,
+[SDBMonth]a7Y0o0000007D6u,
+[SDBBrandedAU]a7Y0o0000007D6z,
+[SDBBrandedDE]a7Y0o0000007D74,
+[SDBBrandedSG]a7Y0o0000007D79,
+[SDBBrandedUK]a7Y0o0000007D7E,
+[SDBBrandedUS]a7Y0o0000007D7J,
+[SDBBrandedAE]a7Y0o0000007D7O,
+[SDBBrandedAPAC]a7Y0o0000007D7T,
+[SDBBrandedAR]a7Y0o0000007D7Y,
+[SDBBrandedAT]a7Y0o0000007D7d,
+[SDBBrandedBE]a7Y0o0000007D7i,
+[SDBBrandedBR]a7Y0o0000007D7n,
+[SDBBrandedCA]a7Y0o0000007D7s,
+[SDBBrandedCH]a7Y0o0000007D7x,
+[SDBBrandedCL]a7Y0o0000007D82,
+[SDBBrandedCY]a7Y0o0000007D87,
+[SDBBrandedEMEA]a7Y0o0000007D8R,
+[SDBBrandedES]a7Y0o0000007D8W,
+[SDBBrandedFR]a7Y0o0000007D8g,
+[SDBBrandedID]a7Y0o0000007D8l,
+[SDBBrandedHK]a7Y0o0000007D8v,
+[SDBBrandedIE]a7Y0o0000007D90,
+[SDBBrandedIT]a7Y0o0000007D95,
+[SDBBrandedJP]a7Y0o0000007D9A,
+[SDBBrandedKR]a7Y0o0000007D9F,
+[SDBBrandedMX]a7Y0o0000007D9P,
+[SDBBrandedMY]a7Y0o0000007D9U,
+[SDBBrandedNL]a7Y0o0000007D9Z,
+[SDBBrandedNO]a7Y0o0000007D9e,
+[SDBBrandedNZ]a7Y0o0000007D9j,
+[SDBBrandedPL]a7Y0o0000007D9t,
+[SDBBrandedPR]a7Y0o0000007D9y,
+[SDBBrandedRU]a7Y0o0000007DA3,
+[SDBBrandedTH]a7Y0o0000007DAI,
+[SDBBrandedTR]a7Y0o0000007DAN,
+[SDBBrandedTW]a7Y0o0000007DAS,
+[SDBBrandedVN]a7Y0o0000007DAX,
+[SDBBrandedZA]a7Y0o0000007DAc,
+[SDBBrandedOthers]a7Y0o0000007DAh,
+[SDBEyeotaIN]a7Y0o0000007D5D,
+[SDBBrandedIN]a7Y0o0000007DAr
+
+&amp;TemplateId=a7g0o000000LTN0
+
+&amp;CongaEmailTemplateId=a7X0o000000Q5QE
+
+&amp;DS7=12
+&amp;EmailToId={!$User.Id}
+&amp;EmailAdditionalTo={!Account.Supplier_Earnings_Email__c}
+&amp;EmailCC=accountspayable@eyeota.com
+&amp;EmailBCC=epatajo@eyeota.com</url>
+    <width>900</width>
+</WebLink>

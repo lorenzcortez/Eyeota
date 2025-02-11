@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Participation_in_Industry_Code__c</fullName>
+    <label>Participation in Industry Code</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Network Advertising Initiative (NAI)</fullName>
+                <default>false</default>
+                <label>Network Advertising Initiative (NAI)</label>
+            </value>
+            <value>
+                <fullName>Direct Marketing Assn (US)</fullName>
+                <default>false</default>
+                <label>Direct Marketing Assn (US)</label>
+            </value>
+            <value>
+                <fullName>Digital Advertising Alliance (DAA)</fullName>
+                <default>false</default>
+                <label>Digital Advertising Alliance (DAA)</label>
+            </value>
+            <value>
+                <fullName>Direct Marketing Assn (UK)</fullName>
+                <default>false</default>
+                <label>Direct Marketing Assn (UK)</label>
+            </value>
+            <value>
+                <fullName>EDDA (YourOnlineChoices.com)</fullName>
+                <default>false</default>
+                <label>EDDA (YourOnlineChoices.com)</label>
+            </value>
+            <value>
+                <fullName>ePrivacy Seal</fullName>
+                <default>false</default>
+                <label>ePrivacy Seal</label>
+            </value>
+            <value>
+                <fullName>Interactive Advertising Bureau (IAB)</fullName>
+                <default>false</default>
+                <label>Interactive Advertising Bureau (IAB)</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

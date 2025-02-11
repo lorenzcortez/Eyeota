@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Send_Alert_for_New_IO__c</fullName>
+    <defaultValue>false</defaultValue>
+    <label>Send Alert for New IO</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

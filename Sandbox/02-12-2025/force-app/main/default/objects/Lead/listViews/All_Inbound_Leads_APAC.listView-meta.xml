@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Inbound_Leads_APAC</fullName>
+    <booleanFilter>(1 OR 2) AND 3 AND 4 AND 5 AND 6</booleanFilter>
+    <columns>LEAD.COMPANY</columns>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.COUNTRY</columns>
+    <columns>LEAD.LEAD_SOURCE</columns>
+    <columns>Lead_Source_Other__c</columns>
+    <columns>CORE.USERS.FIRST_NAME</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>LEAD.COUNTRY</field>
+        <operation>equals</operation>
+        <value>Singapore,Indonesia,Hong Kong,Thailand,Malaysia,Australia,New Zealand,Vietnam</value>
+    </filters>
+    <filters>
+        <field>LEAD.COUNTRY</field>
+        <operation>contains</operation>
+        <value>India,Japan,Korea</value>
+    </filters>
+    <filters>
+        <field>LEAD.LEAD_SOURCE</field>
+        <operation>equals</operation>
+        <value>Hubspot Form Submission,Incoming enquiry</value>
+    </filters>
+    <filters>
+        <field>Spam__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>Inactive_Lead__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Referred to New Lead,Unqualified,Dead,Email Bounced,Bulk Upload</value>
+    </filters>
+    <label>All Inbound Leads (APAC)</label>
+    <sharedTo>
+        <group>Regional_Distribution_Lists_Asia</group>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Segment_Update_No_Deletion</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(TEXT(Type__c)=&quot;Segment Update&quot;  ,INCLUDES(Segment_Update_Type__c,&apos;Segment Deletion&apos;))</errorConditionFormula>
+    <errorMessage>Please submit a Deletion Request.</errorMessage>
+</ValidationRule>

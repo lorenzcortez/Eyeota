@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Print_Statement_PDF_Formula__c</fullName>
+    <description>##Conga created button:00bN0000000KG1T</description>
+    <externalId>false</externalId>
+    <formula>&quot;&amp;solmgr=1&quot; + 
+&quot;&amp;id=&quot; + Id +
+&quot;&amp;queryid=[CMPSTMT]a7YN0000000Dc6c?pv0=&quot; + $User.Id + &quot;,[ACTSTMT]a7YN0000000Dc6d,[TOTOUTSTMT]a7YN0000000Dc6e?pv0={QVar0}~pv1=&quot; + Id + &quot;,[CMPQVAR]a7YN0000000Dc6f,[ADSTMT]a7YN0000000Dc6g?pv0=&quot; + Id + &quot;~pv1={QVar0},[JDSTMT]a7YN0000000Dc6h?pv0=&quot; + Id + &quot;~pv1={QVar0},[StmtCT]a7YN0000000Dc6i,[TD]a7YN0000000Dc7K,[AgeSum]a7YN0000000Dc7Z&quot; + 
+&quot;&amp;templateid=a7gN000000005Wd,{QVar1}&quot; + 
+&quot;&amp;qmode=Download&quot; + 
+&quot;&amp;defaultpdf=1&quot; + 
+&quot;&amp;ofn=&quot; + Name + &quot; &quot; + TEXT(TODAY()) +
+&quot;&amp;currencyculture=&quot; + ffaci__CurrencyCulture__c +
+&quot;&amp;dv0=&quot; + ffaci__CurrencyCulture__c +
+&quot;&amp;qvar1id=a7YN0000000Dc6k&quot; + 
+&quot;&amp;qvar0id=a7YN0000000Dc6j?pv0=&quot; + $User.Id</formula>
+    <label>Print Statement PDF Formula</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

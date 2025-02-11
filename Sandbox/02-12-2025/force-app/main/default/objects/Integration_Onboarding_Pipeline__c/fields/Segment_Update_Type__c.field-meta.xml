@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Segment_Update_Type__c</fullName>
+    <label>Segment Update Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Segment Name</fullName>
+                <default>false</default>
+                <label>Segment Name</label>
+            </value>
+            <value>
+                <fullName>Pricing</fullName>
+                <default>false</default>
+                <label>Pricing</label>
+            </value>
+            <value>
+                <fullName>Description</fullName>
+                <default>false</default>
+                <label>Description</label>
+            </value>
+            <value>
+                <fullName>Lifetime</fullName>
+                <default>false</default>
+                <label>Lifetime</label>
+            </value>
+            <value>
+                <fullName>Mapping Values</fullName>
+                <default>false</default>
+                <label>Mapping Values</label>
+            </value>
+            <value>
+                <fullName>Segment Deletion</fullName>
+                <default>false</default>
+                <label>Segment Deletion</label>
+            </value>
+            <value>
+                <fullName>Termination of Account</fullName>
+                <default>false</default>
+                <label>Termination of Account</label>
+            </value>
+            <value>
+                <fullName>Low/ No Revenue</fullName>
+                <default>false</default>
+                <label>Low/ No Revenue</label>
+            </value>
+            <value>
+                <fullName>Product Removal</fullName>
+                <default>false</default>
+                <label>Product Removal</label>
+            </value>
+            <value>
+                <fullName>Market Deletion</fullName>
+                <default>false</default>
+                <label>Market Deletion</label>
+            </value>
+            <value>
+                <fullName>Privacy/ Compliance</fullName>
+                <default>false</default>
+                <label>Privacy/ Compliance</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

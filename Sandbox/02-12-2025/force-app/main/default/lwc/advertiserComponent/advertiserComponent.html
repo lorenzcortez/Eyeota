@@ -1,0 +1,78 @@
+<template>
+    <div class="advertiser__component slds-card ">
+        <div class="slds-card__body slds-card__body_inner slds-p-around_large" style="margin: 0;position: relative;min-height: 648px;">
+            <div class="filter__wrapper">
+                <div class="date-invoiced__filter">
+                    <div class="label">Date Invoiced</div>
+                    <div class="date-invoiced__inputs">
+                        <div class="date--from__wrapper">
+                            <lightning-input type="date" name="dateFrom" label="Date From" value={dataFrom} onchange={onChangeDateFrom} ></lightning-input>
+                        </div>
+                        <div class="date--to__wrapper">
+                            <lightning-input type="date" class="slds-p-left_medium" value={dateTo} onchange={onChangeDateTo} label="Date To" ></lightning-input>
+                        </div>
+                    </div>
+                </div>
+                <div class="country-code_wrapper slds-p-left_medium">
+                    <lightning-input type="text" label="Target Country Code" value={country} onchange={onChangeCountry}></lightning-input>
+                </div>
+                <div class="platform_wrapper slds-p-left_medium">
+                    <lightning-input type="text" label="Platform" value={platform} onchange={onPlatform}></lightning-input>
+                </div>
+                <div class="submit_wrapper slds-p-left_medium">
+                    <lightning-button variant="brand" label="Submit" onclick={handleSearch}></lightning-button>
+                </div>
+            </div>
+            <div class="bulk__wrapper slds-p-top_large">
+                <lightning-button variant="brand" label="Bulk Update Advertisers" onclick={handleBulk}></lightning-button>
+            </div>
+            <div class="custom--table__wrapper slds-p-top_large">
+                <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered" aria-label="Example table of Opportunities with vertical borders">
+                    <thead>
+                        <tr class="slds-line-height_reset">
+                            <th class="" scope="col">
+                                <div class="slds-truncate" title="Advertiser Seat Name">Advertiser Seat Name</div>
+                            </th>
+                            <th class="" scope="col">
+                                <div class="slds-truncate" title="Account">Account</div>
+                            </th>
+                            <th class="" scope="col">
+                                <div class="slds-truncate" title="Advertiser Mapping">Advertiser Mapping</div>
+                            </th>
+                            <th class="" scope="col">
+                                <div class="slds-truncate"></div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <template for:each={data} for:item="item" for:index="index">
+                            <tr key={item.name} class="slds-hint-parent">
+                                <td>
+                                    <div class="slds-truncate">{item.name}</div>
+                                </td>
+                                <td>
+                                    <template if:true={item.itemAccount.hasAccount}>
+                                        <c-search-component onclear={onclearAccount} options={item.itemAccount.itemMatching} onobjectselected={selectAccount} label="Search Account"></c-search-component>
+                                    </template>
+                                </td>
+                                <td>
+                                    <template if:true={item.itemadvertiserMapping.hasAdvertisingMapping}>
+                                        <c-search-component onclear={onclearMapping} options={item.itemadvertiserMapping.itemMatching} onobjectselected={selectMapping} label="Search Adviser Mapping"></c-search-component>
+                                    </template>
+                                </td>
+                                <td>
+                                    <div class="slds-truncate">
+                                        <lightning-button variant="brand" data-name={item.name} label="Execute" onclick={handleSingleExecute} ></lightning-button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </template>
+                    </tbody>
+                </table>
+            </div>
+            <template if:true={showModal}>
+                <lightning-spinner alternative-text="Loading" size="small"></lightning-spinner>
+            </template>
+        </div>
+    </div>
+</template>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Day_Purchase__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE(
+  MOD(  Date__c  - DATE( 1900, 1, 7 ), 7 ),
+  0, &quot;1. Sunday&quot;,
+  1, &quot;2. Monday&quot;,
+  2, &quot;3. Tuesday&quot;,
+  3, &quot;4. Wednesday&quot;,
+  4, &quot;5. Thursday&quot;,
+  5, &quot;6. Friday&quot;, 
+  &quot;7. Saturday&quot;
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Day Purchase (By Week)</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

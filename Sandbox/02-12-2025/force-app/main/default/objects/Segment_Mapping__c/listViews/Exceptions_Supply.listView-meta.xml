@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Exceptions_Supply</fullName>
+    <columns>Segment_Category_Mapping__c</columns>
+    <columns>Segment_Name_Sales_Raw__c</columns>
+    <columns>Segment_Name__c</columns>
+    <columns>Segment_Name_Supply_Raw__c</columns>
+    <columns>Created_From_Exception__c</columns>
+    <columns>isCreatedFromException__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Segment_Name_Supply_Raw__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>Segment_Name__c</field>
+        <operation>equals</operation>
+    </filters>
+    <label>Segment Exceptions (Supply)</label>
+    <sharedTo>
+        <group>AIA_Team</group>
+        <group>Finance_Team</group>
+        <role>Finance_Team</role>
+    </sharedTo>
+</ListView>

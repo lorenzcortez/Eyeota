@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Log_a_Meeting_StrategicAccount</fullName>
+    <availability>online</availability>
+    <displayType>massActionButton</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>Log a Meeting (Strategic)</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <requireRowSelection>true</requireRowSelection>
+    <url>/00T/e?what_id={!Strategic_Account__c.Id}&amp;retURL=%2F{!Strategic_Account__c.Id}&amp;{!Task.What} = {!Strategic_Account__c.Name}&amp;tsk10=Meeting&amp;tsk5=Meeting&amp;tsk12=Completed&amp;tsk4={!TODAY()}&amp;ent=Task</url>
+</WebLink>

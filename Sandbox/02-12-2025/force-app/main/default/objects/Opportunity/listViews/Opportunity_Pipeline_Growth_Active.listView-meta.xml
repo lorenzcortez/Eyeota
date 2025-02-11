@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunity_Pipeline_Growth_Active</fullName>
+    <columns>Billing_Status__c</columns>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>Total_Contract_Value__c</columns>
+    <columns>OPPORTUNITY.CURRENCY_ISO_CODE</columns>
+    <columns>Billing_Schedule__c</columns>
+    <columns>Monthly_Billable_Amount__c</columns>
+    <columns>Additional_Fees__c</columns>
+    <columns>Billing_Account__c</columns>
+    <columns>OPPORTUNITY.CLOSE_DATE</columns>
+    <columns>Start_Date__c</columns>
+    <columns>End_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Billing_Status__c</field>
+        <operation>equals</operation>
+        <value>Active</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.FIRST_NAME</field>
+        <operation>equals</operation>
+        <value>Paul,Aaron,Teodora,Niki,Georgina,Trent</value>
+    </filters>
+    <label>Opportunity Pipeline (Growth) - Active</label>
+    <sharedTo>
+        <group>Commercial_Development_Team</group>
+        <group>Finance_Team</group>
+    </sharedTo>
+</ListView>

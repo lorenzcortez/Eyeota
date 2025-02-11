@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DMP_Data_Grouping__c</fullName>
+    <label>Data Grouping</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>By Country</fullName>
+                <default>false</default>
+                <label>By Country</label>
+            </value>
+            <value>
+                <fullName>By Vertical</fullName>
+                <default>false</default>
+                <label>By Vertical</label>
+            </value>
+            <value>
+                <fullName>By Number of Segments</fullName>
+                <default>false</default>
+                <label>By Number of Segments</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

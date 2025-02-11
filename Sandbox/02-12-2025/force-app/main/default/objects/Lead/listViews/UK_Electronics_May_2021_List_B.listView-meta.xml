@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UK_Electronics_May_2021_List_B</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.STATE</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>LEAD.UNREAD</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>LEAD.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Lead.General</value>
+    </filters>
+    <filters>
+        <field>Lead_Source_Other__c</field>
+        <operation>equals</operation>
+        <value>UK Consumer Electronics - May 2021 - List B</value>
+    </filters>
+    <label>UK Electronics (May 2021) - List B</label>
+    <sharedTo>
+        <group>Commercial_Development_Team</group>
+    </sharedTo>
+</ListView>

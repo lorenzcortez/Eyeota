@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Commercial_Development_Leads</fullName>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.INDUSTRY</columns>
+    <columns>Regionv2__c</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LinkedIn_Profile__c</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>LEAD.LEAD_SOURCE</columns>
+    <columns>Lead_Source_Other__c</columns>
+    <columns>Conversation_History__c</columns>
+    <columns>CORE.USERS.FIRST_NAME</columns>
+    <columns>LEAD.LAST_UPDATE</columns>
+    <columns>LEAD.UNREAD</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>LEAD.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Lead.General</value>
+    </filters>
+    <filters>
+        <field>LEAD.CREATED_DATE</field>
+        <operation>greaterOrEqual</operation>
+        <value>1/1/2020 12:00 AM</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>equals</operation>
+        <value>,PAK</value>
+    </filters>
+    <filters>
+        <field>Regionv2__c</field>
+        <operation>notContain</operation>
+        <value>Oceania</value>
+    </filters>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>notContain</operation>
+        <value>Unqualified</value>
+    </filters>
+    <label>Commercial Development Leads</label>
+    <sharedTo>
+        <role>Director_Commercial_Development</role>
+        <role>Managing_Director_EMEA</role>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ashraf_Check</fullName>
+    <columns>NAME</columns>
+    <columns>Advertiser_Raw__c</columns>
+    <columns>Advertiser_Account__c</columns>
+    <columns>LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>UPDATEDBY_USER</field>
+        <operation>equals</operation>
+        <value>Ashraf Maniyar</value>
+    </filters>
+    <filters>
+        <field>LAST_UPDATE</field>
+        <operation>greaterOrEqual</operation>
+        <value>4/1/2023 12:00 AM</value>
+    </filters>
+    <label>Ashraf Check</label>
+    <sharedTo>
+        <group>Usage_Reports_Alert_Group</group>
+    </sharedTo>
+</ListView>

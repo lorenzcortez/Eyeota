@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PDT_Member__c</fullName>
+    <description>Placeholder for Sales Team Member Names</description>
+    <label>PDT Member</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Unallocated</fullName>
+                <default>true</default>
+                <label>Unallocated</label>
+            </value>
+            <value>
+                <fullName>Data Alliance</fullName>
+                <default>false</default>
+                <label>Data Alliance</label>
+            </value>
+            <value>
+                <fullName>Inside Sales</fullName>
+                <default>false</default>
+                <label>Inside Sales</label>
+            </value>
+            <value>
+                <fullName>Ailish</fullName>
+                <default>false</default>
+                <label>Ailish</label>
+            </value>
+            <value>
+                <fullName>Audra</fullName>
+                <default>false</default>
+                <label>Audra</label>
+            </value>
+            <value>
+                <fullName>Chloe</fullName>
+                <default>false</default>
+                <label>Chloe</label>
+            </value>
+            <value>
+                <fullName>Chris E.</fullName>
+                <default>false</default>
+                <label>Chris E.</label>
+            </value>
+            <value>
+                <fullName>Derek</fullName>
+                <default>false</default>
+                <label>Derek</label>
+            </value>
+            <value>
+                <fullName>Georgina</fullName>
+                <default>false</default>
+                <label>Georgina</label>
+            </value>
+            <value>
+                <fullName>Gerard</fullName>
+                <default>false</default>
+                <label>Gerard</label>
+            </value>
+            <value>
+                <fullName>James</fullName>
+                <default>false</default>
+                <label>James</label>
+            </value>
+            <value>
+                <fullName>Jamie</fullName>
+                <default>false</default>
+                <label>Jamie</label>
+            </value>
+            <value>
+                <fullName>Matthew</fullName>
+                <default>false</default>
+                <label>Matthew</label>
+            </value>
+            <value>
+                <fullName>Monika</fullName>
+                <default>false</default>
+                <label>Monika</label>
+            </value>
+            <value>
+                <fullName>Paul</fullName>
+                <default>false</default>
+                <label>Paul</label>
+            </value>
+            <value>
+                <fullName>Priya</fullName>
+                <default>false</default>
+                <label>Priya</label>
+            </value>
+            <value>
+                <fullName>Managed Service</fullName>
+                <default>false</default>
+                <label>Managed Service</label>
+            </value>
+            <value>
+                <fullName>US - New York 1</fullName>
+                <default>false</default>
+                <label>US - New York 1</label>
+            </value>
+            <value>
+                <fullName>US - New York 2</fullName>
+                <default>false</default>
+                <label>US - New York 2</label>
+            </value>
+            <value>
+                <fullName>US - Midwest</fullName>
+                <default>false</default>
+                <label>US - Midwest</label>
+            </value>
+            <value>
+                <fullName>US - Southeast</fullName>
+                <default>false</default>
+                <label>US - Southeast</label>
+            </value>
+            <value>
+                <fullName>Publisher</fullName>
+                <default>false</default>
+                <label>Publisher</label>
+            </value>
+            <value>
+                <fullName>Pending Allocation</fullName>
+                <default>false</default>
+                <label>Pending Allocation</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

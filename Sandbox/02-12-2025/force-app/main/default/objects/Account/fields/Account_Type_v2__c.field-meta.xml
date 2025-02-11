@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Type_v2__c</fullName>
+    <label>Account Type v2</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Named Platform Accounts</fullName>
+                <default>false</default>
+                <label>Named Platform Accounts</label>
+            </value>
+            <value>
+                <fullName>Buyer</fullName>
+                <default>false</default>
+                <label>Buyer</label>
+            </value>
+            <value>
+                <fullName>Data Supplier</fullName>
+                <default>false</default>
+                <label>Data Supplier</label>
+            </value>
+            <value>
+                <fullName>Platform</fullName>
+                <default>false</default>
+                <label>Platform</label>
+            </value>
+            <value>
+                <fullName>Advertiser</fullName>
+                <default>false</default>
+                <label>Advertiser</label>
+            </value>
+            <value>
+                <fullName>Agency</fullName>
+                <default>false</default>
+                <label>Agency</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

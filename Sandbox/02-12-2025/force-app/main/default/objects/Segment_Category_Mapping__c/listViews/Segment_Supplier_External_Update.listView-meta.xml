@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Segment_Supplier_External_Update</fullName>
+    <columns>NAME</columns>
+    <columns>Segment_Supplier_External__c</columns>
+    <columns>Segment_Name__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Segment_Supplier_External__c</field>
+        <operation>equals</operation>
+    </filters>
+    <label>Segment Supplier External Update</label>
+    <sharedTo>
+        <role>DataOps_Team</role>
+    </sharedTo>
+</ListView>

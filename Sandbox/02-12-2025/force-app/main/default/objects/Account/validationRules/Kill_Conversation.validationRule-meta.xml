@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Kill_Conversation</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( Killed_Conversation__c = TRUE,
+ ISBLANK(  Reason_for_Killing_Investment__c)  
+)</errorConditionFormula>
+    <errorMessage>Please fill Reason for Killing Investment!</errorMessage>
+</ValidationRule>

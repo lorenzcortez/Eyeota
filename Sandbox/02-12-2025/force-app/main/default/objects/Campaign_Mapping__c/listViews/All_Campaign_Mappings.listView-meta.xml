@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Campaign_Mappings</fullName>
+    <columns>NAME</columns>
+    <columns>Campaign_Raw__c</columns>
+    <columns>Advertiser__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Campaign_Raw__c</field>
+        <operation>equals</operation>
+        <value>BUDGET AU</value>
+    </filters>
+    <label>All Campaign Mappings</label>
+</ListView>

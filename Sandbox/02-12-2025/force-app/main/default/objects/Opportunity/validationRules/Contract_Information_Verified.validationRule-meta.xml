@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contract_Information_Verified</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(OR(OR(OR(OR(OR( OR(OR(ISCHANGED( Amount ) ,ISCHANGED(  Billing_Account__c  ) ),ISCHANGED(   Maintenance_Start_Date__c  ) ),ISCHANGED(  Additional_Fees__c  ) ),ISCHANGED(  StageName  ) ),ISCHANGED(  Start_Date__c  ) ),ISCHANGED(  End_Date__c  ) ),ISCHANGED(  Billing_Schedule__c  ) ), Contract_Information_Reviewed__c =TRUE)</errorConditionFormula>
+    <errorMessage>Please reach out to Business Operations if you need to update the Opportunity.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,1381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>General</fullName>
+    <active>true</active>
+    <businessProcess>Publisher</businessProcess>
+    <label>General</label>
+    <picklistValues>
+        <picklist>Audience_Report_Access_Leads__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Campaign_Tags__c</picklist>
+        <values>
+            <fullName>Adobe Summit 2017</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DAAC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Digiday Publisher Summit %28Nice%29 2016</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MasterCard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RampUp 2017</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>dmexco 2016</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Countries_they_look_after__c</picklist>
+        <values>
+            <fullName>Australia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Austria</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Belgium</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Canada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>China</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>France</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Germany</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hong Kong</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>India</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Indonesia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Italy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Japan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Korea</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Malaysia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Netherlands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Zealand</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Norway</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Others</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Philippines</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Poland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Singapore</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spain</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Switzerland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Taiwan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Thailand</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Turkey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UAE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vietnam</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Data_Category__c</picklist>
+        <values>
+            <fullName>AU TV Zones</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Branded Data B2B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Branded Data B2C</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Demographic - Declared Age</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Demographic - Declared Gender</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Demographic - First Name%2FSalutation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Demographic - Income</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Demographic - Job</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Demographic - Lifestyle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Demographic - Location</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Demographic - Marital Status</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hashed Emails</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Intent - Auto</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Intent - B2B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Intent - Consumer Electronics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Intent - Entertainment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Intent - Finance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Intent - Food</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Intent - Gaming</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Intent - IT%2FComputer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Intent - Jobs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Intent - Lifestyle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Intent - Medical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Intent - News%2FInformation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Intent - Real Estate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Intent - Shopping%2FRetail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Intent - Sport</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Intent - Travel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Interest - Auto</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Interest - B2B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Interest - Consumer Electronics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Interest - Entertainment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Interest - Finance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Interest - Food</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Interest - Gaming</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Interest - IT%2FComputer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Interest - Jobs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Interest - Lifestyle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Interest - Medical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Interest - News%2FInformation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Interest - Shopping%2FRetail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Interest - Sport</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Interest - Travel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Seasonal Segments</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Data_Coverage__c</picklist>
+        <values>
+            <fullName>Country</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Region</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Documents_Sent__c</picklist>
+        <values>
+            <fullName>Billing Process</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contract</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lead</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Others</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pixel Implementation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Publisher Intro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales Deck</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Industry</picklist>
+        <values>
+            <fullName>Agriculture</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apparel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Automotive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Banking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Biotechnology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CPG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chemicals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Communications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Construction</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consulting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Education</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Electronics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Energy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Engineering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Entertainment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Environmental</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Food %26 Beverage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Government</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Healthcare</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hospitality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insurance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lifestyle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Machinery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manufacturing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not For Profit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Real Estate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recreation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shipping</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sport</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telecommunications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tourism</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transportation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Travel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Utilities</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Integration_Time__c</picklist>
+        <values>
+            <fullName>%3E2 months</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1 week</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 months</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 weeks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3 weeks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4 weeks</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>LeadSource</picklist>
+        <values>
+            <fullName>Business Development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EDM %2F e-newsletter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Employee Referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Event - External</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Event - Internal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existing Lead</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hubspot Form Submission</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incoming enquiry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lead Gen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Offline Advertising</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Online Advertising</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paid Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Public Relations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Search</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trade Show</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Website</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Word of Mouth</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Lead_Category__c</picklist>
+        <values>
+            <fullName>Child Account</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Holding Company</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Media Agency</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Parent Account</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Lead_List_Name__c</picklist>
+        <values>
+            <fullName>AMES 2016</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Boutique Agencies %28US%29 List A</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Boutique Agencies %28US%29 List B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inside Sales Mailing List A</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inside Sales Mailing List B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unallocated Oct-Dec 2015 A</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unallocated Oct-Dec 2015 B</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Lead_Type__c</picklist>
+        <values>
+            <fullName>Ad Network</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ad Server</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Advertiser</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Advisory Board Member</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Board of Directors</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Branded Data Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Competitor %28no emails%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Competitor Investor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Current Investor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DMP%2FData Specialist</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DSP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Data Buyer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Data Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Data Supplier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Employee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Event Supplier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General Interest</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Industry Association</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marketing Supplier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Media Agency</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mobile</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Potential Investor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Press</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Publisher</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SSP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shareholder</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trading Desk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unlisted Advisor</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Name</picklist>
+        <values>
+            <fullName>Dr%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mr%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mrs%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ms%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prof%2E</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Platforms_used__c</picklist>
+        <values>
+            <fullName>Adap%2Etv</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Adform</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Adobe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Aggregate Knowledge</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AppNexus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Appier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brightroll</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DBM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DataXu</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Google Audience Center</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Google DFP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IgnitionOne</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lotame</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MediaMath</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rocketfuel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SpotXchange</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>The Trade Desk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TubeMogul</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Turn</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Viant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Videology</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Rating</picklist>
+        <values>
+            <fullName>Cold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hot</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Warm</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Region__c</picklist>
+        <values>
+            <fullName>ANZ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APAC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LATAM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MENA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>North America</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Regionv2__c</picklist>
+        <values>
+            <fullName>Americas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Asia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Europe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Global</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MEA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oceania</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>SAR_Regulation_V2__c</picklist>
+        <values>
+            <fullName>CCPA %28California%2C Colorado%2C Connecticut%2C Virginia%2C Utah%2C Nevada Residents%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GDPR %28Non US Requests%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other %2F Generic</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Site_Footprint_Countries__c</picklist>
+        <values>
+            <fullName>Argentina</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Australia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Austria</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Belgium</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brazil</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Canada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chile</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>China</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Colombia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>France</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Germany</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hong Kong</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>India</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Indonesia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>International</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Italy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Japan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Korea</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Malaysia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mexico</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Netherlands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Zealand</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Norway</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Peru</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Philippines</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Poland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Portugal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Singapore</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spain</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Switzerland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Taiwan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Thailand</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Turkey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UAE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Venezuela</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vietnam</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Site_Footprint_Region__c</picklist>
+        <values>
+            <fullName>ANZ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APAC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Global</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LATAM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MENA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>North America</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Site_Type__c</picklist>
+        <values>
+            <fullName>Ad Network</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Automotive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Beauty</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Blog</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Booking Engine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Branded Data Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dating</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Downloading</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ecommerce</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Education</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fashion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Food</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Furniture</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gambling</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Games</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General Conent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Health</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hobbies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hotel%2FAccomodation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insurance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kids</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Languages</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lead Generation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Magazines</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mens</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Movies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Music</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>News %2F Blog</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Price Comparison</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Product %2F Service Listings</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Real Estate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Search aggregator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sports</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Survey Site</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tech</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ticketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Travel Content</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Travel Portal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Travel Site</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Video</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Use_of_Marks__c</picklist>
+        <values>
+            <fullName>Allowed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Anonymous</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

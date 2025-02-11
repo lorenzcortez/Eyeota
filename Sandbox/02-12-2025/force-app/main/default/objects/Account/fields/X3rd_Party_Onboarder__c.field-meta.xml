@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X3rd_Party_Onboarder__c</fullName>
+    <label>3rd Party Onboarder</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>LiveRamp</fullName>
+                <default>false</default>
+                <label>LiveRamp</label>
+            </value>
+            <value>
+                <fullName>Neustar</fullName>
+                <default>false</default>
+                <label>Neustar</label>
+            </value>
+            <value>
+                <fullName>Throttle</fullName>
+                <default>false</default>
+                <label>Throtle</label>
+            </value>
+            <value>
+                <fullName>N/A</fullName>
+                <default>true</default>
+                <label>N/A</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Date_within_Range__c</fullName>
+    <formula>Date__c &gt;= Data_Supplier__r.Start_Date__c &amp;&amp; Date__c &lt;= Data_Supplier__r.End_Date__c</formula>
+    <label>Date within Range?</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

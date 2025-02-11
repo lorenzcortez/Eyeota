@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Advertiser_Exceptions3</fullName>
+    <columns>Advertiser_Account_ID__c</columns>
+    <columns>NAME</columns>
+    <columns>Advertiser_Raw__c</columns>
+    <columns>Advertiser_Name__c</columns>
+    <columns>Advertiser_Account__c</columns>
+    <columns>Advertiser__c</columns>
+    <columns>Advertiser_Sector_1__c</columns>
+    <columns>Advertiser_Sector_2__c</columns>
+    <columns>Created_From_Exception__c</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Advertiser_Raw__c</field>
+        <operation>contains</operation>
+        <value>(OMG FR) (DSP) OMD</value>
+    </filters>
+    <filters>
+        <field>Advertiser__c</field>
+        <operation>equals</operation>
+        <value>,Unclassified</value>
+    </filters>
+    <label>Advertiser Exceptions</label>
+    <sharedTo>
+        <group>AIA_Team</group>
+    </sharedTo>
+</ListView>

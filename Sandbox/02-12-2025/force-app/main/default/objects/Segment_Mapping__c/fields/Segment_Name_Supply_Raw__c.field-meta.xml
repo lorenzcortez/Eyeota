@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Segment_Name_Supply_Raw__c</fullName>
+    <externalId>true</externalId>
+    <inlineHelpText>Please upload SEGMENT KEY in this field (ALL CAPS) for supply data from October 1, 2016 onwards.</inlineHelpText>
+    <label>Segment Name (Supply) Raw</label>
+    <length>255</length>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

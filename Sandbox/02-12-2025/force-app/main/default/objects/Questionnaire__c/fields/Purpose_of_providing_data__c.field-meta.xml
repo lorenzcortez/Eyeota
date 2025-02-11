@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Purpose_of_providing_data__c</fullName>
+    <label>Purpose of providing data</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Online Interest-Based Advertising</fullName>
+                <default>false</default>
+                <label>Online Interest-Based Advertising</label>
+            </value>
+            <value>
+                <fullName>Personalization</fullName>
+                <default>false</default>
+                <label>Personalization</label>
+            </value>
+            <value>
+                <fullName>Linkage</fullName>
+                <default>false</default>
+                <label>Linkage</label>
+            </value>
+            <value>
+                <fullName>Modelling</fullName>
+                <default>false</default>
+                <label>Modelling</label>
+            </value>
+            <value>
+                <fullName>Onboarding</fullName>
+                <default>false</default>
+                <label>Onboarding</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
