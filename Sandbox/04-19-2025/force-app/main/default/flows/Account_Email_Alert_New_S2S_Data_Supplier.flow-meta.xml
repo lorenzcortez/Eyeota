@@ -174,7 +174,7 @@ OR(TEXT({!myVariable_old.Integration_Type__c}) =&apos;Online via S2S&apos; , TEX
     </processMetadataValues>
     <processType>Workflow</processType>
     <startElementReference>myVariable_waitStartTimeAssignment</startElementReference>
-    <status>Active</status>
+    <status>Obsolete</status>
     <variables>
         <name>myVariable_current</name>
         <dataType>SObject</dataType>

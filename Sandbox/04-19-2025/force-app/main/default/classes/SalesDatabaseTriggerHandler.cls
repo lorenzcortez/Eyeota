@@ -383,10 +383,10 @@ public with sharing class SalesDatabaseTriggerHandler {
                     //                                                     salesDB.Date_Invoiced__c+
                     //                                                     mapSegCodeSegCatId.get(segmentName));  
                                                     
-                    if (salesDB.Segment_Revenue_Transaction__c == null)
-                    {
-                    segRevTransaction.add(salesDB.Target_Country_Raw__c+'_'+salesDB.Date_Invoiced__c+'_'+mapSegCodeSegCatId.get(segmentName));
-                    }
+                    // if (salesDB.Segment_Revenue_Transaction__c == null)
+                    // {
+                    // segRevTransaction.add(salesDB.Target_Country_Raw__c+'_'+salesDB.Date_Invoiced__c+'_'+mapSegCodeSegCatId.get(segmentName));
+                    // }
                 }catch(Exception e)
                 {
                     System.debug('>>Error:'+e.getMessage());
@@ -416,42 +416,42 @@ public with sharing class SalesDatabaseTriggerHandler {
 
         /******************* Start - Populate Segment Trans Id in Sales Database ************************************************************/
 
-        if(!segRevTransaction.isEmpty())
-        {                    
-            for(String combkey: segRevTransaction )
-            {
-                try{    
-                    Segment_Revenue_Transaction__c st = new Segment_Revenue_Transaction__c();
-                    String[] keys = combkey.split('\\_');
-                    st.Country_Code__c = keys[0];
-                    st.Date__c = Date.valueOf(keys[1]);
+        // if(!segRevTransaction.isEmpty())
+        // {                    
+        //     for(String combkey: segRevTransaction )
+        //     {
+        //         try{    
+        //             Segment_Revenue_Transaction__c st = new Segment_Revenue_Transaction__c();
+        //             String[] keys = combkey.split('\\_');
+        //             st.Country_Code__c = keys[0];
+        //             st.Date__c = Date.valueOf(keys[1]);
 
-                    if (keys[2] != null) {
-                        st.Segment_Category_Mapping__c = keys[2];
-                        listSegmentTransactionInsert.add (st);
-                    }
-                }catch(Exception e){}    
-            }
+        //             if (keys[2] != null) {
+        //                 st.Segment_Category_Mapping__c = keys[2];
+        //                 listSegmentTransactionInsert.add (st);
+        //             }
+        //         }catch(Exception e){}    
+        //     }
 
-            If (!listSegmentTransactionInsert.isEmpty()) insert listSegmentTransactionInsert;
+        //     If (!listSegmentTransactionInsert.isEmpty()) insert listSegmentTransactionInsert;
 
-            for(Sales_Database__c salesDB:newList)
-            {
-                for(Segment_Revenue_Transaction__c segTrans:listSegmentTransactionInsert)
-                {
-                    try
-                    {
-                        if(salesDB.Date_Invoiced__c == segTrans.Date__c && salesDB.Target_Country_Raw__c.toUpperCase() == segTrans.Country_Code__c   && 
-                            salesDB.Segment_Category_Mapping__c == segTrans.Segment_Category_Mapping__c  )
-                                                                salesDB.Segment_Revenue_Transaction__c = segTrans.Id;                        
-                    }
-                    catch(Exception e)
-                    {
-                        System.debug('>>Error:'+e.getMessage());
-                    }
-                }
-            }
-        }
+        //     for(Sales_Database__c salesDB:newList)
+        //     {
+        //         for(Segment_Revenue_Transaction__c segTrans:listSegmentTransactionInsert)
+        //         {
+        //             try
+        //             {
+        //                 if(salesDB.Date_Invoiced__c == segTrans.Date__c && salesDB.Target_Country_Raw__c.toUpperCase() == segTrans.Country_Code__c   && 
+        //                     salesDB.Segment_Category_Mapping__c == segTrans.Segment_Category_Mapping__c  )
+        //                                                         salesDB.Segment_Revenue_Transaction__c = segTrans.Id;                        
+        //             }
+        //             catch(Exception e)
+        //             {
+        //                 System.debug('>>Error:'+e.getMessage());
+        //             }
+        //         }
+        //     }
+        // }
 
         /******************* End - Populate Segment Trans Id in Sales Database *************************************************************/   
 

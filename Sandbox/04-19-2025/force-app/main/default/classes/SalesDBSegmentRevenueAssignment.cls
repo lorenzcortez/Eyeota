@@ -121,6 +121,6 @@ global with sharing class SalesDBSegmentRevenueAssignment implements Database.Ba
     }
 
     global void execute(SchedulableContext sc) {
-        Database.executeBatch(new SalesDBSegmentRevenutAssignment(new List<String>()), 100);
+        Database.executeBatch(new SalesDBSegmentRevenueAssignment(new List<String>()), 100);
     }
 }

@@ -2,8 +2,7 @@ public class SegmentMonthlyGlobalTriggerHandler {
     
     public static void onBeforeInsertUpdate(List<Segment_Monthly_Global__c> smgList) {
         
-        //Set<String> segmentReachList = new Set<String>(); Updated Dec 28 2024
-        List<String> segmentReachList = new List<String>();
+        Set<String> segmentReachList = new Set<String>();
         Set<String> segmentRawList = new Set<String>();
         Map<String,Segment_Category_Mapping__c> msmMap = new Map<String,Segment_Category_Mapping__c>();
         Map<String,Segment_Mapping__c> segMap = new map<String,Segment_Mapping__c>();

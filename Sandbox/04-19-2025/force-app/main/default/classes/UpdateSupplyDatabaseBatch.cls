@@ -17,7 +17,7 @@ global class UpdateSupplyDatabaseBatch implements Database.Batchable<sObject> {
     };
     
     public UpdateSupplyDatabaseBatch(String recordId){
-        this.adjustment = [SELECT Id, Year__c, Month__c, Monthly_Rev__c FROM Adjustment__c WHERE Id =:recordId LIMIT 1];
+        this.adjustment = [SELECT Id, Year__c, Month__c, Monthly_Rev__c,Total_Monthly_Revenue__c  FROM Adjustment__c WHERE Id =:recordId LIMIT 1];
         this.mapOfAdjustmentTypes = new Map<String, Adjustment_Type__c>();
         List<Adjustment_Type__c> adjustmentTypes = [SELECT Id, Amount__c, Remaining_Adjustment__c, Type__c, Month_Revenue_Percent__c FROM Adjustment_Type__c WHERE Adjustment__c =: adjustment.Id];
         System.debug('adjustmentTypes adjustmentTypes adjustmentTypes' + adjustmentTypes);
@@ -43,7 +43,8 @@ global class UpdateSupplyDatabaseBatch implements Database.Batchable<sObject> {
         System.debug('mapOfAdjustmentTypes mapOfAdjustmentTypes mapOfAdjustmentTypes' + mapOfAdjustmentTypes);
         for(Supply_Database__c record : records){
 
-            Double monthlyEarningsPercentage = (record.Gross_Earnings_Calc_USD_For_Export__c / adjustment.Monthly_Rev__c);
+            //Double monthlyEarningsPercentage = (record.Gross_Earnings_Calc_USD_For_Export__c / adjustment.Monthly_Rev__c);
+            Double monthlyEarningsPercentage = (record.Gross_Earnings_Calc_USD_For_Export__c / adjustment.Total_Monthly_Revenue__c); 
             Double newCalculation = (record.Gross_Earnings_Calc_USD_For_Export__c * 0.02);
 
             record.Supply_Database_Gross_Earnings_Share__c =  monthlyEarningsPercentage;

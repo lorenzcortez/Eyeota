@@ -32,7 +32,8 @@ global class AdjTransactionCreationBatch implements Database.Batchable<sObject> 
         Date firstDayOfMonth    = Date.newInstance(year, month, 1);
         Date lastDayOfMonth     = Date.newInstance(year, month, lastDay);
         
-        String query = 'SELECT Id, Gross_Earnings_Calc_USD_For_Export__c, Branded_Adjustment_Amount__c,Segment_Supplier_Category__c FROM Supply_Database__c WHERE Date__c >= :firstDayOfMonth AND Date__c <= :lastDayOfMonth';
+        //String query = 'SELECT Id, Gross_Earnings_Calc_USD_For_Export__c, Branded_Adjustment_Amount__c,Segment_Supplier_Category__c,Data_Supplier__c FROM Supply_Database__c WHERE Date__c >= :firstDayOfMonth AND Date__c <= :lastDayOfMonth AND Segment_Supplier_Category__c != \'Branded\'';
+        String query = 'SELECT Id, Gross_Earnings_Calc_USD_For_Export__c, Branded_Adjustment_Amount__c,Segment_Supplier_Category__c,Data_Supplier__c FROM Supply_Database__c WHERE Date__c >= :firstDayOfMonth AND Date__c <= :lastDayOfMonth';
         return Database.getQueryLocator(query);
     }
     
@@ -40,22 +41,31 @@ global class AdjTransactionCreationBatch implements Database.Batchable<sObject> 
         
         if(records.size() > 0){
             List<Adjustment_Transaction__c> adjustmentTransactions = new List<Adjustment_Transaction__c>();
+            Set<Id> adjDSup = new Set<Id>();
+            for (Adjustment_Data_Supplier_Filter__mdt ar : [SELECT AccountId__c FROM Adjustment_Data_Supplier_Filter__mdt WHERE Is_Active__c  = TRUE]) {
+                adjDSup.add(ar.AccountId__c);
+            }
             
             for( Supply_Database__c record : records ){
-                                
+                /*if(record.Segment_Supplier_Category__c != 'Eyeota'){
+                    if(NOT(adjDSup.contains(record.Data_Supplier__c))){
+                        
+                    }
+                }*/
                 Adjustment_Transaction__c adjustmentTransaction = new Adjustment_Transaction__c(
-                    Supply_Database__c = record.Id,
-                    Year__c = adjustment.Year__c,
-                    Month__c = adjustment.Month__c,
-                    Adjustment__c = adjustment.Id,
-                    //Revenue_Amount__c = record.Gross_Earnings_Calc_USD_For_Export__c,
-                    Revenue_Amount__c = (record.Segment_Supplier_Category__c != 'Branded') ?  record.Gross_Earnings_Calc_USD_For_Export__c: 0,
-                    Segment_Category__c = record.Segment_Supplier_Category__c,
-                    //Branded_Adjustment_Amount__c = record.Branded_Adjustment_Amount__c
-                    Branded_Adjustment_Amount__c = (record.Segment_Supplier_Category__c == 'Branded') ?  record.Branded_Adjustment_Amount__c: 0
-                );
-                
-                adjustmentTransactions.add(adjustmentTransaction);
+                            Supply_Database__c = record.Id,
+                            Year__c = adjustment.Year__c,
+                            Month__c = adjustment.Month__c,
+                            Adjustment__c = adjustment.Id,
+                    		Data_Supplier__c = record.Data_Supplier__c,
+                            //Revenue_Amount__c = record.Gross_Earnings_Calc_USD_For_Export__c,
+                            Revenue_Amount__c = (record.Segment_Supplier_Category__c != 'Branded') ?  record.Gross_Earnings_Calc_USD_For_Export__c: 0,
+                            Segment_Category__c = record.Segment_Supplier_Category__c,
+                            //Branded_Adjustment_Amount__c = record.Branded_Adjustment_Amount__c
+                            Branded_Adjustment_Amount__c = (record.Segment_Supplier_Category__c == 'Branded') ?  record.Branded_Adjustment_Amount__c: 0
+                        );
+                        
+                        adjustmentTransactions.add(adjustmentTransaction);
             }
             
             System.debug('adjustmentTransactions adjustmentTransactions adjustmentTransactions' + adjustmentTransactions);
