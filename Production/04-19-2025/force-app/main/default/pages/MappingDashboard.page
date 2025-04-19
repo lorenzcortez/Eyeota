@@ -1,0 +1,1412 @@
+<apex:page id="pg" controller="MappingDashboardController" title="Mapping Dashboard" sidebar="false" docType="HTML-5.0">
+    <head>
+        <apex:includeScript value="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"/>
+        <apex:styleSheet value="{!URLFOR($Resource.JqueryResource,'JqueryResource/jquery-ui.css')}"/> 
+        <script src="{!URLFOR($Resource.JqueryResource,'JqueryResource/jquery-ui.js')}"></script> 
+        
+        <apex:includeScript value="//cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.17.8/js/jquery.tablesorter.min.js" />        
+        <apex:stylesheet value="//cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.17.8/css/theme.blue.css"/>
+        
+        <style>
+            body .bPageBlock .pbBody .labelCol, body .bPageBlock .pbBody .dataCol, body .bPageBlock .pbBody .data2Col, body .print .topics-label, body .print .topics-list{
+                width: 100%;
+            }
+            .tbl tr th{
+                font-size:13px;
+                color: rgba(105, 102, 102, 0.96);                
+            }
+            .tbl tr td{
+                vertical-align:middle;
+            }
+            .txt-right{
+                text-align:right;
+            }
+            .txt-center{
+                text-align:center;
+            }
+            .read-only{
+                background-color : #eee  !important;
+                color : rgb(84, 84, 84);
+                cursor: not-allowed;
+            }
+        	.read-write{
+                background-color : #eee  !important;
+                color : rgb(84, 84, 84);
+                cursor: allowed;
+            }
+            .pbBody{
+                margin: 0px !important;
+            }
+            .pbHeader>table {
+                border-bottom : none;
+            }
+            .inpt{
+                height: 27px;
+                background: #fff;
+                border: none;
+                width: 56% !important;
+                border: 1px solid rgba(221, 221, 221, 0.61);
+                padding-left: 5px;
+            }     
+            .inner-tbl tr th{
+                text-align : left !important;
+            }       
+            .inner-tbl tr td {
+                vertical-align:middle !important;
+            }            
+            .inner-tbl-inpt{
+                background: #fff;
+                border: none;
+                border: 1px solid rgba(221, 221, 221, 0.61);
+                padding-left: 5px;
+                vertical-align: middle;
+                padding-top: 7px;
+                padding-bottom: 7px;
+                
+            }
+            .tertiaryPalette{
+                color:#000 !important;
+                background-color: rgba(195, 207, 208, 0.51) !important;
+            }
+            .tertiaryPalette > h3{
+                margin-left: 11px;
+                margint-top:3px;
+                margint-bootom:3px;
+            }
+            .pbSubheader{
+                padding: 6px 3px !important;
+            }            
+            .jSF_Error{
+                border:2px solid #CC0000  !important;
+            }
+            .jSF_Msg{
+                color:#CC0000 !important;
+                margin-top:0px;
+            }
+            .mainTitle{
+                font-size:16px !important;
+            }
+            .pbBody{
+                margin: 0px !important;
+            }
+            .pbHeader>table {
+                border-bottom : none !important;
+            }
+            .pbBottomButtons{
+                border: 0px !important;
+            }
+            .w70{
+                //width: 80%;
+                width: 95%;
+            }
+            .lkpW70{
+                width: 80%;
+            }
+            .lkpW74{
+                width: 74%;
+            }
+            option{ 
+                background-color: #fff;
+                color: #615F5F;
+            }
+            input:focus { 
+                background-color: rgba(255, 255, 0, 0.29);
+                color: #615F5F;
+            }
+            select:focus { 
+                background-color: rgba(255, 255, 0, 0.29);
+                color: #615F5F;
+            }
+            .c_Msg{
+                color: #4CAF50;
+                font-weight: bold;
+                padding: 5px;
+                margin-left: 32%;
+            } 
+            .tablesorter-blue td{
+                border:0px !important;
+            }
+            .tablesorter-blue tbody > tr:hover > td{
+                background: rgba(91, 192, 222, 0.27) !important;
+            }
+            .tablesorter-blue th{
+                color: #fff;
+                background-color: #5bc0de;
+                border-color: #46b8da;
+            }
+            .bd-clr{
+                border-color: #46b8da;
+            }
+            .bg-clr{
+                background-color: rgba(91, 192, 222, 0.27) !important;
+            }
+            .errDiv{
+                padding: 15px;
+                border: 2px solid #CC0000;
+                margin-top: 7px;
+                width: 89%;
+                border-radius: 5px;
+                margin-left: 4%;
+                color: #a94442;
+                background-color: #f2dede;
+                border-color: #ebccd1;
+            }                     
+            #mytbl tr th a, #mytbl tr th, #rmtbl  tr th a, #rmtbl tr th,
+            #pmtbl tr th a, #pmtbl tr th, #amtbl  tr th a, #amtbl tr th
+            #dsmtbl tr th a, .tablesorter-header-inner, .tablesorter-header-inner a{
+                color: #fff !important;
+            }
+            
+            .bodyDiv{
+                min-height:450px;
+            }
+            .bPageBlock{
+                border:0px !important
+            }
+            .hrdiv{
+                width:100%;
+                min-height:1px;
+                background-color:#fff;
+                margin-top: 12px;
+            }
+            .custPopup{ background-color: white; border-width: 0px; border-radius:10px; z-index: 9999; left: 50%; padding:20px; position: absolute; margin-left: -100px; top:40%; } 
+            .popupBackground{ background-color:black; opacity: 0.30; filter: alpha(opacity = 30); position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: 9998; }
+        
+            .ui-dialog-titlebar{
+                background-color: rgba(23, 151, 192, 0.68); //#336699;
+                border-bottom: 2px solid rgba(23, 151, 192, 0.68);
+                color: White;
+                font-weight: bold;
+                padding: 4px;
+            }  
+            .ui-dialog-titlebar-close{
+                background-color: #eee;
+            } 
+            .ui-dialog{
+                left:45% !important;
+                top: 8% !important;
+            }
+            .dlg-btn{
+                background-color: rgba(23, 151, 192, 0.68) !important; 
+                color:#fff !important;  
+            }
+            .dlg-btn-cnl{
+                background-color: #fff !important; 
+            }
+            .ui-dialog-titlebar-close{
+                display:none;
+            }
+            .dlg_inpt{
+                width: 90% !important;
+            }
+            .srchBtn:hover{
+                background-image: -webkit-linear-gradient(rgba(255,255,255,.50),rgba(255,255,255,0) 12px) !important;
+            }
+        </style>
+        
+    </head>
+    <apex:form id="frm">
+       
+        <apex:actionFunction name="getRecords" action="{!fetchRecords}" status="status" reRender="frm"/>    
+        <apex:actionFunction name="createRecord" action="{!createNewRecords}" status="status" reRender="pb,dlgPnl" oncomplete="chkError();"/>
+        <apex:actionFunction name="deleteRecord" action="{!DeleteMappingRecords}" status="status" reRender="pb">
+            <apex:param assignTo="{!selId}" name="arg1" value=""/>
+        </apex:actionFunction>
+        <apex:actionFunction name="SaveRec" action="{!saveRecord}" status="status" reRender="pb">
+            <apex:param assignTo="{!selRecId}" value="" name="arg2"/>
+        </apex:actionFunction>
+        <apex:actionFunction name="callinglookupValueChanged" action="{!lookupValueChanged}" status="status" reRender="pb" oncomplete="editMode('{!selRecId}');">
+            <apex:param assignTo="{!selRecId}" value="" name="arg3"/>
+        </apex:actionFunction>
+        
+        <apex:actionStatus id="status">
+            <apex:facet name="start"> 
+                <apex:outputPanel id="tstpopup"> 
+                    <apex:outputPanel styleClass="popupBackground" layout="block"/> 
+                    <apex:outputPanel styleClass="custPopup" layout="block"> 
+                        <img src="/img/loading24.gif" style="vertical-align:middle; horizontal-align:middle"/> 
+                        <span>Please wait...</span> 
+                    </apex:outputPanel> 
+                </apex:outputPanel> 
+            </apex:facet> 
+        </apex:actionStatus>
+        <apex:pageMessages escape="false" id="pgMsg"/>
+        <apex:pageBlock id="pb" title="Mapping Dashboard">
+            <table class="tbl" style="width:100%;" cellpadding="3" cellspacing="3">
+                <tr>                    
+                    <th class="txt-right">Filter</th>
+                    <td>
+                        <apex:selectList value="{!selOptn}" size="1" styleClass="inpt" onchange="getRecords();">
+                            <apex:selectOptions value="{!fltrOptn}"/>
+                        </apex:selectList>
+                    </td>
+                    <th colspan="2" class="txt-center" style="padding-top: 5px !important;">
+                        <div style="float: left; margin-top: 4px;">Exception Records&nbsp;&nbsp;</div> 
+                        <apex:inputCheckbox value="{!isExpChk}" style="width: 21px; height: 21px;float: left;"/> 
+                        
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Date Invoiced &nbsp;&nbsp;                        
+                        <apex:input value="{!selInvDate}" type="date" style="width: 18% !important;" styleClass="inpt"/>            
+                        
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Date &nbsp;&nbsp;
+                        <apex:input value="{!selDate}" type="date" style="width: 18% !important;" styleClass="inpt"/>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <apex:commandButton value="Search" action="{!searchExceptionRecord}" reRender="pb,pgMsg" status="status" styleClass="srchBtn" style="padding: 6px;font-weight: normal;color:#fff;background: #5bc0de; border-color: #46b8da;background-image:none;"/>
+                    </th>
+                   <!-- <th class="txt-center">Date &nbsp;&nbsp;
+                        <apex:input value="{!selDate}" type="date" style="width: 31% !important;" styleClass="inpt"/>&nbsp;&nbsp;&nbsp;&nbsp;            
+                        <apex:commandButton value="Search" action="{!searchExceptionRecord}" reRender="pb,pgMsg" status="status" styleClass="srchBtn" style="padding: 6px;font-weight: normal;color:#fff;background: #5bc0de; border-color: #46b8da;background-image:none;"/>
+                    </th>-->
+                </tr>
+                <tr>
+                    <td colspan="4"><div class="hrdiv"/></td>
+                </tr>
+                <tr>
+                    <td colspan="4">
+                        <apex:pageBlockSection title="Records" collapsible="false"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4">
+                        <apex:outputPanel id="navigationPnl" rendered="{!if(buyerList.size>0,true,false)}">
+                            <table id="mytbl" class="tablesorter inner-tbl" style="width:95%;margin: 0 auto;" cellpadding="3" cellspacing="3">                            
+                                <thead>
+                                    <tr>
+                                        <th style="width:2%">#</th>
+                                        <th style="width:7%">Action</th>
+                                        <th style="width:9%">
+                                            <apex:commandLink value="Buyer Raw" style="text-decoration:none;" action="{!fetchBuyers}" status="status" reRender="pb,pgMsg">  
+                                                <apex:param name="compareField" value="Buyer_Raw__c" assignTo="{!compareField}" />  
+                                                 <apex:param name="orderType" value="{!IF(sortOrder='asc', 'desc', 'asc')}" assignTo="{!sortOrder}" />  
+                                            </apex:commandLink>
+                                        </th>
+                                      
+                                        <th style="width:8%">
+                                            <apex:commandLink value="Buyer Country" style="text-decoration:none;" action="{!fetchBuyers}" status="status" reRender="pb,pgMsg">  
+                                                <apex:param name="compareField" value="Buyer_Country_Raw__c" assignTo="{!compareField}" />  
+                                                <apex:param name="orderType" value="{!IF(sortOrder='asc', 'desc', 'asc')}" assignTo="{!sortOrder}" />  
+                                            </apex:commandLink>
+                                        </th>        
+                                        <!--                              
+                                        <th style="width:8%">
+                                            <apex:commandLink value="Target Country {!IF(compareField=='Target_Country_Raw__c',IF(sortOrder='asc','?','?'),'')}" style="text-decoration:none;" action="{!fetchBuyers}" status="status" reRender="pb,pgMsg">  
+                                                <apex:param name="compareField" value="Target_Country_Raw__c" assignTo="{!compareField}" />  
+                                                <apex:param name="orderType" value="{!IF(sortOrder='asc', 'desc', 'asc')}" assignTo="{!sortOrder}" />  
+                                            </apex:commandLink>
+                                        </th>
+                                         -->
+                                        <th style="width:8%">
+                                            <apex:commandLink value="Platform Raw" style="text-decoration:none;" action="{!fetchBuyers}" status="status" reRender="pb,pgMsg">  
+                                                <apex:param name="compareField" value="Platform__c" assignTo="{!compareField}" />  
+                                                <apex:param name="orderType" value="{!IF(sortOrder='asc', 'desc', 'asc')}" assignTo="{!sortOrder}" />  
+                                            </apex:commandLink>
+                                        </th>
+                                        <th style="width:14%">
+                                            <apex:commandLink value="Buyer Account {!IF(compareField=='Global_Buyer_
+                                            ',IF(sortOrder='asc','?','?'),'')}" style="text-decoration:none;" action="{!fetchBuyers}" status="status" reRender="pb,pgMsg">  
+                                                <apex:param name="compareField" value="Buyer_Account__c" assignTo="{!compareField}" />  
+                                                <apex:param name="orderType" value="{!IF(sortOrder='asc', 'desc', 'asc')}" assignTo="{!sortOrder}" />  
+                                            </apex:commandLink>
+                                        </th>
+                                        <th style="width:12%">
+                                            <apex:commandLink value="Buyer Global" style="text-decoration:none;" action="{!fetchBuyers}" status="status" reRender="pb,pgMsg">  
+                                                <apex:param name="compareField" value="Buyer_Global__c" assignTo="{!compareField}" />  
+                                                <apex:param name="orderType" value="{!IF(sortOrder='asc', 'desc', 'asc')}" assignTo="{!sortOrder}" />  
+                                            </apex:commandLink>
+                                        </th>
+                                        
+                                                
+                                        <th style="width:14%">
+                                            <apex:commandLink value="Buyer & Buyer Country {!IF(compareField=='Buyer_and_Buyer_Country__c',IF(sortOrder='asc','?','?'),'')}" style="text-decoration:none;" action="{!fetchBuyers}" status="status" reRender="pb,pgMsg">  
+                                                <apex:param name="compareField" value="Buyer_and_Buyer_Country__c" assignTo="{!compareField}" />  
+                                                <apex:param name="orderType" value="{!IF(sortOrder='asc', 'desc', 'asc')}" assignTo="{!sortOrder}" />  
+                                            </apex:commandLink>
+                                        </th>
+                                        <th style="width:9%">
+                                            <apex:commandLink value="PDT Member {!IF(compareField=='PDT_Member__c',IF(sortOrder='asc','?','?'),'')}" style="text-decoration:none;" action="{!fetchBuyers}" status="status" reRender="pb,pgMsg">  
+                                                <apex:param name="compareField" value="PDT_Member__c" assignTo="{!compareField}" />  
+                                                <apex:param name="orderType" value="{!IF(sortOrder='asc', 'desc', 'asc')}" assignTo="{!sortOrder}" />  
+                                            </apex:commandLink>
+                                        </th>
+                                        <!-- 
+                                        <th style="width:30%">
+                                            <apex:commandLink value="Account Owner {!IF(compareField=='Team_Member_Id__c',IF(sortOrder='asc','?','?'),'')}" style="text-decoration:none;" action="{!fetchBuyers}" status="status" reRender="pb,pgMsg">  
+                                                <apex:param name="compareField" value="Team_Member_Id__c" assignTo="{!compareField}" />  
+                                                <apex:param name="orderType" value="{!IF(sortOrder='asc', 'desc', 'asc')}" assignTo="{!sortOrder}" />  
+                                            </apex:commandLink>
+                                        </th>
+                                         -->
+                                    </tr>
+                                 </thead>
+                                 <tbody>
+                                     <apex:variable value="{!1}" var="count"/>
+                                     <apex:repeat value="{!buyerList}" var="mod">
+                                        <tr>
+                                           <!--  <td>{!count}</td> -->
+                                            <td> {!((currentPage-1)*20 + count)} </td>
+                                            <td style="vertical-align: middle;">
+                                                <a href="javascript:void(0)" onClick="editRecord(this,'{!mod.bm.Id}');">{!IF(!mod.isOpn,'Edit','Save')}</a>&nbsp;|&nbsp;
+                                                <a href="javascript:void(0)" onClick="delConfirm('{!mod.bm.Id}');">Delete</a>
+                                            </td>
+                                            <td>
+                                                <div style="{!IF(!mod.isOpn,'','display:none')}">
+                                              <!--         {!mod.bm.Buyer_Raw__c} -->
+                                                </div>
+                                                <apex:outputField value="{!mod.bm.Buyer_Raw__c}" style="{!IF(mod.isOpn,'','display:none')}" styleClass="bd-clr inner-tbl-inpt w70"/>
+                                            </td>
+                                            
+                                            <td>
+                                                <div style="{!IF(!mod.isOpn,'','display:none')}">
+                                                    {!mod.bm.Buyer_Country_Raw__c}
+                                                </div>
+                                                <apex:inputField value="{!mod.bm.Buyer_Country_Raw__c}" onchange="isBuyerChanged('{!count}');" style="{!IF(mod.isOpn,'','display:none')}" styleClass="bc{!count} bd-clr inner-tbl-inpt w70"/>
+                                            </td>
+                                            <!-- 
+                                            <td>
+                                                <div style="{!IF(!mod.isOpn,'','display:none')}">
+                                                    {!mod.bm.Target_Country_Raw__c}
+                                                </div>
+                                                <apex:inputField value="{!mod.bm.Target_Country_Raw__c}" style="{!IF(mod.isOpn,'','display:none')}" styleClass="bd-clr inner-tbl-inpt w70"/>
+                                            </td>
+                                             -->
+                                            <td>
+                                                <div style="{!IF(!mod.isOpn,'','display:none')}">
+                                               <!--       {!mod.bm.Platform__c}  -->
+                                                </div>
+                                                <apex:outputField value="{!mod.bm.Platform__c}" style="{!IF(mod.isOpn,'','display:none')}" styleClass="bd-clr inner-tbl-inpt w70"/>
+                                            </td>
+                                            <td>
+                                                    <div style="{!IF(!mod.isOpn,'','display:none')}" class="editable {!IF(mod.bm.Buyer_Account__c != null, 'inner-tbl-inpt read-only','')}"> 
+                                                    {!mod.bm.Buyer_Account__r.Name}
+                                                </div>
+                                                <div style="{!IF(mod.isOpn,'','display:none')}">
+                                                     <apex:inputField value="{!mod.bm.Buyer_Account__c}"  onchange="isBuyerChanged('{!count}');" styleClass="bg{!count} bd-clr inner-tbl-inpt lkpW70"/> 
+                                                    <!--<apex:inputField value="{!mod.bm.Global_Buyer_Name__c}"  onchange="isBuyerChanged('{!count}');" styleClass="bg{!count} bd-clr inner-tbl-inpt lkpW70"/>
+                                                    <a href="javascript:void(0);" onclick="accountLookup('bg{!count}','BG')">
+                                                        <img title="Related To (New Window)" onmouseover="this.className = 'lookupIconOn';this.className = 'lookupIconOn';" onmouseout="this.className = 'lookupIcon';this.className = 'lookupIcon';" onfocus="this.className = 'lookupIconOn';" onblur="this.className = 'lookupIcon';" class="lookupIcon" alt="Related To" src="/s.gif" />
+                                                    </a>-->    
+                                                </div>
+                                            </td>
+                                             <td>
+                                                <div style="{!IF(!mod.isOpn,'','display:none')}">
+                                               <!--       {!mod.bm.Buyer_Global__c}  -->
+                                                </div>
+                                                <apex:outputField value="{!mod.bm.Buyer_Global__c}" style="{!IF(mod.isOpn,'','display:none')}" styleClass="bd-clr inner-tbl-inpt w70"/>
+                                            </td>
+                                            <td>
+                                                <div class="bbc{!count} {!IF(mod.bm.Buyer_and_Buyer_Country__c != null, 'inner-tbl-inpt read-only','')}">
+                                                    {!mod.bm.Buyer_and_Buyer_Country__c}
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div style="{!IF(!mod.isOpn,'','display:none')}" class="editable {!IF(mod.bm.PDT_Member__c != null, 'inner-tbl-inpt read-only','')}">
+                                                    {!mod.bm.PDT_Member__c}
+                                                </div>
+                                                <apex:inputField value="{!mod.bm.PDT_Member__c}" style="{!IF(mod.isOpn,'','display:none')}" styleClass="bd-clr inner-tbl-inpt w70"/>
+                                            </td>  
+                                            <!--  
+                                            <td>
+                                                <div style="{!IF(!mod.isOpn,'','display:none')}" class="editable {!IF(mod.bm.OwnerId != null, 'inner-tbl-inpt read-only','')}">
+                                                    {!mod.bm.Team_Member_Id__r.Name}
+                                                </div>
+                                                <div style="{!IF(mod.isOpn,'','display:none')}">
+                                                    <apex:inputField value="{!mod.bm.Team_Member_Id__c}" styleClass="bd-clr inner-tbl-inpt lkpW74"/> <!-- lkpW70 -->
+                                                    <!-- 
+                                                </div>
+                                            </td>    
+                                             -->                                 
+                                        </tr>
+                                        <apex:variable value="{!count+1}" var="count"/>
+                                    </apex:repeat>
+                                 </tbody>                                 
+                             </table>
+                        </apex:outputPanel> 
+                        
+                        <!----------------------------- Revenue Share records section --------------------------------------------->                        
+                        <apex:outputPanel id="revenuePnl" rendered="{!if(revenueList.size>0,true,false)}">
+                            <table id="rmtbl" class="tablesorter inner-tbl" style="width:95%;margin: 0 auto;" cellpadding="3" cellspacing="3">                      
+                                <thead>
+                                    <tr>
+                                        <th style="width:1%">#</th>
+                                        <th style="width:4%">Action</th>
+                                        <th style="width:11%">
+                                            <apex:commandLink value="Data Supplier" style="text-decoration:none;" action="{!fetchRevenueShares}" status="status" reRender="pb,pgMsg">  
+                                                <apex:param name="compareField" value="Data_Supplier__c" assignTo="{!compareField}" />  
+                                                <apex:param name="orderType" value="{!IF(sortOrder='asc', 'desc', 'asc')}" assignTo="{!sortOrder}" />  
+                                            </apex:commandLink>
+                                        </th>
+                                                <th style="width:8%">
+                                                     <apex:commandLink value="Segment Name {!IF(compareField=='Segment_Name__c',IF(sortOrder='asc','?','?'),'')}" style="text-decoration:none;" action="{!fetchRevenueShares}" status="status" reRender="pb,pgMsg">  
+                                                      <apex:param name="compareField" value="Segment_Name__c" assignTo="{!compareField}" />  
+                                                      <apex:param name="orderType" value="{!IF(sortOrder='asc', 'desc', 'asc')}" assignTo="{!sortOrder}" />  
+                                                  </apex:commandLink>
+                                                  </th>                                        
+                                        <th style="width:9%">
+                                            <apex:commandLink value="Country {!IF(compareField=='Country__c ',IF(sortOrder='asc','?','?'),'')}" style="text-decoration:none;" action="{!fetchRevenueShares}" status="status" reRender="pb,pgMsg">  
+                                                <apex:param name="compareField" value="Country__c " assignTo="{!compareField}" />  
+                                                <apex:param name="orderType" value="{!IF(sortOrder='asc', 'desc', 'asc')}" assignTo="{!sortOrder}" />  
+                                            </apex:commandLink>
+                                        </th>
+                                        <th style="width:12%">
+                                            <apex:commandLink value="Revenue Share {!IF(compareField=='Revenue_Share__c',IF(sortOrder='asc','?','?'),'')}" style="text-decoration:none;" action="{!fetchRevenueShares}" status="status" reRender="pb,pgMsg">  
+                                                <apex:param name="compareField" value="Revenue_Share__c" assignTo="{!compareField}" />  
+                                                <apex:param name="orderType" value="{!IF(sortOrder='asc', 'desc', 'asc')}" assignTo="{!sortOrder}" />  
+                                            </apex:commandLink>
+                                        </th>
+                                     </tr>
+                                 </thead>
+                                 <tbody>
+                                     <apex:variable value="{!1}" var="count"/>
+                                     <apex:repeat value="{!revenueList}" var="mod">
+                                        <tr>
+                                            <!-- <td>{!count}</td> -->
+                                            <td> {!((currentPage-1)*20 + count)} </td>
+                                            <td style="vertical-align: middle;">
+                                                <a href="javascript:void(0)" onClick="editRecord(this,'{!mod.rsm.Id}');">{!IF(!mod.isOpn,'Edit','Save')}</a>&nbsp;|&nbsp;
+                                                <a href="javascript:void(0)" onClick="delConfirm('{!mod.rsm.Id}');">Delete</a>
+                                            </td>
+                                            <td>
+                                                <div style="{!IF(!mod.isOpn,'','display:none')}" class="editable {!IF(mod.rsm.Data_Supplier__c != null, 'inner-tbl-inpt read-only','')}">
+                                                    {!mod.rsm.Data_Supplier__c}
+                                                </div>
+                                                <apex:inputField value="{!mod.rsm.Data_Supplier__c}" style="{!IF(mod.isOpn,'','display:none')}" styleClass="bd-clr inner-tbl-inpt w70"/>
+                                            </td>
+                                            <td>
+                                                <div style="{!IF(!mod.isOpn,'','display:none')}" class="editable {!IF(mod.rsm.Segment_Name__c != null, 'inner-tbl-inpt read-only','')}">
+                                                    {!mod.rsm.Segment_Name__c}
+                                                </div>
+                                                <apex:inputField value="{!mod.rsm.Segment_Name__c}" style="{!IF(mod.isOpn,'','display:none')}" styleClass="bc{!count} bd-clr inner-tbl-inpt w70"/>
+                                            </td>
+                                            <td>
+                                                <div style="{!IF(!mod.isOpn,'','display:none')}" class="editable {!IF(mod.rsm.Country__c != null, 'inner-tbl-inpt read-only','')}">
+                                                    {!mod.rsm.Country__c}
+                                                </div>
+                                                <apex:inputField value="{!mod.rsm.Country__c}" style="{!IF(mod.isOpn,'','display:none')}" styleClass="bd-clr inner-tbl-inpt w70"/>
+                                            </td>
+                                            <td>
+                                                <div style="{!IF(!mod.isOpn,'','display:none')}" class="editable {!IF(mod.rsm.Revenue_Share__c != null, 'inner-tbl-inpt read-only','')}">
+                                                    {!mod.rsm.Revenue_Share__c}
+                                                </div>
+                                                <apex:inputField value="{!mod.rsm.Revenue_Share__c}" style="{!IF(mod.isOpn,'','display:none')}" styleClass="bd-clr inner-tbl-inpt w70"/>
+                                            </td>      
+                                        </tr>
+                                        <apex:variable value="{!count+1}" var="count"/>
+                                    </apex:repeat>
+                                 </tbody>                                 
+                             </table>
+                        </apex:outputPanel> 
+                        
+                        <!----------------------------- Platform Mapping records section --------------------------------------------->
+                        <apex:outputPanel id="platformPnl" rendered="{!if(platformList.size>0,true,false)}">
+                            <table id="pmtbl" class="tablesorter inner-tbl" style="width:95%;margin: 0 auto;" cellpadding="3" cellspacing="3">                          
+                                <thead>
+                                    <tr>
+                                        <th style="width:1%">#</th>
+                                        <th style="width:7%">Action</th>
+                                        <th style="width:45%">
+                                            <apex:commandLink value="Platform Raw" style="text-decoration:none;" action="{!fetchPlatforms}" status="status" reRender="pb,pgMsg">  
+                                                <apex:param name="compareField" value="Platform_Raw__c" assignTo="{!compareField}" />  
+                                                <apex:param name="orderType" value="{!IF(sortOrder='asc', 'desc', 'asc')}" assignTo="{!sortOrder}" />  
+                                            </apex:commandLink>
+                                        </th>
+                                        <th style="width:45%">
+                                            <apex:commandLink value="Platform Account {!IF(compareField=='Platform_Account__r.Name ',IF(sortOrder='asc','?','?'),'')}" style="text-decoration:none;" action="{!fetchPlatforms}" status="status" reRender="pb,pgMsg">  
+                                                <apex:param name="compareField" value="Platform_Account__r.Name" assignTo="{!compareField}" />  
+                                                <apex:param name="orderType" value="{!IF(sortOrder='asc', 'desc', 'asc')}" assignTo="{!sortOrder}" />  
+                                            </apex:commandLink>
+                                        </th>
+                                   </tr>
+                                 </thead>
+                                 <tbody>
+                                     <apex:variable value="{!1}" var="count"/>
+                                     <apex:repeat value="{!platformList}" var="mod">
+                                        <tr>
+                                           <!--  <td>{!count}</td> -->
+                                            <td> {!((currentPage-1)*20 + count)} </td>
+                                            <td style="vertical-align: middle;">
+                                                <a href="javascript:void(0)" onClick="editRecord(this,'{!mod.pm.Id}');">Edit</a>&nbsp;|&nbsp;
+                                                <a href="javascript:void(0)" onClick="delConfirm('{!mod.pm.Id}');">Delete</a>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                  <!--    {!mod.pm.Platform_Raw__c} -->
+                                                </div>
+                                                <apex:outputField value="{!mod.pm.Platform_Raw__c}" style="display:none;" styleClass="bd-clr inner-tbl-inpt w70"/>
+                                            </td>
+                                            <td>
+                                              <div style="{!IF(!mod.isOpn,'','display:none')}" class="editable {!IF(mod.pm.Platform_Account__c != null, 'inner-tbl-inpt read-only','')}">
+                                                    {!mod.pm.Platform_Account__r.Name} 
+                                              </div> 
+                                              <div  style="{!IF(mod.isOpn,'','display:none')}">
+                                                  <apex:inputField value="{!mod.pm.Platform_Account__c}" styleClass="bg{!count} bd-clr inner-tbl-inpt" style="width: 83%;"/>
+                                                <!--<apex:inputField value="{!mod.pm.Platform_Account_Name__c}" styleClass="bg{!count} bd-clr inner-tbl-inpt" style="width: 83%;" onchange="callinglookupValueChanged('{!mod.pm.Id}');"/>
+                                                  <a href="javascript:void(0);" onclick="accountLookup('bg{!count}','BG')">
+                                                    <img title="Related To (New Window)" onmouseover="this.className = 'lookupIconOn';this.className = 'lookupIconOn';" onmouseout="this.className = 'lookupIcon';this.className = 'lookupIcon';" onfocus="this.className = 'lookupIconOn';" onblur="this.className = 'lookupIcon';" class="lookupIcon" alt="Related To" src="/s.gif" />
+                                                  </a>-->
+                                             </div> 
+                                           </td>
+                                        </tr>
+                                        <apex:variable value="{!count+1}" var="count"/>
+                                    </apex:repeat>
+                                 </tbody>                                 
+                             </table>
+                        </apex:outputPanel>                        
+                        <!----------------------------- Advertiser Mapping records section --------------------------------------------->
+                        <apex:outputPanel id="advertiserPnl" rendered="{!if(advertiserList.size>0,true,false)}">
+                            <table id="amtbl" class="tablesorter inner-tbl" style="width:95%;margin: 0 auto;" cellpadding="3" cellspacing="3">                            
+                                <thead>
+                                    <tr>
+                                        <th style="width:1%">#</th>
+                                        <th style="width:9%">Action</th>                                        
+                                        <th style="width:22%">
+                                            <apex:commandLink value="Advertiser Raw" style="text-decoration:none;" action="{!fetchAdvertisers}" status="status" reRender="pb,pgMsg">  
+                                                <apex:param name="compareField" value="Advertiser_Raw__c" assignTo="{!compareField}" />  
+                                                <apex:param name="orderType" value="{!IF(sortOrder='asc', 'desc', 'asc')}" assignTo="{!sortOrder}" />  
+                                            </apex:commandLink>
+                                        </th>
+                                        <th style="width:12%">
+                                            Revenue Summary
+                                        </th>
+                                        <th style="width:17%">
+                                            <apex:commandLink value="Advertiser Account {!IF(compareField=='Advertiser_Account__r.Name',IF(sortOrder='asc','?','?'),'')}" style="text-decoration:none;" action="{!fetchAdvertisers}" status="status" reRender="pb,pgMsg">  
+                                                <apex:param name="compareField" value="Advertiser_Account__r.Name " assignTo="{!compareField}" />  
+                                                <apex:param name="orderType" value="{!IF(sortOrder='asc', 'desc', 'asc')}" assignTo="{!sortOrder}" />  
+                                            </apex:commandLink>
+                                        </th>
+                                        <th style="width:17%">
+                                            <apex:commandLink value="Sector 1 {!IF(compareField=='Advertiser_Account__r.Advertiser_Sector_1__c',IF(sortOrder='asc','?','?'),'')}" style="text-decoration:none;" action="{!fetchAdvertisers}" status="status" reRender="pb,pgMsg">  
+                                                <apex:param name="compareField" value="Advertiser_Account__r.Advertiser_Sector_1__c" assignTo="{!compareField}" />  
+                                                <apex:param name="orderType" value="{!IF(sortOrder='asc', 'desc', 'asc')}" assignTo="{!sortOrder}" />  
+                                            </apex:commandLink>
+                                        </th>
+                                        <th style="width:17%">
+                                            <apex:commandLink value="Sector 2 {!IF(compareField=='Advertiser_Account__r.Advertiser_Sector_2_New__c',IF(sortOrder='asc','?','?'),'')}" style="text-decoration:none;" action="{!fetchAdvertisers}" status="status" reRender="pb,pgMsg">  
+                                                <apex:param name="compareField" value="Advertiser_Account__r.Advertiser_Sector_2_New__c" assignTo="{!compareField}" />  
+                                                <apex:param name="orderType" value="{!IF(sortOrder='asc', 'desc', 'asc')}" assignTo="{!sortOrder}" />  
+                                            </apex:commandLink>
+                                        </th>
+                                   </tr>
+                                 </thead>
+                                 <tbody>
+                                     <apex:variable value="{!1}" var="count"/>
+                                     <apex:repeat value="{!advertiserList}" var="mod">
+                                        <tr class="{!mod.am.Id}">
+                                           <!-- <td>{!count}</td>-->
+                                               <td> {!((currentPage-1)*20 + count)} </td>
+                                            <td style="vertical-align: middle;" class="action">
+                                                <a href="javascript:void(0)" onClick="editRecord(this,'{!mod.am.Id}');" class="editRow">{!IF(!mod.isOpn,'Edit','Save')}</a>&nbsp;|&nbsp;
+                                                <a href="javascript:void(0)" onClick="delConfirm('{!mod.am.Id}');">Delete</a>
+                                            </td>
+                                            <td>
+                                                <div style="{!IF(!mod.isOpn,'','display:none')}">
+                                                  <!--    {!mod.am.Advertiser_Raw__c}  -->
+                                                </div>
+                                                <apex:outputField value="{!mod.am.Advertiser_Raw__c}"  styleClass="bc{!count} bd-clr inner-tbl-inpt w70"/>
+                                            </td>
+                                            <td style="padding-left: 40px;">
+                                                {!mod.salesDBRevenue}
+                                            </td>
+                                            <td>
+                                                <div style="{!IF(!mod.isOpn,'','display:none')}" class="editable {!IF(mod.am.Advertiser_Account__c != null, 'inner-tbl-inpt read-only','')}">
+                                                    {!mod.am.Advertiser_Account__r.Name}
+                                                </div>
+                                                <div style="{!IF(mod.isOpn,'','display:none')}">
+                                                    <apex:inputField value="{!mod.am.Advertiser_Account__c}" styleClass="bc{!count} bd-clr inner-tbl-inpt"  style="width: 83%;" onchange="callinglookupValueChanged('{!mod.am.Id}');"/>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                 <div style="{!IF(!mod.isOpn,'','display:none')}" class="editable {!IF(mod.am.Advertiser_Account__c != null, 'inner-tbl-inpt read-only','')}">
+                                                 {!mod.am.Advertiser_Account__r.Advertiser_Sector_1__c}
+                                                 </div> 
+                                                 <div style="{!IF(mod.isOpn,'','display:none')}">
+                                                <apex:inputField value="{!mod.am.Advertiser_Account__r.Advertiser_Sector_1__c}" styleClass="bd-clr inner-tbl-inpt w70" onchange="setHiddenSector1Val(this.value);return false;"/> 
+                                                </div>
+                                            </td>
+                                            <td>
+                                            
+                                             <div style="{!IF(!mod.isOpn,'','display:none')}" class="editable {!IF(mod.am.Advertiser_Account__c != null, 'inner-tbl-inpt read-only','')}">
+                                                 {!mod.am.Advertiser_Account__r.Advertiser_Sector_2_New__c} 
+                                              </div>
+                                              <div style="{!IF(mod.isOpn,'','display:none')}">
+                                                 <apex:inputField value="{!mod.am.Advertiser_Account__r.Advertiser_Sector_2_New__c}"  styleClass="bd-clr inner-tbl-inpt w70" onchange="setHiddenSector2Val(this.value);return false;"/>
+                                                 
+                                              </div>
+                                              
+                                            </td>
+                                        </tr>
+                                        <apex:variable value="{!count+1}" var="count"/>
+                                    </apex:repeat>
+                                 </tbody>                                 
+                             </table>
+                        </apex:outputPanel>  
+                        <apex:inputHidden value="{!selSector2Val}" id="inputAdverSector2"/>
+                        <apex:inputHidden value="{!selSector1Val}" id="inputAdverSector1"/> 
+                        <script>
+                            function setHiddenSector2Val(val){
+                                if(val != null && val != ''){
+                                    document.getElementById('{!$Component.frm}').elements['{!$Component.inputAdverSector2}'].value = val;
+                                }else{
+                                    val = 'none';
+                                    document.getElementById('{!$Component.frm}').elements['{!$Component.inputAdverSector2}'].value = val;
+                                }
+                            }
+                            function setHiddenSector1Val(val){
+                                if(val != null && val != ''){
+                                    document.getElementById('{!$Component.frm}').elements['{!$Component.inputAdverSector1}'].value = val;
+                                }else{
+                                    val = 'none';
+                                    document.getElementById('{!$Component.frm}').elements['{!$Component.inputAdverSector1}'].value = val;
+                                }
+                            }
+                        </script>
+                        
+                        <!----------------------------- Campaign Mapping records section --------------------------------------------->
+                        <apex:outputPanel id="CampaignPnl" rendered="{!if(campaignList.size>0,true,false)}">
+                            <table id="cmtbl" class="tablesorter inner-tbl" style="width:95%;margin: 0 auto;border-collapse: collapse;" cellpadding="3" cellspacing="3">                            
+                                <thead>
+                                    <tr>
+                                        <th style="width:1%;background-color: #5bc0de;color: #f3f3ec;border: #68AAE4 1px solid;">#</th>
+                                        <th style="width:9%;background-color: #5bc0de;color: #f3f3ec;border: #68AAE4 1px solid;">Action</th>                                        
+                                        <th style="width:22%;background-color: #5bc0de;border: #68AAE4 1px solid;">
+                                            <apex:commandLink value="Campaign Raw" style="text-decoration:none;color: #f3f3ec" action="{!fetchCampaign}" status="status" reRender="pb,pgMsg">  
+                                                <apex:param name="compareField" value="Campaign_Raw__c" assignTo="{!compareField}" />  
+                                                <apex:param name="orderType" value="{!IF(sortOrder='asc', 'desc', 'asc')}" assignTo="{!sortOrder}" />  
+                                            </apex:commandLink>
+                                        </th>
+                                        <th style="width:22%;background-color: #5bc0de;border: #68AAE4 1px solid;">
+                                            <apex:commandLink value="Advertiser Account {!IF(compareField=='Advertiser_Account__r.Name',IF(sortOrder='asc','?','?'),'')}" style="text-decoration:none;color: #f3f3ec" action="{!fetchCampaign}" status="status" reRender="pb,pgMsg">  
+                                                <apex:param name="compareField" value="Advertiser_Account__r.Name " assignTo="{!compareField}" />  
+                                                <apex:param name="orderType" value="{!IF(sortOrder='asc', 'desc', 'asc')}" assignTo="{!sortOrder}" />  
+                                            </apex:commandLink>
+                                        </th>
+                                        <th style="width:22%;background-color: #5bc0de;border: #68AAE4 1px solid;">
+                                            <apex:commandLink value="Sector 1 {!IF(compareField=='Advertiser_Account__r.Advertiser_Sector_1__c',IF(sortOrder='asc','?','?'),'')}" style="text-decoration:none;color: #f3f3ec" action="{!fetchCampaign}" status="status" reRender="pb,pgMsg">  
+                                                <apex:param name="compareField" value="Advertiser_Account__r.Advertiser_Sector_1__c" assignTo="{!compareField}" />  
+                                                <apex:param name="orderType" value="{!IF(sortOrder='asc', 'desc', 'asc')}" assignTo="{!sortOrder}" />  
+                                            </apex:commandLink>
+                                        </th>
+                                        <th style="width:22%;background-color: #5bc0de;border: #68AAE4 1px solid;">
+                                            <apex:commandLink value="Sector 2 {!IF(compareField=='Advertiser_Account__r.Advertiser_Sector_2_New__c',IF(sortOrder='asc','?','?'),'')}" style="text-decoration:none;color: #f3f3ec" action="{!fetchCampaign}" status="status" reRender="pb,pgMsg">  
+                                                <apex:param name="compareField" value="Advertiser_Account__r.Advertiser_Sector_2_New__c" assignTo="{!compareField}" />  
+                                                <apex:param name="orderType" value="{!IF(sortOrder='asc', 'desc', 'asc')}" assignTo="{!sortOrder}" />  
+                                            </apex:commandLink>
+                                        </th>
+                                   </tr>
+                                 </thead>
+                                 <tbody>
+                                     <apex:variable value="{!1}" var="count"/>
+                                     <apex:repeat value="{!campaignList}" var="mod">
+                                        <tr class="{!mod.cm.Id}">
+                                           <!-- <td>{!count}</td>-->
+                                               <td> {!((currentPage-1)*20 + count)} </td>
+                                            <td style="vertical-align: middle;" class="action">
+                                                <a href="javascript:void(0)" onClick="editRecord(this,'{!mod.cm.Id}');" class="editRow">{!IF(!mod.isOpn,'Edit','Save')}</a>&nbsp;|&nbsp;
+                                                <a href="javascript:void(0)" onClick="delConfirm('{!mod.cm.Id}');">Delete</a>
+                                            </td>
+                                            <td>
+                                                <div style="{!IF(!mod.isOpn,'','display:none')}">
+                                                  <!--    {!mod.am.Advertiser_Raw__c}  -->
+                                                </div>
+                                                <apex:outputField value="{!mod.cm.Campaign_Raw__c}"  styleClass="bc{!count} bd-clr inner-tbl-inpt w70"/>
+                                            </td>
+                                            <td>
+                                                <div style="{!IF(!mod.isOpn,'','display:none')}" class="editable {!IF(mod.cm.Advertiser_Account__c != null, 'inner-tbl-inpt read-only','')}">
+                                                    {!mod.cm.Advertiser_Account__r.Name}
+                                                </div>
+                                                <div style="{!IF(mod.isOpn,'','display:none')}">
+                                                    <apex:inputField value="{!mod.cm.Advertiser_Account__c}" styleClass="bc{!count} bd-clr inner-tbl-inpt"  style="width: 83%;" onchange="callinglookupValueChanged('{!mod.cm.Id}');"/>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                 <div style="{!IF(!mod.isOpn,'','display:none')}" class="editable {!IF(mod.cm.Advertiser_Account__c != null, 'inner-tbl-inpt read-only','')}">
+                                                 {!mod.cm.Advertiser_Account__r.Advertiser_Sector_1__c}
+                                                 </div> 
+                                                 <div style="{!IF(mod.isOpn,'','display:none')}">
+                                                <apex:inputField value="{!mod.cm.Advertiser_Account__r.Advertiser_Sector_1__c}" styleClass="bd-clr inner-tbl-inpt w70"/> 
+                                                </div>
+                                            </td>
+                                            <td>
+                                            
+                                             <div style="{!IF(!mod.isOpn,'','display:none')}" class="editable {!IF(mod.cm.Advertiser_Account__c != null, 'inner-tbl-inpt read-only','')}">
+                                                 {!mod.cm.Advertiser_Account__r.Advertiser_Sector_2_New__c} 
+                                              </div>
+                                              <div style="{!IF(mod.isOpn,'','display:none')}">
+                                                 <apex:inputField value="{!mod.cm.Advertiser_Account__r.Advertiser_Sector_2_New__c}"  styleClass="bd-clr inner-tbl-inpt w70"/> 
+                                              </div>
+                                            </td>
+                                            
+                                       
+                                        </tr>
+                                        <apex:variable value="{!count+1}" var="count"/>
+                                    </apex:repeat>
+                                 </tbody>                                 
+                             </table>
+                        </apex:outputPanel> 
+                        
+                        <!----------------------------- Data Supplier Mapping records section --------------------------------------------->
+                        
+                        <apex:outputPanel id="dataSupplierPnl" rendered="{!if(dataSupplierList.size > 0,true,false)}">
+                            <table id="dsmtbl" class="tablesorter inner-tbl" style="width:95%;margin: 0 auto;" cellpadding="3" cellspacing="3">                          
+                                <thead>
+                                    <tr>
+                                        <th style="width:1%">#</th>
+                                        <th style="width:7%">Action</th>
+                                        <th style="width:15%">
+                                            <apex:commandLink value="Data Supplier Raw" style="text-decoration:none;" action="{!fetchDataSuppliers}" status="status" reRender="pb,pgMsg">  
+                                                <apex:param name="compareField" value="Data_Supplier_Raw__c" assignTo="{!compareField}" />  
+                                                <apex:param name="orderType" value="{!IF(sortOrder='asc', 'desc', 'asc')}" assignTo="{!sortOrder}" />  
+                                            </apex:commandLink>
+                                        </th>
+                                        <th style="width:15%">
+                                            <apex:commandLink value="Data Supplier Account {!IF(compareField=='Data_Supplier_Account_Name__c',IF(sortOrder='asc','?','?'),'')}" style="text-decoration:none;" action="{!fetchDataSuppliers}" status="status" reRender="pb,pgMsg">  
+                                                <apex:param name="compareField" value="Data_Supplier_Account_Name__c" assignTo="{!compareField}" />  
+                                                <apex:param name="orderType" value="{!IF(sortOrder='asc', 'desc', 'asc')}" assignTo="{!sortOrder}" />  
+                                            </apex:commandLink>
+                                        </th>
+                                        <th style="width:15%">
+                                            <apex:commandLink value="Publisher Data Type {!IF(compareField=='Data_Supplier_Account__r.Publisher_Data_Type__c',IF(sortOrder='asc','?','?'),'')}" style="text-decoration:none;" action="{!fetchDataSuppliers}" status="status" reRender="pb,pgMsg">  
+                                                <apex:param name="compareField" value="Data_Supplier_Account__r.Publisher_Data_Type__c" assignTo="{!compareField}" />  
+                                                <apex:param name="orderType" value="{!IF(sortOrder='asc', 'desc', 'asc')}" assignTo="{!sortOrder}" />  
+                                            </apex:commandLink>
+                                        </th>
+                                        <th style="width:15%">
+                                            <apex:commandLink value="Publisher Site Type {!IF(compareField=='Data_Supplier_Account__r.Publisher_Site_Type__c',IF(sortOrder='asc','?','?'),'')}" style="text-decoration:none;" action="{!fetchDataSuppliers}" status="status" reRender="pb,pgMsg">  
+                                                <apex:param name="compareField" value="Data_Supplier_Account__r.Publisher_Site_Type__c" assignTo="{!compareField}" />  
+                                                <apex:param name="orderType" value="{!IF(sortOrder='asc', 'desc', 'asc')}" assignTo="{!sortOrder}" />  
+                                            </apex:commandLink>
+                                        </th>
+                                        <th style="width:17%">
+                                            <apex:commandLink value="Publisher Vertical {!IF(compareField=='Data_Supplier_Account__r.Publisher_Site_Vertical__c',IF(sortOrder='asc','?','?'),'')}" style="text-decoration:none;" action="{!fetchDataSuppliers}" status="status" reRender="pb,pgMsg">  
+                                                <apex:param name="compareField" value="Data_Supplier_Account__r.Publisher_Site_Vertical__c" assignTo="{!compareField}" />  
+                                                <apex:param name="orderType" value="{!IF(sortOrder='asc', 'desc', 'asc')}" assignTo="{!sortOrder}" />  
+                                            </apex:commandLink>
+                                        </th>
+                                        <th style="width:15%">
+                                            <apex:commandLink value="Currency Code {!IF(compareField=='Data_Supplier_Account__r.Currency_Code__c',IF(sortOrder='asc','?','?'),'')}" style="text-decoration:none;" action="{!fetchDataSuppliers}" status="status" reRender="pb,pgMsg">  
+                                                <apex:param name="compareField" value="Data_Supplier_Account__r.Currency_Code__c" assignTo="{!compareField}" />  
+                                                <apex:param name="orderType" value="{!IF(sortOrder='asc', 'desc', 'asc')}" assignTo="{!sortOrder}" />  
+                                            </apex:commandLink>
+                                        </th>
+                                     </tr>
+                                 </thead>
+                                 <tbody>
+                                     <apex:variable value="{!1}" var="count"/>
+                                     <apex:repeat value="{!dataSupplierList}" var="mod">
+                                        <tr class="{!mod.dsm.Id}">
+                                            <!-- <td>{!count}</td> -->
+                                             <td> {!((currentPage-1)*20 + count)} </td>
+                                            <td style="vertical-align: middle;" class="action">
+                                                <a href="javascript:void(0)" onClick="editRecord(this,'{!mod.dsm.Id}');" class="editRow">Edit</a>&nbsp;|&nbsp;
+                                                <a href="javascript:void(0)" onClick="delConfirm('{!mod.dsm.Id}');">Delete</a>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                   <!--   {!mod.dsm.Data_Supplier_Raw__c} -->
+                                                </div >
+                                                <apex:outputField value="{!mod.dsm.Data_Supplier_Raw__c}" style="display:none;" styleClass="bd-clr inner-tbl-inpt w70"/>
+                                            </td>
+                                            <td>
+                                                <div class="editable {!IF(mod.dsm.Data_Supplier_Account__c != null, 'inner-tbl-inpt read-only','')}">
+                                                    {!mod.dsm.Data_Supplier_Account__r.Name}
+                                                </div>
+                                                <div style="display:none;">
+                                                    <apex:inputField value="{!mod.dsm.Data_Supplier_Account__c}" styleClass="bc{!count} bd-clr inner-tbl-inpt" style="width: 83%;" onchange="callinglookupValueChanged('{!mod.dsm.Id}');"/>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="editable {!IF(mod.accPDT != null, 'inner-tbl-inpt read-only','')}">
+                                                    {!mod.accPDT}
+                                                </div>
+                                                <apex:inputField value="{!mod.dsm.Data_Supplier_Account__r.Publisher_Data_Type__c}" style="display:none;" styleClass="bc{!count} bd-clr inner-tbl-inpt w70" onchange="setHiddenPublisherDataType(this.value);return false;"/>  
+                                            </td>
+                                            <td>
+                                                <div class="editable {!IF(mod.accPST != null, 'inner-tbl-inpt read-only','')}">
+                                                    {!mod.accPST}
+                                                </div>
+                                                <apex:inputField value="{!mod.dsm.Data_Supplier_Account__r.Publisher_Site_Type__c}" style="display:none;" styleClass="bc{!count} bd-clr inner-tbl-inpt w70" onchange="setHiddenPublisherSiteType(this.value);return false;"/> 
+                                            </td>
+                                            <td>
+                                            
+                                                <div class="editable {!IF(mod.accPSV != null, 'inner-tbl-inpt read-only','')}">
+                                                    {!mod.accPSV}
+                                                </div>
+                                               <apex:inputField value="{!mod.dsm.Data_Supplier_Account__r.Publisher_Site_Vertical__c}" style="display:none;" styleClass="bc{!count} bd-clr inner-tbl-inpt w70" onchange="setHiddenPublisherVert(this.value);return false;"/> 
+                                            </td>
+                                            <td>
+                                            
+                                                <div class="editable {!IF(mod.accCC != null, 'inner-tbl-inpt read-only','')}">
+                                                    {!mod.accCC}
+                                                </div>
+                                                <apex:inputField value="{!mod.dsm.Data_Supplier_Account__r.Currency_Code__c}" style="display:none;" styleClass="bc{!count} bd-clr inner-tbl-inpt w70" onchange="setHiddencurC(this.value);return false;" /> 
+                                            </td>
+                                        </tr>
+                                        <apex:variable value="{!count+1}" var="count"/>
+                                    </apex:repeat>
+                                 </tbody>                                 
+                             </table>
+                        </apex:outputPanel> 
+                        <apex:inputHidden value="{!publisherVert}" id="inputPublisherVert"/>
+                        <apex:inputHidden value="{!publisherSiteType}" id="inputPublisherSiteType"/> 
+                        <apex:inputHidden value="{!publisherDataType}" id="inputPublisherDataType"/>
+        				<apex:inputHidden value="{!curC}" id="inputcurC"/>
+                        <script>
+                            function setHiddenPublisherVert(val){
+                                if(val != null && val != ''){
+                                    document.getElementById('{!$Component.frm}').elements['{!$Component.inputPublisherVert}'].value = val;
+                                }else{
+                                    val = 'none';
+                                    document.getElementById('{!$Component.frm}').elements['{!$Component.inputPublisherVert}'].value = val;
+                                }
+                            }
+                            function setHiddenPublisherSiteType(val){
+                                if(val != null && val != ''){
+                                    document.getElementById('{!$Component.frm}').elements['{!$Component.inputPublisherSiteType}'].value = val;
+                                }else{
+                                    val = 'none';
+                                    document.getElementById('{!$Component.frm}').elements['{!$Component.inputPublisherSiteType}'].value = val;
+                                }
+                            }
+                            function setHiddenPublisherDataType(val){
+                                if(val != null && val != ''){
+                                    document.getElementById('{!$Component.frm}').elements['{!$Component.inputPublisherDataType}'].value = val;
+                                }else{
+                                    val = 'none';
+                                    document.getElementById('{!$Component.frm}').elements['{!$Component.inputPublisherDataType}'].value = val;
+                                }
+                            }
+        					function setHiddencurC(val){
+                                if(val != null && val != ''){
+                                    document.getElementById('{!$Component.frm}').elements['{!$Component.inputcurC}'].value = val;
+                                }else{
+                                    val = 'none';
+                                    document.getElementById('{!$Component.frm}').elements['{!$Component.inputcurC}'].value = val;
+                                }
+                            }
+                        </script>
+                        <!----------------------------- Data Segment Mapping records section --------------------------------------------->
+                        
+                        <apex:outputPanel id="SegmentPnl" rendered="{!if(segmentList.size > 0,true,false)}">
+                            <table id="smtbl" class="tablesorter inner-tbl" style="width:95%;margin: 0 auto;" cellpadding="3" cellspacing="3">                          
+                                <thead>
+                                    <tr>
+                                        <th style="width:1%">#</th>
+                                        <th style="width:9%">Action</th>
+                                        <th style="width:17%">
+                                            <apex:commandLink value="Segment Name (Sales) Raw" style="text-decoration:none;" action="{!fetchSegments}" status="status" reRender="pb,pgMsg">  
+                                                <apex:param name="compareField" value="Segment_Name_Sales_Raw__c" assignTo="{!compareField}" />  
+                                                <apex:param name="orderType" value="{!IF(sortOrder='asc', 'desc', 'asc')}" assignTo="{!sortOrder}" />  
+                                            </apex:commandLink>
+                                        </th>
+                                        <th style="width:17%">
+                                            <apex:commandLink value="Segment Name (Supply) Raw {!IF(compareField=='Segment_Name_Supply_Raw__c',IF(sortOrder='asc','?','?'),'')}" style="text-decoration:none;" action="{!fetchSegments}" status="status" reRender="pb,pgMsg">  
+                                                <apex:param name="compareField" value="Segment_Name_Supply_Raw__c" assignTo="{!compareField}" />  
+                                                <apex:param name="orderType" value="{!IF(sortOrder='asc', 'desc', 'asc')}" assignTo="{!sortOrder}" />  
+                                            </apex:commandLink>
+                                        </th>
+                                        <th style="width:16%">
+                                            <apex:commandLink value="Segment Category Mapping {!IF(compareField=='Segment_Category_Mapping__c',IF(sortOrder='asc','?','?'),'')}" style="text-decoration:none;" action="{!fetchSegments}" status="status" reRender="pb,pgMsg">  
+                                                <apex:param name="compareField" value="Segment_Category_Mapping__c" assignTo="{!compareField}" />  
+                                                <apex:param name="orderType" value="{!IF(sortOrder='asc', 'desc', 'asc')}" assignTo="{!sortOrder}" />  
+                                            </apex:commandLink>
+                                        </th>
+                                   
+                                      <th style="width:10%">  
+                                             <apex:commandLink value="Segment Name {!IF(compareField=='Segment_Category_Mapping__r.Segment_Name__c',IF(sortOrder='asc','?','?'),'')}" style="text-decoration:none;" action="{!fetchSegments}" status="status" reRender="pb,pgMsg">   
+                                                <apex:param name="compareField" value="Segment_Category_Mapping__r.Segment_Name__c" assignTo="{!compareField}" />   
+                                                 <apex:param name="orderType" value="{!IF(sortOrder='asc', 'desc', 'asc')}" assignTo="{!sortOrder}" />   
+                                            </apex:commandLink> 
+                                         </th>  
+                                                
+                                        <th style="width:11%">
+                                            <apex:commandLink value="Segment Category {!IF(compareField=='Segment_Category_Mapping__r.Segment_Category__c',IF(sortOrder='asc','?','?'),'')}" style="text-decoration:none;" action="{!fetchSegments}" status="status" reRender="pb,pgMsg">  
+                                                <apex:param name="compareField" value="Segment_Category_Mapping__r.Segment_Category__c" assignTo="{!compareField}" />  
+                                                <apex:param name="orderType" value="{!IF(sortOrder='asc', 'desc', 'asc')}" assignTo="{!sortOrder}" />  
+                                            </apex:commandLink>
+                                        </th>
+                                        <th style="width:9%">
+                                            <apex:commandLink value="Segment ID {!IF(compareField=='Segment_Category_Mapping__r.Segment_Code__c',IF(sortOrder='asc','?','?'),'')}" style="text-decoration:none;" action="{!fetchSegments}" status="status" reRender="pb,pgMsg">  
+                                                <apex:param name="compareField" value="Segment_Category_Mapping__r.Segment_Code__c" assignTo="{!compareField}" />  
+                                                <apex:param name="orderType" value="{!IF(sortOrder='asc', 'desc', 'asc')}" assignTo="{!sortOrder}" />  
+                                            </apex:commandLink>
+                                        </th>
+                                        <th style="width:10%">
+                                            <apex:commandLink value="Rate Card CPM {!IF(compareField=='Segment_Category_Mapping__r.Rate_Card_CPM__c',IF(sortOrder='asc','?','?'),'')}" style="text-decoration:none;" action="{!fetchSegments}" status="status" reRender="pb,pgMsg">  
+                                                <apex:param name="compareField" value="Segment_Category_Mapping__r.Rate_Card_CPM__c" assignTo="{!compareField}" />  
+                                                <apex:param name="orderType" value="{!IF(sortOrder='asc', 'desc', 'asc')}" assignTo="{!sortOrder}" />  
+                                            </apex:commandLink>
+                                        </th>
+                                     </tr>
+                                 </thead>
+                                 <tbody>
+                                     <apex:variable value="{!1}" var="count"/>
+                                     <apex:repeat value="{!segmentList}" var="mod">
+                                        <tr class="{!mod.sm.Id}">
+                                            <!-- <td>{!count}</td> -->
+                                            <td> {!((currentPage-1)*20 + count)} </td>
+                                            <td style="vertical-align: middle;" class="action">
+                                                <a href="javascript:void(0)" onClick="editRecord(this,'{!mod.sm.Id}');" class="editRow">Edit</a>&nbsp;|&nbsp;
+                                                <a href="javascript:void(0)" onClick="delConfirm('{!mod.sm.Id}');">Delete</a>
+                                            </td>
+                                            <td>
+                                                <div>
+                                               <!--       {!mod.sm.Segment_Name_Sales_Raw__c} -->
+                                                </div>
+                                                <apex:outputField value="{!mod.sm.Segment_Name_Sales_Raw__c}" style="display:none;" styleClass="bd-clr inner-tbl-inpt w70"/>
+                                            </td>
+                                            <td>
+                                                <div>
+                                               <!--       {!mod.sm.Segment_Name_Supply_Raw__c}  -->
+                                                </div>
+                                                <apex:outputField value="{!mod.sm.Segment_Name_Supply_Raw__c}" style="display:none;" styleClass="bc{!count} bd-clr inner-tbl-inpt w70"/>
+                                            </td>
+                                             <td> 
+                                                 <div class="editable {!IF(mod.sm.Segment_Category_Mapping__c != null, 'inner-tbl-inpt read-only','')}"> 
+                                                       {!mod.sm.Segment_Category_Mapping__r.Segment_Name__c}  
+                                                 </div>  
+                                                <div style="display:none;width: 85%;"> 
+                                                    <apex:inputField value="{!mod.sm.Segment_Category_Mapping__c}"  styleClass="bc{!count} bd-clr inner-tbl-inpt w70" onchange="callinglookupValueChanged('{!mod.sm.Id}'); return false;"/> 
+                                               </div> 
+                                             </td> 
+                                            <td>
+                                                <div class="editable {!IF(mod.scmSN != null, 'inner-tbl-inpt ','')}">
+                                                    {!mod.scmSN}
+                                                </div>
+                                                <apex:inputText value="{!mod.scmSN}" style="display:none;" styleClass="bc{!count} bd-clr inner-tbl-inpt w70"/> 
+                                            </td>
+                                            <td>
+                                                <div class="editable {!IF(mod.scmSCategory != null, 'inner-tbl-inpt read-only','')}">
+                                                    {!mod.scmSCategory}
+                                                </div>
+                                                <apex:inputText value="{!mod.scmSCategory}" style="display:none;" styleClass="bc{!count} bd-clr inner-tbl-inpt w70"/> 
+                                            </td> 
+                                             <td>
+                                                <div class="editable {!IF(mod.scmSCode != null, 'inner-tbl-inpt read-only','')}">
+                                                    {!mod.scmSCode}
+                                                </div>
+                                                <apex:inputText value="{!mod.scmSCode}" style="display:none;" styleClass="bc{!count} bd-clr inner-tbl-inpt w70"/> 
+                                            </td>
+                                            
+                                            <!--Currency field  added by Saifullah on 23/03/2017 -->
+                                            <td>
+                                                <div class="editable {!IF(mod.scmRCC != null, 'inner-tbl-inpt read-only','')}">
+                                                    {!mod.scmRCC}
+                                                </div>
+                                                <apex:inputText value="{!mod.scmRCC}" style="display:none;" styleClass="bc{!count} bd-clr inner-tbl-inpt w70"/> 
+                                            </td> 
+                                        </tr>
+                                        <apex:variable value="{!count+1}" var="count"/>
+                                    </apex:repeat>
+                                 </tbody>                                 
+                             </table>
+                        </apex:outputPanel> 
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <apex:outputLabel id="smry" value="Page : {!currentPage} / {!maxPageSize}" style="margin-left: 32px;"/>&nbsp;&nbsp;&nbsp;
+                        <apex:input value="{!gotoIndex}"  style="width: 5% !important;" styleClass="inpt"/>&nbsp;
+                        <apex:commandButton action="{!goToPage}" value="Go to" status="status" reRender="pb,pgMsg" style="padding: 8px;width: 58px;font-weight: normal;"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        
+                        <apex:commandButton action="{!prevPage}" value="<<Prev" status="status" disabled="{!!hasPrev}" reRender="pb,pgMsg" style="padding: 8px;width: 58px;font-weight: normal;"/> &nbsp;&nbsp;
+                        <apex:commandButton action="{!nextPage}" value="Next>>" status="status" disabled="{!!hasNext}" reRender="pb,pgMsg" style="padding: 8px;width: 58px;font-weight: normal;"/>
+                    </td>
+                    <td colspan="1">
+                        <apex:commandButton value="New" onclick="openDialog(); return false;" style="padding: 8px;width: 58px;font-weight: normal;"/> &nbsp;&nbsp;
+                        <apex:commandButton value="Execute Changes" action="{!SaveAndExecuteMapping}" reRender="pb,pgMsg" status="status" style="padding: 9px;font-weight: normal;"/> &nbsp;&nbsp;
+                        <apex:commandButton value="Cancel" style="padding: 9px;font-weight: normal;"/>
+                    </td>
+                </tr>                
+                <tr><td colspan="4"><div class="hrdiv"/></td></tr>
+               <!-- <tr>
+                     <td colspan="2" class="txt-center">
+                         <apex:commandButton value="Execute Changes" action="{!SaveAndExecuteMapping}" reRender="pb,pgMsg" status="status" style="padding: 9px;font-weight: normal;"/> &nbsp;&nbsp;
+                         <apex:commandButton value="Cancel" style="padding: 9px;font-weight: normal;"/>
+                     </td>
+                     <td colspan="2" class="txt-center">
+                         <apex:commandButton value="New" onclick="openDialog(); return false;" style="padding: 8px;width: 58px;font-weight: normal;"/> &nbsp;&nbsp;
+                         <apex:commandButton action="{!prevPage}" value="<<Prev" status="status" disabled="{!!hasPrev}" reRender="pb,pgMsg" style="padding: 8px;width: 58px;font-weight: normal;"/> &nbsp;&nbsp;
+                         <apex:commandButton action="{!nextPage}" value="Next>>" status="status" disabled="{!!hasNext}" reRender="pb,pgMsg" style="padding: 8px;width: 58px;font-weight: normal;"/>
+                     </td>
+                </tr>-->
+                <tr><td colspan="4"><div class="hrdiv"/></td></tr>
+            </table>
+            
+            <!------------------------------- JQUERY DIALOGE -------------------------------------------> 
+            <apex:outputPanel id="dlgPnl">
+                <div id="dialogPanel" title="{!dlgTitle}"  style="display:none;">
+                   <apex:pageMessages escape="false" id="dlgpgMsg"/>
+                   <!--------------------  for create buyer mapping records ----------------------------> 
+                    <apex:outputPanel id="BMdlg" rendered="{!if(selOptn = 'BM',true,false)}">
+                        <table class="tbl" style="width:100%;">
+                            <tr><td colspan="4">&nbsp;<br/></td></tr> 
+                            <tr>
+                                <td><label>Buyer Raw</label></td>
+                                <td><apex:inputText value="{!buyerMapObj.Buyer_Raw__c}" styleClass="dlg_inpt inpt"/></td>
+                                <td style="width: 25%;"><label> Buyer Account</label></td>
+                                <td style="width: 25%;"><apex:inputField value="{!buyerMapObj.Buyer_Account__c}" styleClass="dlg_inpt inpt"/></td>
+                            </tr>
+                            <tr><td colspan="4">&nbsp;<br/></td></tr>
+                            <tr>
+                                <td><label>Platform</label></td>
+                                <td><apex:inputText value="{!buyerMapObj.Platform__c}" styleClass="dlg_inpt inpt"/></td>
+                                <td><label>PDT Member</label></td>
+                                <td><apex:inputField value="{!buyerMapObj.PDT_Member__c}" styleClass="dlg_inpt inpt"/></td>
+                            </tr>
+                            <tr><td colspan="4">&nbsp;<br/></td></tr>
+                            <tr>
+                                <td style="width: 25%;"><label>Buyer Country Raw</label></td>
+                                <td style="width: 25%;"><apex:inputText value="{!buyerMapObj.Buyer_Country_Raw__c}" styleClass="dlg_inpt inpt"/></td>
+<!--                                 <td><label>Target Country Raw</label></td> -->
+<!--                                 <td><apex:inputText value="{!buyerMapObj.Target_Country_Raw__c}" styleClass="dlg_inpt inpt"/></td> -->
+                            </tr>
+                        </table>
+                     </apex:outputPanel>   
+                     
+                    <!--------------------  for create revenue share mapping record ----------------------------> 
+                    <apex:outputPanel id="RMdlg" rendered="{!if(selOptn = 'RM',true,false)}">
+                        <table class="tbl" style="width:100%;">
+                            <tr><td colspan="4">&nbsp;<br/></td></tr>
+                            <tr>
+                                <td style="width: 25%;"><label>Data Supplier</label></td>
+                                <td style="width: 25%;"><apex:inputText value="{!revenueShareMapObj.Data_Supplier__c}" styleClass="dlg_inpt inpt"/></td>
+                                <td style="width: 25%;"><label>Segment Name</label></td>
+                                <td style="width: 25%;"><apex:inputText value="{!revenueShareMapObj.Segment_Name__c}" styleClass="dlg_inpt inpt"/></td>
+                            </tr>
+                            <tr><td colspan="4">&nbsp;<br/></td></tr>
+                            <tr>
+                                <td><label>Revenue Share</label></td>
+                                <td><apex:inputText value="{!revenueShareMapObj.Revenue_Share__c}" styleClass="dlg_inpt inpt"/></td>
+                                <td><label>Country</label></td>
+                                <td><apex:inputText value="{!revenueShareMapObj.Country__c}" styleClass="dlg_inpt inpt"/></td>
+                            </tr>
+                        </table>
+                     </apex:outputPanel> 
+                     
+                     <!--------------------  for create platform mapping record ----------------------------> 
+                    <apex:outputPanel id="PMdlg" rendered="{!if(selOptn = 'PM',true,false)}">
+                        <table class="tbl" style="width:100%;">
+                            <tr><td colspan="2">&nbsp;<br/></td></tr>
+                            <tr>
+                                <td style="width: 12%;"><label>Platform Raw</label></td>
+                                <td style="width: 25%;"><apex:inputText value="{!platformMapObj.Platform_Raw__c}" styleClass="dlg_inpt inpt"/></td>
+                            </tr>
+                            <tr>
+                                <td style="width: 12%;"><label>Platform Account</label></td>
+                                <td style="width: 25%;"><apex:inputField value="{!platformMapObj.Platform_Account__c}" styleClass="dlg_inpt inpt"/></td>
+                            </tr>
+                        </table>
+                     </apex:outputPanel>
+                     
+                     <!--------------------  for create advertiser mapping record ----------------------------> 
+                    <apex:outputPanel id="AMdlg" rendered="{!if(selOptn = 'AM',true,false)}">
+                        <table class="tbl" style="width:100%;">
+                            <tr><td colspan="2">&nbsp;<br/></td></tr>
+                            <tr>
+                                <td style="width: 13%;"><label>Advertiser Raw </label></td>
+                                <td style="width: 25%;"><apex:inputText value="{!advertiserMapObj.Advertiser_Raw__c}" styleClass="dlg_inpt inpt"/></td>
+                            </tr>
+                            <tr><td colspan="2">&nbsp;<br/></td></tr>
+                            <tr>
+                                <td style="width: 13%;"><label>Advertiser Account</label></td>
+<!--                                 <td style="width: 25%;"><apex:inputText value="{!advertiserMapObj.Advertiser_Account_Name__c}" styleClass="dlg_inpt inpt"/></td> -->
+                                <td style="width: 25%;"><apex:inputField value="{!advertiserMapObj.Advertiser_Account__c}" styleClass="dlg_inpt inpt"/></td>     
+                            </tr>
+                            <tr><td colspan="2">&nbsp;<br/></td></tr>
+                            <!--  <tr>
+                                <td style="width: 13%;"><label>Advertiser Account</label></td>
+                                <td style="width: 25%;"><apex:inputField value="{!advertiserMapObj.Advertiser_Account__c}" styleClass="dlg_inpt inpt"/></td>
+                            </tr>-->
+                            <tr>
+                                <td style="width: 13%;"><label>Sector 1</label></td>
+<!--                                 <td style="width: 25%;"><apex:inputText value="{!advertiserMapObj.Advertiser_Account_Name__c}" styleClass="dlg_inpt inpt"/></td> -->
+                                <td style="width: 25%;"><apex:inputField value="{!advertiserMapObj.Advertiser_Account__r.Advertiser_Sector_1__c}" styleClass="dlg_inpt inpt"/></td>     
+                            </tr>
+                            <tr><td colspan="2">&nbsp;<br/></td></tr>
+                             <tr>
+                                <td style="width: 13%;"><label>Sector 2</label></td>
+                                <td style="width: 25%;"><apex:inputField value="{!advertiserMapObj.Advertiser_Account__r.Advertiser_Sector_2_New__c}" styleClass="dlg_inpt inpt"/></td>
+                            </tr>
+                        </table>
+                     </apex:outputPanel> 
+                     
+                      <!--------------------  for create Campaign mapping record ----------------------------> 
+                    <apex:outputPanel id="CMdlg" rendered="{!if(selOptn = 'CM',true,false)}">
+                        <table class="tbl" style="width:100%;">
+                            <tr><td colspan="2">&nbsp;<br/></td></tr>
+                            <tr>
+                                <td style="width: 13%;"><label>Campaign Raw </label></td>
+                                <td style="width: 25%;"><apex:inputText value="{!campaignMapObj.Campaign_Raw__c}" styleClass="dlg_inpt inpt"/></td>
+                            </tr>
+                            <tr><td colspan="2">&nbsp;<br/></td></tr>
+                            <tr>
+                                <td style="width: 13%;"><label>Advertiser Account</label></td>
+<!--                                 <td style="width: 25%;"><apex:inputText value="{!campaignMapObj.Advertiser_Account_Name__c}" styleClass="dlg_inpt inpt"/></td> -->
+                                <td style="width: 25%;"><apex:inputField value="{!campaignMapObj.Advertiser_Account__c}" styleClass="dlg_inpt inpt"/></td>     
+                            </tr>
+                            <tr><td colspan="2">&nbsp;<br/></td></tr>
+                            <!--  <tr>
+                                <td style="width: 13%;"><label>Campaign Account</label></td>
+                                <td style="width: 25%;"><apex:inputField value="{!advertiserMapObj.Advertiser_Account__c}" styleClass="dlg_inpt inpt"/></td>
+                            </tr>-->
+                            <tr>
+                                <td style="width: 13%;"><label>Sector 1</label></td>
+<!--                                 <td style="width: 25%;"><apex:inputText value="{!campaignMapObj.Advertiser_Account_Name__c}" styleClass="dlg_inpt inpt"/></td> -->
+                                <td style="width: 25%;"><apex:inputField value="{!campaignMapObj.Advertiser_Account__r.Advertiser_Sector_1__c}" styleClass="dlg_inpt inpt"/></td>     
+                            </tr>
+                            <tr><td colspan="2">&nbsp;<br/></td></tr>
+                             <tr>
+                                <td style="width: 13%;"><label>Sector 2</label></td>
+                                <td style="width: 25%;"><apex:inputField value="{!campaignMapObj.Advertiser_Account__r.Advertiser_Sector_2_New__c}" styleClass="dlg_inpt inpt"/></td>
+                            </tr>
+                        </table>
+                     </apex:outputPanel> 
+                     
+                     <!--------------------  for create Data Supplier Mapping record ----------------------------> 
+                    <apex:outputPanel id="DSMdlg" rendered="{!if(selOptn = 'DM',true,false)}">
+                        <table class="tbl" style="width:100%;">
+                            <tr><td colspan="2">&nbsp;<br/></td></tr>
+                            <tr>
+                                <td style="width: 13%;"><label>Data Supplier Raw</label></td>
+                                <td style="width: 25%;"><apex:inputText value="{!dataSupplierMapObj.Data_Supplier_Raw__c}" styleClass="dlg_inpt inpt"/></td>
+                            </tr>
+                            <tr><td colspan="2">&nbsp;<br/></td></tr>
+                            <tr>
+                                <td style="width: 13%;"><label>Data Supplier Account</label></td>
+<!--                                 <td style="width: 25%;"><apex:inputText value="{!dataSupplierMapObj.Data_Supplier_Account_Name__c}" styleClass="dlg_inpt inpt"/></td> -->
+                                <td style="width: 25%;"><apex:inputField value="{!dataSupplierMapObj.Data_Supplier_Account__c}" styleClass="dlg_inpt inpt"/></td>
+                            </tr>
+                            <tr><td colspan="4">&nbsp;<br/></td></tr>
+                            <!--  <tr>
+                                <td style="width: 13%;"><label>Account</label></td>
+                                <td style="width: 25%;"><apex:inputField value="{!dataSupplierMapObj.Data_Supplier_Account__c}" styleClass="dlg_inpt inpt"/></td>
+                            </tr>-->
+                            <tr>
+                                <td style="width: 13%;"><label>Publisher Data Type</label></td>
+<!--                                 <td style="width: 25%;"><apex:inputText value="{!dataSupplierMapObj.Data_Supplier_Account_Name__c}" styleClass="dlg_inpt inpt"/></td> -->
+                                <td style="width: 25%;"><apex:inputField value="{!dataSupplierMapObj.Data_Supplier_Account__r.Publisher_Data_Type__c}" styleClass="dlg_inpt inpt"/></td>
+                            </tr>
+                            <tr><td colspan="4">&nbsp;<br/></td></tr>
+                            <tr>
+                                <td style="width: 13%;"><label>Publisher Site Type</label></td>
+<!--                                 <td style="width: 25%;"><apex:inputText value="{!dataSupplierMapObj.Data_Supplier_Account_Name__c}" styleClass="dlg_inpt inpt"/></td> -->
+                                <td style="width: 25%;"><apex:inputField value="{!dataSupplierMapObj.Data_Supplier_Account__r.Publisher_Site_Type__c}" styleClass="dlg_inpt inpt"/></td>
+                            </tr>
+                            <tr><td colspan="4">&nbsp;<br/></td></tr>
+                            <tr>
+                                <td style="width: 13%;"><label>Publisher Vertical</label></td>
+<!--                                 <td style="width: 25%;"><apex:inputText value="{!dataSupplierMapObj.Data_Supplier_Account_Name__c}" styleClass="dlg_inpt inpt"/></td> -->
+                                <td style="width: 25%;"><apex:inputField value="{!dataSupplierMapObj.Data_Supplier_Account__r.Publisher_Site_Vertical__c}" styleClass="dlg_inpt inpt"/></td>
+                            </tr>
+                            <tr><td colspan="4">&nbsp;<br/></td></tr>
+                            <tr>
+                                <td style="width: 13%;"><label>Currency Code</label></td>
+<!--                                 <td style="width: 25%;"><apex:inputText value="{!dataSupplierMapObj.Data_Supplier_Account_Name__c}" styleClass="dlg_inpt inpt"/></td> -->
+                                <td style="width: 25%;"><apex:inputField value="{!dataSupplierMapObj.Data_Supplier_Account__r.Currency_Code__c}" styleClass="dlg_inpt inpt"/></td>
+                            </tr>
+                        </table>
+                     </apex:outputPanel> 
+                     
+                     <!--------------------  for create Segment Mapping record ----------------------------> 
+                    <apex:outputPanel id="SMdlg" rendered="{!if(selOptn = 'SM',true,false)}">
+                        <table class="tbl" style="width:100%;">
+                            <tr><td colspan="2">&nbsp;<br/></td></tr>
+                            <tr>
+                                <td style="width: 13%;"><label>Segment Name (Sales) Raw</label></td>
+                                <td style="width: 25%;"><apex:inputText value="{!segmentMapObj.Segment_Name_Sales_Raw__c}" styleClass="dlg_inpt inpt"/></td>
+                            </tr>
+                            <tr><td colspan="2">&nbsp;<br/></td></tr>
+                            <tr>
+                                <td style="width: 13%;"><label>Segment Name (Supply) Raw</label></td>
+                                <td style="width: 25%;"><apex:inputText value="{!segmentMapObj.Segment_Name_Supply_Raw__c}" styleClass="dlg_inpt inpt"/></td>
+                            </tr>
+                            <tr><td colspan="2">&nbsp;<br/></td></tr>
+                            <tr>
+                                <td style="width: 13%;"><label>Segment Category Mapping</label></td>
+                                <td style="width: 25%;"><apex:inputField value="{!segmentMapObj.Segment_Category_Mapping__c}" styleClass="dlg_inpt inpt"/></td>
+                            </tr>
+                        </table>
+                     </apex:outputPanel>
+                     
+                </div>
+            </apex:outputPanel>
+            <br/><br/>            
+            <script>
+                $('[id$="start"]').show();
+                var rowIndx = '';
+                $(document).ready(function(){
+                    tableSort();
+                    revenueTableSort();
+                    platformTableSort();
+                    advertiserTableSort();
+                    dataSupplierTableSort();
+                    segmentTableSort();
+                    initDialog();
+                    
+                    $(".inner-tbl-inpt").bind("change", function() {
+                      $(this).parent().find('.editable').text($(this).val());
+                      var editElement =  $(this).parent().find('.editable');
+                        if($(this).val().length>0){
+                             if(!$(editElement).hasClass("inner-tbl-inpt")){
+                                 $("editElement").addClass("inner-tbl-inpt");
+                             }
+                        
+                        }else{
+                            if($(editElement).hasClass("inner-tbl-inpt")){
+                                 $("editElement").removeClass("inner-tbl-inpt");
+                            }
+                        }
+                    });
+                });
+                
+                function tableSort(){
+                    $("#mytbl").tablesorter({theme: 'blue', widthFixed: true, emptyTo: "none", dateFormat : "dd/mm/yyyy",
+                                            headers: { 0: { sorter: false}, 1: {sorter: false}, 2: {sorter: false}, 3: {sorter: false} , 4: { sorter: false}, 5: {sorter: false}, 6: {sorter: false}, 7: { sorter: false}, 8: { sorter: false}, 9: { sorter: false}}
+                    }); 
+                    $('[id$="start"]').hide();
+                }                
+                function revenueTableSort(){
+                    $("#rmtbl").tablesorter({theme: 'blue', widthFixed: true, emptyTo: "none", dateFormat : "dd/mm/yyyy",
+                                            headers: { 0: { sorter: false}, 1: {sorter: false}, 2: {sorter: false}, 3: {sorter: false} , 4: { sorter: false}, 5: {sorter: false}, 6: {sorter: false}, 7: { sorter: false}, 8: { sorter: false}, 9: { sorter: false}}
+                    }); 
+                    $('[id$="start"]').hide();
+                }                
+                function platformTableSort(){
+                    $("#pmtbl").tablesorter({theme: 'blue', widthFixed: true, emptyTo: "none", dateFormat : "dd/mm/yyyy",
+                                            headers: { 0: { sorter: false}, 1: {sorter: false}, 2: {sorter: false}, 3: {sorter: false} , 4: { sorter: false}, 5: {sorter: false}, 6: {sorter: false}, 7: { sorter: false}, 8: { sorter: false}, 9: { sorter: false}}
+                    }); 
+                    $('[id$="start"]').hide();
+                }                
+                function advertiserTableSort(){
+                    $("#amtbl").tablesorter({theme: 'blue', widthFixed: true, emptyTo: "none", dateFormat : "dd/mm/yyyy",
+                                            headers: { 0: { sorter: false}, 1: {sorter: false}, 2: {sorter: false}, 3: {sorter: false} , 4: { sorter: false}, 5: {sorter: false}, 6: {sorter: false}, 7: { sorter: false}, 8: { sorter: false}, 9: { sorter: false}}
+                    }); 
+                    $('[id$="start"]').hide();
+                }  
+                function campaignTableSort(){
+                    $("#cmtbl").tablesorter({theme: 'blue', widthFixed: true, emptyTo: "none", dateFormat : "dd/mm/yyyy",
+                                            headers: { 0: { sorter: false}, 1: {sorter: false}, 2: {sorter: false}, 3: {sorter: false} , 4: { sorter: false}, 5: {sorter: false}, 6: {sorter: false}, 7: { sorter: false}, 8: { sorter: false}, 9: { sorter: false}}
+                    }); 
+                    $('[id$="start"]').hide();
+                }                
+                function dataSupplierTableSort(){
+                    $("#dsmtbl").tablesorter({theme: 'blue', widthFixed: true, emptyTo: "none", dateFormat : "dd/mm/yyyy",
+                                            headers: { 0: { sorter: false}, 1: {sorter: false}, 2: {sorter: false}, 3: {sorter: false} , 4: { sorter: false}, 5: {sorter: false}, 6: {sorter: false}, 7: { sorter: false}, 8: { sorter: false}, 9: { sorter: false}}
+                    }); 
+                    $('[id$="start"]').hide();
+                }                
+                function segmentTableSort(){
+                    $("#smtbl").tablesorter({theme: 'blue', widthFixed: true, emptyTo: "none", dateFormat : "dd/mm/yyyy",
+                                            headers: { 0: { sorter: false}, 1: {sorter: false}, 2: {sorter: false}, 3: {sorter: false} , 4: { sorter: false}, 5: {sorter: false}, 6: {sorter: false}, 7: { sorter: false}, 8: { sorter: false}, 9: { sorter: false}}
+                    }); 
+                    $('[id$="start"]').hide();
+                }                
+                function editRecord(flg, recId){                  
+                    var actn = $(flg).text();
+                    if(actn == 'Edit'){
+                        $(flg).text('Save');
+                        $(flg).parent().parent().find('td').addClass('bg-clr');                      
+                        $(flg).parent().parent().find('.editable').each(function(){
+                            $(this).hide();
+                            $(this).next().show();
+                        });
+                        $(flg).parent().parent().find('.editable :first').focus();
+                    }else{
+                        SaveRec(recId);
+                        $(flg).parent().parent().find('td').removeClass('bg-clr'); 
+                        $(flg).text('Edit');
+                        $(flg).parent().parent().find('.editable').each(function(){
+                            $(this).addClass('read-only');
+                            $(this).show();
+                            $(this).next().hide();
+                        });
+                    }
+                }
+                              
+                function accountLookup(fldCls,rcType){
+                   console.log('fldCls== '+fldCls);
+                   rowIndx =  fldCls.replace('bg','');
+                   console.log('rowIndx= '+rowIndx);
+                   var srchVlu = $('.'+fldCls).val();
+                   console.log('srchVlu== '+srchVlu);
+                   var popup = window.open("/apex/AccountLookup?rctype="+rcType+"&txtElement="+fldCls+"&srchTxt="+srchVlu, "Popup", "width=600,height=400,top=100,left=200");
+                   popup.focus();
+                }                
+                function fillAccount(accName, cls){
+                    $('.'+cls).text(accName);
+                    $('.'+cls).val(accName);
+                    calBuyerCountry();
+                }                
+                function isBuyerChanged(i){
+                    rowIndx = i;
+                    calBuyerCountry();
+                }                
+                function calBuyerCountry(){
+                    console.log('calBuyer for rowIndx= '+rowIndx);
+                    if(rowIndx != undefined && rowIndx.trim().length > 0){
+                        var bc = $('.bc'+rowIndx).val();
+                        var bg = $('.bg'+rowIndx).val();
+                        console.log('bc= '+bc);
+                        console.log('bg= '+bg);
+                        $('.bbc'+rowIndx).text(bg+ ' ' +bc);
+                        rowIndx = '';
+                    }
+                }                
+                function initDialog(){
+                    var elementdlg = $("#dialogPanel").dialog({
+                        modal: true,
+                        autoOpen: false,
+                        height: 350,
+                        width: 520,
+                        resizable:false,
+                        buttons: [
+                                  {
+                                      text: "Save",
+                                      class: 'dlg-btn',
+                                      click: function() {
+                                          createRecord();
+                                          $( this ).dialog( "close" );
+                                      }
+                                  },
+                                  {
+                                      text: "Cancel",
+                                      class: 'dlg-btn-cnl',
+                                      click: function(){                                                  
+                                          $(this).dialog("close");
+                                      }
+                                  }
+                                ]                      
+                     });   
+                    elementdlg.parent().appendTo("#pg\\:frm");                
+                }                
+                function openDialog(){            
+                    $('#dialogPanel').dialog("open");   
+                }                
+                function delConfirm(recId){
+                    if(confirm("Do you want to delete?")){
+                        deleteRecord(recId);
+                    }
+                }                
+                function chkError(){
+                    var err = '{!isErr}';
+                    console.log('Err = '+err);
+                    if(err == 'true'){
+                        openDialog();
+                    }else{
+                        emptyDialog();
+                    }
+                }                
+                function emptyDialog(){
+                    $('#dialogPanel').find("input[type=text], input[type=password], textarea, selete").each(function(){
+                        $(this).val('');
+                    });
+                }
+                function editMode( rowId ){
+                    $('.' + rowId ).find('.editable').each(function(){
+                            $(this).hide();
+                            $(this).next().show();
+                        });
+                    $('.' + rowId).children('.action').children('.editRow').text('Save');
+                }
+            </script>
+         </apex:pageBlock>     
+    </apex:form>
+</apex:page>

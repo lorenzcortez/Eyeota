@@ -1,0 +1,6 @@
+<apex:page >
+  <!-- Begin Default Content REMOVE THIS -->
+  <h1>Please wait for the account to be approved before starting the Ingestion/Onboarding Process.</h1>
+  
+  <!-- End Default Content REMOVE THIS -->
+</apex:page>

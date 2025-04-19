@@ -1,0 +1,16 @@
+.adjustment__wrapper .slds-card__body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form .inputs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 24px;
+}
+
+.spinner__wrapper {
+    min-height: 12rem;
+    position: relative;
+}

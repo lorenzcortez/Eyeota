@@ -1,0 +1,23 @@
+.icon__hide {
+    display: none;
+}
+
+.modal__header {
+    text-align: left;
+    font-size: 18px;
+    line-height: 1.25;
+}
+
+.spinner__wrapper {
+    position: relative;
+    min-height: 240px;
+}
+
+.filter__wrapper {
+    display: flex;
+    align-items: end;
+}
+
+.date-invoiced__inputs {
+    display: flex;
+}

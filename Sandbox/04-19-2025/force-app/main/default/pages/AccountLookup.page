@@ -1,0 +1,60 @@
+<apex:page controller="AccountLookupController" title="Account Lookup" sidebar="false" showHeader="false">
+      
+      <script>
+          function assignAccount(accName){
+              var txtName = '{!$CurrentPage.Parameters.txtElement}';
+              opener.fillAccount(accName, txtName);
+              window.close();
+          }
+      </script>
+      <style>
+          .dv_load{
+               top: 45%;
+               margin-left: 38%;
+               padding: 12px 20px;
+               z-index: 20000;
+               position: fixed;                                  
+               color: #31708f;
+               background: #d9edf7;
+               border: 2px solid #ccc;
+               padding: 6px 20px;
+               border-radius: 8px;
+               box-shadow: 0 3px 5px #ddd;
+           }
+      </style>
+      <apex:form id="frm">
+          <apex:pageMessages id="pgMsg"></apex:pageMessages>
+          <div class="lookup">
+            <div class="bPageTitle">
+                <h1>Account Lookup</h1>
+            </div>
+           <div class="pBody">
+                <label class="assistiveText" for="lksrch">Search</label>
+                <apex:inputText html-placeholder="Search...." value="{!filterText}" style="height: 18px; padding: 2px; border-radius: 1px;"/>&nbsp;
+                <apex:commandButton value="Go!" action="{!filterAccount}" status="sts" reRender="frm"/>
+              
+             </div>
+        </div>
+        <br/>
+        <apex:pageBlock id="pgBlock" title="All Accounts">
+             <apex:actionStatus id="sts">
+                   <apex:facet name="start">
+                       <div style="width: 100%; height:700px; background:#eee; opacity : 0.3; top:0px; left:0px; position: fixed; z-index:10000"></div>            
+                       <div class="dv_load">
+                            <img src="/img/loading24.gif" style="vertical-align:middle;"/>
+                            <span>Processing...</span>
+                       </div>
+                   </apex:facet>
+              </apex:actionStatus>
+            
+            <apex:pageBlockTable value="{!accountList}" var="accRc">
+                <apex:column headerValue="Account Name">
+                  <div onClick="assignAccount('{!accRc.name}');"><a href="javascript:void(0);">{!accRc.name}</a></div>
+                </apex:column>
+                
+             </apex:pageBlockTable>  
+        </apex:pageBlock>
+        
+       </apex:form>   
+  
+</apex:page>
