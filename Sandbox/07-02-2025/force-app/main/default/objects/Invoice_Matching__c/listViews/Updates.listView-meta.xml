@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Updates</fullName>
+    <columns>Month__c</columns>
+    <columns>NAME</columns>
+    <columns>Account__c</columns>
+    <columns>Billing_Legal_Entity_Name__c</columns>
+    <columns>Billing_Currency__c</columns>
+    <columns>Gross_in_USD__c</columns>
+    <columns>Amount_in_USD__c</columns>
+    <columns>Amount_in_Billing_Currency__c</columns>
+    <columns>Payable_Invoice_Number__c</columns>
+    <columns>Invoice_Currency__c</columns>
+    <columns>Invoice_Net__c</columns>
+    <columns>Invoice_Status__c</columns>
+    <columns>Payment_Status__c</columns>
+    <columns>Supplier_Invoice_Reference__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Account__c</field>
+        <operation>equals</operation>
+        <value>US Equifax</value>
+    </filters>
+    <label>Updates</label>
+</ListView>

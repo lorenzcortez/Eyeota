@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tier_For_Americas_Only__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(AND(OR(Buyer_Country_Raw__c = &quot;CA&quot;, Buyer_Country_Raw__c = &quot;US&quot;),
+AND(Buyer_Holding_Group__r.Name =&quot;Publicis Groupe&quot;,
+OR(Advertiser__r.Name=&quot;USAA&quot;,OR(Advertiser__r.Name=&quot;AT&amp;T&quot;,OR(Advertiser__r.Name=&quot;Comcast&quot;,OR(Advertiser__r.Name=&quot;Verizon&quot;,OR(Advertiser__r.Name=&quot;Best Buy&quot;,Advertiser__r.Name=&quot;GSK&quot;
+)))))
+)),&quot;Tier 1&quot;,
+IF(AND(OR(Buyer_Country_Raw__c = &quot;CA&quot;, Buyer_Country_Raw__c = &quot;US&quot;),
+AND(Buyer_Holding_Group__r.Name =&quot;Publicis Groupe&quot;,
+OR(Advertiser__r.Name=&quot;Disney&quot;,OR(Advertiser__r.Name=&quot;Samsung&quot;,Advertiser__r.Name=&quot;Lenovo&quot;
+))
+)),&quot;Tier 2&quot;,
+IF(AND(OR(Buyer_Country_Raw__c = &quot;CA&quot;, Buyer_Country_Raw__c = &quot;US&quot;),
+AND(Buyer_Holding_Group__r.Name =&quot;IPG&quot;,
+OR(Advertiser__r.Name=&quot;Accenture&quot;,OR(Advertiser__r.Name=&quot;USPS&quot;,Advertiser__r.Name=&quot;Navy Federal Credit Union&quot;
+))
+)),&quot;Tier 1&quot;,
+IF(AND(OR(Buyer_Country_Raw__c = &quot;CA&quot;, Buyer_Country_Raw__c = &quot;US&quot;),
+AND(Buyer_Holding_Group__r.Name =&quot;IPG&quot;,
+OR(Advertiser__r.Name=&quot;TIAA&quot;,OR(Advertiser__r.Name=&quot;Aetna&quot;,OR(Advertiser__r.Name=&quot;CVS&quot;,Advertiser__r.Name=&quot;Dropbox&quot;)))
+)),&quot;Tier 2&quot;,
+IF(AND(OR(Buyer_Country_Raw__c = &quot;CA&quot;, Buyer_Country_Raw__c = &quot;US&quot;),
+AND(Buyer_Holding_Group__r.Name =&quot;Havas&quot;,
+OR(Advertiser__r.Name=&quot;Sanofi&quot;,OR(Advertiser__r.Name=&quot;ADP&quot;,Advertiser__r.Name=&quot;Fidelity&quot;
+))
+)),&quot;Tier 2&quot;,
+IF(AND(OR(Buyer_Country_Raw__c = &quot;CA&quot;, Buyer_Country_Raw__c = &quot;US&quot;),
+AND(Buyer_Holding_Group__r.Name =&quot;Omnicom&quot;,Advertiser__r.Name=&quot;Eli Lilly&quot;
+)),&quot;Tier 1&quot;,
+IF(AND(OR(Buyer_Country_Raw__c = &quot;CA&quot;, Buyer_Country_Raw__c = &quot;US&quot;),
+AND(Buyer_Holding_Group__r.Name =&quot;Omnicom&quot;,Advertiser__r.Name=&quot;Infinity&quot;
+)),&quot;Tier 2&quot;,
+IF(AND(OR(Buyer_Country_Raw__c = &quot;CA&quot;, Buyer_Country_Raw__c = &quot;US&quot;),
+AND(Buyer_Holding_Group__r.Name =&quot;WPP Global&quot;,
+OR(Advertiser__r.Name=&quot;T-Mobile&quot;,OR(Advertiser__r.Name=&quot;Dell&quot;,Advertiser__r.Name=&quot;Uber&quot;
+))
+)),&quot;Tier 1&quot;,
+IF(AND(OR(Buyer_Country_Raw__c = &quot;CA&quot;, Buyer_Country_Raw__c = &quot;US&quot;),
+AND(Buyer_Holding_Group__r.Name =&quot;WPP Global&quot;,
+OR(Advertiser__r.Name=&quot;Shell&quot;,OR(Advertiser__r.Name=&quot;Facebook&quot;,OR(Advertiser__r.Name=&quot;Google&quot;,OR(Advertiser__r.Name=&quot;Sony Playstation&quot;,Advertiser__r.Name=&quot;Canon&quot;
+))))
+)),&quot;Tier 1&quot;,
+IF(AND(OR(Buyer_Country_Raw__c = &quot;CA&quot;, Buyer_Country_Raw__c = &quot;US&quot;),
+AND(Buyer_Holding_Group__r.Name =&quot;Dentsu Aegis Network&quot;,
+OR(Advertiser__r.Name=&quot;Home Depot&quot;,OR(Advertiser__r.Name=&quot;Intel&quot;,OR(CONTAINS(Advertiser__r.Name,&quot;Microsoft&quot;),OR(Advertiser__r.Name=&quot;Solarwinds&quot;,OR(Advertiser__r.Name=&quot;NetApp&quot;,OR(Advertiser__r.Name=&quot;Cisco&quot;,OR(Advertiser__r.Name=&quot;Genpact&quot;,OR(Advertiser__r.Name=&quot;DXC Technology&quot;,OR(Advertiser__r.Name=&quot;Amazon Web Services (AWS)&quot;,Advertiser__r.Name=&quot;Sprint Corporation&quot;
+)))))))))
+)),&quot;Tier 1&quot;,
+
+&quot;Longtail&quot;))))))))))</formula>
+    <label>Tier (For Americas Only)</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

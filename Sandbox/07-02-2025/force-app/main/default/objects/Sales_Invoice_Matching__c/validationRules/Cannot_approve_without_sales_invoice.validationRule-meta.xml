@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cannot_approve_without_sales_invoice</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(ISBLANK(Sales_Invoice__c)=TRUE, Approved_for_Posting__c =TRUE)</errorConditionFormula>
+    <errorMessage>Sales Invoice Matching cannot be approved without Sales Invoice record.</errorMessage>
+</ValidationRule>

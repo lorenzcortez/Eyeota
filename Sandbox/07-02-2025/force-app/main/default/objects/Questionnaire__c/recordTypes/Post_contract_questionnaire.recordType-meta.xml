@@ -1,0 +1,1696 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Post_contract_questionnaire</fullName>
+    <active>true</active>
+    <description>Consolidated for data partner/ validation and mktg</description>
+    <label>Post-contract questionnaire</label>
+    <picklistValues>
+        <picklist>Age_Sources__c</picklist>
+        <values>
+            <fullName>Completed Forms</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Declared data via census information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inferred data from Eyeota statistical modelling from declared data sets or 3rd parties modelling</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Registrations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Surveys</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Available_linkages__c</picklist>
+        <values>
+            <fullName>Cookies to Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Full Name to Postal code</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mobile Device ID to App Usage Data</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mobile Device ID to Cookies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mobile Device ID to HH Address</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mobile Device ID to Hashed Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>None of the above</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Postal Code to Phone Number</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Postal code to Email</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>B2B_Decision_Maker_Sources__c</picklist>
+        <values>
+            <fullName>B2B Publications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>B2B Purchase Data</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Declared Registration Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lead Gen Data</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Survey Data</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>B2B_Employment_Sources__c</picklist>
+        <values>
+            <fullName>B2B Publications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Declared Registration Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Industry Directories</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Networking Sites</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recruitment Sites</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>B2B_Firmographics_Sources__c</picklist>
+        <values>
+            <fullName>B2B Publications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business Registrations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed Company Filings%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Industry Directories</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Networking Sites</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>B2B_Technographics_Sources__c</picklist>
+        <values>
+            <fullName>B2B Publications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>B2B Purchase Data</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Declared Registration Data</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lead Gen Data</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Survey Data</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Build_custom_audience_segment_ability__c</picklist>
+        <values>
+            <fullName>Available</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not available</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Consent_mechanism_used__c</picklist>
+        <values>
+            <fullName>IAB Transparency %26 Consent Framework %28TCF%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other %28please specify%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Written Consent</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Country_Source__c</picklist>
+        <values>
+            <fullName>Asia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Australia NZ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Canada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>China %28incl Hong Kong%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Europe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Latin America</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MEA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>United States</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Data_Collection__c</picklist>
+        <values>
+            <fullName>Deterministic</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Modelled %28all%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Modelled %28in parts%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Data_Type__c</picklist>
+        <values>
+            <fullName>Blend of first-party and third-party data</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Third-party data</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Data_Update_Frequency__c</picklist>
+        <values>
+            <fullName>Daily</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Monthly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quarterly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Real-time refresh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Weekly</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Data_supplier_status_California__c</picklist>
+        <values>
+            <fullName>Controller of personal data</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not providing any personal data</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Processor of personal data</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Data_supplier_status_Europe__c</picklist>
+        <values>
+            <fullName>Controller of personal data</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not providing any personal data</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Processor of personal data</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Device_ID__c</picklist>
+        <values>
+            <fullName>Android Advertising ID %28aka Google Advertising ID%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Android ID</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IDFA %28aka identifierForAdvertising%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IDFV %28aka identifierForVendor%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Windows Advertising ID</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Education_Level_Sources__c</picklist>
+        <values>
+            <fullName>Census Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed Forms</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Registrations%2E Business Directories and Networking Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Surveys</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Education_Sources__c</picklist>
+        <values>
+            <fullName>Census Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed Forms</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Registrations%2FApplications Resources</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Surveys</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Employment_Status_Sources__c</picklist>
+        <values>
+            <fullName>Census Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed Forms</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Registrations%2E Business Directories and Networking Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Surveys</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Family_Sources__c</picklist>
+        <values>
+            <fullName>Census Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed Forms</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Registrations and Networking Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Surveys</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Gender_Sources__c</picklist>
+        <values>
+            <fullName>Completed forms</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Declared data via census information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inferred data from Eyeota statistical modelling from declared data sets or 3rd parties modelling</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Registrations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Surveys</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Generation_Sources__c</picklist>
+        <values>
+            <fullName>Census Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed Forms</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Registrations and Networking Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Surveys</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Home_Value_Sources__c</picklist>
+        <values>
+            <fullName>Census Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed Forms</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Real Estate Resources</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Registrations and Networking Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Surveys</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Homeowner_Sources__c</picklist>
+        <values>
+            <fullName>Census Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed Forms</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Real Estate Resources</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Registrations and Networking Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Surveys</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Household_Income_Sources__c</picklist>
+        <values>
+            <fullName>Census Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed Forms</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Registrations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Surveys</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>How_was_consent_obtined__c</picklist>
+        <values>
+            <fullName>Directly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Via 3rd party</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>IAB_TCF_purpose_s__c</picklist>
+        <values>
+            <fullName>Information storage and access</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Linking Devices</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Measurement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Personalization</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Precise Geographic Location Data</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Special Feature%3A Matching Data to Offline Sources</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Intent_Sources__c</picklist>
+        <values>
+            <fullName>Basket Contents</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Booking Engines</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Comparison sites</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Multiple Product Reviews</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Product Searches</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Product configurations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quote requests</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Interest_Sources__c</picklist>
+        <values>
+            <fullName>Online Content</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Language_Spoken_Sources__c</picklist>
+        <values>
+            <fullName>Browser%2F Site settings</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Content Language Consumption</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Declared Registration%2F Form Data</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Legal_Basis_for_Collecting_Data__c</picklist>
+        <values>
+            <fullName>Both</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Legitimate Interest</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Life_Events_Sources__c</picklist>
+        <values>
+            <fullName>Content Engagement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Product Service Searches</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Purchase Behaviour</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Registration information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Survey Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transactional Events</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Marital_Status_Sources__c</picklist>
+        <values>
+            <fullName>Census Information</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Completed Forms</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Registrations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Surveys</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Measurement_of_Success__c</picklist>
+        <values>
+            <fullName>CPA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CPL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CTR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Clicks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ROI %25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reach</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VTR</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Net_Worth_Sources__c</picklist>
+        <values>
+            <fullName>Census Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed Forms</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Real Estate Resources</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Registrations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Surveys</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transactional Events</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Onboarding_Data_Type__c</picklist>
+        <values>
+            <fullName>CRM Data</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Loyalty Card Data</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Research Data</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Survey Data</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transactional Data</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Opp_Campaign_Management__c</picklist>
+        <values>
+            <fullName>Agency</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Client</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Opp_Data_Transfer_Method__c</picklist>
+        <values>
+            <fullName>Data Cleanroom %28Karlsgate - Snowflake%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Modelling process to happen on the client side%2C Eyeota to receive client data file in the correct format</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SFTP Transfer</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Opp_KPIs__c</picklist>
+        <values>
+            <fullName>Generate conversions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Generate leads</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Generate product sales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Measurement of success</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reach a new pool of customers</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Opp_Number_of_audiences__c</picklist>
+        <values>
+            <fullName>1- 5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>11-15</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>16%2B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6 - 10</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Opp_Onboarding_Use_Case__c</picklist>
+        <values>
+            <fullName>Always on activity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Specific campaigns</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Opp_Use_Cases__c</picklist>
+        <values>
+            <fullName>Activation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insights and overlap</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Measurement and analytics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Modelling</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Opp_Verticals__c</picklist>
+        <values>
+            <fullName>Automotive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CPG%2FFMCG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Education</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Electronics %26 Computers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gaming</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Govt%2E Orgs%2E %26 Nonprofits</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internet %26 Telecom</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Luxury</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Media %26 Entertainment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pharma %26 Healthcare</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Services %26 Industries</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Travel %26 Leisure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Opt_out_Communication__c</picklist>
+        <values>
+            <fullName>Opt-out file provided</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other %28please specify%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Update files</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Owner_Sources__c</picklist>
+        <values>
+            <fullName>CRM%2F Loyalty data</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consumer Purchase Activity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Registration Data</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Survey Responses</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transactional events</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Participation_in_Industry_Code__c</picklist>
+        <values>
+            <fullName>Digital Advertising Alliance %28DAA%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Direct Marketing Assn %28UK%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Direct Marketing Assn %28US%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EDDA %28YourOnlineChoices%2Ecom%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Interactive Advertising Bureau %28IAB%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Network Advertising Initiative %28NAI%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ePrivacy Seal</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Past_Purchase_Sources__c</picklist>
+        <values>
+            <fullName>CRM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consumer Purchase Activity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Loyalty data</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Payment information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shopping Behaviour</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transactional events</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Personal_Income_Sources__c</picklist>
+        <values>
+            <fullName>Census Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed Forms</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Employment Resources</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Registrations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Surveys</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Preferred_eyeota_status_California__c</picklist>
+        <values>
+            <fullName>Controller of personal data</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not providing any personal data</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Processor of personal data</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Preferred_eyeota_status_Europe__c</picklist>
+        <values>
+            <fullName>Controller of personal data</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not providing any personal data</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Processor of personal data</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Property_Type_Sources__c</picklist>
+        <values>
+            <fullName>Census Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed Forms</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Real Estate Resources</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Registrations and Networking Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Surveys</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Purchased_Sources__c</picklist>
+        <values>
+            <fullName>CRM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consumer Purchase Activity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Loyalty data</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Payment information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shopping Behaviour</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transactional events</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Purpose_of_providing_data__c</picklist>
+        <values>
+            <fullName>Linkage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Modelling</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Onboarding</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Online Interest-Based Advertising</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Personalization</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Region_s_that_make_up_audience__c</picklist>
+        <values>
+            <fullName>Asia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Australia NZ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Canada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>China %28incl Hong Kong%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Europe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Latin America</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MEA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>United States</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Regulatory_related_Involvement__c</picklist>
+        <values>
+            <fullName>Digital Advertising Alliance %28DAA%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Direct Marketing Assn %28UK%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Direct Marketing Assn %28US%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EDDA %28YourOnlineChoices%2Ecom%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Interactive Advertising Bureau %28IAB%29 APAC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Interactive Advertising Bureau %28IAB%29 EU</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Interactive Advertising Bureau %28IAB%29 US%2FCA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Network Advertising Initiative %28NAI%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other %28please specify%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ePrivacy Seal</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Renter_Sources__c</picklist>
+        <values>
+            <fullName>Census Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed Forms</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Real Estate Resources</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Registrations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Surveys</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sensitive_data_Asia__c</picklist>
+        <values>
+            <fullName>Financial account %23s%2C credit scores%2C insurance eligibility information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Health-related %28inferences about sensitive health%2F medical conditions or treatments%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Health-related %28medical records%2F pharmaceutical prescriptions%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Membership in trade union</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Political opinions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Precise location data %28e%2Eg%2E Lat%2Flong%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Race%2FEthnic Origin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Religious%2F philosophical beliefs</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sensitive_data_Australia_NZ__c</picklist>
+        <values>
+            <fullName>Financial account %23s%2C credit scores%2C insurance eligibility information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Health-related %28inferences about sensitive health%2F medical conditions or treatments%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Health-related %28medical records%2F pharmaceutical prescriptions%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Membership in trade union</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Political opinions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Precise location data %28e%2Eg%2E Lat%2Flong%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Race%2FEthnic Origin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Religious%2F philosophical beliefs</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sensitive_data_Canada__c</picklist>
+        <values>
+            <fullName>Financial account %23s%2C credit scores%2C insurance eligibility information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Health-related %28inferences about sensitive health%2F medical conditions or treatments%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Health-related %28medical records%2F pharmaceutical prescriptions%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Membership in trade union</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Political opinions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Precise location data %28e%2Eg%2E Lat%2Flong%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Race%2FEthnic Origin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Religious%2F philosophical beliefs</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sensitive_data_China_includes_HK__c</picklist>
+        <values>
+            <fullName>Financial account %23s%2C credit scores%2C insurance eligibility information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Health-related %28inferences about sensitive health%2F medical conditions or treatments%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Health-related %28medical records%2F pharmaceutical prescriptions%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Membership in trade union</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Political opinions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Precise location data %28e%2Eg%2E Lat%2Flong%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Race%2FEthnic Origin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Religious%2F philosophical beliefs</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sensitive_data_Latin_America__c</picklist>
+        <values>
+            <fullName>Financial account %23s%2C credit scores%2C insurance eligibility information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Health-related %28inferences about sensitive health%2F medical conditions or treatments%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Health-related %28medical records%2F pharmaceutical prescriptions%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Membership in trade union</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Political opinions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Precise location data %28e%2Eg%2E Lat%2Flong%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Race%2FEthnic Origin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Religious%2F philosophical beliefs</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sensitive_data_MEA__c</picklist>
+        <values>
+            <fullName>Financial account %23s%2C credit scores%2C insurance eligibility information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Health-related %28inferences about sensitive health%2F medical conditions or treatments%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Health-related %28medical records%2F pharmaceutical prescriptions%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Membership in trade union</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Political opinions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Precise location data %28e%2Eg%2E Lat%2Flong%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Race%2FEthnic Origin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Religious%2F philosophical beliefs</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sensitive_data_United_States__c</picklist>
+        <values>
+            <fullName>Financial account %23s%2C credit scores%2C insurance eligibility information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Health-related %28inferences about sensitive health%2F medical conditions or treatments%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Health-related %28medical records%2F pharmaceutical prescriptions%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Membership in trade union</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Political opinions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Precise location data %28e%2Eg%2E Lat%2Flong%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Race%2FEthnic Origin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Religious%2F philosophical beliefs</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sensitive_data__c</picklist>
+        <values>
+            <fullName>Financial account %23s%2C credit scores%2C insurance eligibility information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Health-related %28inferences about sensitive health%2F medical conditions or treatments%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Health-related %28medical records%2F pharmaceutical prescriptions%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Membership in trade union</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Political opinions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Precise location data %28e%2Eg%2E Lat%2Flong%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Race%2FEthnic Origin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Religious%2F philosophical beliefs</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>TV_Viewership_Sources__c</picklist>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Registration information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Survey responses</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TV Viewership</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Transfer_mechanism_outside_EU__c</picklist>
+        <values>
+            <fullName>Non-standard data transfer agreement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other %28please specify%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>We will be transferring data to Eyeota using Standard Contractual Clauses</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type_Offline_Data__c</picklist>
+        <values>
+            <fullName>Age</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gender</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Geolocation %28e%2Eg%2E postal code%2C lat-long%2C SA1%2C meshblock%2C ZIP%2B4%2C etc%2E%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type_Online_Data__c</picklist>
+        <values>
+            <fullName>Cookie IDs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Device IDs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HEMs%2C IDL%2C TTD UID%2C ID5%2C Lotame ID %28please specify%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IP Addresses</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MAIDs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other Identifiers %28please specify%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Errors_Advertisers</fullName>
+    <columns>NAME</columns>
+    <columns>Date_Invoiced__c</columns>
+    <columns>Date__c</columns>
+    <columns>Platform__c</columns>
+    <columns>Buyer_Original_Raw__c</columns>
+    <columns>Advertiser__c</columns>
+    <columns>Advertiser_Raw__c</columns>
+    <columns>Advertiser_Raw_Original__c</columns>
+    <columns>Campaign__c</columns>
+    <columns>Campaign_Raw_Original__c</columns>
+    <columns>Advertiser_Error__c</columns>
+    <columns>Earnings_Revenue_Final_USD__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Date_Invoiced__c</field>
+        <operation>equals</operation>
+        <value>2/1/2022</value>
+    </filters>
+    <filters>
+        <field>Advertiser_Raw__c</field>
+        <operation>startsWith</operation>
+        <value>EURODSP</value>
+    </filters>
+    <filters>
+        <field>Advertiser__c</field>
+        <operation>equals</operation>
+    </filters>
+    <label>Errors_Advertisers</label>
+</ListView>

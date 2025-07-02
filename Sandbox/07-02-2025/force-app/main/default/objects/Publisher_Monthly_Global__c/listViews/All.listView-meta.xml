@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>Date__c</columns>
+    <columns>Data_Supplier_Raw_Original__c</columns>
+    <columns>Data_Supplier__c</columns>
+    <columns>Country_Raw__c</columns>
+    <columns>Calls__c</columns>
+    <columns>Revenue__c</columns>
+    <columns>Uniques__c</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Data_Supplier__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>CREATED_DATE</field>
+        <operation>equals</operation>
+        <value>THIS_YEAR</value>
+    </filters>
+    <filters>
+        <field>Uniques__c</field>
+        <operation>notEqual</operation>
+        <value>,0</value>
+    </filters>
+    <filters>
+        <field>Data_Supplier_Raw_Original__c</field>
+        <operation>contains</operation>
+        <value>IMMEDIATE</value>
+    </filters>
+    <label>All</label>
+</ListView>

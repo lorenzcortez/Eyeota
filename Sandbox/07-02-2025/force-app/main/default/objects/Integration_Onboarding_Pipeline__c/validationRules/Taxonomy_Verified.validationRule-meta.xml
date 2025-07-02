@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Taxonomy_Verified</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(( Taxonomy_Checked_and_Verified__c !=null),( GDPR_Compliance_Verified__c =null))</errorConditionFormula>
+    <errorMessage>Please check for GDPR Compliance first before filling in the Taxonomy Checked and Verified field.</errorMessage>
+</ValidationRule>

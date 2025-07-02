@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Revenue_Type__c</fullName>
+    <label>Revenue Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Transactional</fullName>
+                <default>true</default>
+                <label>Transactional</label>
+            </value>
+            <value>
+                <fullName>Flat-fee</fullName>
+                <default>false</default>
+                <label>Flat-fee - Growth</label>
+            </value>
+            <value>
+                <fullName>DMP Subscription</fullName>
+                <default>false</default>
+                <label>DMP Subscription</label>
+            </value>
+            <value>
+                <fullName>Transactional - DNB</fullName>
+                <default>false</default>
+                <label>Transactional - DNB</label>
+            </value>
+            <value>
+                <fullName>Flat-fee - Core</fullName>
+                <default>false</default>
+                <label>Flat-fee - Core</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

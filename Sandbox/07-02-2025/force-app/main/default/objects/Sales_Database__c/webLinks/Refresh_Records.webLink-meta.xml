@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Refresh_Records</fullName>
+    <availability>online</availability>
+    <displayType>massActionButton</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Refresh Records</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <requireRowSelection>true</requireRowSelection>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/35.0/connection.js&quot;)} 
+var records = {!GETRECORDIDS($ObjectType.Sales_Database__c)}; 
+var updateRecords = []; 
+if (records[0] == null) 
+{ 
+alert(&quot;Please select at least one record&quot;) 
+} 
+else 
+{ 
+for (var i=0; i&lt;records.length; i++) 
+{ 
+var salesdb = new sforce.SObject(&quot;Sales_Database__c&quot;); 
+salesdb.id=records[i]; 
+salesdb.Update_Record__c=true; 
+updateRecords.push(salesdb); 
+} 
+result = sforce.connection.update(updateRecords); 
+window.location.href = &quot;/a0e&quot;; 
+}</url>
+</WebLink>

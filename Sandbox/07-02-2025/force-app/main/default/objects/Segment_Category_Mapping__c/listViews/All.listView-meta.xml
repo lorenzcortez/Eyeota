@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>Data_Supplier__c</columns>
+    <columns>Data_Asset_Global__c</columns>
+    <columns>Data_Asset_Account__c</columns>
+    <columns>Segment_GEO__c</columns>
+    <columns>Segment_Status__c</columns>
+    <columns>Segment_Name__c</columns>
+    <columns>Segment_Code__c</columns>
+    <columns>NAME</columns>
+    <columns>Rate_Card_CPM__c</columns>
+    <columns>Video_Rate_Card_CPM__c</columns>
+    <columns>Lifetime_Days__c</columns>
+    <columns>Segment_Supplier_Category__c</columns>
+    <columns>Segment_Supplier_External__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Data_Asset_Account__c</field>
+        <operation>equals</operation>
+    </filters>
+    <label>All_dataassets</label>
+</ListView>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Segment_Exceptions_For_Eric</fullName>
+    <columns>Segment_Name_Sales_Raw__c</columns>
+    <columns>Segment_Category_Mapping__c</columns>
+    <columns>Created_From_Exception__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Segment_Name__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>Segment_Name_Sales_Raw__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <label>Segment Exceptions (For Priti)</label>
+    <sharedTo>
+        <group>AIA_Team</group>
+        <group>Finance_Team</group>
+    </sharedTo>
+</ListView>

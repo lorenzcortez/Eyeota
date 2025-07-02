@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Errors_Buyer_Country</fullName>
+    <columns>NAME</columns>
+    <columns>Date_Invoiced__c</columns>
+    <columns>Platform__c</columns>
+    <columns>Buyer_Country_Raw__c</columns>
+    <columns>Buyer_Original_Raw__c</columns>
+    <columns>Advertiser_Raw__c</columns>
+    <columns>Revenue__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Date_Invoiced__c</field>
+        <operation>greaterOrEqual</operation>
+        <value>10/1/2021</value>
+    </filters>
+    <filters>
+        <field>Buyer_Raw__c</field>
+        <operation>equals</operation>
+        <value>&quot;CYBBA, INC.&quot;</value>
+    </filters>
+    <filters>
+        <field>Buyer_Global_Data_Alliance_Removed__c</field>
+        <operation>equals</operation>
+        <value>Cybba US</value>
+    </filters>
+    <label>Errors_Buyer Country</label>
+    <sharedTo>
+        <group>Finance_Team</group>
+    </sharedTo>
+</ListView>

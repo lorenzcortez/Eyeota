@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Segment_Supplier_Category_Update</fullName>
+    <columns>LAST_UPDATE</columns>
+    <columns>NAME</columns>
+    <columns>Segment_Supplier_Category__c</columns>
+    <columns>Data_Asset_Account__c</columns>
+    <columns>New_Taxonomy__c</columns>
+    <columns>Segment_Name__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Segment_Supplier_Category__c</field>
+        <operation>equals</operation>
+    </filters>
+    <label>Segment Supplier Category Update</label>
+    <sharedTo>
+        <roleAndSubordinatesInternal>DataOps_Team</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

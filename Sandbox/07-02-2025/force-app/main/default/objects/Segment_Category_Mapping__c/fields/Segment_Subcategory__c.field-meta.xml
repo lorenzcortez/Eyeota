@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Segment_Subcategory__c</fullName>
+    <label>Segment Subcategory</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Activities</fullName>
+                <default>false</default>
+                <label>Activities</label>
+            </value>
+            <value>
+                <fullName>Age &amp; Gender</fullName>
+                <default>false</default>
+                <label>Age &amp; Gender</label>
+            </value>
+            <value>
+                <fullName>B2B Intent</fullName>
+                <default>false</default>
+                <label>B2B Intent</label>
+            </value>
+            <value>
+                <fullName>B2B Interest</fullName>
+                <default>false</default>
+                <label>B2B Interest</label>
+            </value>
+            <value>
+                <fullName>B2B Product Ownership</fullName>
+                <default>false</default>
+                <label>B2B Product Ownership</label>
+            </value>
+            <value>
+                <fullName>Brand Affinity</fullName>
+                <default>false</default>
+                <label>Brand Affinity</label>
+            </value>
+            <value>
+                <fullName>Custom</fullName>
+                <default>false</default>
+                <label>Custom</label>
+            </value>
+            <value>
+                <fullName>Demographic</fullName>
+                <default>false</default>
+                <label>Demographic</label>
+            </value>
+            <value>
+                <fullName>Financial Status</fullName>
+                <default>false</default>
+                <label>Financial Status</label>
+            </value>
+            <value>
+                <fullName>Firmographic</fullName>
+                <default>false</default>
+                <label>Firmographic</label>
+            </value>
+            <value>
+                <fullName>General Interest</fullName>
+                <default>false</default>
+                <label>General Interest</label>
+            </value>
+            <value>
+                <fullName>Holiday</fullName>
+                <default>false</default>
+                <label>Holiday</label>
+            </value>
+            <value>
+                <fullName>Household</fullName>
+                <default>false</default>
+                <label>Household</label>
+            </value>
+            <value>
+                <fullName>In-market Purchase</fullName>
+                <default>false</default>
+                <label>In-market Purchase</label>
+            </value>
+            <value>
+                <fullName>Lifestyle</fullName>
+                <default>false</default>
+                <label>Lifestyle</label>
+            </value>
+            <value>
+                <fullName>Likely to Purchase</fullName>
+                <default>false</default>
+                <label>Likely to Purchase</label>
+            </value>
+            <value>
+                <fullName>Product Ownership</fullName>
+                <default>false</default>
+                <label>Product Ownership</label>
+            </value>
+            <value>
+                <fullName>Professional Groups</fullName>
+                <default>false</default>
+                <label>Professional Groups</label>
+            </value>
+            <value>
+                <fullName>Purchase Intent</fullName>
+                <default>false</default>
+                <label>Purchase Intent</label>
+            </value>
+            <value>
+                <fullName>Sociodemographic Profiles</fullName>
+                <default>false</default>
+                <label>Sociodemographic Profiles</label>
+            </value>
+            <value>
+                <fullName>Special Events</fullName>
+                <default>false</default>
+                <label>Special Events</label>
+            </value>
+            <value>
+                <fullName>Entertainment Interest</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Entertainment Interest</label>
+            </value>
+            <value>
+                <fullName>Home Appliances Owners</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Home Appliances Owners</label>
+            </value>
+            <value>
+                <fullName>Psychographic</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Psychographic</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

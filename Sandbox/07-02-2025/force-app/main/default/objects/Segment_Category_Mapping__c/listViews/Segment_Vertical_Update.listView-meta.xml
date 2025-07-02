@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Segment_Vertical_Update</fullName>
+    <columns>NAME</columns>
+    <columns>Segment_Name__c</columns>
+    <columns>Segment_Vertical__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Segment_Vertical__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>Segment_Name__c</field>
+        <operation>contains</operation>
+        <value>demo</value>
+    </filters>
+    <filters>
+        <field>Segment_Name__c</field>
+        <operation>contains</operation>
+        <value>life</value>
+    </filters>
+    <label>Segment Vertical Update</label>
+</ListView>

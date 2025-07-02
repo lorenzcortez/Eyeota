@@ -1,0 +1,75 @@
+<template>
+    <div class="summary">
+        <div class="header__wrapper slds-p-vertical_x-large">
+            <div class="slds-grid slds-gutters">
+                <div class="slds-col">
+                    <img src={logo} style="width: 200px;" alt="Eyeota Logo">
+                </div>
+                <div class="slds-col">
+                    <span class="title">{dSupplier}</span>
+                </div>
+            </div>
+        </div>
+        <div class="body__wrapper">
+            <div class="details slds-p-bottom_large">
+                <div class="detail slds-p-bottom_x-small">
+                    <div class="detail__label">Data Supplier</div>
+                    <div class="detail__value">{dSupplier}</div>
+                </div>
+                <div class="detail slds-p-bottom_x-small">
+                    <div class="detail__label">Billing Currency</div>
+                    <div class="detail__value">{summaryDetail.billingCurrency}</div>
+                </div>
+                <div class="detail slds-p-bottom_x-small">
+                    <div class="detail__label">Billing Month</div>
+                    <div class="detail__value">{summaryDetail.billingMonth}</div>
+                </div>
+                <div class="detail">
+                    <div class="detail__label">Report Issue Date</div>
+                    <div class="detail__value">{summaryDetail.reportIssueDate}</div>
+                </div>
+            </div>
+            <div class="slds-grid slds-gutters">
+                <div class="slds-col">
+                    <div class="report__table">
+                        <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_striped">
+                            <thead>
+                                <tr class="slds-line-height_reset">
+                                    <template for:each={columns} for:item="item">
+                                        <th scope="col" key={item.label}>
+                                            <div class="slds-truncate">{item.label}</div>
+                                        </th>
+                                    </template>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <template for:each={earningsBreakdown} for:item="item">
+                                    <tr class="slds-hint-parent" key={item}>
+                                        <td>{item.currentBillingMonth}</td>
+                                        <td><lightning-formatted-number format-style="currency" value={item.grossEarnings} minimum-fraction-digits="2" maximum-fraction-digits="2"></lightning-formatted-number></td>
+                                        <td><lightning-formatted-number format-style="currency" value={item.netEarnings} minimum-fraction-digits="2" maximum-fraction-digits="2"></lightning-formatted-number></td>
+                                    </tr>
+                                </template>
+                                <tr class="slds-hint-parent">
+                                    <td>Total</td>
+                                    <td><lightning-formatted-number format-style="currency" value={totalGrossEarnings} minimum-fraction-digits="2" maximum-fraction-digits="2"></lightning-formatted-number></td>
+                                    <td><lightning-formatted-number format-style="currency" value={totalNetEarnings} minimum-fraction-digits="2" maximum-fraction-digits="2"></lightning-formatted-number></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="invoice__amount">
+                        <div class="invoice__label">Invoice Amount</div>
+                        <div class="invoice__value">{summaryDetail.billingCurrency}</div>
+                    </div>
+                </div>
+                <div class="slds-col">
+                    
+                </div>
+            </div>
+            <c-summary-earnings-last6-mos account-id={accountId}></c-summary-earnings-last6-mos>
+            <p class="slds-m-top_x-large" style="font-weight: bold;">If the invoice amount is less than $500, please do not invoice and allow the amount to accrue until the point where the total amount due is greater than or equal to $500. This is to reduce the banking charges incurred for both parties.</p>
+            <p class="slds-m-top_x-small" style="font-weight: bold;">Payment terms begin from the receipt of invoice. Please do not backdate your invoice. Invoices with dates backdated prior to the Report Issue Date will be returned for correction.</p>			
+        </div>
+    </div>
+</template>

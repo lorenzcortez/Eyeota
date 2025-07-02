@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Monthly_Rev_2__c</fullName>
+    <label>Monthly Rev (Filtered)</label>
+    <summarizedField>Adjustment_Transaction__c.Revenue_Amount__c</summarizedField>
+    <summaryFilterItems>
+        <field>Adjustment_Transaction__c.Segment_Category__c</field>
+        <operation>equals</operation>
+        <value>Eyeota</value>
+    </summaryFilterItems>
+    <summaryFilterItems>
+        <field>Adjustment_Transaction__c.Data_Supplier__c</field>
+        <operation>contains</operation>
+        <value>0019000001gJe2xAAC</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Adjustment_Transaction__c.Adjustment__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

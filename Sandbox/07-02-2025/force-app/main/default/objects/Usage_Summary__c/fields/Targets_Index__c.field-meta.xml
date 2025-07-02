@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Targets_Index__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(MONTH(DATEVALUE(Invoice_Date__c))=1,
+CASE( Buyer_Country__r.Region_Roll__c ,
+&quot;Americas&quot;,11,
+&quot;Asia&quot;,21,
+&quot;Europe&quot;,31,
+&quot;Oceania&quot;,41,
+0),
+
+IF(MONTH(DATEVALUE(Invoice_Date__c))=2,
+CASE( Buyer_Country__r.Region_Roll__c ,
+&quot;Americas&quot;,12,
+&quot;Asia&quot;,22,
+&quot;Europe&quot;,32,
+&quot;Oceania&quot;,42,
+0),
+
+IF(MONTH(DATEVALUE(Invoice_Date__c))=3,
+CASE( Buyer_Country__r.Region_Roll__c ,
+&quot;Americas&quot;,13,
+&quot;Asia&quot;,23,
+&quot;Europe&quot;,33,
+&quot;Oceania&quot;,43,
+0),
+
+IF(MONTH(DATEVALUE(Invoice_Date__c))=4,
+CASE( Buyer_Country__r.Region_Roll__c ,
+&quot;Americas&quot;,14,
+&quot;Asia&quot;,24,
+&quot;Europe&quot;,34,
+&quot;Oceania&quot;,44,
+0),
+
+IF(MONTH(DATEVALUE(Invoice_Date__c))=5,
+CASE( Buyer_Country__r.Region_Roll__c ,
+&quot;Americas&quot;,15,
+&quot;Asia&quot;,25,
+&quot;Europe&quot;,35,
+&quot;Oceania&quot;,45,
+0),
+
+IF(MONTH(DATEVALUE(Invoice_Date__c))=6,
+CASE( Buyer_Country__r.Region_Roll__c ,
+&quot;Americas&quot;,16,
+&quot;Asia&quot;,26,
+&quot;Europe&quot;,36,
+&quot;Oceania&quot;,46,
+0),
+
+IF(MONTH(DATEVALUE(Invoice_Date__c))=7,
+CASE( Buyer_Country__r.Region_Roll__c ,
+&quot;Americas&quot;,17,
+&quot;Asia&quot;,27,
+&quot;Europe&quot;,37,
+&quot;Oceania&quot;,47,
+0),
+
+IF(MONTH(DATEVALUE(Invoice_Date__c))=8,
+CASE( Buyer_Country__r.Region_Roll__c ,
+&quot;Americas&quot;,18,
+&quot;Asia&quot;,28,
+&quot;Europe&quot;,38,
+&quot;Oceania&quot;,48,
+0),
+
+IF(MONTH(DATEVALUE(Invoice_Date__c))=9,
+CASE( Buyer_Country__r.Region_Roll__c ,
+&quot;Americas&quot;,19,
+&quot;Asia&quot;,29,
+&quot;Europe&quot;,39,
+&quot;Oceania&quot;,49,
+0),
+
+IF(MONTH(DATEVALUE(Invoice_Date__c))=10,
+CASE( Buyer_Country__r.Region_Roll__c ,
+&quot;Americas&quot;,110,
+&quot;Asia&quot;,210,
+&quot;Europe&quot;,310,
+&quot;Oceania&quot;,410,
+0),
+
+IF(MONTH(DATEVALUE(Invoice_Date__c))=11,
+CASE( Buyer_Country__r.Region_Roll__c ,
+&quot;Americas&quot;,111,
+&quot;Asia&quot;,211,
+&quot;Europe&quot;,311,
+&quot;Oceania&quot;,411,
+0),
+
+IF(MONTH(DATEVALUE(Invoice_Date__c))=12,
+CASE( Buyer_Country__r.Region_Roll__c ,
+&quot;Americas&quot;,112,
+&quot;Asia&quot;,212,
+&quot;Europe&quot;,312,
+&quot;Oceania&quot;,412,
+0),
+
+0))))))))))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Targets Index</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

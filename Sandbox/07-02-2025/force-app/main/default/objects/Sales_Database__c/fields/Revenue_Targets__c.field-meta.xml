@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Revenue_Targets__c</fullName>
+    <formula>IF(  TEXT(Buyer_Country__r.Region_Roll__c)  =&quot;Americas&quot;,
+
+CASE( Quarter_Purchased__c ,
+&quot;Q1 2019&quot;,3360000,
+&quot;Q2 2019&quot;,4664100,
+&quot;Q3 2019&quot;,5521671,
+&quot;Q4 2019&quot;,7230686,
+0),
+IF((OR((TEXT( Buyer_Country__r.Region_Roll__c ) =&quot;Europe&quot;),( TEXT(Buyer_Country__r.Region_Roll__c ) =&quot;MEA&quot;))),
+
+CASE( Quarter_Purchased__c ,
+&quot;Q1 2019&quot;,1693145,
+&quot;Q2 2019&quot;,2451074,
+&quot;Q3 2019&quot;,2880265,
+&quot;Q4 2019&quot;,4505013,
+0),
+
+IF((OR((TEXT( Buyer_Country__r.Region_Roll__c ) =&quot;Oceania&quot;),( TEXT(Buyer_Country__r.Region_Roll__c ) =&quot;Asia&quot;))),
+
+CASE( Quarter_Purchased__c ,
+&quot;Q1 2019&quot;,1241153,
+&quot;Q2 2019&quot;,1506542,
+&quot;Q3 2019&quot;,1803456,
+&quot;Q4 2019&quot;,2398599,
+0),
+
+0)))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Revenue Targets</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>10</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

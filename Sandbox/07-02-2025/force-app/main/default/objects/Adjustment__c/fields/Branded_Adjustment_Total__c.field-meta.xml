@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Branded_Adjustment_Total__c</fullName>
+    <label>Branded Adjustment Total</label>
+    <summarizedField>Adjustment_Transaction__c.Branded_Adjustment_Amount__c</summarizedField>
+    <summaryFilterItems>
+        <field>Adjustment_Transaction__c.Segment_Category__c</field>
+        <operation>equals</operation>
+        <value>Branded</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Adjustment_Transaction__c.Adjustment__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

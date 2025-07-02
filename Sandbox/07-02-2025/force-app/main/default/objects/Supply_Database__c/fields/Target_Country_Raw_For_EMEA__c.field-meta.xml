@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Target_Country_Raw_For_EMEA__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(Target_Region_Rollup__c ==&apos;Europe&apos;,&apos;EMEA&apos;,IF(Target_Region_Rollup__c ==&apos;MEA&apos;,&apos;EMEA&apos;,&quot;&quot;))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Target Country Raw (For EMEA)</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

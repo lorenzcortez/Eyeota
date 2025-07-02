@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>Revenue_Type__c</columns>
+    <columns>Buyer_Region__c</columns>
+    <columns>Invoice_Month__c</columns>
+    <columns>Confirmed_Revenue_MtoD__c</columns>
+    <columns>Actuals__c</columns>
+    <columns>Target__c</columns>
+    <columns>Week_1_Forecast__c</columns>
+    <columns>Week_2_Forecast__c</columns>
+    <columns>Week_3_Forecast__c</columns>
+    <columns>Week_4_Forecast__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All</label>
+</ListView>

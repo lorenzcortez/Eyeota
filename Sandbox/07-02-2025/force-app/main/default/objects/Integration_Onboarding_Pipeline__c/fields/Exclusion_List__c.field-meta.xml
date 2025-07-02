@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Exclusion_List__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+!includes(Inclusion_List_GlobalList__c,&apos;Adform&apos;),&apos;Adform&apos;&amp; br(),&apos;&apos;)&amp;
+if(
+!includes(Inclusion_List_GlobalList__c,&apos;Adobe&apos;),&apos;Adobe&apos;&amp; br(),&apos;&apos;)&amp;
+IF(
+!includes(Inclusion_List_GlobalList__c,&apos;Aggregate Knowledge&apos;),&apos;Aggregate Knowledge&apos;&amp; br(),&apos;&apos;)&amp;
+IF(
+!includes(Inclusion_List_GlobalList__c,&apos;Appier&apos;),&apos;Appier&apos;&amp; br(),&apos;&apos;)&amp;
+IF(
+!includes(Inclusion_List_GlobalList__c,&apos;AppNexus&apos;),&apos;AppNexus&apos;&amp; br(),&apos;&apos;)&amp;
+IF(
+!includes(Inclusion_List_GlobalList__c,&apos;AudienceScience&apos;),&apos;AudienceScience&apos;&amp; br(),&apos;&apos;)&amp;
+IF(
+!includes(Inclusion_List_GlobalList__c,&apos;Avocet&apos;),&apos;Avocet&apos;&amp; br(),&apos;&apos;)&amp;
+IF(
+!includes(Inclusion_List_GlobalList__c,&apos;BrightRoll&apos;),&apos;BrightRoll&apos;&amp; br(),&apos;&apos;)&amp;
+IF(
+!includes(Inclusion_List_GlobalList__c,&apos;DataXu&apos;),&apos;DataXu&apos;&amp; br(),&apos;&apos;)&amp;
+IF(
+!includes(Inclusion_List_GlobalList__c,&apos;Google&apos;),&apos;Google&apos;&amp; br(),&apos;&apos;)&amp;
+IF(
+!includes(Inclusion_List_GlobalList__c,&apos;FreakOut&apos;),&apos;FreakOut&apos;&amp; br(),&apos;&apos;)&amp;
+IF(
+!includes(Inclusion_List_GlobalList__c,&apos;Google Audience Center&apos;),&apos;Google Audience Center&apos;&amp; br(),&apos;&apos;)&amp;
+IF(
+!includes(Inclusion_List_GlobalList__c,&apos;Google DFP&apos;),&apos;Google DFP&apos;&amp; br(),&apos;&apos;)&amp;
+IF(
+!includes(Inclusion_List_GlobalList__c,&apos;IgnitionOne&apos;),&apos;IgnitionOne&apos;&amp; br(),&apos;&apos;)&amp;
+IF(
+!includes(Inclusion_List_GlobalList__c,&apos;Infectious Media&apos;),&apos;Infectious Media&apos;&amp; br(),&apos;&apos;)&amp;
+IF(
+!includes(Inclusion_List_GlobalList__c,&apos;Krux&apos;),&apos;Krux&apos;&amp; br(),&apos;&apos;)&amp;
+IF(
+!includes(Inclusion_List_GlobalList__c,&apos;Lotame&apos;),&apos;Lotame&apos;&amp; br(),&apos;&apos;)&amp;
+IF(
+!includes(Inclusion_List_GlobalList__c,&apos;MediaMath&apos;),&apos;MediaMath&apos;&amp; br(),&apos;&apos;)&amp;
+IF(
+!includes(Inclusion_List_GlobalList__c,&apos;Media iQ Digital&apos;),&apos;Media iQ Digital&apos;&amp; br(),&apos;&apos;)&amp;
+IF(
+!includes(Inclusion_List_GlobalList__c,&apos;Nativo&apos;),&apos;Nativo&apos;&amp; br(),&apos;&apos;)&amp;
+IF(
+!includes(Inclusion_List_GlobalList__c,&apos;ONE by AOL/AOL Platforms&apos;),&apos;ONE by AOL/AOL Platforms&apos;&amp; br(),&apos;&apos;)&amp;
+IF(
+!includes(Inclusion_List_GlobalList__c,&apos;Oracle&apos;),&apos;Oracle&apos;&amp; br(),&apos;&apos;)&amp;
+IF(
+!includes(Inclusion_List_GlobalList__c,&apos;Permutive&apos;),&apos;Permutive&apos;&amp; br(),&apos;&apos;)&amp;
+IF(
+!includes(Inclusion_List_GlobalList__c,&apos;RadiumOne&apos;),&apos;RadiumOne&apos;&amp; br(),&apos;&apos;)&amp;
+IF(
+!includes(Inclusion_List_GlobalList__c,&apos;Rocketfuel&apos;),&apos;Rocketfuel&apos;&amp; br(),&apos;&apos;)&amp;
+IF(
+!includes(Inclusion_List_GlobalList__c,&apos;Semasio&apos;),&apos;Semasio&apos;&amp; br(),&apos;&apos;)&amp;
+IF(
+!includes(Inclusion_List_GlobalList__c,&apos;Specific Media&apos;),&apos;Specific Media&apos;&amp; br(),&apos;&apos;)&amp;
+IF(
+!includes(Inclusion_List_GlobalList__c,&apos;SpotXchange&apos;),&apos;SpotXchange&apos;&amp; br(),&apos;&apos;)&amp;
+IF(
+!includes(Inclusion_List_GlobalList__c,&apos;Taboola&apos;),&apos;Taboola&apos;&amp; br(),&apos;&apos;)&amp;
+IF(
+!includes(Inclusion_List_GlobalList__c,&apos;Tapad&apos;),&apos;Tapad&apos;&amp; br(),&apos;&apos;)&amp;
+IF(
+!includes(Inclusion_List_GlobalList__c,&apos;The Trade Desk&apos;),&apos;The Trade Desk&apos;&amp; br(),&apos;&apos;)&amp;
+IF(
+!includes(Inclusion_List_GlobalList__c,&apos;Treasure Data&apos;),&apos;Treasure Data&apos;&amp; br(),&apos;&apos;)&amp;
+IF(
+!includes(Inclusion_List_GlobalList__c,&apos;TubeMogul&apos;),&apos;TubeMogul&apos;&amp; br(),&apos;&apos;)&amp;
+IF(
+!includes(Inclusion_List_GlobalList__c,&apos;Turn&apos;),&apos;Turn&apos;&amp; br(),&apos;&apos;)&amp;
+IF(
+!includes(Inclusion_List_GlobalList__c,&apos;Viant&apos;),&apos;Viant&apos;&amp; br(),&apos;&apos;)&amp;
+IF(
+!includes(Inclusion_List_GlobalList__c,&apos;Xaxis&apos;),&apos;Xaxis&apos;&amp; br(),&apos;&apos;)&amp;
+IF(
+!includes(Inclusion_List_GlobalList__c,&apos;Yahoo&apos;),&apos;Yahoo&apos;&amp; br(),&apos;&apos;)&amp;
+IF(
+!includes(Inclusion_List_GlobalList__c,&apos;Videology&apos;),&apos;Videology&apos;&amp; br(),&apos;&apos;)</formula>
+    <label>Exclusion List</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>
