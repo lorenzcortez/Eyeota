@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Monthly_Rev__c</fullName>
+    <label>Monthly Rev</label>
+    <summarizedField>Adjustment_Transaction__c.Revenue_Amount__c</summarizedField>
+    <summaryForeignKey>Adjustment_Transaction__c.Adjustment__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

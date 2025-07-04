@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_New</fullName>
+    <columns>NAME</columns>
+    <columns>Approved_for_Posting__c</columns>
+    <columns>Invoice_Month__c</columns>
+    <columns>Sales_Invoice_Number__c</columns>
+    <columns>Billing_Account_Owner__c</columns>
+    <columns>Billing_Account__c</columns>
+    <columns>Billing_Legal_Entity_Name__c</columns>
+    <columns>Approval_Due_Date__c</columns>
+    <columns>Line_Item_Notes__c</columns>
+    <columns>Billing_Currency__c</columns>
+    <columns>Amount_in_Billing_Currency__c</columns>
+    <columns>PO__c</columns>
+    <columns>Sales_Invoice_Amount__c</columns>
+    <columns>Sales_Invoice_Status__c</columns>
+    <columns>Opportunity__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CREATED_DATE</field>
+        <operation>greaterThan</operation>
+        <value>1/1/2024 12:00 AM</value>
+    </filters>
+    <filters>
+        <field>Billing_Account__c</field>
+        <operation>contains</operation>
+        <value>Tubemogul</value>
+    </filters>
+    <filters>
+        <field>Line_Item_Notes__c</field>
+        <operation>contains</operation>
+        <value>2024</value>
+    </filters>
+    <label>All</label>
+</ListView>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sensitive_data_Australia_NZ__c</fullName>
+    <label>Sensitive data: Australia NZ</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Health-related (inferences about sensitive health/ medical conditions or treatments)</fullName>
+                <default>false</default>
+                <label>Health-related (inferences about sensitive health/ medical conditions or treatments)</label>
+            </value>
+            <value>
+                <fullName>Health-related (medical records/ pharmaceutical prescriptions)</fullName>
+                <default>false</default>
+                <label>Health-related (medical records/ pharmaceutical prescriptions)</label>
+            </value>
+            <value>
+                <fullName>Race/Ethnic Origin</fullName>
+                <default>false</default>
+                <label>Race/Ethnic Origin</label>
+            </value>
+            <value>
+                <fullName>Religious/ philosophical beliefs</fullName>
+                <default>false</default>
+                <label>Religious/ philosophical beliefs</label>
+            </value>
+            <value>
+                <fullName>Political opinions</fullName>
+                <default>false</default>
+                <label>Political opinions</label>
+            </value>
+            <value>
+                <fullName>Membership in trade union</fullName>
+                <default>false</default>
+                <label>Membership in trade union</label>
+            </value>
+            <value>
+                <fullName>Precise location data (e.g. Lat/long)</fullName>
+                <default>false</default>
+                <label>Precise location data (e.g. Lat/long)</label>
+            </value>
+            <value>
+                <fullName>Financial account #s, credit scores, insurance eligibility information</fullName>
+                <default>false</default>
+                <label>Financial account #s, credit scores, insurance eligibility information</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

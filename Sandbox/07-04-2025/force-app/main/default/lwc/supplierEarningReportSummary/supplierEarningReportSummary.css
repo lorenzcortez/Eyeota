@@ -1,0 +1,41 @@
+.title {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.details {
+    max-width: 56rem;
+}
+
+.detail {
+    display: flex;
+}
+
+.detail .detail__label {
+    min-width: 20rem;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.report__table,
+.report-footer__table {
+    max-height: 18rem;
+    overflow-y: auto;
+}
+
+.invoice__amount {
+    display: flex;
+    margin: 52px 0;
+    padding: 4px 11px;
+    border: 2px solid #000000;
+}
+
+.invoice__amount .invoice__label {
+    min-width: 30rem;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.invoice__amount .invoice__value {
+    font-size: 16px;
+}

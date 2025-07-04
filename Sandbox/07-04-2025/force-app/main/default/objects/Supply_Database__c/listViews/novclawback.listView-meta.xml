@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>novclawback</fullName>
+    <columns>NAME</columns>
+    <columns>Date__c</columns>
+    <columns>Segment_Name__c</columns>
+    <columns>Target_Country_Raw__c</columns>
+    <columns>Segment_Name_Supply_Raw_Original__c</columns>
+    <columns>Gross_Earnings_Final_USD_For_Export__c</columns>
+    <columns>Data_Supplier_Account_Name__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Date__c</field>
+        <operation>equals</operation>
+        <value>11/5/2023</value>
+    </filters>
+    <label>novclawback</label>
+</ListView>

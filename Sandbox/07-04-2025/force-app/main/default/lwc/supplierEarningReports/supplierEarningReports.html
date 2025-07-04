@@ -1,0 +1,90 @@
+<template>
+    <article class="slds-card" style="position: relative;">
+        <div class="slds-card__body slds-card__body_inner">
+            <template if:true={isShowSpinner}>
+                <lightning-spinner alternative-text="Loading" size="small"></lightning-spinner>
+            </template>
+            <lightning-tabset>
+                <lightning-tab label="Summary">
+                    <c-supplier-earning-report-summary account-id={accountId} d-supplier={accountName} summary-detail={summaryDetail} earnings-breakdown={earningsBreakdown}></c-supplier-earning-report-summary>
+                </lightning-tab>
+                <lightning-tab onactive={handlePartnerBrandedTab} label="Partner-branded">
+                    <div class="partner-branded__wrapper">
+                        <div class="export__wrapper slds-p-bottom_medium" style="text-align: end;">
+                            <lightning-button name="Partner-branded" variant="brand" label="Generate File" onclick={generateFile} class="slds-m-left_x-small"></lightning-button>
+                        </div>
+                        <div class="table-container" style="height: 32rem;">
+                            <lightning-datatable
+                                    key-field="id"
+                                    data={partnerBrandedData}
+                                    columns={columns}
+                                    is-loading={isLoadingPartnerBranded}
+                                    enable-infinite-loading
+                                    onloadmore={partnerBrandedloadMoreData}
+                                    hide-checkbox-column="true"
+                                    show-row-number-column="true">
+                            </lightning-datatable>
+                        </div>
+                    </div>
+                </lightning-tab>
+                <lightning-tab onactive={handleEyeotaBrandedTab} label="Eyeota-branded">
+                    <div class="eyeota-branded__wrapper">
+                        <div class="export__wrapper slds-p-bottom_medium" style="text-align: end;">
+                            <lightning-button name="Eyeota-branded" variant="brand" label="Generate File" onclick={generateFile} class="slds-m-left_x-small"></lightning-button>
+                        </div>
+                        <div class="table-container" style="height: 32rem;">
+                            <lightning-datatable
+                                    key-field="id"
+                                    data={eyeotaBrandedData}
+                                    columns={columns}
+                                    is-loading={isLoadingEyeotaBranded}
+                                    enable-infinite-loading
+                                    onloadmore={eyeotaBrandedloadMoreData}
+                                    hide-checkbox-column="true"
+                                    show-row-number-column="true">
+                            </lightning-datatable>
+                        </div>
+                    </div>
+                </lightning-tab>
+                <lightning-tab onactive={handleCustomTab} label="Custom">
+                    <div class="custom__wrapper">
+                        <div class="export__wrapper slds-p-bottom_medium" style="text-align: end;">
+                            <lightning-button name="Custom" variant="brand" label="Generate File" onclick={generateFile} class="slds-m-left_x-small"></lightning-button>
+                        </div>
+                        <div class="table-container" style="height: 32rem;">
+                            <lightning-datatable
+                                    key-field="id"
+                                    data={customData}
+                                    columns={columns}
+                                    is-loading={isLoadingCustom}
+                                    enable-infinite-loading
+                                    onloadmore={customloadMoreData}
+                                    hide-checkbox-column="true"
+                                    show-row-number-column="true">
+                            </lightning-datatable>
+                        </div>
+                    </div>
+                </lightning-tab>
+                <lightning-tab onactive={handleBuyerAdvertiserTab} label="Buyer and Advertiser Detail">
+                    <div class="buyerandadvertiser__wrapper">
+                        <div class="export__wrapper slds-p-bottom_medium" style="text-align: end;">
+                            <lightning-button name="Buyer and Advertiser Detail" variant="brand" label="Generate File" onclick={generateFile} class="slds-m-left_x-small"></lightning-button>
+                        </div>
+                        <div class="table-container" style="height: 32rem;">
+                            <lightning-datatable
+                                    key-field="id"
+                                    data={buyerAndAdvertiserDetailData}
+                                    columns={buyerAndAdvertiserDetailColumns}
+                                    is-loading={isLoadingBuyerAndAdvertiserDetail}
+                                    enable-infinite-loading
+                                    onloadmore={buyerAndAdvertiserDetailloadMoreData}
+                                    hide-checkbox-column="true"
+                                    show-row-number-column="true">
+                            </lightning-datatable>
+                        </div>
+                    </div>
+                </lightning-tab>
+            </lightning-tabset>
+        </div>
+    </article>
+</template>

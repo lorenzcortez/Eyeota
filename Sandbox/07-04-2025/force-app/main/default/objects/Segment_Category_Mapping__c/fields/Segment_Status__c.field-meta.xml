@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Segment_Status__c</fullName>
+    <label>Segment Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Active-Public</fullName>
+                <default>false</default>
+                <label>Active-Public</label>
+            </value>
+            <value>
+                <fullName>Active-Private (PDMP)</fullName>
+                <default>false</default>
+                <label>Active-Private (PDMP)</label>
+            </value>
+            <value>
+                <fullName>Inactive</fullName>
+                <default>true</default>
+                <label>Inactive</label>
+            </value>
+            <value>
+                <fullName>Inactive-Private (PDMP)</fullName>
+                <default>false</default>
+                <label>Inactive-Private (PDMP)</label>
+            </value>
+            <value>
+                <fullName>Multi</fullName>
+                <default>false</default>
+                <label>Multi</label>
+            </value>
+            <value>
+                <fullName>Deleted</fullName>
+                <default>false</default>
+                <label>Deleted</label>
+            </value>
+            <value>
+                <fullName>Active-Name Changed</fullName>
+                <default>false</default>
+                <label>Active-Name Changed</label>
+            </value>
+            <value>
+                <fullName>Active-Private (Custom)</fullName>
+                <default>false</default>
+                <label>Active-Private (Custom)</label>
+            </value>
+            <value>
+                <fullName>Inactive-Private (Custom)</fullName>
+                <default>false</default>
+                <label>Inactive-Private (Custom)</label>
+            </value>
+            <value>
+                <fullName>Active - Name Changed</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Active - Name Changed</label>
+            </value>
+            <value>
+                <fullName>Active - Private</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Active - Private</label>
+            </value>
+            <value>
+                <fullName>Active - Public</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Active - Public</label>
+            </value>
+            <value>
+                <fullName>Active Private</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Active Private</label>
+            </value>
+            <value>
+                <fullName>Active Public</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Active Public</label>
+            </value>
+            <value>
+                <fullName>Active-Private</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Active-Private (Custom)</label>
+            </value>
+            <value>
+                <fullName>Archived</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Archived</label>
+            </value>
+            <value>
+                <fullName>CombiPMP</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>CombiPMP</label>
+            </value>
+            <value>
+                <fullName>Custom</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Custom</label>
+            </value>
+            <value>
+                <fullName>Hitwise Public</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Hitwise Public</label>
+            </value>
+            <value>
+                <fullName>Inactive-Private</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Inactive-Private (Custom)</label>
+            </value>
+            <value>
+                <fullName>PDMP</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>PDMP</label>
+            </value>
+            <value>
+                <fullName>SegStatus_Active-Private (Custom)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>SegStatus_Active-Private (Custom)</label>
+            </value>
+            <value>
+                <fullName>exuk.fss.g.multi</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>exuk.fss.g.multi</label>
+            </value>
+            <value>
+                <fullName>fss.multi</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>fss.multi</label>
+            </value>
+            <value>
+                <fullName>fss.t.multi</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>fss.t.multi</label>
+            </value>
+            <value>
+                <fullName>ml.b2bdem.cr.multi</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>ml.b2bdem.cr.multi</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

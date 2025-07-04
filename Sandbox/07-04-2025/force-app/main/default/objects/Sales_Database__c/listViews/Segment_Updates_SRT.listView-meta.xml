@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Segment_Updates_SRT</fullName>
+    <columns>NAME</columns>
+    <columns>Platform__c</columns>
+    <columns>Target_Country_Raw__c</columns>
+    <columns>Segment_Name__c</columns>
+    <columns>Impressions__c</columns>
+    <columns>Total_Segment_Revenue__c</columns>
+    <columns>Revenue__c</columns>
+    <columns>Segment_Revenue_Transaction__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Segment_Revenue_Transaction__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>Date_Invoiced__c</field>
+        <operation>greaterOrEqual</operation>
+        <value>4/1/2024</value>
+    </filters>
+    <filters>
+        <field>Date_Invoiced__c</field>
+        <operation>lessThan</operation>
+        <value>4/30/2024</value>
+    </filters>
+    <label>Segment Updates (SRT)</label>
+    <sharedTo>
+        <role>Finance_Team</role>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,4 @@
+<apex:page standardController="Lead" tabStyle="Lead">
+<apex:pageBlock mode="edit" id="leadPB" title="{!if(Lead.Company==null,'',Lead.Company)}">
+</apex:pageBlock>
+</apex:page>

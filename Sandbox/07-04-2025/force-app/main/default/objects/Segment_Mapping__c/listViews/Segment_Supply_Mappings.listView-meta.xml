@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Segment_Supply_Mappings</fullName>
+    <booleanFilter>1 AND 2 AND NOT 3</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Segment_Name_Supply_Raw__c</columns>
+    <columns>Segment_Name__c</columns>
+    <columns>Segment_Category_Mapping__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Segment_Name_Supply_Raw__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>Segment_Name__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>Segment_Name_Supply_Raw__c</field>
+        <operation>startsWith</operation>
+        <value>sea.,ee.</value>
+    </filters>
+    <label>Segment Supply Mappings</label>
+    <sharedTo>
+        <group>Finance_Team</group>
+    </sharedTo>
+</ListView>

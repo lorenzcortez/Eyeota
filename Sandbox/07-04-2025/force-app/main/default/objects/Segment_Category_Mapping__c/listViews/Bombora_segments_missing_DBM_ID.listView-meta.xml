@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bombora_segments_missing_DBM_ID</fullName>
+    <columns>NAME</columns>
+    <columns>Segment_Name__c</columns>
+    <columns>Segment_Category__c</columns>
+    <columns>DBM_ID__c</columns>
+    <columns>Segment_Content_1__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Segment_Name__c</field>
+        <operation>contains</operation>
+        <value>t</value>
+    </filters>
+    <filters>
+        <field>Segment_Category__c</field>
+        <operation>contains</operation>
+        <value>t</value>
+    </filters>
+    <label>Bombora segments_missing DBM ID</label>
+</ListView>

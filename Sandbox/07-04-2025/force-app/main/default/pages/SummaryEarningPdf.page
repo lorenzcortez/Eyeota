@@ -1,0 +1,149 @@
+<apex:page controller="SummaryEarningPdfController" renderAs="pdf" applyBodyTag="false">
+    <head>
+        <style>
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .summary-detail-label{
+                font-size: 16px;
+            }
+            .summary-detail-value{
+                font-size: 13px;
+            }
+            table{
+                width: 100%;
+            }
+            .actual-table{
+                border-collapse: collapse;
+                border-top: 1px solid rgb(229, 229, 229);
+                border-bottom: 1px solid rgb(229, 229, 229);
+            }
+            .actual-table tr>th:first-child, .actual-table tr>td:first-child{
+                padding: 4px 8px 4px 24px;
+            }
+            .actual-table tr>th:last-child, .actual-table tr>td:last-child{
+                padding: 4px 24px 4px 8px;
+            }
+            .actual-table th, .actual-table td{
+                padding: 4px 8px;
+            }
+            th, td{
+                font-size: 13px;
+            }
+            .actual-table th,.actual-table td{
+                border: 1px solid rgb(229, 229, 229);
+                border-left: none !important;
+                border-right: none !important;
+            }
+            .big-title{
+                font-size: 22px;
+            }
+            .invoice-amount{
+                border: 2px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td style="width: 50%;">
+                    <!-- EYEOTA LOGO -->
+                    <apex:image url="{!$Resource.EyeotaLogo}" width="200"></apex:image>
+                </td>
+                <td class="big-title" style="width: 50%;">
+                    <b>{!accountName}</b>
+                </td>
+            </tr>
+        </table>
+        <table style="margin-top: 20px;">
+            <tr>
+                <td class="summary-detail-label" style="width: 25%;"><b>Data Supplier</b></td>
+                <td class="summary-detail-value" style="width: 25%;">{!accountName}</td>
+                <td style="width: 50%;"></td>
+            </tr>
+            <tr>
+                <td class="summary-detail-label" style="width: 25%;"><b>Billing Currency</b></td>
+                <td class="summary-detail-value" style="width: 25%;">{!summaryDetail.billingCurrency}</td>
+                <td style="width: 50%;"></td>
+            </tr>
+            <tr>
+                <td class="summary-detail-label" style="width: 25%;"><b>Billing Month</b></td>
+                <td class="summary-detail-value" style="width: 25%;">
+                    <apex:outputText value="{0, number, integer}">
+                        <apex:param value="{!summaryDetail.billingMonth}" />
+                    </apex:outputText>
+                </td>
+                <td style="width: 50%;"></td>
+            </tr>
+            <tr>
+                <td class="summary-detail-label" style="width: 25%;"><b>Report Issue Date</b></td>
+                <td class="summary-detail-value" style="width: 25%;">{!TEXT(summaryDetail.reportIssueDate)}</td>
+                <td style="width: 50%;"></td>
+            </tr>
+        </table>
+        <table class="actual-table" style="margin-top: 20px;">
+            <tr>
+                <th>Earnings Breakdown (Current Billing Month)</th>
+                <th>Gross Earnings (USD)</th>
+                <th>Net Earnings (USD)</th>
+            </tr>
+            <apex:repeat value="{!earningsBreakdown}" var="earningBreakdown">
+                <tr>
+                    <td>
+                        {!earningBreakdown.currentBillingMonth}
+                    </td>
+                    <td>
+                        <apex:outputText value="${0,number,###,###,###.00}">
+                            <apex:param value="{!earningBreakdown.grossEarnings}" />
+                        </apex:outputText>
+                    </td>
+                    <td>
+                        <apex:outputText value="${0,number,###,###,###.00}">
+                            <apex:param value="{!earningBreakdown.netEarnings}" />
+                        </apex:outputText>
+                    </td>
+                </tr>
+            </apex:repeat>
+        </table>
+        <table class="invoice-amount" style="margin-top: 40px;">
+            <tr>
+                <td class="summary-detail-label" style="width: 33.33%;"><b>Invoice Amount</b></td>
+                <td class="summary-detail-label" style="width: 33.33%;">{!summaryDetail.billingCurrency}</td>
+                <td style="width: 33.33%;"></td>
+            </tr>
+        </table>
+        <table class="actual-table" style="margin-top: 40px;">
+            <tr>
+                <th colspan="2">Summary Earnings (Last 6 Months)</th>
+                <th>Gross Earnings (USD)</th>
+                <th>Billing Currency</th>
+                <th>Net Earnings (USD)</th>
+                <th>Net Earnings (Billing Currency)</th>
+            </tr>
+            <apex:repeat value="{!summaryEarningsLast6Mo}" var="summaryEarning">
+                <tr>
+                    <td>{!summaryEarning.lastSixMonthsCoL1}</td>
+                    <td>{!summaryEarning.lastSixMonthsCol2}</td>
+                    <td>
+                        <apex:outputText value="${0,number,###,###,###.00}">
+                            <apex:param value="{!summaryEarning.grossEarningsUSD}" />
+                        </apex:outputText>
+                    </td>
+                    <td>{!summaryEarning.billingCurrency}</td>
+                    <td>
+                        <apex:outputText value="${0,number,###,###,###.00}">
+                            <apex:param value="{!summaryEarning.netEarningsUSD}" />
+                        </apex:outputText>
+                    </td>
+                    <td>
+                        <apex:outputText value="${0,number,###,###,###.00}">
+                            <apex:param value="{!summaryEarning.netEarningsBillingCurrency}" />
+                        </apex:outputText>
+                    </td>
+                </tr>
+            </apex:repeat>
+        </table>
+        <p class="summary-detail-value" style="margin-top: 30px;"><b>If the invoice amount is less than $500, please do not invoice and allow the amount to accrue until the point where the total amount due is greater than or equal to $500. This is to reduce the banking charges incurred for both parties.</b></p>
+        <p class="summary-detail-value"><b>Payment terms begin from the receipt of invoice. Please do not backdate your invoice. Invoices with dates backdated prior to the Report Issue Date will be returned for correction.</b></p>
+    </body>
+</apex:page>

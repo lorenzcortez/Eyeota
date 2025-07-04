@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Avocet_excluded</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(NOT(INCLUDES(Inclusion_List_GlobalList__c,&apos;Avocet&apos;)),NOT(ISBLANK( Avocet_Upload_Date__c )))</errorConditionFormula>
+    <errorDisplayField>Avocet_Upload_Date__c</errorDisplayField>
+    <errorMessage>Avocet is not in the Inclusion List.</errorMessage>
+</ValidationRule>

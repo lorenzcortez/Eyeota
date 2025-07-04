@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Segment_Category_Mapping__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Segment Category Mapping</label>
+    <referenceTo>Segment_Category_Mapping__c</referenceTo>
+    <relationshipLabel>Segment Monthly Global</relationshipLabel>
+    <relationshipName>Segment_Monthly_Global</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Primary_Key__c</fullName>
+    <description>Unique Combination Key</description>
+    <externalId>true</externalId>
+    <inlineHelpText>Always enter a unique value on this field to be sure of Sales and Supply and Record junction duplication avoidance.</inlineHelpText>
+    <label>Primary Key</label>
+    <length>255</length>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>
